@@ -56,10 +56,10 @@
 <text x="694.5" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Aug</text>
 <text x="773.4" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Sep</text>
 <text x="836.5" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Oct</text>
-<rect x="32.0" y="292" width="481.9" height="10" rx="2" fill="#3987e5"><title>JavaScript: 57.9%</title></rect>
-<rect x="515.9" y="292" width="247.7" height="10" rx="2" fill="#d95926"><title>Python: 29.9%</title></rect>
+<rect x="32.0" y="292" width="482.0" height="10" rx="2" fill="#3987e5"><title>JavaScript: 57.9%</title></rect>
+<rect x="516.0" y="292" width="247.6" height="10" rx="2" fill="#d95926"><title>Python: 29.9%</title></rect>
 <rect x="765.6" y="292" width="39.6" height="10" rx="2" fill="#199e70"><title>CSS: 5.0%</title></rect>
-<rect x="807.2" y="292" width="23.3" height="10" rx="2" fill="#c98500"><title>HTML: 3.0%</title></rect>
+<rect x="807.3" y="292" width="23.3" height="10" rx="2" fill="#c98500"><title>HTML: 3.0%</title></rect>
 <rect x="832.5" y="292" width="16.9" height="10" rx="2" fill="#d55181"><title>TypeScript: 2.3%</title></rect>
 <rect x="851.4" y="292" width="14.6" height="10" rx="2" fill="#6e7681"><title>Other: 2.0%</title></rect>
 <circle cx="36" cy="322" r="4" fill="#3987e5"/>
