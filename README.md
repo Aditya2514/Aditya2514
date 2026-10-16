@@ -58,8 +58,8 @@ I'm studying for a BS in Data Science & Applications at IIT Madras, co-enrolled 
 Four rules, each one shipped in a repo:
 
 - **Check the model in code.** LexGuard's 38 trap patterns can overrule the LLM's risk rating, and a contradiction engine cross-checks fees, dates and jurisdictions across clauses.
-- **Ground every answer.** Noesis cites the timestamp, page or frame behind each answer; LexGuard cites statutes retrieved from 7,556+ Indian law sections.
-- **Ask before acting.** Resilion never reroutes supply without sign-off; Pikina pops a native consent dialog before high-risk OS actions.
+- **Ground every answer.** Noesis answers cite the timestamp, page or frame behind each claim, and an LLM auditor checks them; LexGuard cites statutes retrieved from 7,556+ Indian law sections.
+- **Ask before acting.** Pikina validates every model-proposed action against a tool manifest and pops a native consent dialog before high-risk OS actions.
 - **Degrade, don't die.** LexGuard falls back across four LLM providers and fits its backend in 512 MB; Pikina answers known commands with plain regex routing before it ever calls a model.
 
 <br>
@@ -103,13 +103,13 @@ On the committed benchmarks it gets 28/30 clause types and 21/30 risk tiers righ
 
 ![Python](https://img.shields.io/badge/Python-161B22?style=flat-square&logo=python&logoColor=3776AB) ![Ollama](https://img.shields.io/badge/Ollama-161B22?style=flat-square&logo=ollama&logoColor=white) ![Electron](https://img.shields.io/badge/Electron-161B22?style=flat-square&logo=electron&logoColor=47848F) ![Windows](https://img.shields.io/badge/Win32-161B22?style=flat-square&logo=windows&logoColor=0078D4)
 
-An offline-first personal operating layer for Windows. Press Alt+Space and type what you want; Pikina routes it, plans it as tasks, runs them, and asks first when an action is risky. Pre-alpha.
+An offline-first personal operating layer for Windows. Press Alt+Space and type what you want; Pikina routes it to a tool, validates the action, and asks first when it is risky. Pre-alpha.
 
 <details>
 <summary>Engineering notes</summary>
 <br>
 
-Commands that match a known pattern are routed by a Tier 1 regex router in under a millisecond; only misses go to a local Ollama model, with a `no_match` escape hatch to stop it inventing actions. Work runs through a DAG scheduler with starvation protection and a transaction executor that rolls back in reverse order on failure. An Action Validation Layer grades every action, and level 4+ actions need a native Windows confirmation. Event-driven daemons and a dual-tier memory sit underneath.
+Commands that match a known pattern are handled by a Tier 1 regex router with no model call; only misses go to a local Ollama model, which must return a registered tool or `no_match`, so it can't invent actions. An Action Validation Layer checks every model-proposed action against the tool manifest, and level 4+ actions from either tier need a native Windows confirmation. A DAG scheduler with starvation protection and a transactional executor with reverse-order rollback are built and unit-tested, and are next to be wired into the live request path. Event-driven daemons and a dual-tier memory sit underneath.
 
 </details>
 
@@ -125,13 +125,13 @@ Commands that match a known pattern are routed by a Tier 1 regex router in under
 
 ![Python](https://img.shields.io/badge/Python-161B22?style=flat-square&logo=python&logoColor=3776AB) ![FastAPI](https://img.shields.io/badge/FastAPI-161B22?style=flat-square&logo=fastapi&logoColor=009688) ![React](https://img.shields.io/badge/React-161B22?style=flat-square&logo=react&logoColor=61DAFB) ![NetworkX](https://img.shields.io/badge/NetworkX-161B22?style=flat-square) ![Gemini](https://img.shields.io/badge/Gemini-161B22?style=flat-square&logo=googlegemini&logoColor=8E75B2)
 
-India imports most of its crude oil, much of it through the Strait of Hormuz. Resilion watches geopolitical signals and, when a route is at risk, shows which refineries and industries are exposed and ranks alternative supply routes for a person to approve.
+India imports most of its crude oil, much of it through the Strait of Hormuz. Resilion watches geopolitical signals and shows which refineries and industries are exposed when a route is at risk. In progress: ranking alternative supply routes for a person to approve.
 
 <details>
 <summary>Engineering notes</summary>
 <br>
 
-Two agents share a NetworkX knowledge graph. The Risk Watcher ingests GDELT, EIA, OFAC and RSS feeds, extracts structured disruption events and scores source confidence. The Procurement Orchestrator traces cascading impact through the graph and ranks reroutes by cost per barrel and added transit days. Recommendations carry the traversal that justifies them, and nothing executes without an approval record.
+Built so far: data sources for GDELT, EIA, OFAC and RSS feeds, a Gemini Risk Watcher agent that turns them into structured disruption events, and a NetworkX graph of India's crude-oil supply corridors that traces which industries an event affects. Next: a Procurement Orchestrator that ranks reroutes by cost and transit delay, and an approval console so nothing executes without a person signing off.
 
 </details>
 
@@ -151,7 +151,7 @@ Ask one question across videos, podcasts, PDFs and scanned pages, and get an ans
 <summary>Engineering notes</summary>
 <br>
 
-Video and audio go through FFmpeg and Whisper with word-level timestamps; keyframes come from scene-change detection with SSIM de-duplication; PDFs through PyMuPDF and RapidOCR. Entity canonicalisation links a term spoken in a video to the same term in a PDF diagram. Retrieval is hybrid (BM25 + bge-small embeddings) with an ms-marco reranker, and a confidence cutoff decides between a full grounded answer and an extractive fallback.
+Video and audio go through FFmpeg and Whisper with word-level timestamps; keyframes come from scene-change detection with perceptual-hash de-duplication; PDFs through PyMuPDF and RapidOCR. Entity canonicalisation links a term spoken in a video to the same term in a PDF diagram. Retrieval is hybrid (BM25 + bge-small embeddings) with an ms-marco reranker, and a confidence cutoff decides between a full grounded answer and an extractive fallback.
 
 </details>
 

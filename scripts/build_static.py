@@ -27,8 +27,8 @@ PATTERN_ROWS = [
         "stack": "FastAPI · NetworkX · Gemini",
         "cells": [
             "Risk Watcher agent turns news into disruption events",
-            "Graph traversal proves the downstream impact",
-            "No rerouting order runs without approval",
+            "Graph traversal traces which industries are hit",
+            "Reroutes will need sign-off (approval console in progress)",
         ],
     },
     {
@@ -36,15 +36,15 @@ PATTERN_ROWS = [
         "stack": "Python · Ollama · Electron",
         "cells": [
             "Local Ollama parses intent when regex routes miss",
-            "Validation layer + DAG checks gate every task",
-            "Consent popup for risky OS actions; rollback on failure",
+            "Validation layer checks every model-proposed action",
+            "Native consent popup before any level-4+ action",
         ],
     },
     {
         "name": "Noesis",
         "stack": "Python · Groq · ChromaDB",
         "cells": [
-            "Llama 3.3 drafts the answer in one grounded pass",
+            "gpt-oss on Groq drafts the answer in one grounded pass",
             "Hybrid BM25 + dense retrieval with reranking",
             "Answers cite the timestamp, page or frame used",
         ],
