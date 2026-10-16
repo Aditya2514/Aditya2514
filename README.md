@@ -16,8 +16,8 @@
 <tr>
 <td><a href="#05-live-signal"><code>05</code> SIGNAL</a></td>
 <td><a href="#06-stack"><code>06</code> STACK</a></td>
-<td><a href="#07-contact"><code>07</code> CONTACT</a></td>
-<td></td>
+<td><a href="#07-education--honors"><code>07</code> EDUCATION</a></td>
+<td><a href="#08-contact"><code>08</code> CONTACT</a></td>
 </tr>
 </table>
 
@@ -32,16 +32,16 @@
 </td>
 <td width="33%" valign="top">
 
-<sub>LATEST // SHIPPED</sub><br>
-**ShopKart**<br>
-Full-stack store with Razorpay, Oct 2026
+<sub>STUDYING // IIT MADRAS</sub><br>
+**BS in Data Science & Applications**<br>
+CGPA 9.0 / 10 · 2025 – 2029
 
 </td>
 <td width="33%" valign="top">
 
-<sub>FOCUS // NOW</sub><br>
-**LLM systems with guardrails**<br>
-Agents · RAG · evaluation
+<sub>LATEST // WIN</sub><br>
+**Paradox DSA Triathlon, IIT Madras**<br>
+Runner-up (2nd place) · 2026
 
 </td>
 </tr>
@@ -51,7 +51,7 @@ Agents · RAG · evaluation
 
 ## 01 About
 
-I build LLM systems that are safe to act on. In my projects the model is the reasoning layer, not the foundation: deterministic code checks what it says, retrieval grounds it, and a person approves anything that can't be undone.
+I'm studying for a BS in Data Science & Applications at IIT Madras, co-enrolled at Scaler School of Technology, and I build LLM systems that are safe to act on. In my projects the model is the reasoning layer, not the foundation: deterministic code checks what it says, retrieval grounds it, and a person approves anything that can't be undone.
 
 > *"Language models are lazy-loaded reasoning services sitting on top of deterministic infrastructure, not the thing the infrastructure depends on."* (from the Pikina design notes)
 
@@ -167,7 +167,7 @@ Video and audio go through FFmpeg and Whisper with word-level timestamps; keyfra
 
 | Project | What it is | Stack |
 | :-- | :-- | :-- |
-| [**Meta_OpenEnv**](https://github.com/Aditya2514/Meta_OpenEnv) | OpenEnv environment where an RL or LLM agent triages assignments and production bugs against deadlines and a burnout budget. 110-test suite in CI. Team project. | Python · FastAPI · Docker · HF Spaces |
+| [**Meta_OpenEnv**](https://github.com/Aditya2514/Meta_OpenEnv) | Built for the Meta PyTorch OpenEnv Hackathon (2026): an OpenEnv environment where an RL or LLM agent triages assignments and production bugs against deadlines and a burnout budget. 110-test suite in CI. Team project. | Python · FastAPI · Docker · HF Spaces |
 | [**ShopKart**](https://github.com/Aditya2514/Shopkart) | Full-stack store: JWT auth, catalog, wishlist, cart, server-side checkout, Razorpay payments. Built with [@apurva202](https://github.com/apurva202). | React · Express · MongoDB · Vercel |
 | [**C++ shell**](https://github.com/Aditya2514/codecrafters-shell-cpp) | POSIX-style shell from scratch: quoting, redirection, multi-stage pipelines and background jobs on `fork`/`exec`/`pipe`/`dup2`. | C++23 |
 | [**Vidya**](https://github.com/Aditya2514/Vidya) | Book discovery app with debounced search, infinite scroll, Firebase and Google sign-in, and persisted saved lists. | React Native · TypeScript · Redux Toolkit |
@@ -233,22 +233,27 @@ Video and audio go through FFmpeg and Whisper with word-level timestamps; keyfra
 </tr>
 </table>
 
-<!--
-## Education & Honors
+<br>
 
-Add these yourself; nothing here was guessed.
+## 07 Education & Honors
 
 **Education**
-B.Tech, <branch> — <college>, <graduation year>
+
+| Program | Institution | When | Result |
+| :-- | :-- | :-- | :-- |
+| BS in Data Science & Applications | Indian Institute of Technology Madras | 2025 – 2029 | CGPA **9.0 / 10** |
+| Co-enrolled with the IITM BS degree | Scaler School of Technology | 2025 – 2029 | |
+
+**Honors**
 
 | When | Event | Result |
-|:--|:--|:--|
-| <month year> | <hackathon> | <result> |
--->
+| :-- | :-- | :-- |
+| 2026 | Paradox DSA Triathlon, IIT Madras | **Runner-up (2nd place)** |
+| 2026 | Meta PyTorch OpenEnv Hackathon | Built and submitted [Meta_OpenEnv](https://github.com/Aditya2514/Meta_OpenEnv) with a team |
 
 <br>
 
-## 07 Contact
+## 08 Contact
 
 <div align="center">
 
