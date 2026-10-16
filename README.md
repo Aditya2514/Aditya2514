@@ -135,7 +135,7 @@ Two agents share a NetworkX knowledge graph. The Risk Watcher ingests GDELT, EIA
 
 </details>
 
-[Source](https://github.com/Aditya2514/Resilion-)
+[Source](https://github.com/Aditya2514/Resilion)
 
 </td>
 <td width="50%" valign="top">
