@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 522" width="100%" role="img" aria-labelledby="t d">
+<title id="t">How I build: one pattern across four AI projects</title>
+<desc id="d">LexGuard: Risk analyst + adversarial judge rate every clause / 38 trap patterns + cross-clause contradiction rules / Signer reviews ratings, cited statutes, rewrites. Resilion: Risk Watcher agent turns news into disruption events / Graph traversal proves the downstream impact / No rerouting order runs without approval. Pikina: Local Ollama parses intent when regex routes miss / Validation layer + DAG checks gate every task / Consent popup for risky OS actions; rollback on failure. Noesis: Llama 3.3 drafts the answer in one grounded pass / Hybrid BM25 + dense retrieval with reranking / Answers cite the timestamp, page or frame used.</desc>
+<rect x="0.5" y="0.5" width="899" height="521" rx="16" fill="#0d1117" stroke="#30363d"/>
+<text x="32" y="40" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="3" fill="#f5a524">HOW I BUILD</text>
+<text x="32" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#e6edf3">The model never gets the last word</text>
+<text x="230" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="2" fill="#2dd4bf">01  MODEL PROPOSES</text>
+<text x="452" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="2" fill="#f5a524">02  CODE VERIFIES</text>
+<text x="674" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="2" fill="#c9d1d9">03  A PERSON DECIDES</text>
+<rect x="20" y="122" width="860" height="80" rx="10" fill="#161b22" stroke="#30363d"/>
+<text x="36" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#e6edf3">LexGuard</text>
+<text x="36" y="172" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">Node · React · MongoDB Atlas</text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3"><tspan x="230" y="158">Risk analyst + adversarial</tspan><tspan x="230" y="174">judge rate every clause</tspan></text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3"><tspan x="452" y="150">38 trap patterns +</tspan><tspan x="452" y="166">cross-clause contradiction</tspan><tspan x="452" y="182">rules</tspan></text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3"><tspan x="674" y="158">Signer reviews ratings,</tspan><tspan x="674" y="174">cited statutes, rewrites</tspan></text>
+<path d="M432,157.0 L438,162.0 L432,167.0" fill="none" stroke="#f5a524" stroke-width="1.8" opacity="0.35"><animate attributeName="opacity" values="0.35;1;0.35" dur="2.4s" begin="0.0s" repeatCount="indefinite"/></path>
+<path d="M654,157.0 L660,162.0 L654,167.0" fill="none" stroke="#c9d1d9" stroke-width="1.8" opacity="0.35"><animate attributeName="opacity" values="0.35;1;0.35" dur="2.4s" begin="0.3s" repeatCount="indefinite"/></path>
+<rect x="20" y="212" width="860" height="80" rx="10" fill="#161b22" stroke="#30363d"/>
+<text x="36" y="242" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#e6edf3">Resilion</text>
+<text x="36" y="262" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">FastAPI · NetworkX · Gemini</text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3"><tspan x="230" y="248">Risk Watcher agent turns</tspan><tspan x="230" y="264">news into disruption events</tspan></text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3"><tspan x="452" y="248">Graph traversal proves the</tspan><tspan x="452" y="264">downstream impact</tspan></text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3"><tspan x="674" y="248">No rerouting order runs</tspan><tspan x="674" y="264">without approval</tspan></text>
+<path d="M432,247.0 L438,252.0 L432,257.0" fill="none" stroke="#f5a524" stroke-width="1.8" opacity="0.35"><animate attributeName="opacity" values="0.35;1;0.35" dur="2.4s" begin="0.6s" repeatCount="indefinite"/></path>
+<path d="M654,247.0 L660,252.0 L654,257.0" fill="none" stroke="#c9d1d9" stroke-width="1.8" opacity="0.35"><animate attributeName="opacity" values="0.35;1;0.35" dur="2.4s" begin="0.9s" repeatCount="indefinite"/></path>
+<rect x="20" y="302" width="860" height="80" rx="10" fill="#161b22" stroke="#30363d"/>
+<text x="36" y="332" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#e6edf3">Pikina</text>
+<text x="36" y="352" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">Python · Ollama · Electron</text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3"><tspan x="230" y="338">Local Ollama parses intent</tspan><tspan x="230" y="354">when regex routes miss</tspan></text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3"><tspan x="452" y="338">Validation layer + DAG</tspan><tspan x="452" y="354">checks gate every task</tspan></text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3"><tspan x="674" y="330">Consent popup for risky OS</tspan><tspan x="674" y="346">actions; rollback on</tspan><tspan x="674" y="362">failure</tspan></text>
+<path d="M432,337.0 L438,342.0 L432,347.0" fill="none" stroke="#f5a524" stroke-width="1.8" opacity="0.35"><animate attributeName="opacity" values="0.35;1;0.35" dur="2.4s" begin="1.2s" repeatCount="indefinite"/></path>
+<path d="M654,337.0 L660,342.0 L654,347.0" fill="none" stroke="#c9d1d9" stroke-width="1.8" opacity="0.35"><animate attributeName="opacity" values="0.35;1;0.35" dur="2.4s" begin="1.5s" repeatCount="indefinite"/></path>
+<rect x="20" y="392" width="860" height="80" rx="10" fill="#161b22" stroke="#30363d"/>
+<text x="36" y="422" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#e6edf3">Noesis</text>
+<text x="36" y="442" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">Python · Groq · ChromaDB</text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3"><tspan x="230" y="428">Llama 3.3 drafts the answer</tspan><tspan x="230" y="444">in one grounded pass</tspan></text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3"><tspan x="452" y="428">Hybrid BM25 + dense</tspan><tspan x="452" y="444">retrieval with reranking</tspan></text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3"><tspan x="674" y="428">Answers cite the timestamp,</tspan><tspan x="674" y="444">page or frame used</tspan></text>
+<path d="M432,427.0 L438,432.0 L432,437.0" fill="none" stroke="#f5a524" stroke-width="1.8" opacity="0.35"><animate attributeName="opacity" values="0.35;1;0.35" dur="2.4s" begin="1.8s" repeatCount="indefinite"/></path>
+<path d="M654,427.0 L660,432.0 L654,437.0" fill="none" stroke="#c9d1d9" stroke-width="1.8" opacity="0.35"><animate attributeName="opacity" values="0.35;1;0.35" dur="2.4s" begin="2.1s" repeatCount="indefinite"/></path>
+<text x="32" y="506" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#8b949e">LLMs are the reasoning layer, not the foundation: deterministic code checks their output, and a person approves anything irreversible.</text>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350" width="100%" role="img" aria-labelledby="t d">
+<title id="t">Live GitHub signal for the last 12 months</title>
+<desc id="d">298 contributions, active in 9 of the last 12 months, longest streak 11 days, busiest week 60, 13 public repositories. Weekly contribution bars and languages by bytes of code.</desc>
+<rect x="0.5" y="0.5" width="899" height="349" rx="16" fill="#0d1117" stroke="#30363d"/>
+<text x="32" y="40" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="3" fill="#2dd4bf">LIVE SIGNAL</text>
+<text x="32" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#e6edf3">Last 12 months on GitHub</text>
+<text x="868" y="40" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">updated 2026-10-16 · commit history of public repos</text>
+<rect x="32" y="86" width="160" height="64" rx="10" fill="#161b22" stroke="#30363d"/>
+<text x="48" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#e6edf3">298</text>
+<text x="48" y="140" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" letter-spacing="1.5" fill="#8b949e">CONTRIBUTIONS</text>
+<rect x="201" y="86" width="160" height="64" rx="10" fill="#161b22" stroke="#30363d"/>
+<text x="217" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#e6edf3">9 / 12</text>
+<text x="217" y="140" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" letter-spacing="1.5" fill="#8b949e">ACTIVE MONTHS</text>
+<rect x="370" y="86" width="160" height="64" rx="10" fill="#161b22" stroke="#30363d"/>
+<text x="386" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#e6edf3">11</text>
+<text x="386" y="140" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" letter-spacing="1.5" fill="#8b949e">LONGEST STREAK</text>
+<rect x="539" y="86" width="160" height="64" rx="10" fill="#161b22" stroke="#30363d"/>
+<text x="555" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#e6edf3">60</text>
+<text x="555" y="140" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" letter-spacing="1.5" fill="#8b949e">BUSIEST WEEK</text>
+<rect x="708" y="86" width="160" height="64" rx="10" fill="#161b22" stroke="#30363d"/>
+<text x="724" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#e6edf3">13</text>
+<text x="724" y="140" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" letter-spacing="1.5" fill="#8b949e">PUBLIC REPOS</text>
+<line x1="32" y1="258" x2="868" y2="258" stroke="#30363d"/>
+<path d="M143.4,258.0 V257.5 Q143.4,255.5 145.4,255.5 H155.2 Q157.2,255.5 157.2,257.5 V258.0 Z" fill="#2dd4bf"><title>Week of 2025-11-30: 2 contributions</title></path>
+<path d="M253.8,258.0 V257.5 Q253.8,255.5 255.8,255.5 H265.6 Q267.6,255.5 267.6,257.5 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-01-18: 2 contributions</title></path>
+<path d="M269.6,258.0 V253.7 Q269.6,251.7 271.6,251.7 H281.4 Q283.4,251.7 283.4,253.7 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-01-25: 5 contributions</title></path>
+<path d="M380.0,258.0 V256.2 Q380.0,254.2 382.0,254.2 H391.8 Q393.8,254.2 393.8,256.2 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-03-15: 3 contributions</title></path>
+<path d="M395.8,258.0 V253.7 Q395.8,251.7 397.8,251.7 H407.6 Q409.6,251.7 409.6,253.7 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-03-22: 5 contributions</title></path>
+<path d="M411.6,258.0 V258.0 Q411.6,256.0 413.6,256.0 H423.3 Q425.3,256.0 425.3,258.0 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-03-29: 1 contributions</title></path>
+<path d="M427.3,258.0 V243.5 Q427.3,241.5 429.3,241.5 H439.1 Q441.1,241.5 441.1,243.5 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-04-05: 13 contributions</title></path>
+<path d="M506.2,258.0 V248.6 Q506.2,246.6 508.2,246.6 H518.0 Q520.0,246.6 520.0,248.6 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-05-10: 9 contributions</title></path>
+<path d="M522.0,258.0 V184.0 Q522.0,182.0 524.0,182.0 H533.8 Q535.8,182.0 535.8,184.0 V258.0 Z" fill="#f5a524"><title>Week of 2026-05-17: 60 contributions</title></path>
+<path d="M537.8,258.0 V205.5 Q537.8,203.5 539.8,203.5 H549.5 Q551.5,203.5 551.5,205.5 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-05-24: 43 contributions</title></path>
+<path d="M553.5,258.0 V239.7 Q553.5,237.7 555.5,237.7 H565.3 Q567.3,237.7 567.3,239.7 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-05-31: 16 contributions</title></path>
+<path d="M585.1,258.0 V214.4 Q585.1,212.4 587.1,212.4 H596.8 Q598.8,212.4 598.8,214.4 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-06-14: 36 contributions</title></path>
+<path d="M616.6,258.0 V247.3 Q616.6,245.3 618.6,245.3 H628.4 Q630.4,245.3 630.4,247.3 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-06-28: 10 contributions</title></path>
+<path d="M632.4,258.0 V195.4 Q632.4,193.4 634.4,193.4 H644.2 Q646.2,193.4 646.2,195.4 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-07-05: 51 contributions</title></path>
+<path d="M648.2,258.0 V246.1 Q648.2,244.1 650.2,244.1 H659.9 Q661.9,244.1 661.9,246.1 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-07-12: 11 contributions</title></path>
+<path d="M663.9,258.0 V249.9 Q663.9,247.9 665.9,247.9 H675.7 Q677.7,247.9 677.7,249.9 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-07-19: 8 contributions</title></path>
+<path d="M727.0,258.0 V251.1 Q727.0,249.1 729.0,249.1 H738.8 Q740.8,249.1 740.8,251.1 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-08-16: 7 contributions</title></path>
+<path d="M742.8,258.0 V247.3 Q742.8,245.3 744.8,245.3 H754.6 Q756.6,245.3 756.6,247.3 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-08-23: 10 contributions</title></path>
+<path d="M853.2,258.0 V252.4 Q853.2,250.4 855.2,250.4 H865.0 Q867.0,250.4 867.0,252.4 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-10-11: 6 contributions</title></path>
+<text x="528.9" y="176.0" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#e6edf3">peak 60</text>
+<line x1="32" y1="250.9" x2="868" y2="250.9" stroke="#484f58" stroke-dasharray="3 4"/>
+<text x="868" y="245.9" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">avg 5.6 / week</text>
+<text x="79.3" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Nov</text>
+<text x="158.2" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Dec</text>
+<text x="221.3" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Jan</text>
+<text x="284.4" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Feb</text>
+<text x="347.5" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Mar</text>
+<text x="426.3" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Apr</text>
+<text x="489.4" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">May</text>
+<text x="568.3" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Jun</text>
+<text x="631.4" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Jul</text>
+<text x="694.5" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Aug</text>
+<text x="773.4" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Sep</text>
+<text x="836.5" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Oct</text>
+<rect x="32.0" y="292" width="481.1" height="10" rx="2" fill="#3987e5"><title>JavaScript: 57.8%</title></rect>
+<rect x="515.1" y="292" width="240.2" height="10" rx="2" fill="#d95926"><title>Python: 29.0%</title></rect>
+<rect x="757.3" y="292" width="44.8" height="10" rx="2" fill="#199e70"><title>CSS: 5.6%</title></rect>
+<rect x="804.1" y="292" width="30.7" height="10" rx="2" fill="#c98500"><title>HTML: 3.9%</title></rect>
+<rect x="836.8" y="292" width="16.8" height="10" rx="2" fill="#d55181"><title>TypeScript: 2.3%</title></rect>
+<rect x="855.7" y="292" width="10.3" height="10" rx="2" fill="#6e7681"><title>Other: 1.5%</title></rect>
+<circle cx="36" cy="322" r="4" fill="#3987e5"/>
+<text x="45" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">JavaScript 58%</text>
+<circle cx="162" cy="322" r="4" fill="#d95926"/>
+<text x="171" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">Python 29%</text>
+<circle cx="260" cy="322" r="4" fill="#199e70"/>
+<text x="269" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">CSS 6%</text>
+<circle cx="330" cy="322" r="4" fill="#c98500"/>
+<text x="339" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">HTML 4%</text>
+<circle cx="407" cy="322" r="4" fill="#d55181"/>
+<text x="416" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">TypeScript 2%</text>
+<circle cx="526" cy="322" r="4" fill="#6e7681"/>
+<text x="535" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">Other 1%</text>
+</svg>
