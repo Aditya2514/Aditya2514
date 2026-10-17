@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350" width="100%" role="img" aria-labelledby="t d">
 <title id="t">Live GitHub signal for the last 12 months</title>
-<desc id="d">428 contributions, active in 9 of the last 12 months, longest streak 11 days, busiest week 100, 14 public repositories. Weekly contribution bars and languages by bytes of code.</desc>
+<desc id="d">432 contributions, active in 9 of the last 12 months, longest streak 11 days, busiest week 100, 14 public repositories. Weekly contribution bars and languages by bytes of code.</desc>
 <rect x="0.5" y="0.5" width="899" height="349" rx="16" fill="#0d1117" stroke="#30363d"/>
 <text x="32" y="40" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="3" fill="#2dd4bf">LIVE SIGNAL</text>
 <text x="32" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#e6edf3">Last 12 months on GitHub</text>
-<text x="868" y="40" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">updated 2026-10-16 · GitHub contribution calendar</text>
+<text x="868" y="40" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">updated 2026-10-17 · GitHub contribution calendar</text>
 <rect x="32" y="86" width="160" height="64" rx="10" fill="#161b22" stroke="#30363d"/>
-<text x="48" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#e6edf3">428</text>
+<text x="48" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#e6edf3">432</text>
 <text x="48" y="140" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" letter-spacing="1.5" fill="#8b949e">CONTRIBUTIONS</text>
 <rect x="201" y="86" width="160" height="64" rx="10" fill="#161b22" stroke="#30363d"/>
 <text x="217" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#e6edf3">9 / 12</text>
@@ -40,10 +40,10 @@
 <path d="M663.9,258.0 V250.9 Q663.9,248.9 665.9,248.9 H675.7 Q677.7,248.9 677.7,250.9 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-07-19: 12 contributions</title></path>
 <path d="M727.0,258.0 V253.2 Q727.0,251.2 729.0,251.2 H738.8 Q740.8,251.2 740.8,253.2 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-08-16: 9 contributions</title></path>
 <path d="M742.8,258.0 V252.4 Q742.8,250.4 744.8,250.4 H754.6 Q756.6,250.4 756.6,252.4 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-08-23: 10 contributions</title></path>
-<path d="M853.2,258.0 V255.4 Q853.2,253.4 855.2,253.4 H865.0 Q867.0,253.4 867.0,255.4 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-10-11: 6 contributions</title></path>
+<path d="M853.2,258.0 V252.4 Q853.2,250.4 855.2,250.4 H865.0 Q867.0,250.4 867.0,252.4 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-10-11: 10 contributions</title></path>
 <text x="528.9" y="176.0" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#e6edf3">peak 100</text>
-<line x1="32" y1="251.9" x2="868" y2="251.9" stroke="#484f58" stroke-dasharray="3 4"/>
-<text x="868" y="246.9" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">avg 8.1 / week</text>
+<line x1="32" y1="251.8" x2="868" y2="251.8" stroke="#484f58" stroke-dasharray="3 4"/>
+<text x="868" y="246.8" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">avg 8.2 / week</text>
 <text x="79.3" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Nov</text>
 <text x="158.2" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Dec</text>
 <text x="221.3" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Jan</text>
@@ -56,16 +56,16 @@
 <text x="694.5" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Aug</text>
 <text x="773.4" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Sep</text>
 <text x="836.5" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Oct</text>
-<rect x="32.0" y="292" width="482.0" height="10" rx="2" fill="#3987e5"><title>JavaScript: 57.9%</title></rect>
-<rect x="516.0" y="292" width="247.6" height="10" rx="2" fill="#d95926"><title>Python: 29.9%</title></rect>
-<rect x="765.6" y="292" width="39.6" height="10" rx="2" fill="#199e70"><title>CSS: 5.0%</title></rect>
-<rect x="807.3" y="292" width="23.3" height="10" rx="2" fill="#c98500"><title>HTML: 3.0%</title></rect>
-<rect x="832.5" y="292" width="16.9" height="10" rx="2" fill="#d55181"><title>TypeScript: 2.3%</title></rect>
-<rect x="851.4" y="292" width="14.6" height="10" rx="2" fill="#6e7681"><title>Other: 2.0%</title></rect>
+<rect x="32.0" y="292" width="477.8" height="10" rx="2" fill="#3987e5"><title>JavaScript: 57.4%</title></rect>
+<rect x="511.8" y="292" width="254.4" height="10" rx="2" fill="#d95926"><title>Python: 30.7%</title></rect>
+<rect x="768.3" y="292" width="38.7" height="10" rx="2" fill="#199e70"><title>CSS: 4.9%</title></rect>
+<rect x="809.0" y="292" width="22.8" height="10" rx="2" fill="#c98500"><title>HTML: 3.0%</title></rect>
+<rect x="833.8" y="292" width="16.5" height="10" rx="2" fill="#d55181"><title>TypeScript: 2.2%</title></rect>
+<rect x="852.3" y="292" width="13.7" height="10" rx="2" fill="#6e7681"><title>Other: 1.9%</title></rect>
 <circle cx="36" cy="322" r="4" fill="#3987e5"/>
-<text x="45" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">JavaScript 58%</text>
+<text x="45" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">JavaScript 57%</text>
 <circle cx="162" cy="322" r="4" fill="#d95926"/>
-<text x="171" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">Python 30%</text>
+<text x="171" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">Python 31%</text>
 <circle cx="260" cy="322" r="4" fill="#199e70"/>
 <text x="269" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">CSS 5%</text>
 <circle cx="330" cy="322" r="4" fill="#c98500"/>
