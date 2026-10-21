@@ -1,0 +1,306 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 825" width="100%" role="img" aria-labelledby="t d">
+<title id="t">Stack by project: what each project is actually built with</title>
+<desc id="d">Technology by project matrix, derived from each repository's manifests and imports, counting only files the author committed. Python: Pikina, Resilion, Noesis, OpenEnv planner; JavaScript: LexGuard, Pikina, Resilion, ShopKart; TypeScript: BookFinder; C++: C++ shell; Gemini: LexGuard, Resilion, Noesis; Groq: LexGuard, Noesis; Ollama: LexGuard, Pikina; Hugging Face: LexGuard, OpenEnv planner; sentence-transformers: LexGuard, Pikina, Noesis; ChromaDB: Noesis; Whisper: Noesis; Node.js · Express: LexGuard, ShopKart; FastAPI: OpenEnv planner; Flask: Pikina; Pydantic: Resilion, Noesis, OpenEnv planner; MongoDB: LexGuard, ShopKart; Redis: LexGuard; NetworkX: Pikina, Resilion, Noesis; Firebase: BookFinder; React: LexGuard, Resilion, ShopKart; React Native: BookFinder; Electron: Pikina; Streamlit: Noesis; Docker: LexGuard, OpenEnv planner; GitHub Actions: LexGuard; Vercel: LexGuard, ShopKart; Hugging Face Spaces: LexGuard, OpenEnv planner.</desc>
+<style>.d{transform-box:fill-box;transform-origin:center;animation:pop .55s cubic-bezier(.3,1.7,.5,1) both}@keyframes pop{from{transform:scale(.55);opacity:.8}to{transform:scale(1);opacity:1}}.band,.ring{opacity:0;animation:win 8.0s ease-in-out infinite}@keyframes win{0%{opacity:0}4%{opacity:1}11%{opacity:1}16%{opacity:0}100%{opacity:0}}.hn{animation:hn 8.0s ease-in-out infinite}@keyframes hn{0%{fill:#e6edf3}4%{fill:#f5a524}11%{fill:#f5a524}16%{fill:#e6edf3}100%{fill:#e6edf3}}.hc{animation:hc 8.0s ease-in-out infinite}@keyframes hc{0%{fill:#8b949e}4%{fill:#2dd4bf}11%{fill:#2dd4bf}16%{fill:#8b949e}100%{fill:#8b949e}}@media (prefers-reduced-motion: reduce){*{animation:none !important}.band,.ring{opacity:0}}</style>
+<rect x="0.5" y="0.5" width="899" height="824" rx="16" fill="#0d1117" stroke="#30363d"/>
+<text x="32" y="40" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="3" fill="#f5a524">STACK // BY PROJECT</text>
+<text x="32" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#e6edf3">What each project is actually built with</text>
+<circle cx="672" cy="36" r="5" fill="#2dd4bf"/><text x="682" y="40" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#8b949e">used in my code</text><circle cx="784" cy="36" r="1.8" fill="#484f58"/><text x="792" y="40" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#8b949e">not used</text>
+<rect class="band" style="animation-delay:1.60s" x="225.0" y="88" width="74.8" height="697" rx="10" fill="#2dd4bf" fill-opacity="0.07" stroke="#2dd4bf" stroke-opacity="0.35"/>
+<rect class="band" style="animation-delay:2.40s" x="305.8" y="88" width="74.8" height="697" rx="10" fill="#2dd4bf" fill-opacity="0.07" stroke="#2dd4bf" stroke-opacity="0.35"/>
+<rect class="band" style="animation-delay:3.20s" x="386.5" y="88" width="74.8" height="697" rx="10" fill="#2dd4bf" fill-opacity="0.07" stroke="#2dd4bf" stroke-opacity="0.35"/>
+<rect class="band" style="animation-delay:4.00s" x="467.2" y="88" width="74.8" height="697" rx="10" fill="#2dd4bf" fill-opacity="0.07" stroke="#2dd4bf" stroke-opacity="0.35"/>
+<rect class="band" style="animation-delay:4.80s" x="548.0" y="88" width="74.8" height="697" rx="10" fill="#2dd4bf" fill-opacity="0.07" stroke="#2dd4bf" stroke-opacity="0.35"/>
+<rect class="band" style="animation-delay:5.60s" x="628.8" y="88" width="74.8" height="697" rx="10" fill="#2dd4bf" fill-opacity="0.07" stroke="#2dd4bf" stroke-opacity="0.35"/>
+<rect class="band" style="animation-delay:6.40s" x="709.5" y="88" width="74.8" height="697" rx="10" fill="#2dd4bf" fill-opacity="0.07" stroke="#2dd4bf" stroke-opacity="0.35"/>
+<rect class="band" style="animation-delay:7.20s" x="790.2" y="88" width="74.8" height="697" rx="10" fill="#2dd4bf" fill-opacity="0.07" stroke="#2dd4bf" stroke-opacity="0.35"/>
+<text class="hn" style="animation-delay:1.60s" x="262.4" y="110" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#e6edf3">LexGuard</text>
+<text x="262.4" y="127" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8b949e">legal AI</text>
+<text class="hn" style="animation-delay:2.40s" x="343.1" y="110" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#e6edf3">Pikina</text>
+<text x="343.1" y="127" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8b949e">desktop AI</text>
+<text class="hn" style="animation-delay:3.20s" x="423.9" y="110" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#e6edf3">Resilion</text>
+<text x="423.9" y="127" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8b949e">supply chain</text>
+<text class="hn" style="animation-delay:4.00s" x="504.6" y="110" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#e6edf3">Noesis</text>
+<text x="504.6" y="127" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8b949e">RAG</text>
+<text class="hn" style="animation-delay:4.80s" x="585.4" y="110" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#e6edf3">OpenEnv</text>
+<text x="585.4" y="127" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8b949e">planner · RL</text>
+<text class="hn" style="animation-delay:5.60s" x="666.1" y="110" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#e6edf3">ShopKart</text>
+<text x="666.1" y="127" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8b949e">e-commerce</text>
+<text class="hn" style="animation-delay:6.40s" x="746.9" y="110" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#e6edf3">BookFinder</text>
+<text x="746.9" y="127" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8b949e">mobile</text>
+<text class="hn" style="animation-delay:7.20s" x="827.6" y="110" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#e6edf3">C++ shell</text>
+<text x="827.6" y="127" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8b949e">POSIX shell</text>
+<text x="32" y="157" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="2" fill="#f5a524">LANGUAGES</text><line x1="121" y1="153" x2="868" y2="153" stroke="#30363d" stroke-width="1"/>
+<rect x="24" y="165" width="852" height="18" rx="5" fill="#161b22" fill-opacity="0.55"/>
+<text x="32" y="178.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">Python</text>
+<circle cx="262.4" cy="174.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:2.40s" cx="343.1" cy="174.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.24s" cx="343.1" cy="174.0" r="5.2" fill="#2dd4bf"/>
+<circle class="ring" style="animation-delay:3.20s" cx="423.9" cy="174.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.33s" cx="423.9" cy="174.0" r="5.2" fill="#2dd4bf"/>
+<circle class="ring" style="animation-delay:4.00s" cx="504.6" cy="174.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.42s" cx="504.6" cy="174.0" r="5.2" fill="#2dd4bf"/>
+<circle class="ring" style="animation-delay:4.80s" cx="585.4" cy="174.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.51s" cx="585.4" cy="174.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="666.1" cy="174.0" r="1.6" fill="#484f58"/>
+<circle cx="746.9" cy="174.0" r="1.6" fill="#484f58"/>
+<circle cx="827.6" cy="174.0" r="1.6" fill="#484f58"/>
+<text x="32" y="196.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">JavaScript</text>
+<circle class="ring" style="animation-delay:1.60s" cx="262.4" cy="192.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.16s" cx="262.4" cy="192.0" r="5.2" fill="#2dd4bf"/>
+<circle class="ring" style="animation-delay:2.40s" cx="343.1" cy="192.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.25s" cx="343.1" cy="192.0" r="5.2" fill="#2dd4bf"/>
+<circle class="ring" style="animation-delay:3.20s" cx="423.9" cy="192.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.34s" cx="423.9" cy="192.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="504.6" cy="192.0" r="1.6" fill="#484f58"/>
+<circle cx="585.4" cy="192.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:5.60s" cx="666.1" cy="192.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.61s" cx="666.1" cy="192.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="746.9" cy="192.0" r="1.6" fill="#484f58"/>
+<circle cx="827.6" cy="192.0" r="1.6" fill="#484f58"/>
+<rect x="24" y="201" width="852" height="18" rx="5" fill="#161b22" fill-opacity="0.55"/>
+<text x="32" y="214.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">TypeScript</text>
+<circle cx="262.4" cy="210.0" r="1.6" fill="#484f58"/>
+<circle cx="343.1" cy="210.0" r="1.6" fill="#484f58"/>
+<circle cx="423.9" cy="210.0" r="1.6" fill="#484f58"/>
+<circle cx="504.6" cy="210.0" r="1.6" fill="#484f58"/>
+<circle cx="585.4" cy="210.0" r="1.6" fill="#484f58"/>
+<circle cx="666.1" cy="210.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:6.40s" cx="746.9" cy="210.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.71s" cx="746.9" cy="210.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="827.6" cy="210.0" r="1.6" fill="#484f58"/>
+<text x="32" y="232.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">C++</text>
+<circle cx="262.4" cy="228.0" r="1.6" fill="#484f58"/>
+<circle cx="343.1" cy="228.0" r="1.6" fill="#484f58"/>
+<circle cx="423.9" cy="228.0" r="1.6" fill="#484f58"/>
+<circle cx="504.6" cy="228.0" r="1.6" fill="#484f58"/>
+<circle cx="585.4" cy="228.0" r="1.6" fill="#484f58"/>
+<circle cx="666.1" cy="228.0" r="1.6" fill="#484f58"/>
+<circle cx="746.9" cy="228.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:7.20s" cx="827.6" cy="228.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.82s" cx="827.6" cy="228.0" r="5.2" fill="#2dd4bf"/>
+<text x="32" y="254" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="2" fill="#f5a524">AI &amp; LLM</text><line x1="113" y1="250" x2="868" y2="250" stroke="#30363d" stroke-width="1"/>
+<rect x="24" y="262" width="852" height="18" rx="5" fill="#161b22" fill-opacity="0.55"/>
+<text x="32" y="275.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">Gemini</text>
+<circle class="ring" style="animation-delay:1.60s" cx="262.4" cy="271.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.20s" cx="262.4" cy="271.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="343.1" cy="271.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:3.20s" cx="423.9" cy="271.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.38s" cx="423.9" cy="271.0" r="5.2" fill="#2dd4bf"/>
+<circle class="ring" style="animation-delay:4.00s" cx="504.6" cy="271.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.47s" cx="504.6" cy="271.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="585.4" cy="271.0" r="1.6" fill="#484f58"/>
+<circle cx="666.1" cy="271.0" r="1.6" fill="#484f58"/>
+<circle cx="746.9" cy="271.0" r="1.6" fill="#484f58"/>
+<circle cx="827.6" cy="271.0" r="1.6" fill="#484f58"/>
+<text x="32" y="293.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">Groq</text>
+<circle class="ring" style="animation-delay:1.60s" cx="262.4" cy="289.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.21s" cx="262.4" cy="289.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="343.1" cy="289.0" r="1.6" fill="#484f58"/>
+<circle cx="423.9" cy="289.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:4.00s" cx="504.6" cy="289.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.48s" cx="504.6" cy="289.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="585.4" cy="289.0" r="1.6" fill="#484f58"/>
+<circle cx="666.1" cy="289.0" r="1.6" fill="#484f58"/>
+<circle cx="746.9" cy="289.0" r="1.6" fill="#484f58"/>
+<circle cx="827.6" cy="289.0" r="1.6" fill="#484f58"/>
+<rect x="24" y="298" width="852" height="18" rx="5" fill="#161b22" fill-opacity="0.55"/>
+<text x="32" y="311.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">Ollama</text>
+<circle class="ring" style="animation-delay:1.60s" cx="262.4" cy="307.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.22s" cx="262.4" cy="307.0" r="5.2" fill="#2dd4bf"/>
+<circle class="ring" style="animation-delay:2.40s" cx="343.1" cy="307.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.31s" cx="343.1" cy="307.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="423.9" cy="307.0" r="1.6" fill="#484f58"/>
+<circle cx="504.6" cy="307.0" r="1.6" fill="#484f58"/>
+<circle cx="585.4" cy="307.0" r="1.6" fill="#484f58"/>
+<circle cx="666.1" cy="307.0" r="1.6" fill="#484f58"/>
+<circle cx="746.9" cy="307.0" r="1.6" fill="#484f58"/>
+<circle cx="827.6" cy="307.0" r="1.6" fill="#484f58"/>
+<text x="32" y="329.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">Hugging Face</text>
+<circle class="ring" style="animation-delay:1.60s" cx="262.4" cy="325.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.23s" cx="262.4" cy="325.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="343.1" cy="325.0" r="1.6" fill="#484f58"/>
+<circle cx="423.9" cy="325.0" r="1.6" fill="#484f58"/>
+<circle cx="504.6" cy="325.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:4.80s" cx="585.4" cy="325.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.59s" cx="585.4" cy="325.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="666.1" cy="325.0" r="1.6" fill="#484f58"/>
+<circle cx="746.9" cy="325.0" r="1.6" fill="#484f58"/>
+<circle cx="827.6" cy="325.0" r="1.6" fill="#484f58"/>
+<rect x="24" y="334" width="852" height="18" rx="5" fill="#161b22" fill-opacity="0.55"/>
+<text x="32" y="347.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">sentence-transformers</text>
+<circle class="ring" style="animation-delay:1.60s" cx="262.4" cy="343.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.25s" cx="262.4" cy="343.0" r="5.2" fill="#2dd4bf"/>
+<circle class="ring" style="animation-delay:2.40s" cx="343.1" cy="343.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.34s" cx="343.1" cy="343.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="423.9" cy="343.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:4.00s" cx="504.6" cy="343.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.52s" cx="504.6" cy="343.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="585.4" cy="343.0" r="1.6" fill="#484f58"/>
+<circle cx="666.1" cy="343.0" r="1.6" fill="#484f58"/>
+<circle cx="746.9" cy="343.0" r="1.6" fill="#484f58"/>
+<circle cx="827.6" cy="343.0" r="1.6" fill="#484f58"/>
+<text x="32" y="365.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">ChromaDB</text>
+<circle cx="262.4" cy="361.0" r="1.6" fill="#484f58"/>
+<circle cx="343.1" cy="361.0" r="1.6" fill="#484f58"/>
+<circle cx="423.9" cy="361.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:4.00s" cx="504.6" cy="361.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.53s" cx="504.6" cy="361.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="585.4" cy="361.0" r="1.6" fill="#484f58"/>
+<circle cx="666.1" cy="361.0" r="1.6" fill="#484f58"/>
+<circle cx="746.9" cy="361.0" r="1.6" fill="#484f58"/>
+<circle cx="827.6" cy="361.0" r="1.6" fill="#484f58"/>
+<rect x="24" y="370" width="852" height="18" rx="5" fill="#161b22" fill-opacity="0.55"/>
+<text x="32" y="383.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">Whisper</text>
+<circle cx="262.4" cy="379.0" r="1.6" fill="#484f58"/>
+<circle cx="343.1" cy="379.0" r="1.6" fill="#484f58"/>
+<circle cx="423.9" cy="379.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:4.00s" cx="504.6" cy="379.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.54s" cx="504.6" cy="379.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="585.4" cy="379.0" r="1.6" fill="#484f58"/>
+<circle cx="666.1" cy="379.0" r="1.6" fill="#484f58"/>
+<circle cx="746.9" cy="379.0" r="1.6" fill="#484f58"/>
+<circle cx="827.6" cy="379.0" r="1.6" fill="#484f58"/>
+<text x="32" y="405" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="2" fill="#f5a524">BACKEND &amp; DATA</text><line x1="164" y1="401" x2="868" y2="401" stroke="#30363d" stroke-width="1"/>
+<rect x="24" y="413" width="852" height="18" rx="5" fill="#161b22" fill-opacity="0.55"/>
+<text x="32" y="426.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">Node.js · Express</text>
+<circle class="ring" style="animation-delay:1.60s" cx="262.4" cy="422.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.28s" cx="262.4" cy="422.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="343.1" cy="422.0" r="1.6" fill="#484f58"/>
+<circle cx="423.9" cy="422.0" r="1.6" fill="#484f58"/>
+<circle cx="504.6" cy="422.0" r="1.6" fill="#484f58"/>
+<circle cx="585.4" cy="422.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:5.60s" cx="666.1" cy="422.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.73s" cx="666.1" cy="422.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="746.9" cy="422.0" r="1.6" fill="#484f58"/>
+<circle cx="827.6" cy="422.0" r="1.6" fill="#484f58"/>
+<text x="32" y="444.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">FastAPI</text>
+<circle cx="262.4" cy="440.0" r="1.6" fill="#484f58"/>
+<circle cx="343.1" cy="440.0" r="1.6" fill="#484f58"/>
+<circle cx="423.9" cy="440.0" r="1.6" fill="#484f58"/>
+<circle cx="504.6" cy="440.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:4.80s" cx="585.4" cy="440.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.65s" cx="585.4" cy="440.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="666.1" cy="440.0" r="1.6" fill="#484f58"/>
+<circle cx="746.9" cy="440.0" r="1.6" fill="#484f58"/>
+<circle cx="827.6" cy="440.0" r="1.6" fill="#484f58"/>
+<rect x="24" y="449" width="852" height="18" rx="5" fill="#161b22" fill-opacity="0.55"/>
+<text x="32" y="462.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">Flask</text>
+<circle cx="262.4" cy="458.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:2.40s" cx="343.1" cy="458.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.40s" cx="343.1" cy="458.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="423.9" cy="458.0" r="1.6" fill="#484f58"/>
+<circle cx="504.6" cy="458.0" r="1.6" fill="#484f58"/>
+<circle cx="585.4" cy="458.0" r="1.6" fill="#484f58"/>
+<circle cx="666.1" cy="458.0" r="1.6" fill="#484f58"/>
+<circle cx="746.9" cy="458.0" r="1.6" fill="#484f58"/>
+<circle cx="827.6" cy="458.0" r="1.6" fill="#484f58"/>
+<text x="32" y="480.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">Pydantic</text>
+<circle cx="262.4" cy="476.0" r="1.6" fill="#484f58"/>
+<circle cx="343.1" cy="476.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:3.20s" cx="423.9" cy="476.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.50s" cx="423.9" cy="476.0" r="5.2" fill="#2dd4bf"/>
+<circle class="ring" style="animation-delay:4.00s" cx="504.6" cy="476.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.59s" cx="504.6" cy="476.0" r="5.2" fill="#2dd4bf"/>
+<circle class="ring" style="animation-delay:4.80s" cx="585.4" cy="476.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.68s" cx="585.4" cy="476.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="666.1" cy="476.0" r="1.6" fill="#484f58"/>
+<circle cx="746.9" cy="476.0" r="1.6" fill="#484f58"/>
+<circle cx="827.6" cy="476.0" r="1.6" fill="#484f58"/>
+<rect x="24" y="485" width="852" height="18" rx="5" fill="#161b22" fill-opacity="0.55"/>
+<text x="32" y="498.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">MongoDB</text>
+<circle class="ring" style="animation-delay:1.60s" cx="262.4" cy="494.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.33s" cx="262.4" cy="494.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="343.1" cy="494.0" r="1.6" fill="#484f58"/>
+<circle cx="423.9" cy="494.0" r="1.6" fill="#484f58"/>
+<circle cx="504.6" cy="494.0" r="1.6" fill="#484f58"/>
+<circle cx="585.4" cy="494.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:5.60s" cx="666.1" cy="494.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.78s" cx="666.1" cy="494.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="746.9" cy="494.0" r="1.6" fill="#484f58"/>
+<circle cx="827.6" cy="494.0" r="1.6" fill="#484f58"/>
+<text x="32" y="516.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">Redis</text>
+<circle class="ring" style="animation-delay:1.60s" cx="262.4" cy="512.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.34s" cx="262.4" cy="512.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="343.1" cy="512.0" r="1.6" fill="#484f58"/>
+<circle cx="423.9" cy="512.0" r="1.6" fill="#484f58"/>
+<circle cx="504.6" cy="512.0" r="1.6" fill="#484f58"/>
+<circle cx="585.4" cy="512.0" r="1.6" fill="#484f58"/>
+<circle cx="666.1" cy="512.0" r="1.6" fill="#484f58"/>
+<circle cx="746.9" cy="512.0" r="1.6" fill="#484f58"/>
+<circle cx="827.6" cy="512.0" r="1.6" fill="#484f58"/>
+<rect x="24" y="521" width="852" height="18" rx="5" fill="#161b22" fill-opacity="0.55"/>
+<text x="32" y="534.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">NetworkX</text>
+<circle cx="262.4" cy="530.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:2.40s" cx="343.1" cy="530.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.44s" cx="343.1" cy="530.0" r="5.2" fill="#2dd4bf"/>
+<circle class="ring" style="animation-delay:3.20s" cx="423.9" cy="530.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.53s" cx="423.9" cy="530.0" r="5.2" fill="#2dd4bf"/>
+<circle class="ring" style="animation-delay:4.00s" cx="504.6" cy="530.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.62s" cx="504.6" cy="530.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="585.4" cy="530.0" r="1.6" fill="#484f58"/>
+<circle cx="666.1" cy="530.0" r="1.6" fill="#484f58"/>
+<circle cx="746.9" cy="530.0" r="1.6" fill="#484f58"/>
+<circle cx="827.6" cy="530.0" r="1.6" fill="#484f58"/>
+<text x="32" y="552.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">Firebase</text>
+<circle cx="262.4" cy="548.0" r="1.6" fill="#484f58"/>
+<circle cx="343.1" cy="548.0" r="1.6" fill="#484f58"/>
+<circle cx="423.9" cy="548.0" r="1.6" fill="#484f58"/>
+<circle cx="504.6" cy="548.0" r="1.6" fill="#484f58"/>
+<circle cx="585.4" cy="548.0" r="1.6" fill="#484f58"/>
+<circle cx="666.1" cy="548.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:6.40s" cx="746.9" cy="548.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.91s" cx="746.9" cy="548.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="827.6" cy="548.0" r="1.6" fill="#484f58"/>
+<text x="32" y="574" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="2" fill="#f5a524">FRONTEND &amp; MOBILE</text><line x1="190" y1="570" x2="868" y2="570" stroke="#30363d" stroke-width="1"/>
+<rect x="24" y="582" width="852" height="18" rx="5" fill="#161b22" fill-opacity="0.55"/>
+<text x="32" y="595.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">React</text>
+<circle class="ring" style="animation-delay:1.60s" cx="262.4" cy="591.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.38s" cx="262.4" cy="591.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="343.1" cy="591.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:3.20s" cx="423.9" cy="591.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.56s" cx="423.9" cy="591.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="504.6" cy="591.0" r="1.6" fill="#484f58"/>
+<circle cx="585.4" cy="591.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:5.60s" cx="666.1" cy="591.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.83s" cx="666.1" cy="591.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="746.9" cy="591.0" r="1.6" fill="#484f58"/>
+<circle cx="827.6" cy="591.0" r="1.6" fill="#484f58"/>
+<text x="32" y="613.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">React Native</text>
+<circle cx="262.4" cy="609.0" r="1.6" fill="#484f58"/>
+<circle cx="343.1" cy="609.0" r="1.6" fill="#484f58"/>
+<circle cx="423.9" cy="609.0" r="1.6" fill="#484f58"/>
+<circle cx="504.6" cy="609.0" r="1.6" fill="#484f58"/>
+<circle cx="585.4" cy="609.0" r="1.6" fill="#484f58"/>
+<circle cx="666.1" cy="609.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:6.40s" cx="746.9" cy="609.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.93s" cx="746.9" cy="609.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="827.6" cy="609.0" r="1.6" fill="#484f58"/>
+<rect x="24" y="618" width="852" height="18" rx="5" fill="#161b22" fill-opacity="0.55"/>
+<text x="32" y="631.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">Electron</text>
+<circle cx="262.4" cy="627.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:2.40s" cx="343.1" cy="627.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.49s" cx="343.1" cy="627.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="423.9" cy="627.0" r="1.6" fill="#484f58"/>
+<circle cx="504.6" cy="627.0" r="1.6" fill="#484f58"/>
+<circle cx="585.4" cy="627.0" r="1.6" fill="#484f58"/>
+<circle cx="666.1" cy="627.0" r="1.6" fill="#484f58"/>
+<circle cx="746.9" cy="627.0" r="1.6" fill="#484f58"/>
+<circle cx="827.6" cy="627.0" r="1.6" fill="#484f58"/>
+<text x="32" y="649.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">Streamlit</text>
+<circle cx="262.4" cy="645.0" r="1.6" fill="#484f58"/>
+<circle cx="343.1" cy="645.0" r="1.6" fill="#484f58"/>
+<circle cx="423.9" cy="645.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:4.00s" cx="504.6" cy="645.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.68s" cx="504.6" cy="645.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="585.4" cy="645.0" r="1.6" fill="#484f58"/>
+<circle cx="666.1" cy="645.0" r="1.6" fill="#484f58"/>
+<circle cx="746.9" cy="645.0" r="1.6" fill="#484f58"/>
+<circle cx="827.6" cy="645.0" r="1.6" fill="#484f58"/>
+<text x="32" y="671" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="2" fill="#f5a524">INFRA</text><line x1="87" y1="667" x2="868" y2="667" stroke="#30363d" stroke-width="1"/>
+<rect x="24" y="679" width="852" height="18" rx="5" fill="#161b22" fill-opacity="0.55"/>
+<text x="32" y="692.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">Docker</text>
+<circle class="ring" style="animation-delay:1.60s" cx="262.4" cy="688.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.43s" cx="262.4" cy="688.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="343.1" cy="688.0" r="1.6" fill="#484f58"/>
+<circle cx="423.9" cy="688.0" r="1.6" fill="#484f58"/>
+<circle cx="504.6" cy="688.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:4.80s" cx="585.4" cy="688.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.79s" cx="585.4" cy="688.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="666.1" cy="688.0" r="1.6" fill="#484f58"/>
+<circle cx="746.9" cy="688.0" r="1.6" fill="#484f58"/>
+<circle cx="827.6" cy="688.0" r="1.6" fill="#484f58"/>
+<text x="32" y="710.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">GitHub Actions</text>
+<circle class="ring" style="animation-delay:1.60s" cx="262.4" cy="706.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.44s" cx="262.4" cy="706.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="343.1" cy="706.0" r="1.6" fill="#484f58"/>
+<circle cx="423.9" cy="706.0" r="1.6" fill="#484f58"/>
+<circle cx="504.6" cy="706.0" r="1.6" fill="#484f58"/>
+<circle cx="585.4" cy="706.0" r="1.6" fill="#484f58"/>
+<circle cx="666.1" cy="706.0" r="1.6" fill="#484f58"/>
+<circle cx="746.9" cy="706.0" r="1.6" fill="#484f58"/>
+<circle cx="827.6" cy="706.0" r="1.6" fill="#484f58"/>
+<rect x="24" y="715" width="852" height="18" rx="5" fill="#161b22" fill-opacity="0.55"/>
+<text x="32" y="728.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">Vercel</text>
+<circle class="ring" style="animation-delay:1.60s" cx="262.4" cy="724.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.45s" cx="262.4" cy="724.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="343.1" cy="724.0" r="1.6" fill="#484f58"/>
+<circle cx="423.9" cy="724.0" r="1.6" fill="#484f58"/>
+<circle cx="504.6" cy="724.0" r="1.6" fill="#484f58"/>
+<circle cx="585.4" cy="724.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:5.60s" cx="666.1" cy="724.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.90s" cx="666.1" cy="724.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="746.9" cy="724.0" r="1.6" fill="#484f58"/>
+<circle cx="827.6" cy="724.0" r="1.6" fill="#484f58"/>
+<text x="32" y="746.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3">Hugging Face Spaces</text>
+<circle class="ring" style="animation-delay:1.60s" cx="262.4" cy="742.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.46s" cx="262.4" cy="742.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="343.1" cy="742.0" r="1.6" fill="#484f58"/>
+<circle cx="423.9" cy="742.0" r="1.6" fill="#484f58"/>
+<circle cx="504.6" cy="742.0" r="1.6" fill="#484f58"/>
+<circle class="ring" style="animation-delay:4.80s" cx="585.4" cy="742.0" r="8.5" fill="none" stroke="#2dd4bf" stroke-opacity="0.55" stroke-width="1.5"/><circle class="d" style="animation-delay:0.82s" cx="585.4" cy="742.0" r="5.2" fill="#2dd4bf"/>
+<circle cx="666.1" cy="742.0" r="1.6" fill="#484f58"/>
+<circle cx="746.9" cy="742.0" r="1.6" fill="#484f58"/>
+<circle cx="827.6" cy="742.0" r="1.6" fill="#484f58"/>
+<line x1="32" y1="757" x2="868" y2="757" stroke="#30363d" stroke-width="1"/>
+<text x="32" y="773" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#8b949e">technologies per project</text>
+<text class="hc" style="animation-delay:1.60s" x="262.4" y="773" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700" fill="#8b949e">14</text>
+<text class="hc" style="animation-delay:2.40s" x="343.1" y="773" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700" fill="#8b949e">7</text>
+<text class="hc" style="animation-delay:3.20s" x="423.9" y="773" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700" fill="#8b949e">6</text>
+<text class="hc" style="animation-delay:4.00s" x="504.6" y="773" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700" fill="#8b949e">9</text>
+<text class="hc" style="animation-delay:4.80s" x="585.4" y="773" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700" fill="#8b949e">6</text>
+<text class="hc" style="animation-delay:5.60s" x="666.1" y="773" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700" fill="#8b949e">5</text>
+<text class="hc" style="animation-delay:6.40s" x="746.9" y="773" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700" fill="#8b949e">3</text>
+<text class="hc" style="animation-delay:7.20s" x="827.6" y="773" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700" fill="#8b949e">1</text>
+<text x="32" y="807" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#8b949e">derived from each repo's manifests and imports · only files I committed · scripts/build_stack.py</text>
+</svg>

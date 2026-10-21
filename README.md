@@ -21,31 +21,7 @@
 </tr>
 </table>
 
-<table>
-<tr>
-<td width="33%" valign="top">
-
-<sub>FLAGSHIP // LEXGUARD</sub><br>
-**AI contract review for Indian law**<br>
-130+ commits · solo · May – Aug 2026
-
-</td>
-<td width="33%" valign="top">
-
-<sub>STUDYING // IIT MADRAS</sub><br>
-**BS in Data Science & Applications**<br>
-CGPA 9.0 / 10 · 2025 – 2029
-
-</td>
-<td width="33%" valign="top">
-
-<sub>LATEST // WIN</sub><br>
-**Paradox DSA Triathlon, IIT Madras**<br>
-Runner-up (2nd place) · 2026
-
-</td>
-</tr>
-</table>
+<img src="assets/strip.svg" alt="Flagship: LexGuard — AI contract review for Indian law; 130+ commits · solo · May–Aug 2026. Studying: IIT Madras — BS in Data Science & Applications; CGPA 9.0 / 10 · 2025 – 2029. Latest win — Paradox DSA Triathlon, IIT Madras; Runner-up (2nd place) · 2026." width="100%" />
 
 <br>
 
@@ -78,94 +54,52 @@ Four rules, each one shipped in a repo:
 
 <br>
 
-<table>
-<tr>
-<td width="50%" valign="top">
+<p align="center">
+<a href="https://github.com/Aditya2514/LexGuard"><img src="assets/card_lexguard.svg" width="49%" alt="Project card for LexGuard, a solo project from May to August 2026. Illustrative run: a scan passes three contract clauses; the LLM rated 'Repay 3,00,000 rupees if you resign' LOW, and one of 36 trap patterns forces it to CRITICAL. The citation verifier marks Indian Contract Act section 27 strong and section 412 hallucinated. Stack: Node.js, Redis job queue, MongoDB Atlas Vector Search." /></a>
+<a href="https://github.com/Aditya2514/Pikina"><img src="assets/card_pikina.svg" width="49%" alt="Project card for Pikina, pre-alpha, started July 2026. Illustrative run in the quick panel: 'add todo call mom' matches a Tier 1 regex route, with no model call. 'remind me to pay rent' matches no regex, so it goes to a local llama3 model through Ollama, which must return a registered tool or no_match; it proposes todo.add at level 0, the Action Validation Layer checks that the tool is registered and the claimed level matches the registry, and it runs. Actions at level 4 or above, or with irreversible side effects, ask for native consent first. Stack: Python, Ollama, Electron." /></a>
+</p>
+<p align="center">
+<a href="https://github.com/Aditya2514/Resilion"><img src="assets/card_resilion.svg" width="49%" alt="Project card for Resilion, in progress. A Gemini Risk Watcher agent turns news (GDELT headlines, Guardian articles) into structured disruption events. In this illustrative event, a news event lands on the Strait of Hormuz corridor in the NetworkX supply graph (seeded with 13 nodes and 19 edges); a 2-hop traversal lights the refineries it supplies (Jamnagar, Panipat, Mumbai) and then the industries they serve (power, petrochemicals, transport fuel, LPG). The Red Sea corridor is untouched. A human approval console is planned, drawn dashed. Stack: Python, NetworkX, Gemini, React." /></a>
+<a href="https://github.com/Aditya2514/Noesis"><img src="assets/card_noesis.svg" width="49%" alt="Project card for Noesis, built by a team of 2 in August 2026. Video, audio and PDF sources send chunks into an index (Whisper with word-level timestamps, keyframes de-duplicated by perceptual hash, PyMuPDF plus RapidOCR plus a Gemini vision model). Retrieval runs BM25 plus dense bge-small, fused with RRF and reranked by a cross-encoder. In this illustrative run, a Groq gpt-oss-20b answer arrives with citation chips [video 00:14:20] and [pdf p.4], checked by an LLM audit; a 0.65 confidence gate falls back to extractive answers. Stack: Python, Groq, ChromaDB, Streamlit." /></a>
+</p>
 
-**◉ LexGuard**<br>
-<sub>`N.01` · LEGAL AI · CONTRACT REVIEW</sub>
-
-![Node.js](https://img.shields.io/badge/Node.js-161B22?style=flat-square&logo=nodedotjs&logoColor=5FA04E) ![React](https://img.shields.io/badge/React-161B22?style=flat-square&logo=react&logoColor=61DAFB) ![MongoDB](https://img.shields.io/badge/MongoDB_Atlas-161B22?style=flat-square&logo=mongodb&logoColor=47A248) ![Gemini](https://img.shields.io/badge/Gemini-161B22?style=flat-square&logo=googlegemini&logoColor=8E75B2) ![Tests](https://github.com/Aditya2514/LexGuard/actions/workflows/tests.yml/badge.svg)
-
-Upload an employment, freelance or vendor contract. LexGuard splits it into clauses, rates how risky each one is for the signer, explains it in plain language, cites the Indian statute it touches, and drafts a fairer rewrite.
+<sub>Each card loops an illustrative run of the real mechanism. Click a card for the repo.</sub>
 
 <details>
-<summary>Engineering notes</summary>
+<summary><b>LexGuard: under the hood</b></summary>
 <br>
 
 A staged agent pipeline (pre-flight context, classifier, risk analyst with an adversarial judge, deterministic audit, advocate and compliance in parallel, citation verifier, drafter) runs behind a Redis or MongoDB job queue. After the LLM passes, a deterministic detector with 36 trap patterns can force an escalation, and a reflection loop makes the model explain what it missed. The backend was squeezed into a 512 MB host with a 380 MB heap cap and post-job GC, and the AI client cascades across Gemini, Groq, Hugging Face and local Ollama when a provider runs out of quota.
 
 On the committed May 2026 benchmark runs it got 28/30 clause types and 21/30 risk tiers right, and every miss over-flagged rather than under-flagged. Rules that matched benchmark text word for word were removed in October 2026, so a fresh run is pending. The offline unit suite runs in CI.
 
+![Tests](https://github.com/Aditya2514/LexGuard/actions/workflows/tests.yml/badge.svg)
+
 </details>
 
-[Source](https://github.com/Aditya2514/LexGuard)
-
-</td>
-<td width="50%" valign="top">
-
-**◉ Pikina**<br>
-<sub>`N.02` · LOCAL AI · DESKTOP AGENT</sub>
-
-![Python](https://img.shields.io/badge/Python-161B22?style=flat-square&logo=python&logoColor=3776AB) ![Ollama](https://img.shields.io/badge/Ollama-161B22?style=flat-square&logo=ollama&logoColor=white) ![Electron](https://img.shields.io/badge/Electron-161B22?style=flat-square&logo=electron&logoColor=47848F) ![Windows](https://img.shields.io/badge/Windows-161B22?style=flat-square&logo=windows&logoColor=0078D4) ![Linux](https://img.shields.io/badge/Linux-161B22?style=flat-square&logo=linux&logoColor=FCC624)
-
-An offline-first personal operating layer for Windows and Linux. Press a hotkey and type what you want; Pikina routes it to a tool, validates the action, and asks first when it is risky. Pre-alpha.
-
 <details>
-<summary>Engineering notes</summary>
+<summary><b>Pikina: under the hood</b></summary>
 <br>
 
 Commands that match a known pattern are handled by a Tier 1 regex router with no model call; only misses go to a local Ollama model, which must return a registered tool or `no_match`, so it can't invent actions. An Action Validation Layer checks every model-proposed action against the tool manifest, and level 4+ actions from either tier need a native confirmation dialog (MessageBoxW on Windows, zenity or kdialog on Linux). Multi-step alias chains run through a transactional executor that undoes completed steps in reverse order if one fails; a DAG scheduler with starvation protection is built and tested, waiting for the planner that will call it. Event-driven daemons and a dual-tier memory sit underneath.
 
 </details>
 
-[Source](https://github.com/Aditya2514/Pikina)
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-**◉ Resilion**<br>
-<sub>`N.03` · AGENTS · SUPPLY-CHAIN RISK</sub>
-
-![Python](https://img.shields.io/badge/Python-161B22?style=flat-square&logo=python&logoColor=3776AB) ![React](https://img.shields.io/badge/React-161B22?style=flat-square&logo=react&logoColor=61DAFB) ![NetworkX](https://img.shields.io/badge/NetworkX-161B22?style=flat-square) ![Gemini](https://img.shields.io/badge/Gemini-161B22?style=flat-square&logo=googlegemini&logoColor=8E75B2)
-
-India imports most of its crude oil, much of it through the Strait of Hormuz. Resilion watches geopolitical signals and shows which refineries and industries are exposed when a route is at risk. In progress: ranking alternative supply routes for a person to approve.
-
 <details>
-<summary>Engineering notes</summary>
+<summary><b>Resilion: built vs planned</b></summary>
 <br>
 
 Built so far: data sources for GDELT, EIA, OFAC and RSS feeds, a Gemini Risk Watcher agent that turns them into structured disruption events, and a NetworkX graph of India's crude-oil supply corridors that traces which industries an event affects. Next: a Procurement Orchestrator that ranks reroutes by cost and transit delay, and an approval console so nothing executes without a person signing off.
 
 </details>
 
-[Source](https://github.com/Aditya2514/Resilion)
-
-</td>
-<td width="50%" valign="top">
-
-**◉ Noesis**<br>
-<sub>`N.04` · MULTIMODAL RAG</sub>
-
-![Python](https://img.shields.io/badge/Python-161B22?style=flat-square&logo=python&logoColor=3776AB) ![Groq](https://img.shields.io/badge/Groq-161B22?style=flat-square) ![ChromaDB](https://img.shields.io/badge/ChromaDB-161B22?style=flat-square) ![Streamlit](https://img.shields.io/badge/Streamlit-161B22?style=flat-square&logo=streamlit&logoColor=FF4B4B)
-
-Ask one question across videos, podcasts, PDFs and scanned pages, and get an answer that points to the exact timestamp, page or frame it came from. Built with [@apurva202](https://github.com/apurva202).
-
 <details>
-<summary>Engineering notes</summary>
+<summary><b>Noesis: under the hood</b></summary>
 <br>
 
 Video and audio go through FFmpeg and Whisper with word-level timestamps; keyframes come from scene-change detection with perceptual-hash de-duplication; PDFs through PyMuPDF and RapidOCR. Entity canonicalisation links a term spoken in a video to the same term in a PDF diagram. Retrieval is hybrid (BM25 + bge-small embeddings) with an ms-marco reranker, and a confidence cutoff decides between a full grounded answer and an extractive fallback.
 
 </details>
-
-[Source](https://github.com/Aditya2514/Noesis)
-
-</td>
-</tr>
-</table>
 
 <br>
 
@@ -200,50 +134,15 @@ Video and audio go through FFmpeg and Whisper with word-level timestamps; keyfra
 
 ## 06 Stack
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
-**LANGUAGES**<br>
-![Python](https://img.shields.io/badge/Python-161B22?style=flat-square&logo=python&logoColor=3776AB)
-![JavaScript](https://img.shields.io/badge/JavaScript-161B22?style=flat-square&logo=javascript&logoColor=F7DF1E)
-![TypeScript](https://img.shields.io/badge/TypeScript-161B22?style=flat-square&logo=typescript&logoColor=3178C6)
-![C++](https://img.shields.io/badge/C++-161B22?style=flat-square&logo=cplusplus&logoColor=00599C)
-
-**AI / LLM**<br>
-![Gemini](https://img.shields.io/badge/Gemini-161B22?style=flat-square&logo=googlegemini&logoColor=8E75B2)
-![Groq](https://img.shields.io/badge/Groq-161B22?style=flat-square)
-![Ollama](https://img.shields.io/badge/Ollama-161B22?style=flat-square&logo=ollama&logoColor=white)
-![Hugging Face](https://img.shields.io/badge/Hugging_Face-161B22?style=flat-square&logo=huggingface&logoColor=FFD21E)
-![ChromaDB](https://img.shields.io/badge/ChromaDB-161B22?style=flat-square)
-![Whisper](https://img.shields.io/badge/Whisper-161B22?style=flat-square)
-
-</td>
-<td width="50%" valign="top">
-
-**BACKEND & DATA**<br>
-![Node.js](https://img.shields.io/badge/Node.js-161B22?style=flat-square&logo=nodedotjs&logoColor=5FA04E)
-![Express](https://img.shields.io/badge/Express-161B22?style=flat-square&logo=express&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-161B22?style=flat-square&logo=fastapi&logoColor=009688)
-![MongoDB](https://img.shields.io/badge/MongoDB-161B22?style=flat-square&logo=mongodb&logoColor=47A248)
-![Redis](https://img.shields.io/badge/Redis-161B22?style=flat-square&logo=redis&logoColor=FF4438)
-![NetworkX](https://img.shields.io/badge/NetworkX-161B22?style=flat-square)
-
-**FRONTEND, MOBILE & INFRA**<br>
-![React](https://img.shields.io/badge/React-161B22?style=flat-square&logo=react&logoColor=61DAFB)
-![React Native](https://img.shields.io/badge/React_Native-161B22?style=flat-square&logo=react&logoColor=61DAFB)
-![Electron](https://img.shields.io/badge/Electron-161B22?style=flat-square&logo=electron&logoColor=47848F)
-![Docker](https://img.shields.io/badge/Docker-161B22?style=flat-square&logo=docker&logoColor=2496ED)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-161B22?style=flat-square&logo=githubactions&logoColor=2088FF)
-![Vercel](https://img.shields.io/badge/Vercel-161B22?style=flat-square&logo=vercel&logoColor=white)
-
-</td>
-</tr>
-</table>
+<img src="assets/stack.svg" alt="Technology by project matrix, derived from each repository's manifests and imports, counting only files the author committed. Python: Pikina, Resilion, Noesis, OpenEnv planner; JavaScript: LexGuard, Pikina, Resilion, ShopKart; TypeScript: BookFinder; C++: C++ shell; Gemini: LexGuard, Resilion, Noesis; Groq: LexGuard, Noesis; Ollama: LexGuard, Pikina; Hugging Face: LexGuard, OpenEnv planner; sentence-transformers: LexGuard, Pikina, Noesis; ChromaDB: Noesis; Whisper: Noesis; Node.js · Express: LexGuard, ShopKart; FastAPI: OpenEnv planner; Flask: Pikina; Pydantic: Resilion, Noesis, OpenEnv planner; MongoDB: LexGuard, ShopKart; Redis: LexGuard; NetworkX: Pikina, Resilion, Noesis; Firebase: BookFinder; React: LexGuard, Resilion, ShopKart; React Native: BookFinder; Electron: Pikina; Streamlit: Noesis; Docker: LexGuard, OpenEnv planner; GitHub Actions: LexGuard; Vercel: LexGuard, ShopKart; Hugging Face Spaces: LexGuard, OpenEnv planner." width="100%" />
 
 <br>
 
 ## 07 Education & Honors
+
+<img src="assets/journey.svg" alt="A timeline from August 2025 to October 2026. A line draws itself left to right and each milestone lights up as it is reached. Start: May 2025, BS in Data Science and Applications at IIT Madras, co-enrolled at Scaler School of Technology. August 2025: GitHub account created. October 2025: first public repo (portfolio). March 2026: Naukri and Fintrac. April 2026: Meta PyTorch OpenEnv Hackathon, a planner RL environment built by a team of 2. May 2026: BookFinder (React Native and TypeScript); LexGuard starts and runs to August 2026. June 2026: a POSIX shell in C++. July 2026: Pikina, then Resilion. August 2026: Noesis (team of 2). September to October 2026: ShopKart (team of 2). Also: runner-up at the Paradox DSA Triathlon, IIT Madras, 2026; CGPA 9.0 out of 10." width="100%" />
+
+<br>
 
 **Education**
 
@@ -265,7 +164,7 @@ Video and audio go through FFmpeg and Whisper with word-level timestamps; keyfra
 
 <div align="center">
 
-Happy to talk about LLM systems, agents with guardrails, or any of the repos above.
+<img src="assets/contact.svg" alt="A terminal types: connect --with aditya. It prints linkedin.com/in/aditya-singh-8286b137a, adityasinghv05@gmail.com and github.com/Aditya2514, then: Open to AI engineering internships with teams building agents." width="100%" />
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aditya-singh-8286b137a/)
 [![Email](https://img.shields.io/badge/Email-161B22?style=for-the-badge&logo=gmail&logoColor=EA4335)](mailto:adityasinghv05@gmail.com)
