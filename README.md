@@ -59,7 +59,7 @@ I'm studying for a BS in Data Science & Applications at IIT Madras, co-enrolled 
 
 Four rules, each one shipped in a repo:
 
-- **Check the model in code.** LexGuard's 38 trap patterns can overrule the LLM's risk rating, and a contradiction engine cross-checks fees, dates and jurisdictions across clauses.
+- **Check the model in code.** LexGuard's 36 trap patterns can overrule the LLM's risk rating, and a contradiction engine cross-checks fees, dates and jurisdictions across clauses.
 - **Ground every answer.** Noesis answers cite the timestamp, page or frame behind each claim, and an LLM auditor checks them; LexGuard cites statutes retrieved from 7,556+ Indian law sections.
 - **Ask before acting.** Pikina validates every model-proposed action against a tool manifest and pops a native consent dialog before high-risk OS actions.
 - **Degrade, don't die.** LexGuard falls back across four LLM providers and fits its backend in 512 MB; Pikina answers known commands with plain regex routing before it ever calls a model.
@@ -93,9 +93,9 @@ Upload an employment, freelance or vendor contract. LexGuard splits it into clau
 <summary>Engineering notes</summary>
 <br>
 
-A sequential agent pipeline (pre-flight context, classifier, risk analyst, adversarial judge, advocate, compliance) runs behind a Redis or MongoDB job queue. After the LLM passes, a deterministic detector with 38 trap patterns can force an escalation, and a reflection loop makes the model explain what it missed. The backend was squeezed into a 512 MB host with a 380 MB heap cap and post-job GC, and the AI client cascades across Gemini, Groq, Hugging Face and local Ollama when a provider runs out of quota.
+A staged agent pipeline (pre-flight context, classifier, risk analyst with an adversarial judge, deterministic audit, advocate and compliance in parallel, citation verifier, drafter) runs behind a Redis or MongoDB job queue. After the LLM passes, a deterministic detector with 36 trap patterns can force an escalation, and a reflection loop makes the model explain what it missed. The backend was squeezed into a 512 MB host with a 380 MB heap cap and post-job GC, and the AI client cascades across Gemini, Groq, Hugging Face and local Ollama when a provider runs out of quota.
 
-On the committed benchmarks it gets 28/30 clause types and 21/30 risk tiers right on the master suite, and every miss over-flags rather than under-flags. The offline unit suite runs in CI.
+On the committed May 2026 benchmark runs it got 28/30 clause types and 21/30 risk tiers right, and every miss over-flagged rather than under-flagged. Rules that matched benchmark text word for word were removed in October 2026, so a fresh run is pending. The offline unit suite runs in CI.
 
 </details>
 
@@ -129,7 +129,7 @@ Commands that match a known pattern are handled by a Tier 1 regex router with no
 **◉ Resilion**<br>
 <sub>`N.03` · AGENTS · SUPPLY-CHAIN RISK</sub>
 
-![Python](https://img.shields.io/badge/Python-161B22?style=flat-square&logo=python&logoColor=3776AB) ![FastAPI](https://img.shields.io/badge/FastAPI-161B22?style=flat-square&logo=fastapi&logoColor=009688) ![React](https://img.shields.io/badge/React-161B22?style=flat-square&logo=react&logoColor=61DAFB) ![NetworkX](https://img.shields.io/badge/NetworkX-161B22?style=flat-square) ![Gemini](https://img.shields.io/badge/Gemini-161B22?style=flat-square&logo=googlegemini&logoColor=8E75B2)
+![Python](https://img.shields.io/badge/Python-161B22?style=flat-square&logo=python&logoColor=3776AB) ![React](https://img.shields.io/badge/React-161B22?style=flat-square&logo=react&logoColor=61DAFB) ![NetworkX](https://img.shields.io/badge/NetworkX-161B22?style=flat-square) ![Gemini](https://img.shields.io/badge/Gemini-161B22?style=flat-square&logo=googlegemini&logoColor=8E75B2)
 
 India imports most of its crude oil, much of it through the Strait of Hormuz. Resilion watches geopolitical signals and shows which refineries and industries are exposed when a route is at risk. In progress: ranking alternative supply routes for a person to approve.
 

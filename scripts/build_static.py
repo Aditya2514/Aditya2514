@@ -18,17 +18,17 @@ PATTERN_ROWS = [
         "stack": "Node · React · MongoDB Atlas",
         "cells": [
             "Risk analyst + adversarial judge rate every clause",
-            "38 trap patterns + cross-clause contradiction rules",
+            "36 trap patterns + cross-clause contradiction rules",
             "Signer reviews ratings, cited statutes, rewrites",
         ],
     },
     {
         "name": "Resilion",
-        "stack": "FastAPI · NetworkX · Gemini",
+        "stack": "Python · NetworkX · Gemini",
         "cells": [
             "Risk Watcher agent turns news into disruption events",
             "Graph traversal traces which industries are hit",
-            "Reroutes will need sign-off (approval console in progress)",
+            "Reroutes will need sign-off (approval console planned)",
         ],
     },
     {

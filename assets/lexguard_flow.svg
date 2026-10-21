@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 511" width="100%" role="img" aria-labelledby="t d">
 <title id="t">Watch LexGuard work: a contract through the pipeline</title>
-<desc id="d">Illustrative run of LexGuard's pipeline on a four-clause contract. Stages: classifier, risk analyst plus adversarial judge, safety net with 38 trap patterns, citation verifier, fairer rewrite. The classifier tags clauses as non_compete, compensation, termination and payment. The risk analyst rates the non-compete HIGH and a training-bond clause LOW; the safety net overrules both to CRITICAL (post-employment non-compete, punitive training bond). The citation verifier marks Indian Contract Act s.27 and s.74 strong and s.412 hallucinated, not in corpus. The training bond gets a fairer rewrite: costs repayable pro rata, only within 12 months, capped at actual cost. Benchmark: 28 of 30 clause types, 21 of 30 risk tiers, 0 risky clauses under-rated.</desc>
+<desc id="d">Illustrative run of LexGuard's pipeline on a four-clause contract. Stages: classifier, risk analyst plus adversarial judge, safety net with 36 trap patterns, citation verifier, fairer rewrite. The classifier tags clauses as non_compete, compensation, termination and payment. The risk analyst rates the non-compete HIGH and a training-bond clause LOW; the safety net overrules both to CRITICAL (post-employment non-compete, punitive training bond). The citation verifier marks Indian Contract Act s.27 and s.74 strong and s.412 hallucinated, not in corpus. The training bond gets a fairer rewrite: costs repayable pro rata, only within 12 months, capped at actual cost. Benchmark: 28 of 30 clause types, 21 of 30 risk tiers, 0 risky clauses under-rated.</desc>
 <defs>
 <linearGradient id="rail" x1="32" y1="0" x2="868" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2dd4bf"/><stop offset="0.38" stop-color="#2dd4bf"/><stop offset="0.42" stop-color="#f5a524"/><stop offset="0.78" stop-color="#f5a524"/><stop offset="0.82" stop-color="#2dd4bf"/><stop offset="1" stop-color="#2dd4bf"/></linearGradient>
 <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5a524" stop-opacity="0"/><stop offset="1" stop-color="#f5a524" stop-opacity="0.22"/></linearGradient>
@@ -67,7 +67,7 @@
 <rect class="k4" x="374.0" y="80" width="152.0" height="42" rx="10" fill="#f5a524" opacity="0"/>
 <rect class="k5" x="374.0" y="80" width="152.0" height="42" rx="10" fill="none" stroke="#f5a524" stroke-width="1.5" opacity="0.85"/>
 <text x="388.0" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3" font-weight="700"><tspan fill="#f5a524" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="700">3</tspan>  Safety net</text>
-<text x="388.0" y="113" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">38 trap patterns</text>
+<text x="388.0" y="113" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">36 trap patterns</text>
 <path d="M532.5,96.0 L538.5,101.0 L532.5,106.0" fill="none" stroke="#484f58" stroke-width="1.6"/>
 <rect x="545.0" y="80" width="152.0" height="42" rx="10" fill="#161b22" stroke="#30363d"/>
 <rect class="k6" x="545.0" y="80" width="152.0" height="42" rx="10" fill="#f5a524" opacity="0"/>
@@ -134,7 +134,7 @@
 <text x="632" y="415" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e"><tspan fill="#3fb950">strong</tspan> · weak ·</text>
 <text x="632" y="431" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e"><tspan fill="#f85149">hallucinated</tspan> · unverifiable</text>
 <text x="32" y="471" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#f5a524" letter-spacing="1.5">BENCHMARK</text>
-<text x="124" y="471" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3">28/30 clause types · 21/30 risk tiers · 0 risky clauses under-rated</text>
+<text x="124" y="471" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3">28/30 clause types · 21/30 risk tiers · 0 risky under-rated (May 2026 runs)</text>
 <text x="868" y="471" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e" text-anchor="end">pipeline runs on a Redis job queue</text>
 <text x="32" y="493" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">illustrative run · real pipeline stages, trap types and verifier labels from github.com/Aditya2514/LexGuard</text>
 </svg>

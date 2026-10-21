@@ -26,7 +26,7 @@ FADE = 0.3
 STAGES = [  # (label, caption, colour, start, end)
     ("Classifier", "tags clause types", TEAL, 1.5, 3.3),
     ("Risk analyst", "+ adversarial judge", TEAL, 3.3, 5.3),
-    ("Safety net", "38 trap patterns", AMBER, 5.3, 7.6),
+    ("Safety net", "36 trap patterns", AMBER, 5.3, 7.6),
     ("Citation verifier", "checks statutes", AMBER, 7.6, 9.6),
     ("Fairer rewrite", "drafts fair wording", TEAL, 9.6, 11.0),
 ]
@@ -279,14 +279,14 @@ def render() -> str:
     fy = card_bottom + 26
     H = fy + 40
     body.append(text(LEFT, fy, "BENCHMARK", 10.5, AMBER, MONO, spacing="1.5"))
-    body.append(text(LEFT + 92, fy, "28/30 clause types · 21/30 risk tiers · 0 risky clauses under-rated", 12.5, TEXT, SANS))
+    body.append(text(LEFT + 92, fy, "28/30 clause types · 21/30 risk tiers · 0 risky under-rated (May 2026 runs)", 12.5, TEXT, SANS))
     body.append(text(RIGHT, fy, "pipeline runs on a Redis job queue", 10.5, MUTED, MONO, anchor="end"))
     body.append(text(LEFT, fy + 22, "illustrative run · real pipeline stages, trap types and verifier labels from github.com/Aditya2514/LexGuard",
                      10.5, MUTED, MONO))
 
     desc = (
         "Illustrative run of LexGuard's pipeline on a four-clause contract. Stages: classifier, risk analyst plus adversarial judge, "
-        "safety net with 38 trap patterns, citation verifier, fairer rewrite. The classifier tags clauses as non_compete, compensation, "
+        "safety net with 36 trap patterns, citation verifier, fairer rewrite. The classifier tags clauses as non_compete, compensation, "
         "termination and payment. The risk analyst rates the non-compete HIGH and a training-bond clause LOW; the safety net overrules both "
         "to CRITICAL (post-employment non-compete, punitive training bond). The citation verifier marks Indian Contract Act s.27 and s.74 "
         "strong and s.412 hallucinated, not in corpus. The training bond gets a fairer rewrite: costs repayable pro rata, only within "
