@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350" width="100%" role="img" aria-labelledby="t d">
 <title id="t">Live GitHub signal for the last 12 months</title>
-<desc id="d">434 contributions, active in 9 of the last 12 months, longest streak 11 days, busiest week 100, 14 public repositories. Weekly contribution bars and languages by bytes of code.</desc>
+<desc id="d">437 contributions, active in 9 of the last 12 months, longest streak 11 days, busiest week 100, 14 public repositories. Weekly contribution bars and languages by bytes of code.</desc>
 <style>
   .tile { animation: fade-up .6s ease-out both; }
   .bar { transform-box: fill-box; transform-origin: 50% 100%; animation: rise .9s cubic-bezier(.2, .8, .2, 1) both; }
@@ -21,7 +21,7 @@
 <text x="868" y="40" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">updated 2026-10-21 · GitHub contribution calendar</text>
 <g class="tile" style="animation-delay:0.00s">
 <rect x="32" y="86" width="160" height="64" rx="10" fill="#161b22" stroke="#30363d"/>
-<text x="48" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#e6edf3">434</text>
+<text x="48" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#e6edf3">437</text>
 <text x="48" y="140" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" letter-spacing="1.5" fill="#8b949e">CONTRIBUTIONS</text>
 </g>
 <g class="tile" style="animation-delay:0.08s">
@@ -65,10 +65,10 @@
 <path class="bar" style="animation-delay:0.82s" d="M711.3,258.0 V253.2 Q711.3,251.2 713.3,251.2 H723.0 Q725.0,251.2 725.0,253.2 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-08-16: 9 contributions</title></path>
 <path class="bar" style="animation-delay:0.83s" d="M727.0,258.0 V252.4 Q727.0,250.4 729.0,250.4 H738.8 Q740.8,250.4 740.8,252.4 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-08-23: 10 contributions</title></path>
 <path class="bar" style="animation-delay:0.91s" d="M837.5,258.0 V252.4 Q837.5,250.4 839.5,250.4 H849.2 Q851.2,250.4 851.2,252.4 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-10-11: 10 contributions</title></path>
-<path class="bar" style="animation-delay:0.92s" d="M853.2,258.0 V258.0 Q853.2,256.0 855.2,256.0 H865.0 Q867.0,256.0 867.0,258.0 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-10-18: 2 contributions</title></path>
+<path class="bar" style="animation-delay:0.92s" d="M853.2,258.0 V256.2 Q853.2,254.2 855.2,254.2 H865.0 Q867.0,254.2 867.0,256.2 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-10-18: 5 contributions</title></path>
 <text x="513.1" y="176.0" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#e6edf3" class="late">peak 100</text>
-<line x1="32" y1="251.8" x2="868" y2="251.8" stroke="#484f58" stroke-dasharray="3 4" class="late"/>
-<text x="868" y="246.8" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e" class="late">avg 8.2 / week</text>
+<line x1="32" y1="251.7" x2="868" y2="251.7" stroke="#484f58" stroke-dasharray="3 4" class="late"/>
+<text x="868" y="246.7" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e" class="late">avg 8.2 / week</text>
 <text x="63.5" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Nov</text>
 <text x="142.4" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Dec</text>
 <text x="205.5" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Jan</text>
@@ -81,18 +81,18 @@
 <text x="678.7" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Aug</text>
 <text x="757.6" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Sep</text>
 <text x="820.7" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Oct</text>
-<rect class="seg" style="animation-delay:1.00s" x="32.0" y="292" width="449.1" height="10" rx="2" fill="#3987e5"><title>JavaScript: 54.0%</title></rect>
-<rect class="seg" style="animation-delay:1.08s" x="483.1" y="292" width="288.9" height="10" rx="2" fill="#d95926"><title>Python: 34.8%</title></rect>
-<rect class="seg" style="animation-delay:1.16s" x="774.0" y="292" width="36.4" height="10" rx="2" fill="#199e70"><title>CSS: 4.6%</title></rect>
-<rect class="seg" style="animation-delay:1.24s" x="812.4" y="292" width="21.4" height="10" rx="2" fill="#c98500"><title>HTML: 2.8%</title></rect>
-<rect class="seg" style="animation-delay:1.32s" x="835.8" y="292" width="15.4" height="10" rx="2" fill="#d55181"><title>TypeScript: 2.1%</title></rect>
-<rect class="seg" style="animation-delay:1.40s" x="853.2" y="292" width="12.8" height="10" rx="2" fill="#6e7681"><title>Other: 1.8%</title></rect>
+<rect class="seg" style="animation-delay:1.00s" x="32.0" y="292" width="427.8" height="10" rx="2" fill="#3987e5"><title>JavaScript: 51.4%</title></rect>
+<rect class="seg" style="animation-delay:1.08s" x="461.8" y="292" width="314.4" height="10" rx="2" fill="#d95926"><title>Python: 37.9%</title></rect>
+<rect class="seg" style="animation-delay:1.16s" x="778.2" y="292" width="34.8" height="10" rx="2" fill="#199e70"><title>CSS: 4.4%</title></rect>
+<rect class="seg" style="animation-delay:1.24s" x="815.0" y="292" width="20.5" height="10" rx="2" fill="#c98500"><title>HTML: 2.7%</title></rect>
+<rect class="seg" style="animation-delay:1.32s" x="837.5" y="292" width="14.5" height="10" rx="2" fill="#d55181"><title>TypeScript: 2.0%</title></rect>
+<rect class="seg" style="animation-delay:1.40s" x="854.0" y="292" width="12.0" height="10" rx="2" fill="#6e7681"><title>Other: 1.7%</title></rect>
 <circle cx="36" cy="322" r="4" fill="#3987e5"/>
-<text x="45" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">JavaScript 54%</text>
+<text x="45" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">JavaScript 51%</text>
 <circle cx="162" cy="322" r="4" fill="#d95926"/>
-<text x="171" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">Python 35%</text>
+<text x="171" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">Python 38%</text>
 <circle cx="260" cy="322" r="4" fill="#199e70"/>
-<text x="269" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">CSS 5%</text>
+<text x="269" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">CSS 4%</text>
 <circle cx="330" cy="322" r="4" fill="#c98500"/>
 <text x="339" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">HTML 3%</text>
 <circle cx="407" cy="322" r="4" fill="#d55181"/>
