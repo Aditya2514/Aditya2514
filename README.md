@@ -107,15 +107,15 @@ On the committed benchmarks it gets 28/30 clause types and 21/30 risk tiers righ
 **◉ Pikina**<br>
 <sub>`N.02` · LOCAL AI · DESKTOP AGENT</sub>
 
-![Python](https://img.shields.io/badge/Python-161B22?style=flat-square&logo=python&logoColor=3776AB) ![Ollama](https://img.shields.io/badge/Ollama-161B22?style=flat-square&logo=ollama&logoColor=white) ![Electron](https://img.shields.io/badge/Electron-161B22?style=flat-square&logo=electron&logoColor=47848F) ![Windows](https://img.shields.io/badge/Win32-161B22?style=flat-square&logo=windows&logoColor=0078D4)
+![Python](https://img.shields.io/badge/Python-161B22?style=flat-square&logo=python&logoColor=3776AB) ![Ollama](https://img.shields.io/badge/Ollama-161B22?style=flat-square&logo=ollama&logoColor=white) ![Electron](https://img.shields.io/badge/Electron-161B22?style=flat-square&logo=electron&logoColor=47848F) ![Windows](https://img.shields.io/badge/Windows-161B22?style=flat-square&logo=windows&logoColor=0078D4) ![Linux](https://img.shields.io/badge/Linux-161B22?style=flat-square&logo=linux&logoColor=FCC624)
 
-An offline-first personal operating layer for Windows. Press Alt+Space and type what you want; Pikina routes it to a tool, validates the action, and asks first when it is risky. Pre-alpha.
+An offline-first personal operating layer for Windows and Linux. Press a hotkey and type what you want; Pikina routes it to a tool, validates the action, and asks first when it is risky. Pre-alpha.
 
 <details>
 <summary>Engineering notes</summary>
 <br>
 
-Commands that match a known pattern are handled by a Tier 1 regex router with no model call; only misses go to a local Ollama model, which must return a registered tool or `no_match`, so it can't invent actions. An Action Validation Layer checks every model-proposed action against the tool manifest, and level 4+ actions from either tier need a native Windows confirmation. A DAG scheduler with starvation protection and a transactional executor with reverse-order rollback are built and unit-tested, and are next to be wired into the live request path. Event-driven daemons and a dual-tier memory sit underneath.
+Commands that match a known pattern are handled by a Tier 1 regex router with no model call; only misses go to a local Ollama model, which must return a registered tool or `no_match`, so it can't invent actions. An Action Validation Layer checks every model-proposed action against the tool manifest, and level 4+ actions from either tier need a native confirmation dialog (MessageBoxW on Windows, zenity or kdialog on Linux). Multi-step alias chains run through a transactional executor that undoes completed steps in reverse order if one fails; a DAG scheduler with starvation protection is built and tested, waiting for the planner that will call it. Event-driven daemons and a dual-tier memory sit underneath.
 
 </details>
 
