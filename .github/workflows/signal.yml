@@ -6,7 +6,7 @@ on:
     - cron: "17 */6 * * *"
   push:
     branches: [main]
-    paths-ignore: ["assets/signal.svg"]
+    paths-ignore: ["assets/signal.svg", "assets/rhythm.svg", "assets/terminal.svg"]
   workflow_dispatch:
 
 permissions:
@@ -26,21 +26,24 @@ jobs:
         with:
           python-version: "3.12"
 
-      # build_signal.py exits 0 and keeps the last good SVG if the API call fails
-      - name: Render assets/signal.svg
+      # Each generator exits 0 and keeps its last good SVG if the API call fails
+      - name: Render live cards
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/build_signal.py --github "${{ github.repository_owner }}"
+        run: |
+          python3 scripts/build_signal.py --github "${{ github.repository_owner }}"
+          python3 scripts/build_rhythm.py --github "${{ github.repository_owner }}"
+          python3 scripts/build_terminal.py --github "${{ github.repository_owner }}"
 
       - name: Commit if changed
         run: |
-          if git diff --quiet -- assets/signal.svg; then
+          if git diff --quiet -- assets/signal.svg assets/rhythm.svg assets/terminal.svg; then
             echo "No change in signal."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/signal.svg
+          git add assets/signal.svg assets/rhythm.svg assets/terminal.svg
           git commit -m "chore: refresh live signal"
           git pull --rebase origin main
           git push

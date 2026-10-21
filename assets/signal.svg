@@ -1,49 +1,72 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350" width="100%" role="img" aria-labelledby="t d">
 <title id="t">Live GitHub signal for the last 12 months</title>
-<desc id="d">432 contributions, active in 9 of the last 12 months, longest streak 11 days, busiest week 100, 14 public repositories. Weekly contribution bars and languages by bytes of code.</desc>
+<desc id="d">299 contributions, active in 9 of the last 12 months, longest streak 11 days, busiest week 60, 13 public repositories. Weekly contribution bars and languages by bytes of code.</desc>
+<style>
+  .tile { animation: fade-up .6s ease-out both; }
+  .bar { transform-box: fill-box; transform-origin: 50% 100%; animation: rise .9s cubic-bezier(.2, .8, .2, 1) both; }
+  .seg { transform-box: fill-box; transform-origin: 0 50%; animation: grow 1s ease-out both; }
+  .late { animation: fade-in .6s ease-out 1.4s both; }
+  .live { animation: pulse 2s ease-in-out infinite; }
+  @keyframes fade-up { from { opacity: .15; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  @keyframes rise { from { transform: scaleY(.08); } to { transform: scaleY(1); } }
+  @keyframes grow { from { transform: scaleX(.05); } to { transform: scaleX(1); } }
+  @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
 <rect x="0.5" y="0.5" width="899" height="349" rx="16" fill="#0d1117" stroke="#30363d"/>
-<text x="32" y="40" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="3" fill="#2dd4bf">LIVE SIGNAL</text>
+<circle class="live" cx="36" cy="36" r="4" fill="#2dd4bf"/>
+<text x="48" y="40" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="3" fill="#2dd4bf">LIVE SIGNAL</text>
 <text x="32" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#e6edf3">Last 12 months on GitHub</text>
-<text x="868" y="40" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">updated 2026-10-20 · GitHub contribution calendar</text>
+<text x="868" y="40" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">updated 2026-10-21 · commit history of public repos</text>
+<g class="tile" style="animation-delay:0.00s">
 <rect x="32" y="86" width="160" height="64" rx="10" fill="#161b22" stroke="#30363d"/>
-<text x="48" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#e6edf3">432</text>
+<text x="48" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#e6edf3">299</text>
 <text x="48" y="140" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" letter-spacing="1.5" fill="#8b949e">CONTRIBUTIONS</text>
+</g>
+<g class="tile" style="animation-delay:0.08s">
 <rect x="201" y="86" width="160" height="64" rx="10" fill="#161b22" stroke="#30363d"/>
 <text x="217" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#e6edf3">9 / 12</text>
 <text x="217" y="140" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" letter-spacing="1.5" fill="#8b949e">ACTIVE MONTHS</text>
+</g>
+<g class="tile" style="animation-delay:0.16s">
 <rect x="370" y="86" width="160" height="64" rx="10" fill="#161b22" stroke="#30363d"/>
 <text x="386" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#e6edf3">11</text>
 <text x="386" y="140" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" letter-spacing="1.5" fill="#8b949e">LONGEST STREAK</text>
+</g>
+<g class="tile" style="animation-delay:0.24s">
 <rect x="539" y="86" width="160" height="64" rx="10" fill="#161b22" stroke="#30363d"/>
-<text x="555" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#e6edf3">100</text>
+<text x="555" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#e6edf3">60</text>
 <text x="555" y="140" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" letter-spacing="1.5" fill="#8b949e">BUSIEST WEEK</text>
+</g>
+<g class="tile" style="animation-delay:0.32s">
 <rect x="708" y="86" width="160" height="64" rx="10" fill="#161b22" stroke="#30363d"/>
-<text x="724" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#e6edf3">14</text>
+<text x="724" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#e6edf3">13</text>
 <text x="724" y="140" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" letter-spacing="1.5" fill="#8b949e">PUBLIC REPOS</text>
+</g>
 <line x1="32" y1="258" x2="868" y2="258" stroke="#30363d"/>
-<path d="M127.6,258.0 V257.7 Q127.6,255.7 129.6,255.7 H139.4 Q141.4,255.7 141.4,257.7 V258.0 Z" fill="#2dd4bf"><title>Week of 2025-11-30: 3 contributions</title></path>
-<path d="M238.1,258.0 V257.7 Q238.1,255.7 240.1,255.7 H249.8 Q251.8,255.7 251.8,257.7 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-01-18: 3 contributions</title></path>
-<path d="M253.8,258.0 V256.2 Q253.8,254.2 255.8,254.2 H265.6 Q267.6,254.2 267.6,256.2 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-01-25: 5 contributions</title></path>
-<path d="M332.7,258.0 V258.0 Q332.7,256.0 334.7,256.0 H344.5 Q346.5,256.0 346.5,258.0 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-03-01: 1 contributions</title></path>
-<path d="M364.2,258.0 V257.0 Q364.2,255.0 366.2,255.0 H376.0 Q378.0,255.0 378.0,257.0 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-03-15: 4 contributions</title></path>
-<path d="M380.0,258.0 V255.4 Q380.0,253.4 382.0,253.4 H391.8 Q393.8,253.4 393.8,255.4 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-03-22: 6 contributions</title></path>
-<path d="M395.8,258.0 V258.0 Q395.8,256.0 397.8,256.0 H407.6 Q409.6,256.0 409.6,258.0 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-03-29: 2 contributions</title></path>
-<path d="M411.6,258.0 V250.9 Q411.6,248.9 413.6,248.9 H423.3 Q425.3,248.9 425.3,250.9 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-04-05: 12 contributions</title></path>
-<path d="M490.4,258.0 V253.2 Q490.4,251.2 492.4,251.2 H502.2 Q504.2,251.2 504.2,253.2 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-05-10: 9 contributions</title></path>
-<path d="M506.2,258.0 V184.0 Q506.2,182.0 508.2,182.0 H518.0 Q520.0,182.0 520.0,184.0 V258.0 Z" fill="#f5a524"><title>Week of 2026-05-17: 100 contributions</title></path>
-<path d="M522.0,258.0 V194.6 Q522.0,192.6 524.0,192.6 H533.8 Q535.8,192.6 535.8,194.6 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-05-24: 86 contributions</title></path>
-<path d="M537.8,258.0 V235.7 Q537.8,233.7 539.8,233.7 H549.5 Q551.5,233.7 551.5,235.7 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-05-31: 32 contributions</title></path>
-<path d="M569.3,258.0 V231.9 Q569.3,229.9 571.3,229.9 H581.1 Q583.1,229.9 583.1,231.9 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-06-14: 37 contributions</title></path>
-<path d="M600.8,258.0 V244.8 Q600.8,242.8 602.8,242.8 H612.6 Q614.6,242.8 614.6,244.8 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-06-28: 20 contributions</title></path>
-<path d="M616.6,258.0 V214.4 Q616.6,212.4 618.6,212.4 H628.4 Q630.4,212.4 630.4,214.4 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-07-05: 60 contributions</title></path>
-<path d="M632.4,258.0 V251.6 Q632.4,249.6 634.4,249.6 H644.2 Q646.2,249.6 646.2,251.6 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-07-12: 11 contributions</title></path>
-<path d="M648.2,258.0 V250.9 Q648.2,248.9 650.2,248.9 H659.9 Q661.9,248.9 661.9,250.9 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-07-19: 12 contributions</title></path>
-<path d="M711.3,258.0 V253.2 Q711.3,251.2 713.3,251.2 H723.0 Q725.0,251.2 725.0,253.2 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-08-16: 9 contributions</title></path>
-<path d="M727.0,258.0 V252.4 Q727.0,250.4 729.0,250.4 H738.8 Q740.8,250.4 740.8,252.4 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-08-23: 10 contributions</title></path>
-<path d="M837.5,258.0 V252.4 Q837.5,250.4 839.5,250.4 H849.2 Q851.2,250.4 851.2,252.4 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-10-11: 10 contributions</title></path>
-<text x="513.1" y="176.0" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#e6edf3">peak 100</text>
-<line x1="32" y1="251.8" x2="868" y2="251.8" stroke="#484f58" stroke-dasharray="3 4"/>
-<text x="868" y="246.8" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">avg 8.2 / week</text>
+<path class="bar" style="animation-delay:0.37s" d="M127.6,258.0 V257.5 Q127.6,255.5 129.6,255.5 H139.4 Q141.4,255.5 141.4,257.5 V258.0 Z" fill="#2dd4bf"><title>Week of 2025-11-30: 2 contributions</title></path>
+<path class="bar" style="animation-delay:0.46s" d="M238.1,258.0 V257.5 Q238.1,255.5 240.1,255.5 H249.8 Q251.8,255.5 251.8,257.5 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-01-18: 2 contributions</title></path>
+<path class="bar" style="animation-delay:0.47s" d="M253.8,258.0 V253.7 Q253.8,251.7 255.8,251.7 H265.6 Q267.6,251.7 267.6,253.7 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-01-25: 5 contributions</title></path>
+<path class="bar" style="animation-delay:0.55s" d="M364.2,258.0 V256.2 Q364.2,254.2 366.2,254.2 H376.0 Q378.0,254.2 378.0,256.2 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-03-15: 3 contributions</title></path>
+<path class="bar" style="animation-delay:0.56s" d="M380.0,258.0 V253.7 Q380.0,251.7 382.0,251.7 H391.8 Q393.8,251.7 393.8,253.7 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-03-22: 5 contributions</title></path>
+<path class="bar" style="animation-delay:0.58s" d="M395.8,258.0 V258.0 Q395.8,256.0 397.8,256.0 H407.6 Q409.6,256.0 409.6,258.0 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-03-29: 1 contributions</title></path>
+<path class="bar" style="animation-delay:0.59s" d="M411.6,258.0 V243.5 Q411.6,241.5 413.6,241.5 H423.3 Q425.3,241.5 425.3,243.5 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-04-05: 13 contributions</title></path>
+<path class="bar" style="animation-delay:0.65s" d="M490.4,258.0 V248.6 Q490.4,246.6 492.4,246.6 H502.2 Q504.2,246.6 504.2,248.6 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-05-10: 9 contributions</title></path>
+<path class="bar" style="animation-delay:0.66s" d="M506.2,258.0 V184.0 Q506.2,182.0 508.2,182.0 H518.0 Q520.0,182.0 520.0,184.0 V258.0 Z" fill="#f5a524"><title>Week of 2026-05-17: 60 contributions</title></path>
+<path class="bar" style="animation-delay:0.67s" d="M522.0,258.0 V205.5 Q522.0,203.5 524.0,203.5 H533.8 Q535.8,203.5 535.8,205.5 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-05-24: 43 contributions</title></path>
+<path class="bar" style="animation-delay:0.68s" d="M537.8,258.0 V239.7 Q537.8,237.7 539.8,237.7 H549.5 Q551.5,237.7 551.5,239.7 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-05-31: 16 contributions</title></path>
+<path class="bar" style="animation-delay:0.71s" d="M569.3,258.0 V214.4 Q569.3,212.4 571.3,212.4 H581.1 Q583.1,212.4 583.1,214.4 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-06-14: 36 contributions</title></path>
+<path class="bar" style="animation-delay:0.73s" d="M600.8,258.0 V247.3 Q600.8,245.3 602.8,245.3 H612.6 Q614.6,245.3 614.6,247.3 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-06-28: 10 contributions</title></path>
+<path class="bar" style="animation-delay:0.74s" d="M616.6,258.0 V195.4 Q616.6,193.4 618.6,193.4 H628.4 Q630.4,193.4 630.4,195.4 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-07-05: 51 contributions</title></path>
+<path class="bar" style="animation-delay:0.76s" d="M632.4,258.0 V246.1 Q632.4,244.1 634.4,244.1 H644.2 Q646.2,244.1 646.2,246.1 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-07-12: 11 contributions</title></path>
+<path class="bar" style="animation-delay:0.77s" d="M648.2,258.0 V249.9 Q648.2,247.9 650.2,247.9 H659.9 Q661.9,247.9 661.9,249.9 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-07-19: 8 contributions</title></path>
+<path class="bar" style="animation-delay:0.82s" d="M711.3,258.0 V249.9 Q711.3,247.9 713.3,247.9 H723.0 Q725.0,247.9 725.0,249.9 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-08-16: 8 contributions</title></path>
+<path class="bar" style="animation-delay:0.83s" d="M727.0,258.0 V247.3 Q727.0,245.3 729.0,245.3 H738.8 Q740.8,245.3 740.8,247.3 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-08-23: 10 contributions</title></path>
+<path class="bar" style="animation-delay:0.91s" d="M837.5,258.0 V252.4 Q837.5,250.4 839.5,250.4 H849.2 Q851.2,250.4 851.2,252.4 V258.0 Z" fill="#2dd4bf"><title>Week of 2026-10-11: 6 contributions</title></path>
+<text x="513.1" y="176.0" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#e6edf3" class="late">peak 60</text>
+<line x1="32" y1="250.9" x2="868" y2="250.9" stroke="#484f58" stroke-dasharray="3 4" class="late"/>
+<text x="868" y="245.9" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e" class="late">avg 5.6 / week</text>
 <text x="63.5" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Nov</text>
 <text x="142.4" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Dec</text>
 <text x="205.5" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Jan</text>
@@ -56,22 +79,22 @@
 <text x="678.7" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Aug</text>
 <text x="757.6" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Sep</text>
 <text x="820.7" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Oct</text>
-<rect x="32.0" y="292" width="477.8" height="10" rx="2" fill="#3987e5"><title>JavaScript: 57.4%</title></rect>
-<rect x="511.8" y="292" width="254.4" height="10" rx="2" fill="#d95926"><title>Python: 30.7%</title></rect>
-<rect x="768.3" y="292" width="38.7" height="10" rx="2" fill="#199e70"><title>CSS: 4.9%</title></rect>
-<rect x="809.0" y="292" width="22.8" height="10" rx="2" fill="#c98500"><title>HTML: 3.0%</title></rect>
-<rect x="833.8" y="292" width="16.5" height="10" rx="2" fill="#d55181"><title>TypeScript: 2.2%</title></rect>
-<rect x="852.3" y="292" width="13.7" height="10" rx="2" fill="#6e7681"><title>Other: 1.9%</title></rect>
+<rect class="seg" style="animation-delay:1.00s" x="32.0" y="292" width="481.1" height="10" rx="2" fill="#3987e5"><title>JavaScript: 57.8%</title></rect>
+<rect class="seg" style="animation-delay:1.08s" x="515.1" y="292" width="240.2" height="10" rx="2" fill="#d95926"><title>Python: 29.0%</title></rect>
+<rect class="seg" style="animation-delay:1.16s" x="757.3" y="292" width="44.8" height="10" rx="2" fill="#199e70"><title>CSS: 5.6%</title></rect>
+<rect class="seg" style="animation-delay:1.24s" x="804.1" y="292" width="30.7" height="10" rx="2" fill="#c98500"><title>HTML: 3.9%</title></rect>
+<rect class="seg" style="animation-delay:1.32s" x="836.8" y="292" width="16.8" height="10" rx="2" fill="#d55181"><title>TypeScript: 2.3%</title></rect>
+<rect class="seg" style="animation-delay:1.40s" x="855.7" y="292" width="10.3" height="10" rx="2" fill="#6e7681"><title>Other: 1.5%</title></rect>
 <circle cx="36" cy="322" r="4" fill="#3987e5"/>
-<text x="45" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">JavaScript 57%</text>
+<text x="45" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">JavaScript 58%</text>
 <circle cx="162" cy="322" r="4" fill="#d95926"/>
-<text x="171" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">Python 31%</text>
+<text x="171" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">Python 29%</text>
 <circle cx="260" cy="322" r="4" fill="#199e70"/>
-<text x="269" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">CSS 5%</text>
+<text x="269" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">CSS 6%</text>
 <circle cx="330" cy="322" r="4" fill="#c98500"/>
-<text x="339" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">HTML 3%</text>
+<text x="339" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">HTML 4%</text>
 <circle cx="407" cy="322" r="4" fill="#d55181"/>
 <text x="416" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">TypeScript 2%</text>
 <circle cx="526" cy="322" r="4" fill="#6e7681"/>
-<text x="535" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">Other 2%</text>
+<text x="535" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">Other 1%</text>
 </svg>

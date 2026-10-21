@@ -128,6 +128,24 @@ def bar_path(x: float, base: float, width: float, height: float, r: float = 2.0)
     )
 
 
+# Entrance motion: tiles fade up, weekly bars rise from the baseline, the language bar fills, and the
+# "live" dot pulses because this card really is regenerated from the API. Bars start at 8% height rather
+# than zero so a frozen first frame still shows the shape of the year.
+STYLE = """<style>
+  .tile { animation: fade-up .6s ease-out both; }
+  .bar { transform-box: fill-box; transform-origin: 50% 100%; animation: rise .9s cubic-bezier(.2, .8, .2, 1) both; }
+  .seg { transform-box: fill-box; transform-origin: 0 50%; animation: grow 1s ease-out both; }
+  .late { animation: fade-in .6s ease-out 1.4s both; }
+  .live { animation: pulse 2s ease-in-out infinite; }
+  @keyframes fade-up { from { opacity: .15; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  @keyframes rise { from { transform: scaleY(.08); } to { transform: scaleY(1); } }
+  @keyframes grow { from { transform: scaleX(.05); } to { transform: scaleX(1); } }
+  @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>"""
+
+
 def render(data: dict, stats: dict, updated: str) -> str:
     width, left, right = 900, 32, 868
     out = [
@@ -135,8 +153,10 @@ def render(data: dict, stats: dict, updated: str) -> str:
         '<title id="t">Live GitHub signal for the last 12 months</title>',
         f'<desc id="d">{stats["total"]} contributions, active in {stats["active_months"]} of the last 12 months, longest streak {stats["longest_streak"]} days, '
         f'busiest week {stats["peak_week"]}, {data["public_repos"]} public repositories. Weekly contribution bars and languages by bytes of code.</desc>',
+        STYLE,
         f'<rect x="0.5" y="0.5" width="{width - 1}" height="349" rx="16" fill="{SURFACE}" stroke="{BORDER}"/>',
-        f'<text x="{left}" y="40" font-family="{MONO}" font-size="12" letter-spacing="3" fill="{TEAL}">LIVE SIGNAL</text>',
+        f'<circle class="live" cx="{left + 4}" cy="36" r="4" fill="{TEAL}"/>',
+        f'<text x="{left + 16}" y="40" font-family="{MONO}" font-size="12" letter-spacing="3" fill="{TEAL}">LIVE SIGNAL</text>',
         f'<text x="{left}" y="66" font-family="{SANS}" font-size="20" font-weight="700" fill="{TEXT}">Last 12 months on GitHub</text>',
         f'<text x="{right}" y="40" text-anchor="end" font-family="{MONO}" font-size="10.5" fill="{MUTED}">updated {updated} · {escape(data["source"])}</text>',
     ]
@@ -151,10 +171,12 @@ def render(data: dict, stats: dict, updated: str) -> str:
     tile_w, tile_gap = 160, 9
     for i, (value, label) in enumerate(tiles):
         x = left + i * (tile_w + tile_gap)
-        out.append(f'<rect x="{x}" y="86" width="{tile_w}" height="64" rx="10" fill="{PANEL}" stroke="{BORDER}"/>')
         shown = f"{value:,}" if isinstance(value, int) else value
+        out.append(f'<g class="tile" style="animation-delay:{i * 0.08:.2f}s">')
+        out.append(f'<rect x="{x}" y="86" width="{tile_w}" height="64" rx="10" fill="{PANEL}" stroke="{BORDER}"/>')
         out.append(f'<text x="{x + 16}" y="120" font-family="{SANS}" font-size="26" font-weight="700" fill="{TEXT}">{shown}</text>')
         out.append(f'<text x="{x + 16}" y="140" font-family="{MONO}" font-size="10" letter-spacing="1.5" fill="{MUTED}">{label}</text>')
+        out.append('</g>')
 
     # Weekly rhythm: one series, so no legend; the peak and the average are labelled directly.
     weekly, base, plot_h = stats["weekly"], 258, 76
@@ -169,17 +191,17 @@ def render(data: dict, stats: dict, updated: str) -> str:
         x = left + i * slot + 1
         color = AMBER if i == peak_index else TEAL
         out.append(
-            f'<path d="{bar_path(x, base, slot - 2, max(2, count * scale))}" fill="{color}">'
+            f'<path class="bar" style="animation-delay:{0.3 + i * 0.012:.2f}s" d="{bar_path(x, base, slot - 2, max(2, count * scale))}" fill="{color}">'
             f'<title>Week of {stats["week_starts"][i]}: {count} contributions</title></path>'
         )
     if peak:
         px = left + peak_index * slot + slot / 2
         anchor = "end" if px > right - 60 else "start" if px < left + 60 else "middle"
-        out.append(f'<text x="{px:.1f}" y="{base - peak * scale - 6:.1f}" text-anchor="{anchor}" font-family="{MONO}" font-size="10.5" fill="{TEXT}">peak {peak}</text>')
+        out.append(f'<text x="{px:.1f}" y="{base - peak * scale - 6:.1f}" text-anchor="{anchor}" font-family="{MONO}" font-size="10.5" fill="{TEXT}" class="late">peak {peak}</text>')
         average = sum(weekly) / len(weekly)
         ay = base - average * scale
-        out.append(f'<line x1="{left}" y1="{ay:.1f}" x2="{right}" y2="{ay:.1f}" stroke="{FAINT}" stroke-dasharray="3 4"/>')
-        out.append(f'<text x="{right}" y="{ay - 5:.1f}" text-anchor="end" font-family="{MONO}" font-size="10.5" fill="{MUTED}">avg {average:.1f} / week</text>')
+        out.append(f'<line x1="{left}" y1="{ay:.1f}" x2="{right}" y2="{ay:.1f}" stroke="{FAINT}" stroke-dasharray="3 4" class="late"/>')
+        out.append(f'<text x="{right}" y="{ay - 5:.1f}" text-anchor="end" font-family="{MONO}" font-size="10.5" fill="{MUTED}" class="late">avg {average:.1f} / week</text>')
     last_month = None
     for i, start in enumerate(stats["week_starts"]):
         month = start[:7]
@@ -198,10 +220,10 @@ def render(data: dict, stats: dict, updated: str) -> str:
         if rest / total_bytes >= 0.005:
             segments.append(("Other", rest, OTHER))
         x, y = left, 292
-        for name, size, color in segments:
+        for n, (name, size, color) in enumerate(segments):
             w = (right - left) * size / total_bytes
             if w > 2:
-                out.append(f'<rect x="{x:.1f}" y="{y}" width="{w - 2:.1f}" height="10" rx="2" fill="{color}"><title>{escape(name)}: {100 * size / total_bytes:.1f}%</title></rect>')
+                out.append(f'<rect class="seg" style="animation-delay:{1.0 + n * 0.08:.2f}s" x="{x:.1f}" y="{y}" width="{w - 2:.1f}" height="10" rx="2" fill="{color}"><title>{escape(name)}: {100 * size / total_bytes:.1f}%</title></rect>')
             x += w
         lx = left
         for name, size, color in segments:
