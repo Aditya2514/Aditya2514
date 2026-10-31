@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 924 392" width="924" height="392" role="img" aria-labelledby="arena-title">
+<title id="arena-title">07 / CAREER CAMPAIGN — original animated profile panel</title>
+<style>
+.arena-label{font:11px Consolas,monospace;letter-spacing:1.5px}
+.arena-border{animation:arena-run 18s linear infinite}
+.arena-dot{animation:arena-ping 3s ease-in-out infinite}
+.arena-eq{transform-box:fill-box;transform-origin:bottom;animation:arena-eq 2.4s ease-in-out infinite}
+@keyframes arena-run{to{stroke-dashoffset:-2400}}
+@keyframes arena-ping{50%{opacity:.35}}
+@keyframes arena-eq{50%{transform:scaleY(.35);opacity:.4}}
+@media(prefers-reduced-motion:reduce){.arena-border,.arena-dot,.arena-eq{animation:none!important}}
+</style>
+<rect x="1" y="1" width="922" height="390" rx="12" fill="#06080d" stroke="#293341"/>
+<rect x="1.5" y="1.5" width="921" height="389" rx="12" fill="none" stroke="#ffc247" stroke-width="2" stroke-dasharray="70 1130" class="arena-border"/>
+<path d="M16 38H908" stroke="#293341"/>
+<text class="arena-label" x="18" y="27" fill="#ffc247">07 / CAREER CAMPAIGN</text>
+<text class="arena-label" x="884" y="28" text-anchor="end" fill="#8faea5">MILESTONES</text><circle cx="902" cy="24" r="4" fill="#54cbd5" class="arena-dot"/>
+<svg xmlns="http://www.w3.org/2000/svg" x="12" y="48" width="900" height="322" viewBox="0 0 900 322" role="img" aria-labelledby="t d">
+<title id="t">Journey: fourteen months of building, Aug 2025 to Oct 2026</title>
+<desc id="d">A timeline from August 2025 to October 2026. A line draws itself left to right and each milestone lights up as it is reached. Start: May 2025, BS in Data Science and Applications at IIT Madras, co-enrolled at Scaler School of Technology. August 2025: GitHub account created. October 2025: first public repo (portfolio). March 2026: Naukri and Fintrac. April 2026: Meta PyTorch OpenEnv Hackathon, a planner RL environment built by a team of 2. May 2026: BookFinder (React Native and TypeScript); LexGuard starts and runs to August 2026. June 2026: a POSIX shell in C++. July 2026: Pikina, then Resilion. August 2026: Noesis (team of 2). September to October 2026: ShopKart (team of 2). Also: runner-up at the Paradox DSA Triathlon, IIT Madras, 2026; CGPA 9.0 out of 10.</desc>
+<style>
+  .pop { transform-box: fill-box; transform-origin: center; }
+  .bar { transform-box: fill-box; transform-origin: 0 50%; }
+  .breathe { transform-box: fill-box; transform-origin: center; animation: breathe 3s ease-in-out infinite; }
+  @keyframes breathe { 0%, 100% { opacity: .9; transform: scale(1); } 50% { opacity: .2; transform: scale(1.8); } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  @keyframes l0 { 0.00% { opacity: 1 } 10.00% { opacity: 1 } 14.17% { opacity: .28 } 14.58% { opacity: .28 } 17.50% { opacity: 1 } 100.00% { opacity: 1 } }
+  @keyframes r0 { 0% { opacity: 0; transform: scale(1) } 14.42% { opacity: 0; transform: scale(1) } 14.58% { opacity: .8; transform: scale(1) } 22.08% { opacity: 0; transform: scale(3.2) } 100% { opacity: 0; transform: scale(1) } }
+  @keyframes d0 { 0.00% { opacity: 1; transform: scale(1) } 10.00% { opacity: 1; transform: scale(1) } 14.17% { opacity: .35; transform: scale(.55) } 14.58% { opacity: .35; transform: scale(.55) } 15.90% { opacity: 1; transform: scale(1.6) } 17.50% { opacity: 1; transform: scale(1) } 100.00% { opacity: 1; transform: scale(1) } }
+  @keyframes l1 { 0.00% { opacity: 1 } 10.00% { opacity: 1 } 14.17% { opacity: .28 } 16.21% { opacity: .28 } 19.12% { opacity: 1 } 100.00% { opacity: 1 } }
+  @keyframes d1 { 0.00% { opacity: 1; transform: scale(1) } 10.00% { opacity: 1; transform: scale(1) } 14.17% { opacity: .35; transform: scale(.55) } 16.21% { opacity: .35; transform: scale(.55) } 17.52% { opacity: 1; transform: scale(1.6) } 19.12% { opacity: 1; transform: scale(1) } 100.00% { opacity: 1; transform: scale(1) } }
+  @keyframes l2 { 0.00% { opacity: 1 } 10.00% { opacity: 1 } 14.17% { opacity: .28 } 20.69% { opacity: .28 } 23.61% { opacity: 1 } 100.00% { opacity: 1 } }
+  @keyframes d2 { 0.00% { opacity: 1; transform: scale(1) } 10.00% { opacity: 1; transform: scale(1) } 14.17% { opacity: .35; transform: scale(.55) } 20.69% { opacity: .35; transform: scale(.55) } 22.00% { opacity: 1; transform: scale(1.6) } 23.61% { opacity: 1; transform: scale(1) } 100.00% { opacity: 1; transform: scale(1) } }
+  @keyframes l3 { 0.00% { opacity: 1 } 10.00% { opacity: 1 } 14.17% { opacity: .28 } 32.95% { opacity: .28 } 35.87% { opacity: 1 } 100.00% { opacity: 1 } }
+  @keyframes d3 { 0.00% { opacity: 1; transform: scale(1) } 10.00% { opacity: 1; transform: scale(1) } 14.17% { opacity: .35; transform: scale(.55) } 32.95% { opacity: .35; transform: scale(.55) } 34.26% { opacity: 1; transform: scale(1.6) } 35.87% { opacity: 1; transform: scale(1) } 100.00% { opacity: 1; transform: scale(1) } }
+  @keyframes d3x0 { 0.00% { opacity: 1; transform: scale(1) } 10.00% { opacity: 1; transform: scale(1) } 14.17% { opacity: .35; transform: scale(.55) } 33.62% { opacity: .35; transform: scale(.55) } 34.93% { opacity: 1; transform: scale(1.6) } 36.54% { opacity: 1; transform: scale(1) } 100.00% { opacity: 1; transform: scale(1) } }
+  @keyframes l4 { 0.00% { opacity: 1 } 10.00% { opacity: 1 } 14.17% { opacity: .28 } 34.14% { opacity: .28 } 37.06% { opacity: 1 } 100.00% { opacity: 1 } }
+  @keyframes r4 { 0% { opacity: 0; transform: scale(1) } 33.98% { opacity: 0; transform: scale(1) } 34.14% { opacity: .8; transform: scale(1) } 41.64% { opacity: 0; transform: scale(3.2) } 100% { opacity: 0; transform: scale(1) } }
+  @keyframes d4 { 0.00% { opacity: 1; transform: scale(1) } 10.00% { opacity: 1; transform: scale(1) } 14.17% { opacity: .35; transform: scale(.55) } 34.14% { opacity: .35; transform: scale(.55) } 35.46% { opacity: 1; transform: scale(1.6) } 37.06% { opacity: 1; transform: scale(1) } 100.00% { opacity: 1; transform: scale(1) } }
+  @keyframes l5 { 0.00% { opacity: 1 } 10.00% { opacity: 1 } 14.17% { opacity: .28 } 36.98% { opacity: .28 } 39.90% { opacity: 1 } 100.00% { opacity: 1 } }
+  @keyframes d5 { 0.00% { opacity: 1; transform: scale(1) } 10.00% { opacity: 1; transform: scale(1) } 14.17% { opacity: .35; transform: scale(.55) } 36.98% { opacity: .35; transform: scale(.55) } 38.30% { opacity: 1; transform: scale(1.6) } 39.90% { opacity: 1; transform: scale(1) } 100.00% { opacity: 1; transform: scale(1) } }
+  @keyframes g6 { 0% { transform: scaleX(1); opacity: 1 } 10.00% { transform: scaleX(1); opacity: 1 } 14.17% { transform: scaleX(1); opacity: 0 } 14.25% { transform: scaleX(0); opacity: 0 } 37.43% { transform: scaleX(0); opacity: 1 } 44.68% { transform: scaleX(1); opacity: 1 } 100% { transform: scaleX(1); opacity: 1 } }
+  @keyframes l6 { 0.00% { opacity: 1 } 10.00% { opacity: 1 } 14.17% { opacity: .28 } 37.43% { opacity: .28 } 40.35% { opacity: 1 } 100.00% { opacity: 1 } }
+  @keyframes r6 { 0% { opacity: 0; transform: scale(1) } 37.27% { opacity: 0; transform: scale(1) } 37.43% { opacity: .8; transform: scale(1) } 44.93% { opacity: 0; transform: scale(3.2) } 100% { opacity: 0; transform: scale(1) } }
+  @keyframes d6 { 0.00% { opacity: 1; transform: scale(1) } 10.00% { opacity: 1; transform: scale(1) } 14.17% { opacity: .35; transform: scale(.55) } 37.43% { opacity: .35; transform: scale(.55) } 38.75% { opacity: 1; transform: scale(1.6) } 40.35% { opacity: 1; transform: scale(1) } 100.00% { opacity: 1; transform: scale(1) } }
+  @keyframes l7 { 0.00% { opacity: 1 } 10.00% { opacity: 1 } 14.17% { opacity: .28 } 39.60% { opacity: .28 } 42.52% { opacity: 1 } 100.00% { opacity: 1 } }
+  @keyframes d7 { 0.00% { opacity: 1; transform: scale(1) } 10.00% { opacity: 1; transform: scale(1) } 14.17% { opacity: .35; transform: scale(.55) } 39.60% { opacity: .35; transform: scale(.55) } 40.91% { opacity: 1; transform: scale(1.6) } 42.52% { opacity: 1; transform: scale(1) } 100.00% { opacity: 1; transform: scale(1) } }
+  @keyframes l8 { 0.00% { opacity: 1 } 10.00% { opacity: 1 } 14.17% { opacity: .28 } 41.09% { opacity: .28 } 44.01% { opacity: 1 } 100.00% { opacity: 1 } }
+  @keyframes r8 { 0% { opacity: 0; transform: scale(1) } 40.93% { opacity: 0; transform: scale(1) } 41.09% { opacity: .8; transform: scale(1) } 48.59% { opacity: 0; transform: scale(3.2) } 100% { opacity: 0; transform: scale(1) } }
+  @keyframes d8 { 0.00% { opacity: 1; transform: scale(1) } 10.00% { opacity: 1; transform: scale(1) } 14.17% { opacity: .35; transform: scale(.55) } 41.09% { opacity: .35; transform: scale(.55) } 42.41% { opacity: 1; transform: scale(1.6) } 44.01% { opacity: 1; transform: scale(1) } 100.00% { opacity: 1; transform: scale(1) } }
+  @keyframes l9 { 0.00% { opacity: 1 } 10.00% { opacity: 1 } 14.17% { opacity: .28 } 42.22% { opacity: .28 } 45.13% { opacity: 1 } 100.00% { opacity: 1 } }
+  @keyframes r9 { 0% { opacity: 0; transform: scale(1) } 42.05% { opacity: 0; transform: scale(1) } 42.22% { opacity: .8; transform: scale(1) } 49.72% { opacity: 0; transform: scale(3.2) } 100% { opacity: 0; transform: scale(1) } }
+  @keyframes d9 { 0.00% { opacity: 1; transform: scale(1) } 10.00% { opacity: 1; transform: scale(1) } 14.17% { opacity: .35; transform: scale(.55) } 42.22% { opacity: .35; transform: scale(.55) } 43.53% { opacity: 1; transform: scale(1.6) } 45.13% { opacity: 1; transform: scale(1) } 100.00% { opacity: 1; transform: scale(1) } }
+  @keyframes l10 { 0.00% { opacity: 1 } 10.00% { opacity: 1 } 14.17% { opacity: .28 } 44.76% { opacity: .28 } 47.67% { opacity: 1 } 100.00% { opacity: 1 } }
+  @keyframes r10 { 0% { opacity: 0; transform: scale(1) } 44.59% { opacity: 0; transform: scale(1) } 44.76% { opacity: .8; transform: scale(1) } 52.26% { opacity: 0; transform: scale(3.2) } 100% { opacity: 0; transform: scale(1) } }
+  @keyframes d10 { 0.00% { opacity: 1; transform: scale(1) } 10.00% { opacity: 1; transform: scale(1) } 14.17% { opacity: .35; transform: scale(.55) } 44.76% { opacity: .35; transform: scale(.55) } 46.07% { opacity: 1; transform: scale(1.6) } 47.67% { opacity: 1; transform: scale(1) } 100.00% { opacity: 1; transform: scale(1) } }
+  @keyframes g11 { 0% { transform: scaleX(1); opacity: 1 } 10.00% { transform: scaleX(1); opacity: 1 } 14.17% { transform: scaleX(1); opacity: 0 } 14.25% { transform: scaleX(0); opacity: 0 } 46.03% { transform: scaleX(0); opacity: 1 } 48.72% { transform: scaleX(1); opacity: 1 } 100% { transform: scaleX(1); opacity: 1 } }
+  @keyframes l11 { 0.00% { opacity: 1 } 10.00% { opacity: 1 } 14.17% { opacity: .28 } 48.72% { opacity: .28 } 51.63% { opacity: 1 } 100.00% { opacity: 1 } }
+  @keyframes d11 { 0.00% { opacity: 1; transform: scale(1) } 10.00% { opacity: 1; transform: scale(1) } 14.17% { opacity: .35; transform: scale(.55) } 46.03% { opacity: .35; transform: scale(.55) } 47.34% { opacity: 1; transform: scale(1.6) } 48.94% { opacity: 1; transform: scale(1) } 100.00% { opacity: 1; transform: scale(1) } }
+  @keyframes draw { 0% { stroke-dashoffset: 0; opacity: 1 } 10.00% { stroke-dashoffset: 0; opacity: 1 } 14.17% { stroke-dashoffset: 0; opacity: 0 } 14.25% { stroke-dashoffset: 692; opacity: 0 } 15.83% { stroke-dashoffset: 692; opacity: 1 } 49.17% { stroke-dashoffset: 0; opacity: 1 } 100% { stroke-dashoffset: 0; opacity: 1 } }
+  @keyframes head { 0% { transform: translateX(0) } 14.17% { transform: translateX(0) } 14.25% { transform: translateX(-692px) } 15.83% { transform: translateX(-692px) } 49.17% { transform: translateX(0) } 100% { transform: translateX(0) } }
+</style>
+<rect x="0.5" y="0.5" width="899" height="321" rx="16" fill="#080a0f" stroke="#293341"/>
+<text x="32.0" y="40.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#54cbd5" letter-spacing="3">JOURNEY</text>
+<text x="32.0" y="66.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#e6edf3" font-weight="700">Fourteen months of building</text>
+<g><rect x="383.0" y="28" width="109.8" height="24" rx="12" fill="#10141b" stroke="#293341"/><text x="395.0" y="44" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#e6edf3"><tspan fill="#8b949e">CGPA </tspan><tspan fill="#54cbd5">9.0</tspan><tspan fill="#8b949e"> / 10</tspan></text></g>
+<g><rect x="500.8" y="28" width="367.2" height="24" rx="12" fill="#10141b" stroke="#293341"/><text x="512.8" y="44" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#e6edf3"><tspan fill="#8b949e">2026 · </tspan><tspan fill="#f5a524">Runner-up</tspan><tspan fill="#e6edf3"> · Paradox DSA Triathlon, IIT Madras</tspan></text></g>
+<line x1="44" y1="214" x2="150" y2="214" stroke="#484f58" stroke-width="2" stroke-dasharray="3 5"/>
+<line x1="97.0" y1="221" x2="103.0" y2="207" stroke="#8b949e" stroke-width="1.5"/>
+<line x1="103.0" y1="221" x2="109.0" y2="207" stroke="#8b949e" stroke-width="1.5"/>
+<line x1="150" y1="214" x2="842" y2="214" stroke="#293341" stroke-width="3" stroke-linecap="round"/>
+<line x1="150.0" y1="208" x2="150.0" y2="220" stroke="#8b949e" stroke-width="1"/>
+<line x1="198.1" y1="210" x2="198.1" y2="218" stroke="#484f58" stroke-width="1"/>
+<line x1="244.6" y1="210" x2="244.6" y2="218" stroke="#484f58" stroke-width="1"/>
+<line x1="292.7" y1="210" x2="292.7" y2="218" stroke="#484f58" stroke-width="1"/>
+<line x1="339.3" y1="210" x2="339.3" y2="218" stroke="#484f58" stroke-width="1"/>
+<line x1="387.4" y1="208" x2="387.4" y2="220" stroke="#8b949e" stroke-width="1"/>
+<line x1="435.5" y1="210" x2="435.5" y2="218" stroke="#484f58" stroke-width="1"/>
+<line x1="478.9" y1="210" x2="478.9" y2="218" stroke="#484f58" stroke-width="1"/>
+<line x1="527.0" y1="210" x2="527.0" y2="218" stroke="#484f58" stroke-width="1"/>
+<line x1="573.6" y1="210" x2="573.6" y2="218" stroke="#484f58" stroke-width="1"/>
+<line x1="621.7" y1="210" x2="621.7" y2="218" stroke="#484f58" stroke-width="1"/>
+<line x1="668.2" y1="210" x2="668.2" y2="218" stroke="#484f58" stroke-width="1"/>
+<line x1="716.3" y1="210" x2="716.3" y2="218" stroke="#484f58" stroke-width="1"/>
+<line x1="764.4" y1="210" x2="764.4" y2="218" stroke="#484f58" stroke-width="1"/>
+<line x1="811.0" y1="210" x2="811.0" y2="218" stroke="#484f58" stroke-width="1"/>
+<g style="animation: l0 12s ease-out infinite"><line x1="44.0" y1="206" x2="44.0" y2="113" stroke="#54cbd5" stroke-width="1" opacity="0.6"/><text x="50.0" y="124.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3" font-weight="700">IIT Madras · BS in Data Science</text><text x="50.0" y="137.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">May 2025 · co-enrolled at Scaler School of Technology</text></g>
+<g style="animation: l1 12s ease-out infinite"><line x1="157.8" y1="219" x2="157.8" y2="302" stroke="#484f58" stroke-width="1" opacity="1"/><text x="163.8" y="286.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#8b949e" font-weight="600">GitHub account</text><text x="163.8" y="299.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">Aug 2025</text></g>
+<g style="animation: l2 12s ease-out infinite"><line x1="250.9" y1="219" x2="250.9" y2="274" stroke="#484f58" stroke-width="1" opacity="1"/><text x="256.9" y="258.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#8b949e" font-weight="600">First public repo</text><text x="256.9" y="271.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">Oct 2025 · portfolio</text></g>
+<g style="animation: l3 12s ease-out infinite"><line x1="505.3" y1="219" x2="505.3" y2="274" stroke="#484f58" stroke-width="1" opacity="1"/><text x="511.3" y="258.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#8b949e" font-weight="600">Naukri · Fintrac</text><text x="511.3" y="271.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">Mar 2026</text></g>
+<g style="animation: l4 12s ease-out infinite"><line x1="530.1" y1="206" x2="530.1" y2="173" stroke="#f5a524" stroke-width="1" opacity="0.6"/><text x="524.1" y="184.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f5a524" text-anchor="end" font-weight="700">Meta PyTorch OpenEnv Hackathon</text><text x="524.1" y="197.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e" text-anchor="end">Apr 2026 · planner RL environment · team of 2</text></g>
+<g style="animation: l5 12s ease-out infinite"><line x1="589.1" y1="209" x2="589.1" y2="143" stroke="#484f58" stroke-width="1" opacity="1"/><text x="583.1" y="154.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#8b949e" text-anchor="end" font-weight="600">BookFinder</text><text x="583.1" y="167.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e" text-anchor="end">May 2026 · React Native + TS</text></g>
+<g style="animation: l6 12s ease-out infinite"><line x1="598.4" y1="206" x2="598.4" y2="83" stroke="#54cbd5" stroke-width="1" opacity="0.6"/><text x="604.4" y="94.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3" font-weight="700">LexGuard</text><text x="604.4" y="107.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">May – Aug 2026</text></g>
+<g style="animation: l7 12s ease-out infinite"><line x1="643.4" y1="219" x2="643.4" y2="274" stroke="#484f58" stroke-width="1" opacity="1"/><text x="649.4" y="258.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#8b949e" font-weight="600">POSIX shell in C++</text><text x="649.4" y="271.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">Jun 2026</text></g>
+<g style="animation: l8 12s ease-out infinite"><line x1="674.4" y1="206" x2="674.4" y2="113" stroke="#54cbd5" stroke-width="1" opacity="0.6"/><text x="680.4" y="124.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3" font-weight="700">Pikina</text><text x="680.4" y="137.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">Jul 2026</text></g>
+<g style="animation: l9 12s ease-out infinite"><line x1="697.7" y1="206" x2="697.7" y2="143" stroke="#54cbd5" stroke-width="1" opacity="0.6"/><text x="703.7" y="154.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3" font-weight="700">Resilion</text><text x="703.7" y="167.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">Jul 2026</text></g>
+<g style="animation: l10 12s ease-out infinite"><line x1="750.5" y1="206" x2="750.5" y2="173" stroke="#54cbd5" stroke-width="1" opacity="0.6"/><text x="756.5" y="184.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#e6edf3" font-weight="700">Noesis</text><text x="756.5" y="197.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">Aug 2026 · team of 2</text></g>
+<g style="animation: l11 12s ease-out infinite"><line x1="832.7" y1="219" x2="832.7" y2="302" stroke="#484f58" stroke-width="1" opacity="1"/><text x="826.7" y="286.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#8b949e" text-anchor="end" font-weight="600">ShopKart</text><text x="826.7" y="299.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e" text-anchor="end">Sep – Oct 2026 · team of 2</text></g>
+<text x="174.0" y="234.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#e6edf3" text-anchor="middle" font-weight="700" stroke="#080a0f" stroke-width="5" paint-order="stroke">2025</text>
+<text x="221.4" y="234.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e" text-anchor="middle" stroke="#080a0f" stroke-width="5" paint-order="stroke">Sep</text>
+<text x="268.7" y="234.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e" text-anchor="middle" stroke="#080a0f" stroke-width="5" paint-order="stroke">Oct</text>
+<text x="316.0" y="234.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e" text-anchor="middle" stroke="#080a0f" stroke-width="5" paint-order="stroke">Nov</text>
+<text x="363.3" y="234.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e" text-anchor="middle" stroke="#080a0f" stroke-width="5" paint-order="stroke">Dec</text>
+<text x="411.4" y="234.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#e6edf3" text-anchor="middle" font-weight="700" stroke="#080a0f" stroke-width="5" paint-order="stroke">2026</text>
+<text x="457.2" y="234.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e" text-anchor="middle" stroke="#080a0f" stroke-width="5" paint-order="stroke">Feb</text>
+<text x="503.0" y="234.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e" text-anchor="middle" stroke="#080a0f" stroke-width="5" paint-order="stroke">Mar</text>
+<text x="550.3" y="234.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e" text-anchor="middle" stroke="#080a0f" stroke-width="5" paint-order="stroke">Apr</text>
+<text x="597.6" y="234.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e" text-anchor="middle" stroke="#080a0f" stroke-width="5" paint-order="stroke">May</text>
+<text x="645.0" y="234.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e" text-anchor="middle" stroke="#080a0f" stroke-width="5" paint-order="stroke">Jun</text>
+<text x="692.3" y="234.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e" text-anchor="middle" stroke="#080a0f" stroke-width="5" paint-order="stroke">Jul</text>
+<text x="740.4" y="234.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e" text-anchor="middle" stroke="#080a0f" stroke-width="5" paint-order="stroke">Aug</text>
+<text x="787.7" y="234.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e" text-anchor="middle" stroke="#080a0f" stroke-width="5" paint-order="stroke">Sep</text>
+<text x="826.5" y="234.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e" text-anchor="middle" stroke="#080a0f" stroke-width="5" paint-order="stroke">Oct</text>
+<line x1="150" y1="214" x2="842" y2="214" stroke="#54cbd5" stroke-width="3" stroke-linecap="round" stroke-dasharray="692 692" opacity="0.85" style="animation: draw 12s linear infinite"/>
+<circle class="pop" cx="44.0" cy="214" r="6.5" fill="none" stroke="#54cbd5" stroke-width="1.5" opacity="0" style="animation: r0 12s ease-out infinite"/>
+<circle class="pop" cx="44.0" cy="214" r="6.5" fill="#080a0f" stroke="#54cbd5" stroke-width="2" style="animation: d0 12s ease-out infinite"/>
+<circle class="pop" cx="157.8" cy="214" r="4" fill="#8b949e" stroke="#080a0f" stroke-width="2" style="animation: d1 12s ease-out infinite"/>
+<circle class="pop" cx="250.9" cy="214" r="4" fill="#8b949e" stroke="#080a0f" stroke-width="2" style="animation: d2 12s ease-out infinite"/>
+<circle class="pop" cx="505.3" cy="214" r="4" fill="#8b949e" stroke="#080a0f" stroke-width="2" style="animation: d3 12s ease-out infinite"/>
+<circle class="pop" cx="519.3" cy="214" r="4" fill="#8b949e" stroke="#080a0f" stroke-width="2" style="animation: d3x0 12s ease-out infinite"/>
+<circle class="pop" cx="530.1" cy="214" r="6.5" fill="none" stroke="#f5a524" stroke-width="1.5" opacity="0" style="animation: r4 12s ease-out infinite"/>
+<circle class="pop" cx="530.1" cy="214" r="6.5" fill="#f5a524" stroke="#080a0f" stroke-width="2" style="animation: d4 12s ease-out infinite"/>
+<circle class="pop" cx="589.1" cy="214" r="4" fill="#8b949e" stroke="#080a0f" stroke-width="2" style="animation: d5 12s ease-out infinite"/>
+<rect x="598.4" y="209.5" width="150.5" height="9" rx="4.5" fill="#54cbd5" opacity="0.18"/>
+<rect class="bar" x="598.4" y="209.5" width="150.5" height="9" rx="4.5" fill="#54cbd5" fill-opacity="0.9" style="animation: g6 12s linear infinite"/>
+<circle class="pop" cx="598.4" cy="214" r="6.5" fill="none" stroke="#54cbd5" stroke-width="1.5" opacity="0" style="animation: r6 12s ease-out infinite"/>
+<circle class="pop" cx="598.4" cy="214" r="6.5" fill="#54cbd5" stroke="#080a0f" stroke-width="2" style="animation: d6 12s ease-out infinite"/>
+<circle class="pop" cx="643.4" cy="214" r="4" fill="#8b949e" stroke="#080a0f" stroke-width="2" style="animation: d7 12s ease-out infinite"/>
+<circle class="pop" cx="674.4" cy="214" r="6.5" fill="none" stroke="#54cbd5" stroke-width="1.5" opacity="0" style="animation: r8 12s ease-out infinite"/>
+<circle class="pop" cx="674.4" cy="214" r="6.5" fill="#54cbd5" stroke="#080a0f" stroke-width="2" style="animation: d8 12s ease-out infinite"/>
+<circle class="pop" cx="697.7" cy="214" r="6.5" fill="none" stroke="#54cbd5" stroke-width="1.5" opacity="0" style="animation: r9 12s ease-out infinite"/>
+<circle class="pop" cx="697.7" cy="214" r="6.5" fill="#54cbd5" stroke="#080a0f" stroke-width="2" style="animation: d9 12s ease-out infinite"/>
+<circle class="pop" cx="750.5" cy="214" r="6.5" fill="none" stroke="#54cbd5" stroke-width="1.5" opacity="0" style="animation: r10 12s ease-out infinite"/>
+<circle class="pop" cx="750.5" cy="214" r="6.5" fill="#54cbd5" stroke="#080a0f" stroke-width="2" style="animation: d10 12s ease-out infinite"/>
+<rect x="776.8" y="210.5" width="55.9" height="7" rx="3.5" fill="#8b949e" opacity="0.18"/>
+<rect class="bar" x="776.8" y="210.5" width="55.9" height="7" rx="3.5" fill="#8b949e" fill-opacity="0.75" style="animation: g11 12s linear infinite"/>
+<circle cx="832.7" cy="214" r="2" fill="#e6edf3" opacity=".6"/>
+<circle class="pop" cx="776.8" cy="214" r="4" fill="#8b949e" stroke="#080a0f" stroke-width="2" style="animation: d11 12s ease-out infinite"/>
+<g style="animation: head 12s linear infinite"><circle class="breathe" cx="842" cy="214" r="6" fill="none" stroke="#54cbd5" stroke-width="1.5"/><circle cx="842" cy="214" r="4" fill="#e6edf3"/></g>
+<text x="853.0" y="217.5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Oct 21</text>
+<text x="32.0" y="90.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">dot = when it started · bar = span of commits · labels give the month</text>
+</svg>
+
+<path d="M20 380h30m6 0h10" stroke="#ffc247" stroke-width="2"/>
+<rect x="821" y="379" width="4" height="4" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.0s"/><rect x="829" y="377" width="4" height="6" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.23s"/><rect x="837" y="375" width="4" height="8" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.46s"/><rect x="845" y="379" width="4" height="4" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.6900000000000001s"/><rect x="853" y="377" width="4" height="6" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.92s"/><rect x="861" y="375" width="4" height="8" fill="#54cbd5" class="arena-eq" style="animation-delay:-1.1500000000000001s"/><rect x="869" y="379" width="4" height="4" fill="#54cbd5" class="arena-eq" style="animation-delay:-1.3800000000000001s"/><rect x="877" y="377" width="4" height="6" fill="#54cbd5" class="arena-eq" style="animation-delay:-1.61s"/><rect x="885" y="375" width="4" height="8" fill="#54cbd5" class="arena-eq" style="animation-delay:-1.84s"/></svg>

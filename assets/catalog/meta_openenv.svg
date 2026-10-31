@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="356" viewBox="0 0 600 356" role="img" aria-labelledby="cat-title">
+<title id="cat-title">Meta OpenEnv — An environment for agents juggling assignments, bugs, deadlines and burnout constraints. Team hackathon project.</title><style>
+text{font-family:Arial,Helvetica,sans-serif}.mono{font-family:Consolas,monospace;letter-spacing:1.5px}
+.cat-trace{stroke-dasharray:55 760;animation:cat-trace 12s linear infinite}
+.cat-pulse{animation:cat-pulse 4s ease-in-out infinite}
+.cat-sweep{transform-origin:0 0;animation:cat-sweep 12s linear infinite}
+.cat-meter{transform-box:fill-box;transform-origin:bottom;animation:cat-meter 2.5s ease-in-out infinite}
+@keyframes cat-trace{to{stroke-dashoffset:-815}}
+@keyframes cat-pulse{50%{opacity:.4}}
+@keyframes cat-sweep{to{transform:rotate(360deg)}}
+@keyframes cat-meter{50%{transform:scaleY(.35);opacity:.45}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<defs><pattern id="cat-grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#26303d" stroke-width=".45"/></pattern></defs>
+<rect x="1" y="1" width="598" height="354" rx="12" fill="#070a10" stroke="#293341"/>
+<rect x="1" y="1" width="598" height="354" rx="12" fill="url(#cat-grid)"/>
+<path d="M1 1H599V123H447L421 146H1Z" fill="#54cbd5" opacity=".045"/><path d="M436 1H599V164Z" fill="#54cbd5" opacity=".075"/><text x="562" y="223" font-size="82" fill="#54cbd5" text-anchor="end" font-weight="900" opacity=".07">02</text><path d="M18 1H582" stroke="#54cbd5" stroke-width="3" class="cat-trace"/><text x="26" y="35" font-size="12" fill="#54cbd5" class="mono">02 / AGENT ENVIRONMENT</text><text x="25" y="91" font-size="34" fill="#edf2f7" font-weight="800">Meta OpenEnv</text><g transform="translate(534 86)"><circle r="34" fill="#0d151f" stroke="#334456"/><g class="cat-sweep"><path d="M0 0V-29A29 29 0 0 1 25-14Z" fill="#54cbd5" opacity=".12"/></g><path d="M-15-8L-24 0-15 8M15-8L24 0 15 8M5-16L-5 16" fill="none" stroke="#54cbd5" stroke-width="2"/></g><text x="26" y="159" font-size="17" fill="#acb8c7" >An environment for agents juggling assignments, bugs,</text><text x="26" y="182" font-size="17" fill="#acb8c7" >deadlines and burnout constraints. Team hackathon project.</text><rect x="26" y="239" width="70.2" height="24" rx="5" fill="#101722" stroke="#334050"/><text x="38" y="256" font-size="13" fill="#c4cdd9" >Python</text><rect x="104.2" y="239" width="77.9" height="24" rx="5" fill="#101722" stroke="#334050"/><text x="116.2" y="256" font-size="13" fill="#c4cdd9" >FastAPI</text><rect x="190.10000000000002" y="239" width="70.2" height="24" rx="5" fill="#101722" stroke="#334050"/><text x="202.10000000000002" y="256" font-size="13" fill="#c4cdd9" >Docker</text><path d="M26 304H574" stroke="#293341"/><rect x="1" y="305" width="598" height="50" rx="10" fill="#54cbd5" opacity=".035"/><text x="26" y="332" font-size="13" fill="#54cbd5" class="mono">OPEN REPOSITORY</text><path d="M540 326H572m-8-6 8 6-8 6" fill="none" stroke="#54cbd5" stroke-width="2"/></svg>

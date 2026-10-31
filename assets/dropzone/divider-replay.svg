@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="74" viewBox="0 0 1200 74" role="img" aria-labelledby="dz-title">
+<title id="dz-title">MISSION REPLAY</title>
+<style>text{font-family:Arial,Helvetica,sans-serif}.mono{font-family:Consolas,monospace;letter-spacing:2px}
+.dz-run{animation:dz-run 12s linear infinite}
+.dz-glow{animation:dz-glow 5s ease-in-out infinite}
+.dz-float{animation:dz-float 7s ease-in-out infinite}
+.dz-turn{animation:dz-turn 12s linear infinite;transform-origin:0 0}
+.dz-eq{transform-box:fill-box;transform-origin:bottom;animation:dz-eq 2s ease-in-out infinite}
+.dz-hop{animation:dz-hop 8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.dz-spark{animation:dz-spark 9s linear infinite}
+.dz-plane{animation:dz-plane 12s linear infinite}
+.dz-drop{animation:dz-drop 8s ease-in-out infinite}
+.dz-progress{stroke-dasharray:50 850;animation:dz-progress 7s linear infinite}
+.dz-slot{animation:dz-slot 8s ease-in-out infinite}
+@keyframes dz-run{to{stroke-dashoffset:-360}}
+@keyframes dz-glow{50%{opacity:.55}}
+@keyframes dz-float{50%{transform:translateY(-9px)}}
+@keyframes dz-turn{to{transform:rotate(360deg)}}
+@keyframes dz-eq{50%{transform:scaleY(.25);opacity:.4}}
+@keyframes dz-hop{50%{transform:scale(1.07)}}
+@keyframes dz-spark{0%{transform:translate(0,15px);opacity:0}20%{opacity:.55}80%{opacity:.25}100%{transform:translate(35px,-65px);opacity:0}}
+@keyframes dz-plane{0%{transform:translate(9px,44px) rotate(39deg);opacity:0}8%{opacity:1}92%{opacity:1}100%{transform:translate(319px,299px) rotate(39deg);opacity:0}}
+@keyframes dz-drop{0%,100%{transform:translateY(-12px)}50%{transform:translateY(10px)}}
+@keyframes dz-progress{to{stroke-dashoffset:-900}}
+@keyframes dz-slot{0%,18%,100%{stroke:#ffc247;fill:#253024}25%,92%{stroke:#293341;fill:#10141b}}
+@media(prefers-reduced-motion:reduce){.dz-run,.dz-glow,.dz-float,.dz-turn,.dz-eq,.dz-hop,.dz-spark,.dz-plane,.dz-drop,.dz-progress,.dz-slot{animation:none!important}.dz-spark{opacity:.2}}
+</style>
+<defs><pattern id="dz-grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#202736" stroke-width=".5"/></pattern><clipPath id="dz-clip"><rect width="1200" height="74" rx="12"/></clipPath></defs>
+<rect x="1" y="1" width="1198" height="72" rx="12" fill="#06080d" stroke="#293341"/>
+<g clip-path="url(#dz-clip)"><rect width="1200" height="74" fill="url(#dz-grid)"/><path d="M20 37H1180" stroke="#2b443a"/><path d="M20 37H1180" stroke="#ffc247" stroke-width="2" stroke-dasharray="28 240" class="dz-run"/><path d="M24 18L43 37 24 56 5 37Z" fill="#06080d" stroke="#ffc247" class="dz-glow"/><rect x="61" y="17" width="540" height="40" fill="#06080d"/><text x="75" y="44" fill="#ffc247" font-size="17" class="mono">03 / MISSION REPLAY</text><g transform="translate(1150 37)"><g class="dz-turn"><path d="M-13-13h9m8 0h9v9m0 8v9h-9m-8 0h-9v-9m0-8v-9" fill="none" stroke="#54cbd5"/></g></g></g></svg>

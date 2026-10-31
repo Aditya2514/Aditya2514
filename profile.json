@@ -1,0 +1,23 @@
+{
+  "owner": "Aditya2514",
+  "featured": ["LexGuard", "Pikina", "Noesis", "Resilion"],
+  "exclude": ["Aditya2514"],
+  "order": ["HostelDesk", "Meta_OpenEnv", "Shopkart", "codecrafters-shell-cpp", "Vidya", "Fintrac", "Naukri"],
+  "overrides": {
+    "HostelDesk": {"title": "HostelDesk", "category": "FULL-STACK SYSTEM", "description": "Hostel complaints with explained ETA ranges, automatic routing, completion proof and escalation.", "stack": ["TypeScript", "React", "Express", "PostgreSQL", "Prisma"]},
+    "Meta_OpenEnv": {"title": "Meta OpenEnv", "category": "AGENT ENVIRONMENT", "description": "An environment for agents juggling assignments, bugs, deadlines and burnout constraints. Team hackathon project.", "stack": ["Python", "FastAPI", "Docker"]},
+    "Shopkart": {"title": "ShopKart", "category": "COMMERCE ENGINEERING", "description": "Server-authoritative checkout and Razorpay test-mode payments. Built with Apurva Patil.", "stack": ["React", "Express", "MongoDB"]},
+    "codecrafters-shell-cpp": {"title": "C++ Shell", "category": "SYSTEMS PROGRAMMING", "description": "A shell built around fork, exec, pipe and dup2: quoting, redirection, pipelines and background jobs.", "stack": ["C++23", "POSIX", "CMake"]},
+    "Vidya": {"title": "Vidya / BookFinder", "category": "MOBILE APPLICATION", "description": "Book discovery, debounced search, Google sign-in and persistent saved lists.", "stack": ["React Native", "TypeScript", "Firebase"]},
+    "Fintrac": {"title": "Fintrac", "category": "PERSONAL FINANCE", "description": "A personal budgeting dashboard with Gemini-powered spending analysis.", "stack": ["React", "Vite", "Recharts", "Gemini"]},
+    "Naukri": {"title": "Naukri / Jobee", "category": "FRONTEND APPLICATION", "description": "A job-portal UI with search, saved jobs and a simulated listings API.", "stack": ["React", "Vite"]}
+  },
+  "build_kit": [
+    {"name": "LANGUAGES", "purpose": "Write the core logic", "tools": ["Python", "JavaScript", "TypeScript", "C++"]},
+    {"name": "AI & RETRIEVAL", "purpose": "Ground answers and connect models", "tools": ["Ollama", "Gemini", "Groq", "Hugging Face", "ChromaDB", "sentence-transformers"]},
+    {"name": "BACKEND", "purpose": "Expose services and coordinate work", "tools": ["Node.js", "Express", "FastAPI", "Flask"]},
+    {"name": "DATA", "purpose": "Store, query and cache", "tools": ["PostgreSQL", "MongoDB", "Redis", "SQLite"]},
+    {"name": "INTERFACES", "purpose": "Make systems usable", "tools": ["React", "React Native", "Electron", "Streamlit"]},
+    {"name": "DELIVERY", "purpose": "Version, test and ship", "tools": ["Git", "GitHub Actions", "Docker", "Vercel"]}
+  ]
+}

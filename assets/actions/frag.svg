@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="260" viewBox="0 0 600 260" role="img" aria-labelledby="a-title">
+<title id="a-title">02 / FRAG — FRAG OUT. BUG OUT. Find the edge case. Test the fix.</title><style>
+text{font-family:Arial,Helvetica,sans-serif}.mono{font-family:Consolas,monospace;letter-spacing:2px}
+.a-scope{animation:a-scope 10s ease-in-out infinite;transform-origin:0 0}
+.a-target{animation:a-target 10s ease-in-out infinite}
+.a-cross{animation:a-cross 10s ease-in-out infinite}
+.a-hit{opacity:0;animation:a-hit 10s ease-in-out infinite}
+.a-confirm{opacity:0;animation:a-confirm 10s ease-in-out infinite}
+.a-trace{stroke-dasharray:38 600;animation:a-trace 8s linear infinite}
+.a-glow{animation:a-glow 5s ease-in-out infinite}
+.a-smoke{animation:a-smoke 7s ease-out infinite;transform-box:fill-box;transform-origin:center}
+.a-frag{animation:a-frag 8s ease-in-out infinite}
+.a-burst{opacity:0;animation:a-burst 8s ease-out infinite;transform-origin:100px 143px}
+.a-flame{animation:a-flame 3s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom}
+.a-can{animation:a-can 4s ease-in-out infinite}
+.a-energy{animation:a-energy 4s ease-in-out infinite;transform-box:fill-box;transform-origin:bottom}
+.a-feed{animation:a-feed 12s linear infinite}
+@keyframes a-scope{0%,10%{transform:scale(.82) rotate(-5deg);opacity:.6}30%,68%{transform:scale(1) rotate(0);opacity:1}80%,100%{transform:scale(.82) rotate(-5deg);opacity:.6}}
+@keyframes a-target{0%,12%{transform:translate(48px,-28px)}32%,70%{transform:translate(0,0)}85%,100%{transform:translate(48px,-28px)}}
+@keyframes a-cross{0%,20%{stroke:#54cbd5}35%,70%{stroke:#ffc247}80%,100%{stroke:#54cbd5}}
+@keyframes a-hit{0%,43%,78%,100%{opacity:0}49%,63%{opacity:1}}
+@keyframes a-confirm{0%,45%,82%,100%{opacity:0;transform:translateY(8px)}51%,74%{opacity:1;transform:translateY(0)}}
+@keyframes a-trace{to{stroke-dashoffset:-638}}
+@keyframes a-glow{50%{opacity:.5}}
+@keyframes a-smoke{0%{transform:translate(0,15px) scale(.55);opacity:0}20%{opacity:.4}70%{opacity:.22}100%{transform:translate(25px,-55px) scale(1.45);opacity:0}}
+@keyframes a-frag{0%,12%{transform:translate(-30px,35px) rotate(-20deg)}40%,60%{transform:translate(25px,-25px) rotate(80deg)}75%,100%{transform:translate(-30px,35px) rotate(-20deg)}}
+@keyframes a-burst{0%,40%,85%,100%{opacity:0;transform:scale(.4)}50%{opacity:.8;transform:scale(.9)}75%{opacity:0;transform:scale(1.5)}}
+@keyframes a-flame{50%{transform:scaleX(.8) scaleY(1.15);opacity:.75}}
+@keyframes a-can{50%{transform:translateY(-9px)}}
+@keyframes a-energy{0%,100%{transform:scaleY(.25)}50%{transform:scaleY(1)}}
+@keyframes a-feed{0%,100%{transform:translateX(0)}50%{transform:translateX(-12px)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}.a-hit,.a-confirm{opacity:1}.a-smoke{opacity:.2}}
+</style>
+<defs><pattern id="a-grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#202736" stroke-width=".5"/></pattern><radialGradient id="a-glass"><stop stop-color="#182c35"/><stop offset="1" stop-color="#080c12"/></radialGradient><clipPath id="a-clip"><rect x="1" y="1" width="598" height="258" rx="12"/></clipPath></defs>
+<rect x="1" y="1" width="598" height="258" rx="12" fill="#06080d" stroke="#293341"/>
+<g clip-path="url(#a-clip)"><rect width="600" height="260" fill="url(#a-grid)"/><text x="24" y="34" font-size="12" fill="#ffc247" class="mono">02 / FRAG</text><path d="M186 58V226" stroke="#293341"/><text x="210" y="103" font-size="29" fill="#edf2f7" font-weight="900">FRAG OUT.</text><text x="210" y="143" font-size="29" fill="#ffc247" font-weight="900">BUG OUT.</text><text x="210" y="186" font-size="15" fill="#9daab9" >Find the edge case. Test the fix.</text><path d="M210 219H572" stroke="#ffc247" stroke-width="2" class="a-trace"/><path d="M40 202Q70 69 147 112" fill="none" stroke="#536b7c" stroke-dasharray="4 7"/><g transform="translate(86 153)"><g class="a-frag"><rect x="-11" y="-38" width="22" height="14" fill="#b5bca3"/><ellipse rx="25" ry="34" fill="#46583b" stroke="#94a477" stroke-width="2"/><path d="M-21-17H21M-25 0H25M-21 17H21M-9-30V30M9-30V30" stroke="#182516" stroke-width="3"/><path d="M8-39Q35-55 29-30" fill="none" stroke="#c0c7a8" stroke-width="3"/></g></g><g class="a-burst" fill="none" stroke="#ffc247" stroke-width="2"><circle cx="100" cy="143" r="38"/><path d="M100 84V100M100 186V202M41 143H58M142 143H160M58 101L70 113M130 173L143 186M58 186L70 174M130 113L143 100"/></g></g>
+<path d="M16 1H584" fill="none" stroke="#ffc247" stroke-width="2" class="a-trace"/>
+</svg>

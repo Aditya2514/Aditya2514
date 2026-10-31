@@ -1,0 +1,115 @@
+{
+  "owner": "Aditya2514",
+  "repositories": [
+    {
+      "name": "HostelDesk",
+      "description": null,
+      "language": "TypeScript",
+      "html_url": "https://github.com/Aditya2514/HostelDesk",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "pushed_at": "2026-10-27T07:52:16Z"
+    },
+    {
+      "name": "Meta_OpenEnv",
+      "description": "OpenEnv-compatible environment where an RL or LLM agent triages assignments and production bugs against deadlines and a burnout budget. FastAPI server, deterministic graders, 110-test suite in CI.",
+      "language": "Python",
+      "html_url": "https://github.com/Aditya2514/Meta_OpenEnv",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "pushed_at": "2026-10-16T18:05:33Z"
+    },
+    {
+      "name": "Shopkart",
+      "description": "Full-stack e-commerce app: JWT auth, catalog, wishlist, cart, server-side checkout and Razorpay payments. React + Express + MongoDB, deployed on Vercel.",
+      "language": "JavaScript",
+      "html_url": "https://github.com/Aditya2514/Shopkart",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "pushed_at": "2026-10-15T14:11:42Z"
+    },
+    {
+      "name": "codecrafters-shell-cpp",
+      "description": "POSIX-style shell in C++23: builtins, PATH lookup, quoting, I/O redirection, multi-stage pipelines and background jobs on fork/exec/pipe/dup2.",
+      "language": "C++",
+      "html_url": "https://github.com/Aditya2514/codecrafters-shell-cpp",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "pushed_at": "2026-10-16T18:05:41Z"
+    },
+    {
+      "name": "Vidya",
+      "description": "React Native book discovery app: Google Books search with debounced infinite scroll, Firebase email and Google sign-in, and saved lists with Redux Toolkit + redux-persist.",
+      "language": "TypeScript",
+      "html_url": "https://github.com/Aditya2514/Vidya",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "pushed_at": "2026-10-16T18:05:38Z"
+    },
+    {
+      "name": "Fintrac",
+      "description": "Personal finance tracker and budgeting dashboard with Gemini-powered spending analysis. React + Vite + Recharts.",
+      "language": "JavaScript",
+      "html_url": "https://github.com/Aditya2514/Fintrac",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "pushed_at": "2026-08-22T08:02:13Z"
+    },
+    {
+      "name": "Naukri",
+      "description": "Dark-mode job portal UI in React + Vite with API-backed listings and saved jobs, deployed on GitHub Pages.",
+      "language": "JavaScript",
+      "html_url": "https://github.com/Aditya2514/Naukri",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "pushed_at": "2026-03-18T07:50:54Z"
+    },
+    {
+      "name": "LexGuard",
+      "description": "AI contract review for Indian law: clause-level risk ratings, plain-language explanations, statute-grounded citations and fairer rewrites. Multi-agent LLM pipeline with a deterministic safety net.",
+      "language": "JavaScript",
+      "html_url": "https://github.com/Aditya2514/LexGuard",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "pushed_at": "2026-10-21T11:16:09Z"
+    },
+    {
+      "name": "Pikina",
+      "description": "Offline-first personal operating layer for Windows: deterministic intent routing with a local Ollama fallback, DAG task scheduler, transactional executor with rollback, and a consent gate for OS actions.",
+      "language": "Python",
+      "html_url": "https://github.com/Aditya2514/Pikina",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "pushed_at": "2026-10-22T18:31:31Z"
+    },
+    {
+      "name": "Noesis",
+      "description": "Multimodal RAG over video, audio, PDFs and images: Whisper transcription, local OCR, hybrid BM25 + dense retrieval with reranking, and grounded answers that show their sources. Streamlit UI with a knowledge graph.",
+      "language": "Python",
+      "html_url": "https://github.com/Aditya2514/Noesis",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "pushed_at": "2026-10-21T11:18:27Z"
+    },
+    {
+      "name": "Resilion",
+      "description": "Energy supply-chain risk intelligence: two AI agents over a NetworkX knowledge graph turn geopolitical news (GDELT, RSS) into disruption events and rank alternative crude routes, with human sign-off on every action.",
+      "language": "Python",
+      "html_url": "https://github.com/Aditya2514/Resilion",
+      "fork": false,
+      "archived": false,
+      "private": false,
+      "pushed_at": "2026-10-21T11:18:35Z"
+    }
+  ]
+}

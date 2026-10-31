@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 464 370" width="464" height="370" role="img" aria-labelledby="arena-title">
+<title id="arena-title">STRATEGY / RESILION — original animated profile panel</title>
+<style>
+.arena-label{font:11px Consolas,monospace;letter-spacing:1.5px}
+.arena-border{animation:arena-run 18s linear infinite}
+.arena-dot{animation:arena-ping 3s ease-in-out infinite}
+.arena-eq{transform-box:fill-box;transform-origin:bottom;animation:arena-eq 2.4s ease-in-out infinite}
+@keyframes arena-run{to{stroke-dashoffset:-2400}}
+@keyframes arena-ping{50%{opacity:.35}}
+@keyframes arena-eq{50%{transform:scaleY(.35);opacity:.4}}
+@media(prefers-reduced-motion:reduce){.arena-border,.arena-dot,.arena-eq{animation:none!important}}
+</style>
+<rect x="1" y="1" width="462" height="368" rx="12" fill="#06080d" stroke="#293341"/>
+<rect x="1.5" y="1.5" width="461" height="367" rx="12" fill="none" stroke="#ffc247" stroke-width="2" stroke-dasharray="70 1130" class="arena-border"/>
+<path d="M16 38H448" stroke="#293341"/>
+<text class="arena-label" x="18" y="27" fill="#ffc247">STRATEGY / RESILION</text>
+<circle cx="442" cy="24" r="4" fill="#54cbd5" class="arena-dot"/>
+<svg xmlns="http://www.w3.org/2000/svg" x="12" y="48" width="440" height="300" viewBox="0 0 440 300" role="img" aria-labelledby="t d">
+<title id="t">Resilion: supply-chain risk intelligence for India's crude-oil imports</title>
+<desc id="d">Project card for Resilion, in progress. A Gemini Risk Watcher agent turns news (GDELT headlines, Guardian articles) into structured disruption events. In this illustrative event, a news event lands on the Strait of Hormuz corridor in the NetworkX supply graph (seeded with 13 nodes and 19 edges); a 2-hop traversal lights the refineries it supplies (Jamnagar, Panipat, Mumbai) and then the industries they serve (power, petrochemicals, transport fuel, LPG). The Red Sea corridor is untouched. A human approval console is planned, drawn dashed. Stack: Python, NetworkX, Gemini, React.</desc>
+<defs></defs>
+<style>
+@keyframes k0{0.00%{opacity:0.75} 7.00%{opacity:0.75} 11.00%{opacity:0} 35.00%{opacity:0} 38.00%{opacity:0.75} 100.00%{opacity:0.75}} .k0{animation:k0 10.0s linear infinite}
+@keyframes k1{0.00%{opacity:0.75} 7.00%{opacity:0.75} 11.00%{opacity:0} 35.00%{opacity:0} 38.00%{opacity:0.75} 100.00%{opacity:0.75}} .k1{animation:k1 10.0s linear infinite}
+@keyframes k2{0.00%{opacity:0.75} 7.00%{opacity:0.75} 11.00%{opacity:0} 35.00%{opacity:0} 38.00%{opacity:0.75} 100.00%{opacity:0.75}} .k2{animation:k2 10.0s linear infinite}
+@keyframes k3{0.00%{opacity:0.75} 7.00%{opacity:0.75} 11.00%{opacity:0} 48.00%{opacity:0} 51.00%{opacity:0.75} 100.00%{opacity:0.75}} .k3{animation:k3 10.0s linear infinite}
+@keyframes k4{0.00%{opacity:0.75} 7.00%{opacity:0.75} 11.00%{opacity:0} 48.00%{opacity:0} 51.00%{opacity:0.75} 100.00%{opacity:0.75}} .k4{animation:k4 10.0s linear infinite}
+@keyframes k5{0.00%{opacity:0.75} 7.00%{opacity:0.75} 11.00%{opacity:0} 48.00%{opacity:0} 51.00%{opacity:0.75} 100.00%{opacity:0.75}} .k5{animation:k5 10.0s linear infinite}
+@keyframes k6{0.00%{opacity:0.75} 7.00%{opacity:0.75} 11.00%{opacity:0} 48.00%{opacity:0} 51.00%{opacity:0.75} 100.00%{opacity:0.75}} .k6{animation:k6 10.0s linear infinite}
+@keyframes k7{0.00%{opacity:0.75} 7.00%{opacity:0.75} 11.00%{opacity:0} 48.00%{opacity:0} 51.00%{opacity:0.75} 100.00%{opacity:0.75}} .k7{animation:k7 10.0s linear infinite}
+@keyframes k8{0.00%{opacity:0.75} 7.00%{opacity:0.75} 11.00%{opacity:0} 48.00%{opacity:0} 51.00%{opacity:0.75} 100.00%{opacity:0.75}} .k8{animation:k8 10.0s linear infinite}
+@keyframes k9{0.00%{opacity:0.75} 7.00%{opacity:0.75} 11.00%{opacity:0} 48.00%{opacity:0} 51.00%{opacity:0.75} 100.00%{opacity:0.75}} .k9{animation:k9 10.0s linear infinite}
+@keyframes k10{0.00%{opacity:0.75} 7.00%{opacity:0.75} 11.00%{opacity:0} 48.00%{opacity:0} 51.00%{opacity:0.75} 100.00%{opacity:0.75}} .k10{animation:k10 10.0s linear infinite}
+@keyframes k11{0.00%{opacity:0.75} 7.00%{opacity:0.75} 11.00%{opacity:0} 48.00%{opacity:0} 51.00%{opacity:0.75} 100.00%{opacity:0.75}} .k11{animation:k11 10.0s linear infinite}
+@keyframes k12{0.00%{opacity:0.75} 7.00%{opacity:0.75} 11.00%{opacity:0} 48.00%{opacity:0} 51.00%{opacity:0.75} 100.00%{opacity:0.75}} .k12{animation:k12 10.0s linear infinite}
+@keyframes k13{0.00%{opacity:0} 17.90%{opacity:0} 18.00%{opacity:1} 27.00%{opacity:1} 29.00%{opacity:0} 100.00%{opacity:0}} .k13{animation:k13 10.0s linear infinite}
+@keyframes k14{0.00%{opacity:0} 25.90%{opacity:0} 26.00%{opacity:1} 35.00%{opacity:1} 37.00%{opacity:0} 100.00%{opacity:0}} .k14{animation:k14 10.0s linear infinite}
+@keyframes k15{0.00%{opacity:0} 25.90%{opacity:0} 26.00%{opacity:1} 35.00%{opacity:1} 37.00%{opacity:0} 100.00%{opacity:0}} .k15{animation:k15 10.0s linear infinite}
+@keyframes k16{0.00%{opacity:0} 25.90%{opacity:0} 26.00%{opacity:1} 35.00%{opacity:1} 37.00%{opacity:0} 100.00%{opacity:0}} .k16{animation:k16 10.0s linear infinite}
+@keyframes k17{0.00%{opacity:0} 38.90%{opacity:0} 39.00%{opacity:1} 48.00%{opacity:1} 50.00%{opacity:0} 100.00%{opacity:0}} .k17{animation:k17 10.0s linear infinite}
+@keyframes k18{0.00%{opacity:0} 38.90%{opacity:0} 39.00%{opacity:1} 48.00%{opacity:1} 50.00%{opacity:0} 100.00%{opacity:0}} .k18{animation:k18 10.0s linear infinite}
+@keyframes k19{0.00%{opacity:0} 38.90%{opacity:0} 39.00%{opacity:1} 48.00%{opacity:1} 50.00%{opacity:0} 100.00%{opacity:0}} .k19{animation:k19 10.0s linear infinite}
+@keyframes k20{0.00%{opacity:0} 38.90%{opacity:0} 39.00%{opacity:1} 48.00%{opacity:1} 50.00%{opacity:0} 100.00%{opacity:0}} .k20{animation:k20 10.0s linear infinite}
+@keyframes k21{0.00%{opacity:0} 38.90%{opacity:0} 39.00%{opacity:1} 48.00%{opacity:1} 50.00%{opacity:0} 100.00%{opacity:0}} .k21{animation:k21 10.0s linear infinite}
+@keyframes k22{0.00%{opacity:0} 38.90%{opacity:0} 39.00%{opacity:1} 48.00%{opacity:1} 50.00%{opacity:0} 100.00%{opacity:0}} .k22{animation:k22 10.0s linear infinite}
+@keyframes k23{0.00%{opacity:0} 38.90%{opacity:0} 39.00%{opacity:1} 48.00%{opacity:1} 50.00%{opacity:0} 100.00%{opacity:0}} .k23{animation:k23 10.0s linear infinite}
+@keyframes k24{0.00%{opacity:0} 38.90%{opacity:0} 39.00%{opacity:1} 48.00%{opacity:1} 50.00%{opacity:0} 100.00%{opacity:0}} .k24{animation:k24 10.0s linear infinite}
+@keyframes k25{0.00%{opacity:0} 38.90%{opacity:0} 39.00%{opacity:1} 48.00%{opacity:1} 50.00%{opacity:0} 100.00%{opacity:0}} .k25{animation:k25 10.0s linear infinite}
+@keyframes k26{0.00%{opacity:0} 38.90%{opacity:0} 39.00%{opacity:1} 48.00%{opacity:1} 50.00%{opacity:0} 100.00%{opacity:0}} .k26{animation:k26 10.0s linear infinite}
+@keyframes k27{0.00%{opacity:0;transform:scale(1)} 14.90%{opacity:0;transform:scale(1)} 15.00%{opacity:0.8;transform:scale(1)} 25.00%{opacity:0;transform:scale(1.35)} 100.00%{opacity:0;transform:scale(1.35)}} .k27{animation:k27 10.0s linear infinite}
+@keyframes k28{0.00%{opacity:1.0} 7.00%{opacity:1.0} 11.00%{opacity:0} 27.00%{opacity:0} 30.00%{opacity:1.0} 100.00%{opacity:1.0}} .k28{animation:k28 10.0s linear infinite}
+@keyframes k29{0.00%{opacity:1.0} 7.00%{opacity:1.0} 11.00%{opacity:0} 35.00%{opacity:0} 38.00%{opacity:1.0} 100.00%{opacity:1.0}} .k29{animation:k29 10.0s linear infinite}
+@keyframes k30{0.00%{opacity:1.0} 7.00%{opacity:1.0} 11.00%{opacity:0} 35.00%{opacity:0} 38.00%{opacity:1.0} 100.00%{opacity:1.0}} .k30{animation:k30 10.0s linear infinite}
+@keyframes k31{0.00%{opacity:1.0} 7.00%{opacity:1.0} 11.00%{opacity:0} 35.00%{opacity:0} 38.00%{opacity:1.0} 100.00%{opacity:1.0}} .k31{animation:k31 10.0s linear infinite}
+@keyframes k32{0.00%{opacity:1.0} 7.00%{opacity:1.0} 11.00%{opacity:0} 48.00%{opacity:0} 51.00%{opacity:1.0} 100.00%{opacity:1.0}} .k32{animation:k32 10.0s linear infinite}
+@keyframes k33{0.00%{opacity:1.0} 7.00%{opacity:1.0} 11.00%{opacity:0} 48.00%{opacity:0} 51.00%{opacity:1.0} 100.00%{opacity:1.0}} .k33{animation:k33 10.0s linear infinite}
+@keyframes k34{0.00%{opacity:1.0} 7.00%{opacity:1.0} 11.00%{opacity:0} 48.00%{opacity:0} 51.00%{opacity:1.0} 100.00%{opacity:1.0}} .k34{animation:k34 10.0s linear infinite}
+@keyframes k35{0.00%{opacity:1.0} 7.00%{opacity:1.0} 11.00%{opacity:0} 48.00%{opacity:0} 51.00%{opacity:1.0} 100.00%{opacity:1.0}} .k35{animation:k35 10.0s linear infinite}
+@keyframes breathe{0%,100%{opacity:1} 50%{opacity:0.3}} .breathe{animation:breathe 2.4s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+<rect x="0.5" y="0.5" width="439" height="299" rx="16" fill="#080a0f" stroke="#293341"/>
+<text x="24" y="34" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#f5a524" letter-spacing="2.5">N.03 · SUPPLY-CHAIN AI</text>
+<text x="416" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#8b949e" text-anchor="end">↗</text>
+<text x="24" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="23" fill="#e6edf3" font-weight="700">Resilion</text>
+<text x="24" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#8b949e">Supply-chain risk intelligence for India's crude-oil</text>
+<text x="24" y="100" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#8b949e">imports.</text>
+<rect x="24" y="110" width="392" height="136" rx="12" fill="#10141b" stroke="#293341"/>
+<text x="36" y="128" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#8b949e">Risk Watcher → 2-hop traversal</text>
+<text x="404" y="128" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#8b949e" text-anchor="end" opacity="0.8">illustrative event</text>
+<path d="M100,194.0 C114.0,194.0 114.0,160.0 128,160.0" fill="none" stroke="#484f58" stroke-width="1"/>
+<path class="k0" d="M100,194.0 C114.0,194.0 114.0,160.0 128,160.0" fill="none" stroke="#f5a524" stroke-width="1.4" opacity="0.75"/>
+<path d="M100,194.0 C114.0,194.0 114.0,194.0 128,194.0" fill="none" stroke="#484f58" stroke-width="1"/>
+<path class="k1" d="M100,194.0 C114.0,194.0 114.0,194.0 128,194.0" fill="none" stroke="#f5a524" stroke-width="1.4" opacity="0.75"/>
+<path d="M100,194.0 C114.0,194.0 114.0,226.0 128,226.0" fill="none" stroke="#484f58" stroke-width="1"/>
+<path class="k2" d="M100,194.0 C114.0,194.0 114.0,226.0 128,226.0" fill="none" stroke="#f5a524" stroke-width="1.4" opacity="0.75"/>
+<path d="M100,226.0 C114.0,226.0 114.0,160.0 128,160.0" fill="none" stroke="#484f58" stroke-width="1"/>
+<path d="M100,226.0 C114.0,226.0 114.0,226.0 128,226.0" fill="none" stroke="#484f58" stroke-width="1"/>
+<path d="M200,160.0 C218.0,160.0 218.0,152.0 236,152.0" fill="none" stroke="#484f58" stroke-width="1"/>
+<path class="k3" d="M200,160.0 C218.0,160.0 218.0,152.0 236,152.0" fill="none" stroke="#f5a524" stroke-width="1.4" opacity="0.75"/>
+<path d="M200,160.0 C218.0,160.0 218.0,176.0 236,176.0" fill="none" stroke="#484f58" stroke-width="1"/>
+<path class="k4" d="M200,160.0 C218.0,160.0 218.0,176.0 236,176.0" fill="none" stroke="#f5a524" stroke-width="1.4" opacity="0.75"/>
+<path d="M200,160.0 C218.0,160.0 218.0,200.0 236,200.0" fill="none" stroke="#484f58" stroke-width="1"/>
+<path class="k5" d="M200,160.0 C218.0,160.0 218.0,200.0 236,200.0" fill="none" stroke="#f5a524" stroke-width="1.4" opacity="0.75"/>
+<path d="M200,160.0 C218.0,160.0 218.0,224.0 236,224.0" fill="none" stroke="#484f58" stroke-width="1"/>
+<path class="k6" d="M200,160.0 C218.0,160.0 218.0,224.0 236,224.0" fill="none" stroke="#f5a524" stroke-width="1.4" opacity="0.75"/>
+<path d="M200,194.0 C218.0,194.0 218.0,176.0 236,176.0" fill="none" stroke="#484f58" stroke-width="1"/>
+<path class="k7" d="M200,194.0 C218.0,194.0 218.0,176.0 236,176.0" fill="none" stroke="#f5a524" stroke-width="1.4" opacity="0.75"/>
+<path d="M200,194.0 C218.0,194.0 218.0,200.0 236,200.0" fill="none" stroke="#484f58" stroke-width="1"/>
+<path class="k8" d="M200,194.0 C218.0,194.0 218.0,200.0 236,200.0" fill="none" stroke="#f5a524" stroke-width="1.4" opacity="0.75"/>
+<path d="M200,194.0 C218.0,194.0 218.0,224.0 236,224.0" fill="none" stroke="#484f58" stroke-width="1"/>
+<path class="k9" d="M200,194.0 C218.0,194.0 218.0,224.0 236,224.0" fill="none" stroke="#f5a524" stroke-width="1.4" opacity="0.75"/>
+<path d="M200,226.0 C218.0,226.0 218.0,152.0 236,152.0" fill="none" stroke="#484f58" stroke-width="1"/>
+<path class="k10" d="M200,226.0 C218.0,226.0 218.0,152.0 236,152.0" fill="none" stroke="#f5a524" stroke-width="1.4" opacity="0.75"/>
+<path d="M200,226.0 C218.0,226.0 218.0,200.0 236,200.0" fill="none" stroke="#484f58" stroke-width="1"/>
+<path class="k11" d="M200,226.0 C218.0,226.0 218.0,200.0 236,200.0" fill="none" stroke="#f5a524" stroke-width="1.4" opacity="0.75"/>
+<path d="M200,226.0 C218.0,226.0 218.0,224.0 236,224.0" fill="none" stroke="#484f58" stroke-width="1"/>
+<path class="k12" d="M200,226.0 C218.0,226.0 218.0,224.0 236,224.0" fill="none" stroke="#f5a524" stroke-width="1.4" opacity="0.75"/>
+<path d="M314,152.0 C325.0,152.0 325.0,186 336,186" fill="none" stroke="#484f58" stroke-width="1" stroke-dasharray="3 3"/>
+<path d="M314,176.0 C325.0,176.0 325.0,186 336,186" fill="none" stroke="#484f58" stroke-width="1" stroke-dasharray="3 3"/>
+<path d="M314,200.0 C325.0,200.0 325.0,186 336,186" fill="none" stroke="#484f58" stroke-width="1" stroke-dasharray="3 3"/>
+<path d="M314,224.0 C325.0,224.0 325.0,186 336,186" fill="none" stroke="#484f58" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="67.0" y1="160" x2="67.0" y2="184" stroke="#f85149" stroke-width="1.4" opacity="0.8"/>
+<circle class="k13" cx="0" cy="0" r="3.2" fill="#f85149" opacity="0"><animateMotion dur="10.0s" repeatCount="indefinite" path="M67.0,160 C67.0,160 67.0,184 67.0,184" calcMode="spline" keyPoints="0;0;1;1" keyTimes="0;0.1800;0.2700;1" keySplines="0 0 1 1;0.45 0 0.55 1;0 0 1 1"/></circle>
+<circle class="k14" cx="0" cy="0" r="3.2" fill="#f5a524" opacity="0"><animateMotion dur="10.0s" repeatCount="indefinite" path="M100,194.0 C114.0,194.0 114.0,160.0 128,160.0" calcMode="spline" keyPoints="0;0;1;1" keyTimes="0;0.2600;0.3500;1" keySplines="0 0 1 1;0.45 0 0.55 1;0 0 1 1"/></circle>
+<circle class="k15" cx="0" cy="0" r="3.2" fill="#f5a524" opacity="0"><animateMotion dur="10.0s" repeatCount="indefinite" path="M100,194.0 C114.0,194.0 114.0,194.0 128,194.0" calcMode="spline" keyPoints="0;0;1;1" keyTimes="0;0.2600;0.3500;1" keySplines="0 0 1 1;0.45 0 0.55 1;0 0 1 1"/></circle>
+<circle class="k16" cx="0" cy="0" r="3.2" fill="#f5a524" opacity="0"><animateMotion dur="10.0s" repeatCount="indefinite" path="M100,194.0 C114.0,194.0 114.0,226.0 128,226.0" calcMode="spline" keyPoints="0;0;1;1" keyTimes="0;0.2600;0.3500;1" keySplines="0 0 1 1;0.45 0 0.55 1;0 0 1 1"/></circle>
+<circle class="k17" cx="0" cy="0" r="3.2" fill="#f5a524" opacity="0"><animateMotion dur="10.0s" repeatCount="indefinite" path="M200,160.0 C218.0,160.0 218.0,152.0 236,152.0" calcMode="spline" keyPoints="0;0;1;1" keyTimes="0;0.3900;0.4800;1" keySplines="0 0 1 1;0.45 0 0.55 1;0 0 1 1"/></circle>
+<circle class="k18" cx="0" cy="0" r="3.2" fill="#f5a524" opacity="0"><animateMotion dur="10.0s" repeatCount="indefinite" path="M200,160.0 C218.0,160.0 218.0,176.0 236,176.0" calcMode="spline" keyPoints="0;0;1;1" keyTimes="0;0.3900;0.4800;1" keySplines="0 0 1 1;0.45 0 0.55 1;0 0 1 1"/></circle>
+<circle class="k19" cx="0" cy="0" r="3.2" fill="#f5a524" opacity="0"><animateMotion dur="10.0s" repeatCount="indefinite" path="M200,160.0 C218.0,160.0 218.0,200.0 236,200.0" calcMode="spline" keyPoints="0;0;1;1" keyTimes="0;0.3900;0.4800;1" keySplines="0 0 1 1;0.45 0 0.55 1;0 0 1 1"/></circle>
+<circle class="k20" cx="0" cy="0" r="3.2" fill="#f5a524" opacity="0"><animateMotion dur="10.0s" repeatCount="indefinite" path="M200,160.0 C218.0,160.0 218.0,224.0 236,224.0" calcMode="spline" keyPoints="0;0;1;1" keyTimes="0;0.3900;0.4800;1" keySplines="0 0 1 1;0.45 0 0.55 1;0 0 1 1"/></circle>
+<circle class="k21" cx="0" cy="0" r="3.2" fill="#f5a524" opacity="0"><animateMotion dur="10.0s" repeatCount="indefinite" path="M200,194.0 C218.0,194.0 218.0,176.0 236,176.0" calcMode="spline" keyPoints="0;0;1;1" keyTimes="0;0.3900;0.4800;1" keySplines="0 0 1 1;0.45 0 0.55 1;0 0 1 1"/></circle>
+<circle class="k22" cx="0" cy="0" r="3.2" fill="#f5a524" opacity="0"><animateMotion dur="10.0s" repeatCount="indefinite" path="M200,194.0 C218.0,194.0 218.0,200.0 236,200.0" calcMode="spline" keyPoints="0;0;1;1" keyTimes="0;0.3900;0.4800;1" keySplines="0 0 1 1;0.45 0 0.55 1;0 0 1 1"/></circle>
+<circle class="k23" cx="0" cy="0" r="3.2" fill="#f5a524" opacity="0"><animateMotion dur="10.0s" repeatCount="indefinite" path="M200,194.0 C218.0,194.0 218.0,224.0 236,224.0" calcMode="spline" keyPoints="0;0;1;1" keyTimes="0;0.3900;0.4800;1" keySplines="0 0 1 1;0.45 0 0.55 1;0 0 1 1"/></circle>
+<circle class="k24" cx="0" cy="0" r="3.2" fill="#f5a524" opacity="0"><animateMotion dur="10.0s" repeatCount="indefinite" path="M200,226.0 C218.0,226.0 218.0,152.0 236,152.0" calcMode="spline" keyPoints="0;0;1;1" keyTimes="0;0.3900;0.4800;1" keySplines="0 0 1 1;0.45 0 0.55 1;0 0 1 1"/></circle>
+<circle class="k25" cx="0" cy="0" r="3.2" fill="#f5a524" opacity="0"><animateMotion dur="10.0s" repeatCount="indefinite" path="M200,226.0 C218.0,226.0 218.0,200.0 236,200.0" calcMode="spline" keyPoints="0;0;1;1" keyTimes="0;0.3900;0.4800;1" keySplines="0 0 1 1;0.45 0 0.55 1;0 0 1 1"/></circle>
+<circle class="k26" cx="0" cy="0" r="3.2" fill="#f5a524" opacity="0"><animateMotion dur="10.0s" repeatCount="indefinite" path="M200,226.0 C218.0,226.0 218.0,224.0 236,224.0" calcMode="spline" keyPoints="0;0;1;1" keyTimes="0;0.3900;0.4800;1" keySplines="0 0 1 1;0.45 0 0.55 1;0 0 1 1"/></circle>
+<rect class="k27" style="transform-box:fill-box;transform-origin:center" x="32" y="140" width="86" height="20" rx="10.0" fill="none" stroke="#f85149" stroke-width="2" opacity="0"/>
+<g><rect x="32" y="140" width="86" height="20" rx="10.0" fill="#f85149" fill-opacity="0.16" stroke="#f85149"/><text x="75.0" y="154.3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#f85149" font-weight="700" text-anchor="middle">news event</text></g>
+<g><rect x="34" y="184" width="66" height="20" rx="10.0" fill="#080a0f" stroke="#8b949e"/><text x="67.0" y="198.3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#e6edf3" text-anchor="middle">Hormuz</text></g>
+<g class="k28"><rect x="34" y="184" width="66" height="20" rx="10.0" fill="#080a0f" stroke="#f85149"/><text x="67.0" y="198.3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#f85149" text-anchor="middle">Hormuz</text></g>
+<g><rect x="34" y="216" width="66" height="20" rx="10.0" fill="#080a0f" stroke="#484f58"/><text x="67.0" y="230.3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#8b949e" text-anchor="middle">Red Sea</text></g>
+<g><rect x="128" y="150" width="72" height="20" rx="10.0" fill="#080a0f" stroke="#8b949e"/><text x="164.0" y="164.3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#e6edf3" text-anchor="middle">Jamnagar</text></g>
+<g class="k29"><rect x="128" y="150" width="72" height="20" rx="10.0" fill="#f5a524" fill-opacity="0.16" stroke="#f5a524"/><text x="164.0" y="164.3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#f5a524" font-weight="700" text-anchor="middle">Jamnagar</text></g>
+<g><rect x="128" y="184" width="72" height="20" rx="10.0" fill="#080a0f" stroke="#8b949e"/><text x="164.0" y="198.3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#e6edf3" text-anchor="middle">Panipat</text></g>
+<g class="k30"><rect x="128" y="184" width="72" height="20" rx="10.0" fill="#f5a524" fill-opacity="0.16" stroke="#f5a524"/><text x="164.0" y="198.3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#f5a524" font-weight="700" text-anchor="middle">Panipat</text></g>
+<g><rect x="128" y="216" width="72" height="20" rx="10.0" fill="#080a0f" stroke="#8b949e"/><text x="164.0" y="230.3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#e6edf3" text-anchor="middle">Mumbai</text></g>
+<g class="k31"><rect x="128" y="216" width="72" height="20" rx="10.0" fill="#f5a524" fill-opacity="0.16" stroke="#f5a524"/><text x="164.0" y="230.3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#f5a524" font-weight="700" text-anchor="middle">Mumbai</text></g>
+<g><rect x="236" y="142" width="78" height="20" rx="10.0" fill="#080a0f" stroke="#8b949e"/><text x="275.0" y="156.3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#e6edf3" text-anchor="middle">power</text></g>
+<g class="k32"><rect x="236" y="142" width="78" height="20" rx="10.0" fill="#f5a524" fill-opacity="0.16" stroke="#f5a524"/><text x="275.0" y="156.3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#f5a524" font-weight="700" text-anchor="middle">power</text></g>
+<g><rect x="236" y="166" width="78" height="20" rx="10.0" fill="#080a0f" stroke="#8b949e"/><text x="275.0" y="180.3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#e6edf3" text-anchor="middle">petrochem</text></g>
+<g class="k33"><rect x="236" y="166" width="78" height="20" rx="10.0" fill="#f5a524" fill-opacity="0.16" stroke="#f5a524"/><text x="275.0" y="180.3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#f5a524" font-weight="700" text-anchor="middle">petrochem</text></g>
+<g><rect x="236" y="190" width="78" height="20" rx="10.0" fill="#080a0f" stroke="#8b949e"/><text x="275.0" y="204.3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#e6edf3" text-anchor="middle">transport</text></g>
+<g class="k34"><rect x="236" y="190" width="78" height="20" rx="10.0" fill="#f5a524" fill-opacity="0.16" stroke="#f5a524"/><text x="275.0" y="204.3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#f5a524" font-weight="700" text-anchor="middle">transport</text></g>
+<g><rect x="236" y="214" width="78" height="20" rx="10.0" fill="#080a0f" stroke="#8b949e"/><text x="275.0" y="228.3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#e6edf3" text-anchor="middle">LPG</text></g>
+<g class="k35"><rect x="236" y="214" width="78" height="20" rx="10.0" fill="#f5a524" fill-opacity="0.16" stroke="#f5a524"/><text x="275.0" y="228.3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#f5a524" font-weight="700" text-anchor="middle">LPG</text></g>
+<rect x="336" y="168" width="72" height="36" rx="9" fill="#080a0f" stroke="#8b949e" stroke-dasharray="3 3"/>
+<text x="372.0" y="183" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" fill="#8b949e" text-anchor="middle">planned</text>
+<text x="372.0" y="197" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#e6edf3" text-anchor="middle" opacity="0.75">approval</text>
+<rect x="24.0" y="262" width="59.2" height="22" rx="11.0" fill="#10141b" stroke="#293341"/>
+<text x="53.6" y="277" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#e6edf3" text-anchor="middle">Python</text>
+<rect x="89.2" y="262" width="73.6" height="22" rx="11.0" fill="#10141b" stroke="#293341"/>
+<text x="126.0" y="277" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#e6edf3" text-anchor="middle">NetworkX</text>
+<rect x="168.8" y="262" width="59.2" height="22" rx="11.0" fill="#10141b" stroke="#293341"/>
+<text x="198.4" y="277" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#e6edf3" text-anchor="middle">Gemini</text>
+<rect x="234.0" y="262" width="52.0" height="22" rx="11.0" fill="#10141b" stroke="#293341"/>
+<text x="260.0" y="277" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#e6edf3" text-anchor="middle">React</text>
+<rect x="308.8" y="262" width="107.2" height="22" rx="11.0" fill="#f5a524" fill-opacity="0.1" stroke="#f5a524" stroke-opacity="0.7"/>
+<circle class="breathe" cx="320.8" cy="273.0" r="3.5" fill="#f5a524"/>
+<text x="328.8" y="277" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#f5a524">in progress</text>
+</svg>
+
+<path d="M20 358h30m6 0h10" stroke="#ffc247" stroke-width="2"/>
+<rect x="361" y="357" width="4" height="4" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.0s"/><rect x="369" y="355" width="4" height="6" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.23s"/><rect x="377" y="353" width="4" height="8" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.46s"/><rect x="385" y="357" width="4" height="4" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.6900000000000001s"/><rect x="393" y="355" width="4" height="6" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.92s"/><rect x="401" y="353" width="4" height="8" fill="#54cbd5" class="arena-eq" style="animation-delay:-1.1500000000000001s"/><rect x="409" y="357" width="4" height="4" fill="#54cbd5" class="arena-eq" style="animation-delay:-1.3800000000000001s"/><rect x="417" y="355" width="4" height="6" fill="#54cbd5" class="arena-eq" style="animation-delay:-1.61s"/><rect x="425" y="353" width="4" height="8" fill="#54cbd5" class="arena-eq" style="animation-delay:-1.84s"/></svg>

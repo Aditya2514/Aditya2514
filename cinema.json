@@ -1,0 +1,19 @@
+{
+  "title": "DROP ZONE — The Aditya Singh Dossier",
+  "scenes": [
+    {"chapter":"00 / THE DROP","title":"Every build starts with a drop.","line":"Aditya Singh · LLM systems · AI agents · Full-stack engineering","assets":["assets/cinema/opening.svg"],"seconds":8},
+    {"chapter":"01 / THE OPERATOR","title":"The model proposes. The system checks.","line":"Data Science & Applications at IIT Madras · Co-enrolled at Scaler School of Technology","assets":["assets/arena/hero.svg","assets/arena/pattern.svg"],"seconds":12},
+    {"chapter":"01 / LOCK ON","title":"Patt se headshot!","line":"Aim at the bug. Ship the fix. Competitive energy, practical engineering.","assets":["assets/actions/scope.svg"],"seconds":10},
+    {"chapter":"02 / SIGNATURE BUILD","title":"LexGuard — spot the trap before you sign.","line":"Indian-law contract review with staged LLM reasoning, statutory retrieval and deterministic risk checks.","assets":["assets/arena/card_lexguard.svg"],"seconds":12,"url":"https://github.com/Aditya2514/LexGuard"},
+    {"chapter":"02 / SIGNATURE BUILD","title":"Pikina — your machine. Your call.","line":"Pre-alpha desktop assistant: local Ollama, validated tools and consent for high-risk actions.","assets":["assets/arena/card_pikina.svg"],"seconds":12,"url":"https://github.com/Aditya2514/Pikina"},
+    {"chapter":"02 / SIGNATURE BUILD","title":"Noesis — find the moment. Check the source.","line":"Multimodal retrieval with timestamp and page citations. Team project with Apurva Patil.","assets":["assets/arena/card_noesis.svg"],"seconds":12,"url":"https://github.com/Aditya2514/Noesis"},
+    {"chapter":"02 / SIGNATURE BUILD","title":"Resilion — trace the ripple.","line":"Supply-chain graph and Risk Watcher built. Orchestration, API and approval console remain planned.","assets":["assets/arena/card_resilion.svg"],"seconds":12,"url":"https://github.com/Aditya2514/Resilion"},
+    {"chapter":"03 / UTILITY BELT","title":"Game wali utility. Builder wala purpose.","line":"Clear the noise. Inspect the checks. Understand the system. Keep building.","assets":["assets/actions/smoke.svg","assets/actions/frag.svg","assets/actions/molotov.svg","assets/actions/boost.svg"],"seconds":12},
+    {"chapter":"04 / MISSION REPLAY","title":"Follow the checks behind the answer.","line":"LexGuard's illustrative contract run: classify, identify risk, detect traps, verify citations and propose rewrites.","assets":["assets/arena/lexguard_flow.svg"],"seconds":15,"url":"https://github.com/Aditya2514/LexGuard"},
+    {"insert":"project_lobby","seconds_per_project":7},
+    {"chapter":"06 / THE LONG GAME","title":"The grind, one active week at a time.","line":"Real GitHub contributions. The card shows its source date; the scope patrol is decorative.","assets":["assets/catalog/ranked-grind.svg"],"seconds":10},
+    {"chapter":"07 / BUILD KIT","title":"Choose the tool for the problem.","line":"Languages, retrieval, backend, data, interfaces and delivery. A kit that grows with the work.","assets":["assets/catalog/build-kit.svg"],"seconds":12},
+    {"chapter":"08 / THE JOURNEY","title":"Still learning. Already building.","line":"IIT Madras · BS Data Science & Applications · CGPA 9.0/10 · Paradox DSA Triathlon runner-up, 2026","assets":["assets/arena/journey.svg"],"seconds":12},
+    {"chapter":"09 / THE NEXT CHAPTER","title":"A conversation can become the next build.","line":"AI engineering internships · Agent systems · Hackathon collaborations","assets":["assets/cinema/credits.svg"],"seconds":12,"url":"mailto:adityasinghv05@gmail.com","link_label":"Start a conversation"}
+  ]
+}

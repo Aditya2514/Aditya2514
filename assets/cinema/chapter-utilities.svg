@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="184" viewBox="0 0 1200 184" role="img" aria-labelledby="film-title">
+<title id="film-title">THE UTILITY BELT</title><style>
+text{font-family:Arial,Helvetica,sans-serif}.mono{font-family:Consolas,monospace;letter-spacing:2px}
+.film-dust{animation:film-dust 12s linear infinite}
+.film-orbit{animation:film-orbit 24s linear infinite;transform-origin:0 0}
+.film-haze{animation:film-haze 18s ease-in-out infinite alternate}
+.film-light{animation:film-light 9s ease-in-out infinite}
+.film-trace{stroke-dasharray:90 1110;animation:film-trace 14s linear infinite}
+.film-credit{animation:film-credit 22s linear infinite}
+.film-title{animation:film-title 12s ease-in-out infinite;transform-box:fill-box;transform-origin:left center}
+@keyframes film-dust{0%{transform:translate(0,12px);opacity:0}20%,70%{opacity:.5}100%{transform:translate(35px,-55px);opacity:0}}
+@keyframes film-orbit{to{transform:rotate(360deg)}}
+@keyframes film-haze{to{transform:translateX(80px)}}
+@keyframes film-light{50%{opacity:.35}}
+@keyframes film-trace{to{stroke-dashoffset:-1200}}
+@keyframes film-credit{to{transform:translateY(-240px)}}
+@keyframes film-title{50%{transform:scale(1.015)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<defs><radialGradient id="film-glow"><stop stop-color="#1d6570" stop-opacity=".38"/><stop offset="1" stop-color="#030509" stop-opacity="0"/></radialGradient></defs>
+<rect width="1200" height="184" rx="12" fill="#030509"/><rect x="1" y="1" width="1198" height="182" rx="11" fill="none" stroke="#28333f"/>
+<text x="1160" y="151" font-size="161" fill="#14212d" font-weight="900" text-anchor="end">03</text><text x="34" y="40" font-size="12" fill="#ffc247" class="mono">CHAPTER 03</text><text x="32" y="92" font-size="34" fill="#edf3f9" font-weight="800">THE UTILITY BELT</text><text x="34" y="131" font-size="18" fill="#9aafc3" >Competitive energy. Practical engineering.</text><path d="M34 161H1166" stroke="#263443"/><path d="M34 161H1166" stroke="#ffc247" class="film-trace" stroke-width="2"/></svg>

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 464 370" width="464" height="370" role="img" aria-labelledby="arena-title">
+<title id="arena-title">CONTROL / PIKINA — original animated profile panel</title>
+<style>
+.arena-label{font:11px Consolas,monospace;letter-spacing:1.5px}
+.arena-border{animation:arena-run 18s linear infinite}
+.arena-dot{animation:arena-ping 3s ease-in-out infinite}
+.arena-eq{transform-box:fill-box;transform-origin:bottom;animation:arena-eq 2.4s ease-in-out infinite}
+@keyframes arena-run{to{stroke-dashoffset:-2400}}
+@keyframes arena-ping{50%{opacity:.35}}
+@keyframes arena-eq{50%{transform:scaleY(.35);opacity:.4}}
+@media(prefers-reduced-motion:reduce){.arena-border,.arena-dot,.arena-eq{animation:none!important}}
+</style>
+<rect x="1" y="1" width="462" height="368" rx="12" fill="#06080d" stroke="#293341"/>
+<rect x="1.5" y="1.5" width="461" height="367" rx="12" fill="none" stroke="#ffc247" stroke-width="2" stroke-dasharray="70 1130" class="arena-border"/>
+<path d="M16 38H448" stroke="#293341"/>
+<text class="arena-label" x="18" y="27" fill="#ffc247">CONTROL / PIKINA</text>
+<circle cx="442" cy="24" r="4" fill="#54cbd5" class="arena-dot"/>
+<svg xmlns="http://www.w3.org/2000/svg" x="12" y="48" width="440" height="300" viewBox="0 0 440 300" role="img" aria-labelledby="t d">
+<title id="t">Pikina: offline-first personal operating layer</title>
+<desc id="d">Project card for Pikina, pre-alpha, started July 2026. Illustrative run in the quick panel: 'add todo call mom' matches a Tier 1 regex route, with no model call. 'remind me to pay rent' matches no regex, so it goes to a local llama3 model through Ollama, which must return a registered tool or no_match; it proposes todo.add at level 0, the Action Validation Layer checks that the tool is registered and the claimed level matches the registry, and it runs. Actions at level 4 or above, or with irreversible side effects, ask for native consent first. Stack: Python, Ollama, Electron.</desc>
+<defs></defs>
+<style>
+@keyframes k0{0.00%{opacity:0;transform:translateX(0px)} 7.37%{opacity:0;transform:translateX(0px)} 11.58%{opacity:1;transform:translateX(0px)} 14.74%{opacity:1;transform:translateX(0px);animation-timing-function:steps(17,end)} 27.74%{opacity:1;transform:translateX(134.6px)} 30.37%{opacity:1;transform:translateX(134.6px)} 30.89%{opacity:0;transform:translateX(134.6px)} 100.00%{opacity:0;transform:translateX(134.6px)}} .k0{animation:k0 9.5s linear infinite}
+@keyframes k1{0.00%{opacity:1.0} 7.37%{opacity:1.0} 11.58%{opacity:0} 33.68%{opacity:0} 36.84%{opacity:1.0} 100.00%{opacity:1.0}} .k1{animation:k1 9.5s linear infinite}
+@keyframes k2{0.00%{opacity:0;transform:translateX(0px)} 7.37%{opacity:0;transform:translateX(0px)} 11.58%{opacity:1;transform:translateX(0px)} 35.79%{opacity:1;transform:translateX(0px);animation-timing-function:steps(21,end)} 51.11%{opacity:1;transform:translateX(165.8px)} 53.74%{opacity:1;transform:translateX(165.8px)} 54.26%{opacity:0;transform:translateX(165.8px)} 100.00%{opacity:0;transform:translateX(165.8px)}} .k2{animation:k2 9.5s linear infinite}
+@keyframes k3{0.00%{opacity:1.0} 7.37%{opacity:1.0} 11.58%{opacity:0} 31.42%{opacity:0} 34.58%{opacity:1.0} 100.00%{opacity:1.0}} .k3{animation:k3 9.5s linear infinite}
+@keyframes k4{0.00%{opacity:0} 54.79%{opacity:0} 57.95%{opacity:1.0} 63.21%{opacity:1.0} 66.37%{opacity:0} 100.00%{opacity:0}} .k4{animation:k4 9.5s linear infinite}
+@keyframes k5{0.00%{opacity:1.0} 7.37%{opacity:1.0} 11.58%{opacity:0} 64.26%{opacity:0} 67.42%{opacity:1.0} 100.00%{opacity:1.0}} .k5{animation:k5 9.5s linear infinite}
+@keyframes k6{0.00%{opacity:1.0} 7.37%{opacity:1.0} 11.58%{opacity:0} 70.58%{opacity:0} 73.74%{opacity:1.0} 100.00%{opacity:1.0}} .k6{animation:k6 9.5s linear infinite}
+@keyframes k7{0.00%{opacity:1.0} 7.37%{opacity:1.0} 11.58%{opacity:0} 76.37%{opacity:0} 79.53%{opacity:1.0} 100.00%{opacity:1.0}} .k7{animation:k7 9.5s linear infinite}
+@keyframes k8{0.00%{opacity:0;transform:scale(1)} 77.84%{opacity:0;transform:scale(1)} 77.95%{opacity:0.8;transform:scale(1)} 86.37%{opacity:0;transform:scale(1.25)} 100.00%{opacity:0;transform:scale(1.25)}} .k8{animation:k8 9.5s linear infinite}
+@keyframes k9{0.00%{opacity:1.0} 7.37%{opacity:1.0} 11.58%{opacity:0} 77.95%{opacity:0} 81.11%{opacity:1.0} 100.00%{opacity:1.0}} .k9{animation:k9 9.5s linear infinite}
+@keyframes k10{0.00%{opacity:1.0} 7.37%{opacity:1.0} 11.58%{opacity:0} 82.68%{opacity:0} 85.84%{opacity:1.0} 100.00%{opacity:1.0}} .k10{animation:k10 9.5s linear infinite}
+@keyframes k11{0.00%{opacity:1.0} 7.37%{opacity:1.0} 11.58%{opacity:0} 84.26%{opacity:0} 87.42%{opacity:1.0} 100.00%{opacity:1.0}} .k11{animation:k11 9.5s linear infinite}
+@keyframes breathe{0%,100%{opacity:1} 50%{opacity:0.3}} .breathe{animation:breathe 2.4s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+<rect x="0.5" y="0.5" width="439" height="299" rx="16" fill="#080a0f" stroke="#293341"/>
+<text x="24" y="34" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#54cbd5" letter-spacing="2.5">N.02 · LOCAL AGENT</text>
+<text x="416" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#8b949e" text-anchor="end">↗</text>
+<text x="24" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="23" fill="#e6edf3" font-weight="700">Pikina</text>
+<text x="24" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#8b949e">Offline-first personal operating layer for Windows</text>
+<text x="24" y="100" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#8b949e">and Linux.</text>
+<rect x="24" y="110" width="392" height="136" rx="12" fill="#10141b" stroke="#293341"/>
+<text x="36" y="128" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#8b949e">regex → llama3 → AVL → consent</text>
+<text x="404" y="128" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#8b949e" text-anchor="end" opacity="0.8">illustrative run</text>
+<g>
+<rect x="32" y="138" width="376" height="26" rx="7" fill="#080a0f" stroke="#293341"/>
+<text x="42" y="155.5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" fill="#54cbd5" font-weight="700">›</text>
+<text x="58" y="155.5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#e6edf3">add todo call mom</text>
+<g class="k0" opacity="0"><rect x="57" y="142" width="136.6" height="18" fill="#080a0f"/><rect x="57" y="144" width="2" height="14" fill="#54cbd5"/></g>
+</g>
+<g class="k1">
+<rect x="32" y="170" width="376" height="26" rx="7" fill="#080a0f" stroke="#293341"/>
+<text x="42" y="187.5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" fill="#54cbd5" font-weight="700">›</text>
+<text x="58" y="187.5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#e6edf3">remind me to pay rent</text>
+<g class="k2" opacity="0"><rect x="57" y="174" width="167.79999999999998" height="18" fill="#080a0f"/><rect x="57" y="176" width="2" height="14" fill="#54cbd5"/></g>
+</g>
+<g class="k3"><rect x="280" y="142" width="124" height="18" rx="9.0" fill="#54cbd5" fill-opacity="0.16" stroke="#54cbd5"/><text x="342.0" y="155.1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" fill="#54cbd5" font-weight="700" text-anchor="middle">Tier 1 · regex ✓</text></g>
+<g opacity="0" class="k4"><rect x="280" y="174" width="124" height="18" rx="9.0" fill="#080a0f" stroke="#8b949e"/><text x="342.0" y="187.1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" fill="#8b949e" text-anchor="middle">no regex match</text></g>
+<g class="k5"><rect x="280" y="174" width="124" height="18" rx="9.0" fill="#080a0f" stroke="#54cbd5"/><text x="342.0" y="187.1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" fill="#54cbd5" text-anchor="middle">Tier 2 · llama3</text></g>
+<g class="k6"><rect x="32" y="204" width="138" height="19" rx="9.5" fill="#080a0f" stroke="#54cbd5"/><text x="101.0" y="217.6" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" fill="#54cbd5" text-anchor="middle">todo.add · level 0</text></g>
+<path class="k7" d="M173,213.5 h9 m-4,-3.5 l4,3.5 l-4,3.5" fill="none" stroke="#8b949e" stroke-width="1.2"/>
+<rect class="k8" style="transform-box:fill-box;transform-origin:center" x="188" y="204" width="138" height="19" rx="9.5" fill="none" stroke="#f5a524" stroke-width="2" opacity="0"/>
+<g class="k9"><rect x="188" y="204" width="138" height="19" rx="9.5" fill="#f5a524" fill-opacity="0.16" stroke="#f5a524"/><text x="257.0" y="217.6" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" fill="#f5a524" font-weight="700" text-anchor="middle">AVL ✓ tool · level</text></g>
+<path class="k10" d="M329,213.5 h9 m-4,-3.5 l4,3.5 l-4,3.5" fill="none" stroke="#8b949e" stroke-width="1.2"/>
+<g class="k11"><rect x="344" y="204" width="42" height="19" rx="9.5" fill="#080a0f" stroke="#8b949e"/><text x="365.0" y="217.6" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" fill="#e6edf3" text-anchor="middle">runs</text></g>
+<text x="34" y="239" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#8b949e">asks first: <tspan fill="#f5a524">level 4+ or irreversible</tspan></text>
+<rect x="24.0" y="262" width="59.2" height="22" rx="11.0" fill="#10141b" stroke="#293341"/>
+<text x="53.6" y="277" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#e6edf3" text-anchor="middle">Python</text>
+<rect x="89.2" y="262" width="59.2" height="22" rx="11.0" fill="#10141b" stroke="#293341"/>
+<text x="118.8" y="277" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#e6edf3" text-anchor="middle">Ollama</text>
+<rect x="154.4" y="262" width="73.6" height="22" rx="11.0" fill="#10141b" stroke="#293341"/>
+<text x="191.2" y="277" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#e6edf3" text-anchor="middle">Electron</text>
+<rect x="244.0" y="262" width="172.0" height="22" rx="11.0" fill="#54cbd5" fill-opacity="0.1" stroke="#54cbd5" stroke-opacity="0.7"/>
+<circle class="breathe" cx="256.0" cy="273.0" r="3.5" fill="#54cbd5"/>
+<text x="264.0" y="277" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#54cbd5">pre-alpha · Jul 2026</text>
+</svg>
+
+<path d="M20 358h30m6 0h10" stroke="#ffc247" stroke-width="2"/>
+<rect x="361" y="357" width="4" height="4" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.0s"/><rect x="369" y="355" width="4" height="6" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.23s"/><rect x="377" y="353" width="4" height="8" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.46s"/><rect x="385" y="357" width="4" height="4" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.6900000000000001s"/><rect x="393" y="355" width="4" height="6" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.92s"/><rect x="401" y="353" width="4" height="8" fill="#54cbd5" class="arena-eq" style="animation-delay:-1.1500000000000001s"/><rect x="409" y="357" width="4" height="4" fill="#54cbd5" class="arena-eq" style="animation-delay:-1.3800000000000001s"/><rect x="417" y="355" width="4" height="6" fill="#54cbd5" class="arena-eq" style="animation-delay:-1.61s"/><rect x="425" y="353" width="4" height="8" fill="#54cbd5" class="arena-eq" style="animation-delay:-1.84s"/></svg>

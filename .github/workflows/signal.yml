@@ -6,7 +6,7 @@ on:
     - cron: "17 */6 * * *"
   push:
     branches: [main]
-    paths-ignore: ["assets/signal.svg", "assets/rhythm.svg", "assets/terminal.svg"]
+    paths-ignore: ["assets/signal.svg", "assets/rhythm.svg", "assets/terminal.svg", "assets/arena/**", "assets/catalog/**", "data/repos.json", "CINEMA.html", "assets/cinema/**"]
   workflow_dispatch:
 
 permissions:
@@ -26,6 +26,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Check catalog generation
+        run: python3 -m unittest discover -s tests -v
+
       # Each generator exits 0 and keeps its last good SVG if the API call fails
       - name: Render live cards
         env:
@@ -35,15 +38,30 @@ jobs:
           python3 scripts/build_rhythm.py --github "${{ github.repository_owner }}"
           python3 scripts/build_terminal.py --github "${{ github.repository_owner }}"
 
+      - name: Frame original animations in the arena theme
+        run: python3 scripts/build_arena.py
+
+      - name: Refresh project lobby and tactical activity map
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 scripts/build_catalog.py --discover
+          python3 scripts/build_ranked_grind.py
+
+      - name: Rebuild the cinematic résumé
+        run: |
+          python3 scripts/build_cinematic_art.py
+          python3 scripts/build_cinema.py
+
       - name: Commit if changed
         run: |
-          if git diff --quiet -- assets/signal.svg assets/rhythm.svg assets/terminal.svg; then
+          git add CINEMA.html assets/cinema README.md data/repos.json assets/catalog assets/signal.svg assets/rhythm.svg assets/terminal.svg assets/arena
+          if git diff --cached --quiet; then
             echo "No change in signal."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/signal.svg assets/rhythm.svg assets/terminal.svg
-          git commit -m "chore: refresh live signal"
+          git commit -m "chore: refresh activity and project lobby"
           git pull --rebase origin main
           git push

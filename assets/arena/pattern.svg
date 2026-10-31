@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 924 592" width="924" height="592" role="img" aria-labelledby="arena-title">
+<title id="arena-title">03 / THE PLAYBOOK — original animated profile panel</title>
+<style>
+.arena-label{font:11px Consolas,monospace;letter-spacing:1.5px}
+.arena-border{animation:arena-run 18s linear infinite}
+.arena-dot{animation:arena-ping 3s ease-in-out infinite}
+.arena-eq{transform-box:fill-box;transform-origin:bottom;animation:arena-eq 2.4s ease-in-out infinite}
+@keyframes arena-run{to{stroke-dashoffset:-2400}}
+@keyframes arena-ping{50%{opacity:.35}}
+@keyframes arena-eq{50%{transform:scaleY(.35);opacity:.4}}
+@media(prefers-reduced-motion:reduce){.arena-border,.arena-dot,.arena-eq{animation:none!important}}
+</style>
+<rect x="1" y="1" width="922" height="590" rx="12" fill="#06080d" stroke="#293341"/>
+<rect x="1.5" y="1.5" width="921" height="589" rx="12" fill="none" stroke="#ffc247" stroke-width="2" stroke-dasharray="70 1130" class="arena-border"/>
+<path d="M16 38H908" stroke="#293341"/>
+<text class="arena-label" x="18" y="27" fill="#ffc247">03 / THE PLAYBOOK</text>
+<text class="arena-label" x="884" y="28" text-anchor="end" fill="#8faea5">MODEL / CODE / PERSON</text><circle cx="902" cy="24" r="4" fill="#54cbd5" class="arena-dot"/>
+<svg xmlns="http://www.w3.org/2000/svg" x="12" y="48" width="900" height="522" viewBox="0 0 900 522" role="img" aria-labelledby="t d">
+<title id="t">How I build: one pattern across four AI projects</title>
+<desc id="d">LexGuard: Risk analyst + adversarial judge rate every clause / 36 trap patterns + cross-clause contradiction rules / Signer reviews ratings, cited statutes, rewrites. Resilion: Risk Watcher agent turns news into disruption events / Graph traversal traces which industries are hit / Reroutes will need sign-off (approval console planned). Pikina: Local Ollama parses intent when regex routes miss / Validation layer checks every model-proposed action / Native consent popup before any level-4+ action. Noesis: gpt-oss on Groq drafts the answer in one grounded pass / Hybrid BM25 + dense retrieval with reranking / Answers cite the timestamp, page or frame used.</desc>
+<rect x="0.5" y="0.5" width="899" height="521" rx="16" fill="#080a0f" stroke="#293341"/>
+<text x="32" y="40" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="3" fill="#f5a524">HOW I BUILD</text>
+<text x="32" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#e6edf3">The model never gets the last word</text>
+<text x="230" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="2" fill="#54cbd5">01  MODEL PROPOSES</text>
+<text x="452" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="2" fill="#f5a524">02  CODE VERIFIES</text>
+<text x="674" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="2" fill="#c9d1d9">03  A PERSON DECIDES</text>
+<rect x="20" y="122" width="860" height="80" rx="10" fill="#10141b" stroke="#293341"/>
+<text x="36" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#e6edf3">LexGuard</text>
+<text x="36" y="172" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">Node · React · MongoDB Atlas</text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3"><tspan x="230" y="158">Risk analyst + adversarial</tspan><tspan x="230" y="174">judge rate every clause</tspan></text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3"><tspan x="452" y="150">36 trap patterns +</tspan><tspan x="452" y="166">cross-clause contradiction</tspan><tspan x="452" y="182">rules</tspan></text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3"><tspan x="674" y="158">Signer reviews ratings,</tspan><tspan x="674" y="174">cited statutes, rewrites</tspan></text>
+<path d="M432,157.0 L438,162.0 L432,167.0" fill="none" stroke="#f5a524" stroke-width="1.8" opacity="0.35"><animate attributeName="opacity" values="0.35;1;0.35" dur="2.4s" begin="0.0s" repeatCount="indefinite"/></path>
+<path d="M654,157.0 L660,162.0 L654,167.0" fill="none" stroke="#c9d1d9" stroke-width="1.8" opacity="0.35"><animate attributeName="opacity" values="0.35;1;0.35" dur="2.4s" begin="0.3s" repeatCount="indefinite"/></path>
+<rect x="20" y="212" width="860" height="80" rx="10" fill="#10141b" stroke="#293341"/>
+<text x="36" y="242" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#e6edf3">Resilion</text>
+<text x="36" y="262" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">Python · NetworkX · Gemini</text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3"><tspan x="230" y="248">Risk Watcher agent turns</tspan><tspan x="230" y="264">news into disruption events</tspan></text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3"><tspan x="452" y="248">Graph traversal traces</tspan><tspan x="452" y="264">which industries are hit</tspan></text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3"><tspan x="674" y="248">Reroutes will need sign-off</tspan><tspan x="674" y="264">(approval console planned)</tspan></text>
+<path d="M432,247.0 L438,252.0 L432,257.0" fill="none" stroke="#f5a524" stroke-width="1.8" opacity="0.35"><animate attributeName="opacity" values="0.35;1;0.35" dur="2.4s" begin="0.6s" repeatCount="indefinite"/></path>
+<path d="M654,247.0 L660,252.0 L654,257.0" fill="none" stroke="#c9d1d9" stroke-width="1.8" opacity="0.35"><animate attributeName="opacity" values="0.35;1;0.35" dur="2.4s" begin="0.9s" repeatCount="indefinite"/></path>
+<rect x="20" y="302" width="860" height="80" rx="10" fill="#10141b" stroke="#293341"/>
+<text x="36" y="332" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#e6edf3">Pikina</text>
+<text x="36" y="352" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">Python · Ollama · Electron</text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3"><tspan x="230" y="338">Local Ollama parses intent</tspan><tspan x="230" y="354">when regex routes miss</tspan></text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3"><tspan x="452" y="338">Validation layer checks</tspan><tspan x="452" y="354">every model-proposed action</tspan></text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3"><tspan x="674" y="338">Native consent popup before</tspan><tspan x="674" y="354">any level-4+ action</tspan></text>
+<path d="M432,337.0 L438,342.0 L432,347.0" fill="none" stroke="#f5a524" stroke-width="1.8" opacity="0.35"><animate attributeName="opacity" values="0.35;1;0.35" dur="2.4s" begin="1.2s" repeatCount="indefinite"/></path>
+<path d="M654,337.0 L660,342.0 L654,347.0" fill="none" stroke="#c9d1d9" stroke-width="1.8" opacity="0.35"><animate attributeName="opacity" values="0.35;1;0.35" dur="2.4s" begin="1.5s" repeatCount="indefinite"/></path>
+<rect x="20" y="392" width="860" height="80" rx="10" fill="#10141b" stroke="#293341"/>
+<text x="36" y="422" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#e6edf3">Noesis</text>
+<text x="36" y="442" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">Python · Groq · ChromaDB</text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3"><tspan x="230" y="428">gpt-oss on Groq drafts the</tspan><tspan x="230" y="444">answer in one grounded pass</tspan></text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3"><tspan x="452" y="428">Hybrid BM25 + dense</tspan><tspan x="452" y="444">retrieval with reranking</tspan></text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#e6edf3"><tspan x="674" y="428">Answers cite the timestamp,</tspan><tspan x="674" y="444">page or frame used</tspan></text>
+<path d="M432,427.0 L438,432.0 L432,437.0" fill="none" stroke="#f5a524" stroke-width="1.8" opacity="0.35"><animate attributeName="opacity" values="0.35;1;0.35" dur="2.4s" begin="1.8s" repeatCount="indefinite"/></path>
+<path d="M654,427.0 L660,432.0 L654,437.0" fill="none" stroke="#c9d1d9" stroke-width="1.8" opacity="0.35"><animate attributeName="opacity" values="0.35;1;0.35" dur="2.4s" begin="2.1s" repeatCount="indefinite"/></path>
+<text x="32" y="506" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#8b949e">LLMs are the reasoning layer, not the foundation: deterministic code checks their output, and a person approves anything irreversible.</text>
+</svg>
+
+<path d="M20 580h30m6 0h10" stroke="#ffc247" stroke-width="2"/>
+<rect x="821" y="579" width="4" height="4" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.0s"/><rect x="829" y="577" width="4" height="6" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.23s"/><rect x="837" y="575" width="4" height="8" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.46s"/><rect x="845" y="579" width="4" height="4" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.6900000000000001s"/><rect x="853" y="577" width="4" height="6" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.92s"/><rect x="861" y="575" width="4" height="8" fill="#54cbd5" class="arena-eq" style="animation-delay:-1.1500000000000001s"/><rect x="869" y="579" width="4" height="4" fill="#54cbd5" class="arena-eq" style="animation-delay:-1.3800000000000001s"/><rect x="877" y="577" width="4" height="6" fill="#54cbd5" class="arena-eq" style="animation-delay:-1.61s"/><rect x="885" y="575" width="4" height="8" fill="#54cbd5" class="arena-eq" style="animation-delay:-1.84s"/></svg>

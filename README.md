@@ -1,173 +1,214 @@
 <div align="center">
 
-<sub>[ LINKEDIN ](https://www.linkedin.com/in/aditya-singh-8286b137a/) &nbsp;·&nbsp; [ EMAIL ](mailto:adityasinghv05@gmail.com) &nbsp;·&nbsp; [ FLAGSHIP: LEXGUARD ](https://github.com/Aditya2514/LexGuard)</sub>
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/cinema/opening-mobile.svg" />
+  <img src="assets/cinema/opening.svg" width="100%" alt="Drop Zone — The Aditya Singh Dossier. Cinematic engineering résumé. Aditya Singh. Drop in. Build something worth finding. LLM systems, AI agents and full-stack development. IIT Madras. BGMI-inspired competitive spirit." />
+</picture>
 
-<img src="assets/hero.svg" alt="Aditya Singh: LLM systems, AI agents, full-stack. A typed line cycles through: I build LLM agents that are safe to act on, checked by deterministic code, grounded by retrieval, approved by a person before anything irreversible. A pulse runs from MODEL to VERIFY to PERSON. IIT Madras, BS Data Science, CGPA 9.0; runner-up, Paradox DSA Triathlon 2026." width="100%" />
+**A developer résumé, told in chapters.**
+
+**[Explore the loadout](#featured-loadout)** &nbsp; / &nbsp; **[Meet the builder](#player-brief)** &nbsp; / &nbsp; **[Squad up](#squad-up)**
+
+[LinkedIn](https://www.linkedin.com/in/aditya-singh-8286b137a/) · [Email](mailto:adityasinghv05@gmail.com) · [Start with LexGuard](https://github.com/Aditya2514/LexGuard)
 
 </div>
 
+<a href="https://github.com/Aditya2514/LexGuard"><img src="assets/actions/scope.svg" width="100%" alt="Patt se headshot! Animated scope tracks a software bug, zooms in, locks on and confirms the hit. Open LexGuard." /></a>
+
+<img src="assets/dropzone/hero.svg" width="100%" alt="Original Drop Zone opening: drop in, build something worth finding." />
+
+<img src="assets/dropzone/lobby.svg" width="100%" alt="Drop, loot, build, repeat: an animated builder loop." />
+
+<img src="assets/arena/strip.svg" width="100%" alt="Original project and education strip inside an animated tactical frame." />
+
+<img src="assets/cinema/chapter-brief.svg" width="100%" alt="Cinematic chapter: brief" />
+
+## Player brief
+
+I'm **Aditya Singh**, studying **Data Science & Applications at IIT Madras**, co-enrolled at **Scaler School of Technology**. I build LLM systems, desktop agents and full-stack products—with a particular interest in what happens when a model gets something wrong.
+
+My projects use **retrieval, deterministic checks and human approval** to make AI outputs easier to inspect and actions harder to get wrong.
+
+**The vibe:** BGMI, a clean scope-in, competitive esports and the satisfaction of a well-coordinated squad. That same energy belongs here: read the situation, communicate clearly, review the mistakes, queue again.
+
+> **The model proposes. The system checks. The person stays in control.**
+
+<img src="assets/arena/hero.svg" width="100%" alt="Original animated identity banner with typing text and model-to-code-to-human pipeline." />
+
+<img src="assets/arena/terminal.svg" width="100%" alt="Original animated terminal: profile, project list and recent real GitHub commits." />
+
+<img src="assets/arena/pattern.svg" width="100%" alt="Original animated engineering pattern: model proposes, code verifies, a person decides." />
+
+<img src="assets/cinema/chapter-loadout.svg" width="100%" alt="Cinematic chapter: loadout" />
+
+## Featured loadout
+
+**Scope khol. Project pakad.** Pick a system and inspect the code.
+
+**Choose your drop:** contract review, local agents, multimodal search, or supply-chain intelligence. Each card opens its repository.
+
 <table>
 <tr>
-<td width="25%"><a href="#01-about"><code>01</code> ABOUT</a></td>
-<td width="25%"><a href="#02-how-i-build"><code>02</code> HOW I BUILD</a></td>
-<td width="25%"><a href="#03-flagship-systems"><code>03</code> FLAGSHIP</a></td>
-<td width="25%"><a href="#04-more-projects"><code>04</code> PROJECTS</a></td>
+<td width="50%" valign="top">
+<a href="https://github.com/Aditya2514/LexGuard"><img src="assets/arena/card_lexguard.svg" width="100%" alt="LexGuard — AI contract review: clauses, audit, rewrite." /></a>
+<p><b>Spot the trap before you sign.</b><br/>Reviews contracts under Indian law using a staged agent pipeline, statutory retrieval and deterministic risk checks.</p>
+<p><sub>Node.js · React · MongoDB · Redis</sub></p>
+<a href="https://github.com/Aditya2514/LexGuard"><b>Inspect LexGuard →</b></a>
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/Aditya2514/Pikina"><img src="assets/arena/card_pikina.svg" width="100%" alt="Pikina — local desktop agent: intent, validation, consent." /></a>
+<p><b>Your machine. Your call.</b><br/>An offline-first Windows/Linux assistant with regex-first routing, local Ollama, validated tools and consent for high-risk actions.</p>
+<p><sub>Python · Electron · Ollama · SQLite · Pre-alpha</sub></p>
+<a href="https://github.com/Aditya2514/Pikina"><b>Inspect Pikina →</b></a>
+</td>
 </tr>
 <tr>
-<td><a href="#05-live-signal"><code>05</code> SIGNAL</a></td>
-<td><a href="#06-stack"><code>06</code> STACK</a></td>
-<td><a href="#07-education--honors"><code>07</code> EDUCATION</a></td>
-<td><a href="#08-contact"><code>08</code> CONTACT</a></td>
+<td width="50%" valign="top">
+<a href="https://github.com/Aditya2514/Noesis"><img src="assets/arena/card_noesis.svg" width="100%" alt="Noesis — multimodal retrieval: sources, retrieval, citations." /></a>
+<p><b>Find the moment. Check the source.</b><br/>Queries videos, audio, PDFs and images with hybrid retrieval, reranking and answers linked to timestamps or pages.</p>
+<p><sub>Python · ChromaDB · Whisper · Streamlit · Team project</sub></p>
+<a href="https://github.com/Aditya2514/Noesis"><b>Inspect Noesis →</b></a>
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/Aditya2514/Resilion"><img src="assets/arena/card_resilion.svg" width="100%" alt="Resilion — supply-chain risk: news, graph, impact." /></a>
+<p><b>Trace the ripple before it spreads.</b><br/>A Risk Watcher turns news into structured events; a supply graph traces affected industries. Orchestration and the approval console are planned.</p>
+<p><sub>Python · NetworkX · Gemini · In progress</sub></p>
+<a href="https://github.com/Aditya2514/Resilion"><b>Inspect Resilion →</b></a>
+</td>
 </tr>
 </table>
 
-<img src="assets/strip.svg" alt="Flagship: LexGuard — AI contract review for Indian law; 130+ commits · solo · May–Aug 2026. Studying: IIT Madras — BS in Data Science & Applications; CGPA 9.0 / 10 · 2025 – 2029. Latest win — Paradox DSA Triathlon, IIT Madras; Runner-up (2nd place) · 2026." width="100%" />
+<details>
+<summary><b>Open the engineering brief — what is underneath the visuals?</b></summary>
 
-<br>
+- **LexGuard:** deterministic trap detection can escalate an LLM's risk assessment; retrieval grounds statutory citations. Its README includes benchmark context and limitations.
+- **Pikina:** the action validator checks model proposals against registered capabilities. Alias chains support rollback; the scheduler still awaits its planner.
+- **Noesis:** BM25 and dense retrieval feed a reranker; source citations and an LLM audit help inspect answers. Built with Apurva Patil.
+- **Resilion:** the graph and Risk Watcher are built. Rerouting, the API and approval console remain future work.
 
-## 01 About
+The original animated project demonstrations above are preserved in full. Their sequences illustrate mechanisms; they are not live production runs.
 
-<img src="assets/terminal.svg" alt="Terminal session: whoami prints Aditya Singh, BS Data Science at IIT Madras (CGPA 9.0), Scaler School of Technology; now.txt says Building LLM agents that are safe to act on; git log shows the four most recent real commits; ls lists LexGuard, Pikina, Noesis, Resilion, Meta_OpenEnv and codecrafters-shell-cpp." width="100%" />
+</details>
 
-I'm studying for a BS in Data Science & Applications at IIT Madras, co-enrolled at Scaler School of Technology, and I build LLM systems that are safe to act on. In my projects the model is the reasoning layer, not the foundation: deterministic code checks what it says, retrieval grounds it, and a person approves anything that can't be undone.
+<img src="assets/cinema/chapter-utilities.svg" width="100%" alt="Chapter 03: The Utility Belt" />
 
-> *"Language models are lazy-loaded reasoning services sitting on top of deterministic infrastructure, not the thing the infrastructure depends on."* (from the Pikina design notes)
+## Utility belt
 
-Four rules, each one shipped in a repo:
+**Game wali utility. Builder wala purpose.** Click a utility to explore the project behind it.
 
-- **Check the model in code.** LexGuard's 36 trap patterns can overrule the LLM's risk rating, and a contradiction engine cross-checks fees, dates and jurisdictions across clauses.
-- **Ground every answer.** Noesis answers cite the timestamp, page or frame behind each claim, and an LLM auditor checks them; LexGuard cites statutes retrieved from 7,556+ Indian law sections.
-- **Ask before acting.** Pikina validates every model-proposed action against a tool manifest and pops a native consent dialog before high-risk OS actions.
-- **Degrade, don't die.** LexGuard falls back across four LLM providers and fits its backend in 512 MB; Pikina answers known commands with plain regex routing before it ever calls a model.
+<table>
+<tr>
+<td width="50%" valign="top"><a href="https://github.com/Aditya2514/Noesis"><img src="assets/actions/smoke.svg" width="100%" alt="Smoke daal. Noise hata. Animated smoke grenade: Noesis retrieves useful evidence and cites its sources." /></a><p><b>Smoke daal. Noise hata.</b> Noesis brings useful evidence into focus.</p></td>
+<td width="50%" valign="top"><a href="https://github.com/Aditya2514/LexGuard"><img src="assets/actions/frag.svg" width="100%" alt="Frag out. Bug out. Animated frag and impact ring: inspect LexGuard's checks and tests." /></a><p><b>Frag out. Bug out.</b> Inspect the checks behind LexGuard.</p></td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="https://github.com/Aditya2514/codecrafters-shell-cpp"><img src="assets/actions/molotov.svg" width="100%" alt="Debt jalao. Clean build. Animated molotov flame: explore the C++ shell and its system calls." /></a><p><b>Debt jalao. Clean build.</b> Get closer to the system with the C++ shell.</p></td>
+<td width="50%" valign="top"><a href="https://github.com/Aditya2514/HostelDesk"><img src="assets/actions/boost.svg" width="100%" alt="Boost on. Build on. Animated energy can and rising boost bar: explore HostelDesk." /></a><p><b>Boost on. Build on.</b> Turn a real hostel problem into working software.</p></td>
+</tr>
+</table>
 
-<br>
+<img src="assets/actions/dev-feed.svg" width="100%" alt="Illustrative developer feed: Aditya scopes a bug, Noesis clears noise, and the next build is ready." />
 
-## 02 How I Build
+<img src="assets/cinema/chapter-replay.svg" width="100%" alt="Cinematic chapter: replay" />
 
-<img src="assets/pattern.svg" alt="How I build: in LexGuard, Resilion, Pikina and Noesis a model proposes, code verifies, and a person decides. Each row lists the mechanism used at each stage." width="100%" />
+## Mission replay
 
-<br>
+<img src="assets/arena/lexguard_flow.svg" width="100%" alt="Original looping LexGuard walkthrough: classify clauses, identify risk, detect traps, verify citations and propose rewrites." />
 
-## 03 Flagship Systems
+<sub>An illustrative contract run, preserved from the original profile.</sub>
 
-<img src="assets/lexguard_flow.svg" alt="Animated walkthrough of LexGuard on an illustrative four-clause contract: the classifier tags clause types, the risk analyst rates them, the safety net catches a training-bond clause the LLM rated LOW and flips it to CRITICAL, the citation verifier marks two real Indian Contract Act sections as strong and a non-existent section 412 as hallucinated, and a fairer rewrite is drafted." width="100%" />
+<img src="assets/cinema/chapter-projects.svg" width="100%" alt="Cinematic chapter: projects" />
 
-<br>
+## Project lobby
+
+**Pick your next drop.** Each animated card opens its repository.
+
+<!-- PROJECT-LOBBY:START -->
 
 <p align="center">
-<a href="https://github.com/Aditya2514/LexGuard"><img src="assets/card_lexguard.svg" width="49%" alt="Project card for LexGuard, a solo project from May to August 2026. Illustrative run: a scan passes three contract clauses; the LLM rated 'Repay 3,00,000 rupees if you resign' LOW, and one of 36 trap patterns forces it to CRITICAL. The citation verifier marks Indian Contract Act section 27 strong and section 412 hallucinated. Stack: Node.js, Redis job queue, MongoDB Atlas Vector Search." /></a>
-<a href="https://github.com/Aditya2514/Pikina"><img src="assets/card_pikina.svg" width="49%" alt="Project card for Pikina, pre-alpha, started July 2026. Illustrative run in the quick panel: 'add todo call mom' matches a Tier 1 regex route, with no model call. 'remind me to pay rent' matches no regex, so it goes to a local llama3 model through Ollama, which must return a registered tool or no_match; it proposes todo.add at level 0, the Action Validation Layer checks that the tool is registered and the claimed level matches the registry, and it runs. Actions at level 4 or above, or with irreversible side effects, ask for native consent first. Stack: Python, Ollama, Electron." /></a>
+<a href="https://github.com/Aditya2514/HostelDesk"><img src="assets/catalog/hosteldesk.svg" width="49%" alt="HostelDesk — Hostel complaints with explained ETA ranges, automatic routing, completion proof and escalation. Stack: TypeScript, React, Express, PostgreSQL, Prisma" /></a>
+<a href="https://github.com/Aditya2514/Meta_OpenEnv"><img src="assets/catalog/meta_openenv.svg" width="49%" alt="Meta OpenEnv — An environment for agents juggling assignments, bugs, deadlines and burnout constraints. Team hackathon project. Stack: Python, FastAPI, Docker" /></a>
 </p>
+
 <p align="center">
-<a href="https://github.com/Aditya2514/Resilion"><img src="assets/card_resilion.svg" width="49%" alt="Project card for Resilion, in progress. A Gemini Risk Watcher agent turns news (GDELT headlines, Guardian articles) into structured disruption events. In this illustrative event, a news event lands on the Strait of Hormuz corridor in the NetworkX supply graph (seeded with 13 nodes and 19 edges); a 2-hop traversal lights the refineries it supplies (Jamnagar, Panipat, Mumbai) and then the industries they serve (power, petrochemicals, transport fuel, LPG). The Red Sea corridor is untouched. A human approval console is planned, drawn dashed. Stack: Python, NetworkX, Gemini, React." /></a>
-<a href="https://github.com/Aditya2514/Noesis"><img src="assets/card_noesis.svg" width="49%" alt="Project card for Noesis, built by a team of 2 in August 2026. Video, audio and PDF sources send chunks into an index (Whisper with word-level timestamps, keyframes de-duplicated by perceptual hash, PyMuPDF plus RapidOCR plus a Gemini vision model). Retrieval runs BM25 plus dense bge-small, fused with RRF and reranked by a cross-encoder. In this illustrative run, a Groq gpt-oss-20b answer arrives with citation chips [video 00:14:20] and [pdf p.4], checked by an LLM audit; a 0.65 confidence gate falls back to extractive answers. Stack: Python, Groq, ChromaDB, Streamlit." /></a>
+<a href="https://github.com/Aditya2514/Shopkart"><img src="assets/catalog/shopkart.svg" width="49%" alt="ShopKart — Server-authoritative checkout and Razorpay test-mode payments. Built with Apurva Patil. Stack: React, Express, MongoDB" /></a>
+<a href="https://github.com/Aditya2514/codecrafters-shell-cpp"><img src="assets/catalog/codecrafters-shell-cpp.svg" width="49%" alt="C++ Shell — A shell built around fork, exec, pipe and dup2: quoting, redirection, pipelines and background jobs. Stack: C++23, POSIX, CMake" /></a>
 </p>
 
-<sub>Each card loops an illustrative run of the real mechanism. Click a card for the repo.</sub>
+<p align="center">
+<a href="https://github.com/Aditya2514/Vidya"><img src="assets/catalog/vidya.svg" width="49%" alt="Vidya / BookFinder — Book discovery, debounced search, Google sign-in and persistent saved lists. Stack: React Native, TypeScript, Firebase" /></a>
+<a href="https://github.com/Aditya2514/Fintrac"><img src="assets/catalog/fintrac.svg" width="49%" alt="Fintrac — A personal budgeting dashboard with Gemini-powered spending analysis. Stack: React, Vite, Recharts, Gemini" /></a>
+</p>
+
+<p align="center">
+<a href="https://github.com/Aditya2514/Naukri"><img src="assets/catalog/naukri.svg" width="49%" alt="Naukri / Jobee — A job-portal UI with search, saved jobs and a simulated listings API. Stack: React, Vite" /></a>
+<a href="https://github.com/Aditya2514?tab=repositories"><img src="assets/catalog/browse.svg" width="49%" alt="Explore all repositories" /></a>
+</p>
+
+<!-- PROJECT-LOBBY:END -->
 
 <details>
-<summary><b>LexGuard: under the hood</b></summary>
-<br>
+<summary>Earlier experiments / archive</summary>
 
-A staged agent pipeline (pre-flight context, classifier, risk analyst with an adversarial judge, deterministic audit, advocate and compliance in parallel, citation verifier, drafter) runs behind a Redis or MongoDB job queue. After the LLM passes, a deterministic detector with 36 trap patterns can force an escalation, and a reflection loop makes the model explain what it missed. The backend was squeezed into a 512 MB host with a 380 MB heap cap and post-job GC, and the AI client cascades across Gemini, Groq, Hugging Face and local Ollama when a provider runs out of quota.
-
-On the committed May 2026 benchmark runs it got 28/30 clause types and 21/30 risk tiers right, and every miss over-flagged rather than under-flagged. Rules that matched benchmark text word for word were removed in October 2026, so a fresh run is pending. The offline unit suite runs in CI.
-
-![Tests](https://github.com/Aditya2514/LexGuard/actions/workflows/tests.yml/badge.svg)
+[FinancePro](https://github.com/Aditya2514/FinancePro) · [Simple Soundboard](https://github.com/Aditya2514/Simple-Sounboard) · [First portfolio](https://github.com/Aditya2514/portfolio)
 
 </details>
 
-<details>
-<summary><b>Pikina: under the hood</b></summary>
-<br>
+<img src="assets/cinema/chapter-history.svg" width="100%" alt="Cinematic chapter: history" />
 
-Commands that match a known pattern are handled by a Tier 1 regex router with no model call; only misses go to a local Ollama model, which must return a registered tool or `no_match`, so it can't invent actions. An Action Validation Layer checks every model-proposed action against the tool manifest, and level 4+ actions from either tier need a native confirmation dialog (MessageBoxW on Windows, zenity or kdialog on Linux). Multi-step alias chains run through a transactional executor that undoes completed steps in reverse order if one fails; a DAG scheduler with starvation protection is built and tested, waiting for the planner that will call it. Event-driven daemons and a dual-tier memory sit underneath.
+## Match history
 
-</details>
+<img src="assets/arena/signal.svg" width="100%" alt="GitHub activity over the last 12 months: contribution totals, weekly activity and language distribution, with the generation date shown on the card." />
 
-<details>
-<summary><b>Resilion: built vs planned</b></summary>
-<br>
+<sub>Actual GitHub activity. The existing workflow is scheduled to refresh this card every six hours; the card shows its last update.</sub>
 
-Built so far: data sources for GDELT, EIA, OFAC and RSS feeds, a Gemini Risk Watcher agent that turns them into structured disruption events, and a NetworkX graph of India's crude-oil supply corridors that traces which industries an event affects. Next: a Procurement Orchestrator that ranks reroutes by cost and transit delay, and an approval console so nothing executes without a person signing off.
 
-</details>
+<img src="assets/arena/rhythm.svg" width="100%" alt="Commit activity by hour in IST and weekday, generated from GitHub data." />
+<img src="assets/catalog/ranked-grind.svg" width="100%" alt="Ranked Grind: a tactical map of active contribution weeks, with an animated scope patrol. Values come from the GitHub activity card." />
 
-<details>
-<summary><b>Noesis: under the hood</b></summary>
-<br>
+<sub>Each tile is an active week. The scope patrol is decorative; contribution values stay unchanged.</sub>
 
-Video and audio go through FFmpeg and Whisper with word-level timestamps; keyframes come from scene-change detection with perceptual-hash de-duplication; PDFs through PyMuPDF and RapidOCR. Entity canonicalisation links a term spoken in a video to the same term in a PDF diagram. Retrieval is hybrid (BM25 + bge-small embeddings) with an ms-marco reranker, and a confidence cutoff decides between a full grounded answer and an extractive fallback.
+<img src="assets/cinema/chapter-kit.svg" width="100%" alt="Cinematic chapter: kit" />
 
-</details>
+## Build kit
 
-<br>
+From local agents to full-stack apps: the tools behind my builds.
 
-## 04 More Projects
+<img src="assets/catalog/build-kit.svg" width="100%" alt="Build Kit: languages, AI and retrieval, backend, data, interfaces and delivery tools." />
 
-| Project | What it is | Stack |
-| :-- | :-- | :-- |
-| [**Meta_OpenEnv**](https://github.com/Aditya2514/Meta_OpenEnv) | Built for the Meta PyTorch OpenEnv Hackathon (2026): an OpenEnv environment where an RL or LLM agent triages assignments and production bugs against deadlines and a burnout budget. 110-test suite in CI. Team project. | Python · FastAPI · Docker · HF Spaces |
-| [**ShopKart**](https://github.com/Aditya2514/Shopkart) | Full-stack store: JWT auth, catalog, wishlist, cart, server-side checkout, Razorpay payments. Built with [@apurva202](https://github.com/apurva202). | React · Express · MongoDB · Vercel |
-| [**C++ shell**](https://github.com/Aditya2514/codecrafters-shell-cpp) | POSIX-style shell from scratch: quoting, redirection, multi-stage pipelines and background jobs on `fork`/`exec`/`pipe`/`dup2`. | C++23 |
-| [**Vidya**](https://github.com/Aditya2514/Vidya) | Book discovery app with debounced search, infinite scroll, Firebase and Google sign-in, and persisted saved lists. | React Native · TypeScript · Redux Toolkit |
-| [**Fintrac**](https://github.com/Aditya2514/Fintrac) | Personal finance tracker and budget dashboard with Gemini-powered spending analysis. | React · Vite · Recharts |
-| [**Naukri**](https://github.com/Aditya2514/Naukri) | Dark-mode job portal UI with API-backed listings and saved jobs. | React · Vite |
+<img src="assets/cinema/chapter-career.svg" width="100%" alt="Cinematic chapter: career" />
 
-<br>
+## Career campaign
 
-## 05 Live Signal
+<img src="assets/arena/journey.svg" width="100%" alt="Original looping career timeline: studies, project milestones and honors." />
 
-<img src="assets/signal.svg" alt="Live GitHub signal for the last 12 months: total contributions, active months, longest streak, busiest week and public repos; weekly contribution bars with the peak week and weekly average marked; languages by bytes of code." width="100%" />
+| Education | Achievement |
+| :-- | :-- |
+| **IIT Madras** · BS Data Science & Applications · 2025–2029 · CGPA **9.0/10** | **Runner-up** · Paradox DSA Triathlon · IIT Madras · 2026 |
+| **Scaler School of Technology** · 2025–2029 | **Meta PyTorch OpenEnv Hackathon** · 2026 · Team submission |
 
-<img src="assets/rhythm.svg" alt="Build rhythm: a 24-hour clock of when I actually commit, in IST, with bar length equal to commits in each hour, the busiest hour highlighted, the share of night commits, the busiest weekday and a chronotype derived from commit times." width="100%" />
+<img src="assets/cinema/chapter-contact.svg" width="100%" alt="Cinematic chapter: contact" />
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Aditya2514/Aditya2514/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Aditya2514/Aditya2514/output/github-snake.svg" />
-  <img alt="A snake eating the last 12 months of contribution squares" src="https://raw.githubusercontent.com/Aditya2514/Aditya2514/output/github-snake-dark.svg" width="100%" />
-</picture>
+## Squad up
 
-<sub>Generated from the GitHub API by GitHub Actions, not typed in by hand: stats, build rhythm and the terminal's git log refresh every 6 hours; the snake daily.</sub>
+<img src="assets/dropzone/victory.svg" width="100%" alt="Winner winner. Cleaner code. An animated supply crate descends on a parachute." />
 
-<br>
+<img src="assets/arena/contact.svg" width="100%" alt="Original typing contact terminal: LinkedIn, email, GitHub and internship interests." />
 
-## 06 Stack
+Interested in **AI engineering internships**, **agent systems**, or a **hackathon project**? Send me the problem you're working on. If you're here for the BGMI energy, tell me your favourite drop spot too.
 
-<img src="assets/stack.svg" alt="Technology by project matrix, derived from each repository's manifests and imports, counting only files the author committed. Python: Pikina, Resilion, Noesis, OpenEnv planner; JavaScript: LexGuard, Pikina, Resilion, ShopKart; TypeScript: BookFinder; C++: C++ shell; Gemini: LexGuard, Resilion, Noesis; Groq: LexGuard, Noesis; Ollama: LexGuard, Pikina; Hugging Face: LexGuard, OpenEnv planner; sentence-transformers: LexGuard, Pikina, Noesis; ChromaDB: Noesis; Whisper: Noesis; Node.js · Express: LexGuard, ShopKart; FastAPI: OpenEnv planner; Flask: Pikina; Pydantic: Resilion, Noesis, OpenEnv planner; MongoDB: LexGuard, ShopKart; Redis: LexGuard; NetworkX: Pikina, Resilion, Noesis; Firebase: BookFinder; React: LexGuard, Resilion, ShopKart; React Native: BookFinder; Electron: Pikina; Streamlit: Noesis; Docker: LexGuard, OpenEnv planner; GitHub Actions: LexGuard; Vercel: LexGuard, ShopKart; Hugging Face Spaces: LexGuard, OpenEnv planner." width="100%" />
+<p align="center">
+<a href="https://www.linkedin.com/in/aditya-singh-8286b137a/"><img src="assets/dropzone/button-linkedin.svg" width="32%" alt="Connect on LinkedIn" /></a>
+<a href="mailto:adityasinghv05@gmail.com"><img src="assets/dropzone/button-email.svg" width="32%" alt="Send an email" /></a>
+<a href="https://github.com/Aditya2514?tab=repositories"><img src="assets/dropzone/button-repos.svg" width="32%" alt="Explore all repositories" /></a>
+</p>
 
-<br>
+[LinkedIn](https://www.linkedin.com/in/aditya-singh-8286b137a/) · [Email](mailto:adityasinghv05@gmail.com) · [Repositories](https://github.com/Aditya2514?tab=repositories)
 
-## 07 Education & Honors
-
-<img src="assets/journey.svg" alt="A timeline from August 2025 to October 2026. A line draws itself left to right and each milestone lights up as it is reached. Start: May 2025, BS in Data Science and Applications at IIT Madras, co-enrolled at Scaler School of Technology. August 2025: GitHub account created. October 2025: first public repo (portfolio). March 2026: Naukri and Fintrac. April 2026: Meta PyTorch OpenEnv Hackathon, a planner RL environment built by a team of 2. May 2026: BookFinder (React Native and TypeScript); LexGuard starts and runs to August 2026. June 2026: a POSIX shell in C++. July 2026: Pikina, then Resilion. August 2026: Noesis (team of 2). September to October 2026: ShopKart (team of 2). Also: runner-up at the Paradox DSA Triathlon, IIT Madras, 2026; CGPA 9.0 out of 10." width="100%" />
-
-<br>
-
-**Education**
-
-| Program | Institution | When | Result |
-| :-- | :-- | :-- | :-- |
-| BS in Data Science & Applications | Indian Institute of Technology Madras | 2025 – 2029 | CGPA **9.0 / 10** |
-| Co-enrolled with the IITM BS degree | Scaler School of Technology | 2025 – 2029 | |
-
-**Honors**
-
-| When | Event | Result |
-| :-- | :-- | :-- |
-| 2026 | Paradox DSA Triathlon, IIT Madras | **Runner-up (2nd place)** |
-| 2026 | Meta PyTorch OpenEnv Hackathon | Built and submitted [Meta_OpenEnv](https://github.com/Aditya2514/Meta_OpenEnv) with a team |
-
-<br>
-
-## 08 Contact
+<img src="assets/cinema/credits.svg" width="100%" alt="To be continued. The builder: Aditya Singh. The next chapter: built with you." />
 
 <div align="center">
-
-<img src="assets/contact.svg" alt="A terminal types: connect --with aditya. It prints linkedin.com/in/aditya-singh-8286b137a, adityasinghv05@gmail.com and github.com/Aditya2514, then: Open to AI engineering internships with teams building agents." width="100%" />
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aditya-singh-8286b137a/)
-[![Email](https://img.shields.io/badge/Email-161B22?style=for-the-badge&logo=gmail&logoColor=EA4335)](mailto:adityasinghv05@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-161B22?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Aditya2514)
-
+<br/>
+<b>GG. Now go inspect the code.</b><br/>
+<sub>BGMI-inspired visuals. Built for curious people who click through to the code.</sub>
 </div>

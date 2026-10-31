@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="540" viewBox="0 0 1200 540" role="img" aria-labelledby="title desc">
+<title id="title">Aditya Singh — Drop in. Build something worth finding.</title><desc id="desc">Original battle-royale-inspired profile artwork. All essential information is also in the README text.</desc>
+<defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#202736" stroke-width=".6"/></pattern><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#090c12"/><stop offset="1" stop-color="#05070b"/></linearGradient></defs>
+<style>
+.dz-run{animation:dz-run 12s linear infinite}
+.dz-glow{animation:dz-glow 5s ease-in-out infinite}
+.dz-float{animation:dz-float 7s ease-in-out infinite}
+.dz-turn{animation:dz-turn 12s linear infinite;transform-origin:0 0}
+.dz-eq{transform-box:fill-box;transform-origin:bottom;animation:dz-eq 2s ease-in-out infinite}
+.dz-hop{animation:dz-hop 8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.dz-spark{animation:dz-spark 9s linear infinite}
+.dz-plane{animation:dz-plane 12s linear infinite}
+.dz-drop{animation:dz-drop 8s ease-in-out infinite}
+.dz-progress{stroke-dasharray:50 850;animation:dz-progress 7s linear infinite}
+.dz-slot{animation:dz-slot 8s ease-in-out infinite}
+@keyframes dz-run{to{stroke-dashoffset:-360}}
+@keyframes dz-glow{50%{opacity:.55}}
+@keyframes dz-float{50%{transform:translateY(-9px)}}
+@keyframes dz-turn{to{transform:rotate(360deg)}}
+@keyframes dz-eq{50%{transform:scaleY(.25);opacity:.4}}
+@keyframes dz-hop{50%{transform:scale(1.07)}}
+@keyframes dz-spark{0%{transform:translate(0,15px);opacity:0}20%{opacity:.55}80%{opacity:.25}100%{transform:translate(35px,-65px);opacity:0}}
+@keyframes dz-plane{0%{transform:translate(9px,44px) rotate(39deg);opacity:0}8%{opacity:1}92%{opacity:1}100%{transform:translate(319px,299px) rotate(39deg);opacity:0}}
+@keyframes dz-drop{0%,100%{transform:translateY(-12px)}50%{transform:translateY(10px)}}
+@keyframes dz-progress{to{stroke-dashoffset:-900}}
+@keyframes dz-slot{0%,18%,100%{stroke:#ffc247;fill:#253024}25%,92%{stroke:#293341;fill:#10141b}}
+@media(prefers-reduced-motion:reduce){.dz-run,.dz-glow,.dz-float,.dz-turn,.dz-eq,.dz-hop,.dz-spark,.dz-plane,.dz-drop,.dz-progress,.dz-slot{animation:none!important}.dz-spark{opacity:.2}}
+text{font-family:Arial,Helvetica,sans-serif}.mono{font-family:Consolas,monospace;letter-spacing:2px}.pulse{animation:pulse 3s ease-in-out infinite}.route{animation:route 12s linear infinite}.ring{transform-box:fill-box;transform-origin:center;animation:ring 6s ease-in-out infinite}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}@keyframes route{to{stroke-dashoffset:-120}}@keyframes ring{50%{transform:scale(.88);opacity:.55}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+<rect width="1200" height="540" rx="12" fill="url(#bg)"/><rect width="1200" height="540" rx="12" fill="url(#grid)"/><rect x="1" y="1" width="1198" height="538" rx="11" fill="none" stroke="#293341"/><circle cx="35" cy="60" r="1.0" fill="#54cbd5" opacity=".15" class="dz-spark" style="animation-delay:-0.0s;animation-duration:8s"/><circle cx="172" cy="131" r="1.5" fill="#ffc247" opacity=".15" class="dz-spark" style="animation-delay:-0.7s;animation-duration:9s"/><circle cx="309" cy="202" r="2.0" fill="#ffc247" opacity=".15" class="dz-spark" style="animation-delay:-1.4s;animation-duration:10s"/><circle cx="446" cy="273" r="1.0" fill="#54cbd5" opacity=".15" class="dz-spark" style="animation-delay:-2.0999999999999996s;animation-duration:11s"/><circle cx="583" cy="344" r="1.5" fill="#ffc247" opacity=".15" class="dz-spark" style="animation-delay:-2.8s;animation-duration:12s"/><circle cx="720" cy="415" r="2.0" fill="#ffc247" opacity=".15" class="dz-spark" style="animation-delay:-3.5s;animation-duration:8s"/><circle cx="857" cy="486" r="1.0" fill="#54cbd5" opacity=".15" class="dz-spark" style="animation-delay:-4.199999999999999s;animation-duration:9s"/><circle cx="994" cy="97" r="1.5" fill="#ffc247" opacity=".15" class="dz-spark" style="animation-delay:-4.8999999999999995s;animation-duration:10s"/><circle cx="1131" cy="168" r="2.0" fill="#ffc247" opacity=".15" class="dz-spark" style="animation-delay:-5.6s;animation-duration:11s"/><circle cx="133" cy="239" r="1.0" fill="#54cbd5" opacity=".15" class="dz-spark" style="animation-delay:-6.3s;animation-duration:12s"/><circle cx="270" cy="310" r="1.5" fill="#ffc247" opacity=".15" class="dz-spark" style="animation-delay:-7.0s;animation-duration:8s"/><circle cx="407" cy="381" r="2.0" fill="#ffc247" opacity=".15" class="dz-spark" style="animation-delay:-7.699999999999999s;animation-duration:9s"/><circle cx="544" cy="452" r="1.0" fill="#54cbd5" opacity=".15" class="dz-spark" style="animation-delay:-8.399999999999999s;animation-duration:10s"/><circle cx="681" cy="63" r="1.5" fill="#ffc247" opacity=".15" class="dz-spark" style="animation-delay:-9.1s;animation-duration:11s"/><circle cx="818" cy="134" r="2.0" fill="#ffc247" opacity=".15" class="dz-spark" style="animation-delay:-9.799999999999999s;animation-duration:12s"/><circle cx="955" cy="205" r="1.0" fill="#54cbd5" opacity=".15" class="dz-spark" style="animation-delay:-10.5s;animation-duration:8s"/><circle cx="1092" cy="276" r="1.5" fill="#ffc247" opacity=".15" class="dz-spark" style="animation-delay:-11.2s;animation-duration:9s"/><circle cx="94" cy="347" r="2.0" fill="#ffc247" opacity=".15" class="dz-spark" style="animation-delay:-11.899999999999999s;animation-duration:10s"/><path d="M0 0H1200V8H0Z" fill="#ffc247"/>
+<text x="52" y="54" font-size="15" fill="#ffc247" class="mono">PLAYER / ADITYA2514</text>
+<text x="1147" y="54" font-size="14" fill="#9daab9" text-anchor="end" class="mono">CODE × COMPETITION</text>
+<text x="48" y="168" font-size="100" fill="#f1f3e8" font-weight="900" letter-spacing="-5" class="dz-glow">ADITYA</text>
+<text x="48" y="264" font-size="100" fill="#ffc247" font-weight="900" letter-spacing="-5" class="dz-glow">SINGH.</text>
+<text x="54" y="318" font-size="27" fill="#f1f3e8" font-weight="700">DROP IN. BUILD SOMETHING</text>
+<text x="54" y="355" font-size="27" fill="#f1f3e8" font-weight="700">WORTH FINDING.</text>
+<text x="54" y="397" font-size="18" fill="#9daab9" >LLM systems  /  AI agents  /  Full-stack</text>
+<path d="M54 434H698" stroke="#293341"/>
+<text x="54" y="468" font-size="14" fill="#54cbd5" class="mono">IIT MADRAS</text>
+<text x="54" y="493" font-size="15" fill="#9daab9" >BS Data Science &amp; Applications</text>
+<text x="407" y="468" font-size="14" fill="#ffc247" class="mono">OFF-DUTY / BGMI</text>
+<text x="407" y="493" font-size="15" fill="#9daab9" >Competitive spirit. Builder mindset.</text>
+<g transform="translate(770 92)">
+<path d="M55 55L130 20 190 48 263 30 313 100 299 151 340 202 302 278 250 292 205 335 133 308 74 321 30 250 43 178 14 130Z" fill="#16232a" stroke="#3f5c68" stroke-width="2"/>
+<g fill="none" stroke="#425968" opacity=".45"><path d="M70 85L128 55 185 76 250 63 280 114 267 161 307 211 272 252 236 261 201 298 144 278 92 287 65 242 76 175 48 133Z"/><path d="M97 111L138 86 181 106 235 95 246 135 231 174 270 216 234 232 194 266 145 247 105 255 102 205 109 170 80 135Z"/><path d="M138 129L185 141 209 123 220 156 195 189 221 219 183 236 150 220 128 183Z"/></g>
+<g fill="#3d4b50" opacity=".6"><path d="M115 102h24v14h-24zM144 116h12v22h-12zM244 192h27v12h-27zM259 211h13v20h-13zM101 236h18v24h-18zM126 251h17v10h-17z"/></g>
+<path d="M44 176Q140 130 179 195T310 224" fill="none" stroke="#76b9b0" stroke-width="9" opacity=".25"/>
+<circle cx="184" cy="174" r="137" fill="none" stroke="#54cbd5" stroke-width="2" opacity=".6" class="ring"/>
+<circle cx="201" cy="190" r="80" fill="#54cbd5" fill-opacity=".035" stroke="#54cbd5" stroke-dasharray="5 8"/>
+<path d="M9 44L319 299" fill="none" stroke="#ffc247" stroke-width="2" stroke-dasharray="7 9" class="route"/>
+<g transform="translate(184 174)"><g class="dz-turn"><path d="M0 0L0-137A137 137 0 0 1 97-97Z" fill="#54cbd5" opacity=".08"/><path d="M0 0V-137" stroke="#54cbd5" opacity=".55"/></g></g><g transform="translate(115 106)"><circle r="4" fill="#54cbd5"/><circle r="12" fill="none" stroke="#54cbd5" class="dz-hop dz-glow" style="animation-delay:-0s"/></g><g transform="translate(265 212)"><circle r="4" fill="#54cbd5"/><circle r="12" fill="none" stroke="#54cbd5" class="dz-hop dz-glow" style="animation-delay:-1s"/></g><g transform="translate(116 252)"><circle r="4" fill="#54cbd5"/><circle r="12" fill="none" stroke="#54cbd5" class="dz-hop dz-glow" style="animation-delay:-2s"/></g><g transform="translate(190 177)"><path d="M0-19L12 0 0 17-12 0Z" fill="#ffc247"/><circle r="4" fill="#090d14"/><circle r="24" fill="none" stroke="#ffc247" class="pulse"/></g>
+<text x="214" y="169" font-size="12" fill="#ffc247" class="mono">DROP HERE</text><text x="100" y="355" font-size="12" fill="#9daab9" class="mono">BUILD ZONE // 2514</text>
+<path d="M0 20V0h20M330 0h20v20M0 330v20h20M330 350h20v-20" fill="none" stroke="#78928a"/>
+<g class="dz-plane" transform="translate(9 44) rotate(39)"><path d="M24 0L-12-5-5 0-12 5Z M-1 0L-8-17-12-17-7 0-12 17-8 17Z" fill="#edf2e9" stroke="#06080d" stroke-width="1"/></g></g></svg>

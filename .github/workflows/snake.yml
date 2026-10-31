@@ -1,10 +1,6 @@
-name: Contribution snake
+name: Legacy contribution snake (manual only)
 
 on:
-  schedule:
-    - cron: "41 3 * * *"
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 464 370" width="464" height="370" role="img" aria-labelledby="arena-title">
+<title id="arena-title">PRIMARY / LEXGUARD — original animated profile panel</title>
+<style>
+.arena-label{font:11px Consolas,monospace;letter-spacing:1.5px}
+.arena-border{animation:arena-run 18s linear infinite}
+.arena-dot{animation:arena-ping 3s ease-in-out infinite}
+.arena-eq{transform-box:fill-box;transform-origin:bottom;animation:arena-eq 2.4s ease-in-out infinite}
+@keyframes arena-run{to{stroke-dashoffset:-2400}}
+@keyframes arena-ping{50%{opacity:.35}}
+@keyframes arena-eq{50%{transform:scaleY(.35);opacity:.4}}
+@media(prefers-reduced-motion:reduce){.arena-border,.arena-dot,.arena-eq{animation:none!important}}
+</style>
+<rect x="1" y="1" width="462" height="368" rx="12" fill="#06080d" stroke="#293341"/>
+<rect x="1.5" y="1.5" width="461" height="367" rx="12" fill="none" stroke="#ffc247" stroke-width="2" stroke-dasharray="70 1130" class="arena-border"/>
+<path d="M16 38H448" stroke="#293341"/>
+<text class="arena-label" x="18" y="27" fill="#ffc247">PRIMARY / LEXGUARD</text>
+<circle cx="442" cy="24" r="4" fill="#54cbd5" class="arena-dot"/>
+<svg xmlns="http://www.w3.org/2000/svg" x="12" y="48" width="440" height="300" viewBox="0 0 440 300" role="img" aria-labelledby="t d">
+<title id="t">LexGuard: AI contract review for Indian law</title>
+<desc id="d">Project card for LexGuard, a solo project from May to August 2026. Illustrative run: a scan passes three contract clauses; the LLM rated 'Repay 3,00,000 rupees if you resign' LOW, and one of 36 trap patterns forces it to CRITICAL. The citation verifier marks Indian Contract Act section 27 strong and section 412 hallucinated. Stack: Node.js, Redis job queue, MongoDB Atlas Vector Search.</desc>
+<defs><linearGradient id="scan" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5a524" stop-opacity="0"/><stop offset="1" stop-color="#f5a524" stop-opacity="0.25"/></linearGradient></defs>
+<style>
+@keyframes k0{0.00%{opacity:0.1} 7.78%{opacity:0.1} 12.22%{opacity:0} 26.11%{opacity:0} 28.89%{opacity:0.28} 37.78%{opacity:0.1} 100.00%{opacity:0.1}} .k0{animation:k0 9.0s linear infinite}
+@keyframes k1{0.00%{opacity:0} 7.78%{opacity:0} 12.22%{opacity:1.0} 26.67%{opacity:1.0} 30.00%{opacity:0} 100.00%{opacity:0}} .k1{animation:k1 9.0s linear infinite}
+@keyframes k2{0.00%{opacity:1.0} 7.78%{opacity:1.0} 12.22%{opacity:0} 26.67%{opacity:0} 30.00%{opacity:1.0} 100.00%{opacity:1.0}} .k2{animation:k2 9.0s linear infinite}
+@keyframes k3{0.00%{opacity:1.0} 7.78%{opacity:1.0} 12.22%{opacity:0} 30.56%{opacity:0} 33.89%{opacity:1.0} 100.00%{opacity:1.0}} .k3{animation:k3 9.0s linear infinite}
+@keyframes k4{0.00%{opacity:0;transform:translateY(0px)} 15.44%{opacity:0;transform:translateY(0px)} 15.56%{opacity:1;transform:translateY(0px)} 37.78%{opacity:1;transform:translateY(74px)} 41.11%{opacity:0;transform:translateY(74px)} 100.00%{opacity:0;transform:translateY(74px)}} .k4{animation:k4 9.0s linear infinite}
+@keyframes k5{0.00%{opacity:1.0} 7.78%{opacity:1.0} 12.22%{opacity:0} 41.11%{opacity:0} 44.44%{opacity:1.0} 100.00%{opacity:1.0}} .k5{animation:k5 9.0s linear infinite}
+@keyframes k6{0.00%{opacity:1.0} 7.78%{opacity:1.0} 12.22%{opacity:0} 47.78%{opacity:0} 51.11%{opacity:1.0} 100.00%{opacity:1.0}} .k6{animation:k6 9.0s linear infinite}
+@keyframes breathe{0%,100%{opacity:1} 50%{opacity:0.3}} .breathe{animation:breathe 2.4s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+<rect x="0.5" y="0.5" width="439" height="299" rx="16" fill="#080a0f" stroke="#293341"/>
+<text x="24" y="34" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#f5a524" letter-spacing="2.5">N.01 · LEGAL AI</text>
+<text x="416" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#8b949e" text-anchor="end">↗</text>
+<text x="24" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="23" fill="#e6edf3" font-weight="700">LexGuard</text>
+<text x="24" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#8b949e">AI contract review for Indian law. 36 trap patterns</text>
+<text x="24" y="100" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#8b949e">can overrule the LLM's risk rating.</text>
+<rect x="24" y="110" width="392" height="136" rx="12" fill="#10141b" stroke="#293341"/>
+<text x="36" y="128" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#8b949e">safety net · 36 trap patterns</text>
+<text x="404" y="128" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#8b949e" text-anchor="end" opacity="0.8">illustrative run</text>
+<text x="36" y="152" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#484f58">01</text>
+<text x="60" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#e6edf3">Payment due within 45 days</text>
+<g><rect x="330" y="139" width="76" height="18" rx="9.0" fill="#080a0f" stroke="#8b949e"/><text x="368.0" y="152.3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#8b949e" text-anchor="middle">LOW</text></g>
+<line x1="34" y1="159" x2="406" y2="159" stroke="#293341" stroke-dasharray="2 4"/>
+<rect class="k0" x="30" y="160" width="380" height="22" rx="5" fill="#f85149" opacity="0.1"/>
+<text x="36" y="176" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#484f58">02</text>
+<text x="60" y="176" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#e6edf3">Repay ₹3,00,000 if you resign</text>
+<g opacity="0" class="k1"><rect x="330" y="163" width="76" height="18" rx="9.0" fill="#080a0f" stroke="#8b949e"/><text x="368.0" y="176.3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#8b949e" text-anchor="middle">LOW</text></g>
+<g class="k2"><rect x="330" y="163" width="76" height="18" rx="9.0" fill="#f85149" fill-opacity="0.16" stroke="#f85149"/><text x="368.0" y="176.3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#f85149" font-weight="700" text-anchor="middle">CRITICAL</text></g>
+<g class="k3"><rect x="280" y="163" width="44" height="18" rx="9.0" fill="#080a0f" stroke="#f5a524"/><text x="302.0" y="176.3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#f5a524" text-anchor="middle">trap</text></g>
+<line x1="34" y1="183" x2="406" y2="183" stroke="#293341" stroke-dasharray="2 4"/>
+<text x="36" y="200" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#484f58">03</text>
+<text x="60" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#e6edf3">30 days' notice to terminate</text>
+<g><rect x="330" y="187" width="76" height="18" rx="9.0" fill="#080a0f" stroke="#8b949e"/><text x="368.0" y="200.3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#8b949e" text-anchor="middle">LOW</text></g>
+<g class="k4" opacity="0"><rect x="30" y="120" width="380" height="14" fill="url(#scan)"/><line x1="30" y1="134" x2="410" y2="134" stroke="#f5a524" stroke-width="1.5"/></g>
+<line x1="34" y1="207" x2="406" y2="207" stroke="#293341"/>
+<text x="36" y="227" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#8b949e">Contract Act</text>
+<g class="k5"><rect x="128" y="214" width="108" height="19" rx="9.5" fill="#080a0f" stroke="#3fb950"/><text x="182.0" y="227.8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#3fb950" text-anchor="middle">s.27 · strong</text></g>
+<g class="k6"><rect x="244" y="214" width="158" height="19" rx="9.5" fill="#f85149" fill-opacity="0.16" stroke="#f85149"/><text x="323.0" y="227.8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#f85149" font-weight="700" text-anchor="middle">s.412 · hallucinated</text></g>
+<rect x="24.0" y="262" width="66.4" height="22" rx="11.0" fill="#10141b" stroke="#293341"/>
+<text x="57.2" y="277" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#e6edf3" text-anchor="middle">Node.js</text>
+<rect x="96.4" y="262" width="52.0" height="22" rx="11.0" fill="#10141b" stroke="#293341"/>
+<text x="122.4" y="277" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#e6edf3" text-anchor="middle">Redis</text>
+<rect x="154.4" y="262" width="66.4" height="22" rx="11.0" fill="#10141b" stroke="#293341"/>
+<text x="187.6" y="277" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#e6edf3" text-anchor="middle">MongoDB</text>
+<rect x="251.2" y="262" width="164.8" height="22" rx="11.0" fill="#f5a524" fill-opacity="0.1" stroke="#f5a524" stroke-opacity="0.7"/>
+<circle cx="263.2" cy="273.0" r="3.5" fill="#f5a524"/>
+<text x="271.2" y="277" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#f5a524">solo · May–Aug 2026</text>
+</svg>
+
+<path d="M20 358h30m6 0h10" stroke="#ffc247" stroke-width="2"/>
+<rect x="361" y="357" width="4" height="4" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.0s"/><rect x="369" y="355" width="4" height="6" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.23s"/><rect x="377" y="353" width="4" height="8" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.46s"/><rect x="385" y="357" width="4" height="4" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.6900000000000001s"/><rect x="393" y="355" width="4" height="6" fill="#54cbd5" class="arena-eq" style="animation-delay:-0.92s"/><rect x="401" y="353" width="4" height="8" fill="#54cbd5" class="arena-eq" style="animation-delay:-1.1500000000000001s"/><rect x="409" y="357" width="4" height="4" fill="#54cbd5" class="arena-eq" style="animation-delay:-1.3800000000000001s"/><rect x="417" y="355" width="4" height="6" fill="#54cbd5" class="arena-eq" style="animation-delay:-1.61s"/><rect x="425" y="353" width="4" height="8" fill="#54cbd5" class="arena-eq" style="animation-delay:-1.84s"/></svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="560" viewBox="0 0 600 560" role="img" aria-labelledby="title desc">
+<title id="title">Aditya Singh — LLM systems, AI agents, full-stack. BGMI-inspired profile.</title><desc id="desc">Original battle-royale-inspired profile artwork. All essential information is also in the README text.</desc>
+<defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#202736" stroke-width=".6"/></pattern><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#090c12"/><stop offset="1" stop-color="#05070b"/></linearGradient></defs>
+<style>text{font-family:Arial,Helvetica,sans-serif}.mono{font-family:Consolas,monospace;letter-spacing:2px}.pulse{animation:pulse 3s ease-in-out infinite}.route{animation:route 12s linear infinite}.ring{transform-box:fill-box;transform-origin:center;animation:ring 6s ease-in-out infinite}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}@keyframes route{to{stroke-dashoffset:-120}}@keyframes ring{50%{transform:scale(.88);opacity:.55}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+<rect width="600" height="560" rx="12" fill="url(#bg)"/><rect width="600" height="560" rx="12" fill="url(#grid)"/><rect x="1" y="1" width="598" height="558" rx="11" fill="none" stroke="#293341"/><path d="M0 0H600V8H0Z" fill="#ffc247"/>
+<text x="32" y="54" font-size="17" fill="#ffc247" class="mono">PLAYER / ADITYA2514</text>
+<text x="28" y="163" font-size="93" fill="#f1f3e8" font-weight="900" letter-spacing="-4">ADITYA</text>
+<text x="28" y="253" font-size="93" fill="#ffc247" font-weight="900" letter-spacing="-4">SINGH.</text>
+<text x="32" y="310" font-size="25" fill="#f1f3e8" font-weight="700">DROP IN. BUILD SOMETHING</text>
+<text x="32" y="346" font-size="25" fill="#f1f3e8" font-weight="700">WORTH FINDING.</text>
+<text x="32" y="392" font-size="20" fill="#9daab9" >LLM systems / AI agents / Full-stack</text>
+<path d="M32 420H568" stroke="#293341"/>
+<text x="32" y="458" font-size="17" fill="#54cbd5" class="mono">IIT MADRAS · BS DATA SCIENCE</text>
+<text x="32" y="500" font-size="17" fill="#ffc247" class="mono">OFF-DUTY / BGMI</text>
+<circle cx="529" cy="489" r="26" fill="none" stroke="#54cbd5" class="ring"/><path d="M529 476L538 489 529 502 520 489Z" fill="#ffc247"/></svg>

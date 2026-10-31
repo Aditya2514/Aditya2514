@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="356" viewBox="0 0 600 356" role="img" aria-labelledby="cat-title">
+<title id="cat-title">Explore all repositories</title><style>
+text{font-family:Arial,Helvetica,sans-serif}.mono{font-family:Consolas,monospace;letter-spacing:1.5px}
+.cat-trace{stroke-dasharray:55 760;animation:cat-trace 12s linear infinite}
+.cat-pulse{animation:cat-pulse 4s ease-in-out infinite}
+.cat-sweep{transform-origin:0 0;animation:cat-sweep 12s linear infinite}
+.cat-meter{transform-box:fill-box;transform-origin:bottom;animation:cat-meter 2.5s ease-in-out infinite}
+@keyframes cat-trace{to{stroke-dashoffset:-815}}
+@keyframes cat-pulse{50%{opacity:.4}}
+@keyframes cat-sweep{to{transform:rotate(360deg)}}
+@keyframes cat-meter{50%{transform:scaleY(.35);opacity:.45}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<defs><pattern id="cat-grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#26303d" stroke-width=".45"/></pattern></defs>
+<rect x="1" y="1" width="598" height="354" rx="12" fill="#070a10" stroke="#293341"/>
+<rect x="1" y="1" width="598" height="354" rx="12" fill="url(#cat-grid)"/>
+<path d="M18 1H582" stroke="#54cbd5" stroke-width="3" class="cat-trace"/><text x="26" y="35" font-size="12" fill="#54cbd5" class="mono">NEXT DROP / ALWAYS BUILDING</text><text x="26" y="104" font-size="42" fill="#edf2f7" font-weight="900">THE LOBBY</text><text x="26" y="155" font-size="36" fill="#ffc247" font-weight="900">KEEPS GROWING.</text><text x="26" y="216" font-size="17" fill="#acb8c7" >New ideas. New repositories. Same curiosity.</text><text x="26" y="271" font-size="20" fill="#edf2f7" >Browse the next build.</text><text x="26" y="332" font-size="14" fill="#54cbd5" class="mono">EXPLORE ALL REPOS  →</text></svg>

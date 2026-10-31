@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="132" viewBox="0 0 1200 132" role="img" aria-labelledby="dz-title">
+<title id="dz-title">Drop. Loot. Build. Repeat. A builder&#x27;s loop.</title>
+<style>text{font-family:Arial,Helvetica,sans-serif}.mono{font-family:Consolas,monospace;letter-spacing:2px}
+.dz-run{animation:dz-run 12s linear infinite}
+.dz-glow{animation:dz-glow 5s ease-in-out infinite}
+.dz-float{animation:dz-float 7s ease-in-out infinite}
+.dz-turn{animation:dz-turn 12s linear infinite;transform-origin:0 0}
+.dz-eq{transform-box:fill-box;transform-origin:bottom;animation:dz-eq 2s ease-in-out infinite}
+.dz-hop{animation:dz-hop 8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.dz-spark{animation:dz-spark 9s linear infinite}
+.dz-plane{animation:dz-plane 12s linear infinite}
+.dz-drop{animation:dz-drop 8s ease-in-out infinite}
+.dz-progress{stroke-dasharray:50 850;animation:dz-progress 7s linear infinite}
+.dz-slot{animation:dz-slot 8s ease-in-out infinite}
+@keyframes dz-run{to{stroke-dashoffset:-360}}
+@keyframes dz-glow{50%{opacity:.55}}
+@keyframes dz-float{50%{transform:translateY(-9px)}}
+@keyframes dz-turn{to{transform:rotate(360deg)}}
+@keyframes dz-eq{50%{transform:scaleY(.25);opacity:.4}}
+@keyframes dz-hop{50%{transform:scale(1.07)}}
+@keyframes dz-spark{0%{transform:translate(0,15px);opacity:0}20%{opacity:.55}80%{opacity:.25}100%{transform:translate(35px,-65px);opacity:0}}
+@keyframes dz-plane{0%{transform:translate(9px,44px) rotate(39deg);opacity:0}8%{opacity:1}92%{opacity:1}100%{transform:translate(319px,299px) rotate(39deg);opacity:0}}
+@keyframes dz-drop{0%,100%{transform:translateY(-12px)}50%{transform:translateY(10px)}}
+@keyframes dz-progress{to{stroke-dashoffset:-900}}
+@keyframes dz-slot{0%,18%,100%{stroke:#ffc247;fill:#253024}25%,92%{stroke:#293341;fill:#10141b}}
+@media(prefers-reduced-motion:reduce){.dz-run,.dz-glow,.dz-float,.dz-turn,.dz-eq,.dz-hop,.dz-spark,.dz-plane,.dz-drop,.dz-progress,.dz-slot{animation:none!important}.dz-spark{opacity:.2}}
+</style>
+<defs><pattern id="dz-grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#202736" stroke-width=".5"/></pattern><clipPath id="dz-clip"><rect width="1200" height="132" rx="12"/></clipPath></defs>
+<rect x="1" y="1" width="1198" height="130" rx="12" fill="#06080d" stroke="#293341"/>
+<g clip-path="url(#dz-clip)"><rect width="1200" height="132" fill="url(#dz-grid)"/><circle cx="35" cy="60" r="1.0" fill="#54cbd5" opacity=".15" class="dz-spark" style="animation-delay:-0.0s;animation-duration:8s"/><circle cx="172" cy="79" r="1.5" fill="#ffc247" opacity=".15" class="dz-spark" style="animation-delay:-0.7s;animation-duration:9s"/><circle cx="309" cy="98" r="2.0" fill="#ffc247" opacity=".15" class="dz-spark" style="animation-delay:-1.4s;animation-duration:10s"/><circle cx="446" cy="65" r="1.0" fill="#54cbd5" opacity=".15" class="dz-spark" style="animation-delay:-2.0999999999999996s;animation-duration:11s"/><circle cx="583" cy="84" r="1.5" fill="#ffc247" opacity=".15" class="dz-spark" style="animation-delay:-2.8s;animation-duration:12s"/><circle cx="720" cy="103" r="2.0" fill="#ffc247" opacity=".15" class="dz-spark" style="animation-delay:-3.5s;animation-duration:8s"/><circle cx="857" cy="70" r="1.0" fill="#54cbd5" opacity=".15" class="dz-spark" style="animation-delay:-4.199999999999999s;animation-duration:9s"/><circle cx="994" cy="89" r="1.5" fill="#ffc247" opacity=".15" class="dz-spark" style="animation-delay:-4.8999999999999995s;animation-duration:10s"/><circle cx="1131" cy="108" r="2.0" fill="#ffc247" opacity=".15" class="dz-spark" style="animation-delay:-5.6s;animation-duration:11s"/><circle cx="133" cy="75" r="1.0" fill="#54cbd5" opacity=".15" class="dz-spark" style="animation-delay:-6.3s;animation-duration:12s"/><circle cx="270" cy="94" r="1.5" fill="#ffc247" opacity=".15" class="dz-spark" style="animation-delay:-7.0s;animation-duration:8s"/><circle cx="407" cy="61" r="2.0" fill="#ffc247" opacity=".15" class="dz-spark" style="animation-delay:-7.699999999999999s;animation-duration:9s"/><rect x="20" y="19" width="273" height="94" rx="7" fill="#10141b" stroke="#293341" class="dz-slot" style="animation-delay:-8s"/><text x="40" y="53" fill="#ffc247" font-size="24" font-weight="800">DROP</text><text x="40" y="84" fill="#9daab9" font-size="16" >Read the problem</text><rect x="316" y="19" width="273" height="94" rx="7" fill="#10141b" stroke="#293341" class="dz-slot" style="animation-delay:-6s"/><text x="336" y="53" fill="#ffc247" font-size="24" font-weight="800">LOOT</text><text x="336" y="84" fill="#9daab9" font-size="16" >Find the evidence</text><rect x="612" y="19" width="273" height="94" rx="7" fill="#10141b" stroke="#293341" class="dz-slot" style="animation-delay:-4s"/><text x="632" y="53" fill="#ffc247" font-size="24" font-weight="800">BUILD</text><text x="632" y="84" fill="#9daab9" font-size="16" >Test the system</text><rect x="908" y="19" width="273" height="94" rx="7" fill="#10141b" stroke="#293341" class="dz-slot" style="animation-delay:-2s"/><text x="928" y="53" fill="#ffc247" font-size="24" font-weight="800">REPEAT</text><text x="928" y="84" fill="#9daab9" font-size="16" >Learn from the run</text></g></svg>
