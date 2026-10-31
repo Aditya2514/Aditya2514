@@ -18,7 +18,7 @@
 <circle class="live" cx="36" cy="36" r="4" fill="#2dd4bf"/>
 <text x="48" y="40" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="3" fill="#2dd4bf">LIVE SIGNAL</text>
 <text x="32" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#e6edf3">Last 12 months on GitHub</text>
-<text x="868" y="40" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">updated 2026-10-30 · GitHub contribution calendar</text>
+<text x="868" y="40" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8b949e">updated 2026-10-31 · GitHub contribution calendar</text>
 <g class="tile" style="animation-delay:0.00s">
 <rect x="32" y="86" width="160" height="64" rx="10" fill="#161b22" stroke="#30363d"/>
 <text x="48" y="120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#e6edf3">539</text>
@@ -82,22 +82,22 @@
 <text x="662.9" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Aug</text>
 <text x="741.8" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Sep</text>
 <text x="804.9" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Oct</text>
-<rect class="seg" style="animation-delay:1.00s" x="32.0" y="292" width="323.9" height="10" rx="2" fill="#3987e5"><title>JavaScript: 39.0%</title></rect>
-<rect class="seg" style="animation-delay:1.08s" x="357.9" y="292" width="240.5" height="10" rx="2" fill="#d95926"><title>TypeScript: 29.0%</title></rect>
-<rect class="seg" style="animation-delay:1.16s" x="600.4" y="292" width="218.3" height="10" rx="2" fill="#199e70"><title>Python: 26.4%</title></rect>
-<rect class="seg" style="animation-delay:1.24s" x="820.8" y="292" width="21.1" height="10" rx="2" fill="#c98500"><title>CSS: 2.8%</title></rect>
-<rect class="seg" style="animation-delay:1.32s" x="843.8" y="292" width="13.3" height="10" rx="2" fill="#d55181"><title>HTML: 1.8%</title></rect>
-<rect class="seg" style="animation-delay:1.40s" x="859.2" y="292" width="6.8" height="10" rx="2" fill="#6e7681"><title>Other: 1.1%</title></rect>
+<rect class="seg" style="animation-delay:1.00s" x="32.0" y="292" width="299.9" height="10" rx="2" fill="#3987e5"><title>JavaScript: 36.1%</title></rect>
+<rect class="seg" style="animation-delay:1.08s" x="333.9" y="292" width="221.9" height="10" rx="2" fill="#d95926"><title>TypeScript: 26.8%</title></rect>
+<rect class="seg" style="animation-delay:1.16s" x="557.8" y="292" width="210.6" height="10" rx="2" fill="#199e70"><title>Python: 25.4%</title></rect>
+<rect class="seg" style="animation-delay:1.24s" x="770.3" y="292" width="66.2" height="10" rx="2" fill="#c98500"><title>HTML: 8.2%</title></rect>
+<rect class="seg" style="animation-delay:1.32s" x="838.6" y="292" width="19.3" height="10" rx="2" fill="#d55181"><title>CSS: 2.5%</title></rect>
+<rect class="seg" style="animation-delay:1.40s" x="859.8" y="292" width="6.2" height="10" rx="2" fill="#6e7681"><title>Other: 1.0%</title></rect>
 <circle cx="36" cy="322" r="4" fill="#3987e5"/>
-<text x="45" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">JavaScript 39%</text>
+<text x="45" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">JavaScript 36%</text>
 <circle cx="162" cy="322" r="4" fill="#d95926"/>
-<text x="171" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">TypeScript 29%</text>
+<text x="171" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">TypeScript 27%</text>
 <circle cx="288" cy="322" r="4" fill="#199e70"/>
-<text x="297" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">Python 26%</text>
+<text x="297" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">Python 25%</text>
 <circle cx="386" cy="322" r="4" fill="#c98500"/>
-<text x="395" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">CSS 3%</text>
-<circle cx="456" cy="322" r="4" fill="#d55181"/>
-<text x="465" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">HTML 2%</text>
+<text x="395" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">HTML 8%</text>
+<circle cx="463" cy="322" r="4" fill="#d55181"/>
+<text x="472" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">CSS 3%</text>
 <circle cx="533" cy="322" r="4" fill="#6e7681"/>
 <text x="542" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">Other 1%</text>
 </svg>

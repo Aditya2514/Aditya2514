@@ -142,7 +142,7 @@ The original animated project demonstrations above are preserved in full. Their 
 
 <p align="center">
 <a href="https://github.com/Aditya2514/Naukri"><img src="assets/catalog/naukri.svg" width="49%" alt="Naukri / Jobee — A job-portal UI with search, saved jobs and a simulated listings API. Stack: React, Vite" /></a>
-<a href="https://github.com/Aditya2514?tab=repositories"><img src="assets/catalog/browse.svg" width="49%" alt="Explore all repositories" /></a>
+<a href="https://github.com/Aditya2514/Mobius"><img src="assets/catalog/mobius.svg" width="49%" alt="Mobius — Explore the source, documentation and latest changes. Stack: TypeScript" /></a>
 </p>
 
 <!-- PROJECT-LOBBY:END -->
