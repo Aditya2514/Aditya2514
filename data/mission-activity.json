@@ -1,0 +1,26 @@
+{
+  "refreshed_at": "2026-11-06T16:00:23.882552+00:00",
+  "commits": [
+    {
+      "repo": "Pikina",
+      "sha": "21e6e432e8653851d9680c458f8814e7e942b6e9",
+      "title": "fix(switcher): review findings \u2014 Ctrl+C, git config execution, robustness",
+      "date": "2026-10-22T16:27:58Z",
+      "url": "https://github.com/Aditya2514/Pikina/commit/21e6e432e8653851d9680c458f8814e7e942b6e9"
+    },
+    {
+      "repo": "Pikina",
+      "sha": "a1b73fa721aaa649689d0b1412fa3d13e56c6f09",
+      "title": "feat: project switcher (\"work on <project>\") as the built-in workspace plugin",
+      "date": "2026-10-22T16:06:08Z",
+      "url": "https://github.com/Aditya2514/Pikina/commit/a1b73fa721aaa649689d0b1412fa3d13e56c6f09"
+    },
+    {
+      "repo": "Pikina",
+      "sha": "11b49a84714332dfcaa3a8681c22d143dbd24271",
+      "title": "phase1: close the gaps found when re-verifying the review fixes",
+      "date": "2026-10-22T00:23:19Z",
+      "url": "https://github.com/Aditya2514/Pikina/commit/11b49a84714332dfcaa3a8681c22d143dbd24271"
+    }
+  ]
+}

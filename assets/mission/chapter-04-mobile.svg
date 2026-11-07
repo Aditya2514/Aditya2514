@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="170" viewBox="0 0 600 170" role="img" aria-labelledby="title">
+<title id="title">THE BUILD KIT. Choose the tool for the job. Make the system work.</title><style>
+text{font-family:Arial,Helvetica,sans-serif}.mono{font-family:Consolas,monospace;letter-spacing:2px}
+.trace{stroke-dasharray:160 1240;animation:trace 9s linear infinite}
+.pulse{animation:pulse 6s ease-in-out infinite}
+.orbit{transform-origin:0 0;animation:orbit 28s linear infinite}
+.scan{animation:scan 10s ease-in-out infinite}
+.spark{animation:spark 9s ease-in-out infinite}
+.s1{animation:s1 12s ease-in-out infinite}.s2{animation:s2 12s ease-in-out infinite}.s3{animation:s3 12s ease-in-out infinite}
+@keyframes trace{to{stroke-dashoffset:-1400}}
+@keyframes pulse{50%{opacity:.35}}
+@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes scan{0%,100%{transform:translateY(0);opacity:0}20%,70%{opacity:.45}80%{transform:translateY(260px);opacity:0}}
+@keyframes spark{0%,100%{opacity:0;transform:translateY(10px)}40%{opacity:.6}90%{transform:translateY(-35px);opacity:0}}
+@keyframes s1{0%,25%,100%{opacity:1}35%,85%{opacity:.35}}
+@keyframes s2{0%,20%,70%,100%{opacity:.35}35%,55%{opacity:1}}
+@keyframes s3{0%,50%,100%{opacity:.35}65%,90%{opacity:1}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}.scan,.spark{display:none}}
+</style><defs>
+<clipPath id="bounds"><rect width="600" height="170" rx="14"/></clipPath>
+<linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#0d1117" stop-opacity="0"/><stop offset="1" stop-color="#0d1117"/></linearGradient>
+<linearGradient id="shade"><stop stop-color="#0d1117" stop-opacity=".8"/><stop offset=".55" stop-color="#0d1117" stop-opacity=".2"/><stop offset="1" stop-color="#0d1117" stop-opacity="0"/></linearGradient>
+</defs><rect width="600" height="170" rx="14" fill="#0d1117"/>
+<g clip-path="url(#bounds)"><text x="575" y="155" font-size="142" fill="#e9b44c" font-weight="900" text-anchor="end" opacity=".08">04</text><text x="30" y="37" font-size="13" fill="#e9b44c" class="mono">CHAPTER 04</text><text x="28" y="86" font-size="34" fill="#e6edf3" font-weight="800" letter-spacing="-1">THE BUILD KIT</text><text x="30" y="120" font-size="18" fill="#a8b3bf" >Choose the tool for the job. Make the</text><text x="30" y="145" font-size="18" fill="#a8b3bf" >system work.</text><path d="M1 15V155" stroke="#e9b44c" stroke-width="3"/></g><rect x="1" y="1" width="598" height="168" rx="13" fill="none" stroke="#30363d"/></svg>
