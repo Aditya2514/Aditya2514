@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" height="185" viewBox="0 0 900 185" role="img" aria-labelledby="title">
-<title id="title">Why let code challenge a model? LexGuard pairs model assessments with explicit checks. A plausible answer still needs something you can verify.</title><style>
+<title id="title">Why pause before an action? Pikina validates tool proposals and asks for high-risk consent. Understanding a request is different from authorizing it.</title><style>
 text{font-family:Arial,Helvetica,sans-serif}.mono{font-family:Consolas,monospace;letter-spacing:2px}
 .sweep{stroke-dasharray:70 1300;animation:sweep 14s linear infinite}
 .breathe{animation:breathe 8s ease-in-out infinite}
@@ -15,6 +15,6 @@ text{font-family:Arial,Helvetica,sans-serif}.mono{font-family:Consolas,monospace
 @keyframes step3{0%,50%,100%{opacity:.35}65%,90%{opacity:1}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
 </style><defs></defs>
-<rect width="900" height="185" rx="16" fill="#0d1117"/><text x="30" y="38" font-size="13" fill="#e9b44c" class="mono">ENGINEERING DECISION / 01 / DETERMINISTIC CHECKS</text><text x="30" y="83" font-size="30" fill="#e6edf3" font-weight="700">Why let code challenge a model?</text><text x="30" y="122" font-size="19" fill="#a8b3bf" >LexGuard pairs model assessments with explicit checks.</text><text x="30" y="155" font-size="19" fill="#a8b3bf" >A plausible answer still needs something you can verify.</text>
+<rect width="900" height="185" rx="16" fill="#0d1117"/><text x="30" y="38" font-size="13" fill="#e9b44c" class="mono">ENGINEERING DECISION / 02 / HUMAN APPROVAL</text><text x="30" y="83" font-size="30" fill="#e6edf3" font-weight="700">Why pause before an action?</text><text x="30" y="122" font-size="19" fill="#a8b3bf" >Pikina validates tool proposals and asks for high-risk consent.</text><text x="30" y="155" font-size="19" fill="#a8b3bf" >Understanding a request is different from authorizing it.</text>
 <rect x="1" y="1" width="898" height="183" rx="15" fill="none" stroke="#30363d"/>
 </svg>

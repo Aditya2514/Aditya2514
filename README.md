@@ -186,7 +186,7 @@ Three systems. Three different ways to make AI easier to inspect. Click a card t
 | Pikina | [feat: project switcher (&quot;work on &lt;project&gt;&quot;) as the built-in workspace plugin](https://github.com/Aditya2514/Pikina/commit/a1b73fa721aaa649689d0b1412fa3d13e56c6f09) | 2026-10-22 |
 | Pikina | [phase1: close the gaps found when re-verifying the review fixes](https://github.com/Aditya2514/Pikina/commit/11b49a84714332dfcaa3a8681c22d143dbd24271) | 2026-10-22 |
 
-<sub>Recent non-merge changes from LexGuard, Pikina and Noesis. Refreshed 09 Nov 2026, 22:21 UTC. Scheduled every six hours; the last successful snapshot stays visible if refresh fails.</sub>
+<sub>Recent non-merge changes from LexGuard, Pikina and Noesis. Refreshed 10 Nov 2026, 07:17 UTC. Scheduled every six hours; the last successful snapshot stays visible if refresh fails.</sub>
 
 <!-- MISSION-FEED:END -->
 
