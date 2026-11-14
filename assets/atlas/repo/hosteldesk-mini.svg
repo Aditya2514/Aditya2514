@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="170" viewBox="0 0 220 170" role="img" aria-labelledby="t d">
+<title id="t">HostelDesk</title><desc id="d">Hostel complaints with explained ETA ranges, automatic routing, completion proof and escalation.</desc>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif}
+.m{font-family:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace}
+.pulse{animation:pulse 2.4s ease-in-out infinite}
+.comet{animation:comet 9s linear infinite}
+.still{display:none}
+@keyframes pulse{50%{opacity:.25}}
+@keyframes comet{to{stroke-dashoffset:-1000}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.fx{display:none}.still{display:inline}.bw{opacity:.9}}
+
+.ping{transform-box:fill-box;transform-origin:center;animation:ping 3.2s ease-out infinite}
+@keyframes ping{0%{transform:scale(.5);opacity:.9}70%,100%{transform:scale(3.2);opacity:0}}
+.nudge{animation:nudge 1.6s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateX(5px)}}
+.bw{opacity:.5;animation:bw 7s linear infinite}
+@keyframes bw{0%,100%{opacity:.5}3%{opacity:1}16%{opacity:.5}}
+.head{animation:head 7s linear infinite}
+@keyframes head{0%{transform:translateX(0);opacity:0}2%{opacity:.9}57%{transform:translateX(var(--run));opacity:.9}60%,100%{transform:translateX(var(--run));opacity:0}}
+.kt{opacity:.3;animation:kt 9s linear infinite}
+@keyframes kt{0%,100%{opacity:.3}6%{opacity:1}22%{opacity:.3}}
+.stop{opacity:.7;animation:stop 8s linear infinite}
+@keyframes stop{0%,100%{opacity:.7}4%{opacity:1}30%{opacity:.7}}
+.walk{animation:walk 8s linear infinite}
+@keyframes walk{0%{transform:translateY(0);opacity:0}3%{opacity:1}82%{transform:translateY(var(--run));opacity:1}88%,100%{transform:translateY(var(--run));opacity:0}}
+</style>
+<defs>
+<radialGradient id="k-glow" cx="0" cy="0" r="1"><stop offset="0" stop-color="#5ed3e8" stop-opacity=".10"/><stop offset="1" stop-color="#5ed3e8" stop-opacity="0"/></radialGradient>
+<linearGradient id="k-edge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".09"/><stop offset=".25" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<clipPath id="k-card"><rect width="220" height="170" rx="14"/></clipPath>
+<linearGradient id="r-fade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#07090d"/><stop offset="1" stop-color="#07090d" stop-opacity="0"/></linearGradient><linearGradient id="r-fade-v" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#07090d" stop-opacity="0"/><stop offset="1" stop-color="#07090d"/></linearGradient></defs>
+<g clip-path="url(#k-card)"><rect width="220" height="170" fill="#07090d"/><rect width="154" height="170" fill="url(#k-glow)"/>
+<g transform="translate(96 0)"><path d="M58 90Q50 85 47 82Q44 80 42 78Q40 77 36 73Q32 70 31 69Q30 68 26 64Q23 60 21 58Q20 55 18 53Q17 50 16 45Q14 40 15 35Q16 30 18 27Q20 23 21 22Q22 20 26 16Q30 13 33 11Q35 10 38 9Q40 8 45 6Q50 5 55 5Q60 4 65 5Q70 6 75 8Q80 9 80 10Q81 10 86 13Q90 15 93 18Q95 20 98 24Q100 27 101 29Q102 30 105 35Q107 40 109 42Q110 44 112 47Q115 50 117 53Q120 56 122 58Q124 60 126 65Q128 70 128 75Q128 80 124 85Q120 89 120 90L119 90" fill="none" stroke="#5ed3e8" stroke-width="1" opacity="0.16"/><path d="M33 23Q36 20 38 19Q40 17 45 15Q50 14 55 13Q60 13 65 14Q70 15 75 17Q80 20 80 20Q81 20 85 25Q90 30 90 30Q90 30 92 35Q95 40 97 45Q100 50 100 50Q100 50 104 55Q108 60 109 62Q110 64 112 67Q114 70 112 75Q111 80 111 81Q110 81 105 84Q100 87 95 88Q90 89 85 89Q80 89 75 87Q70 86 65 83Q60 80 60 80Q60 80 55 76Q50 72 49 71Q47 70 44 67Q40 64 38 62Q35 60 33 57Q30 53 29 52Q28 50 26 45Q25 40 26 35Q27 30 29 28Q30 26 33 23Z" fill="none" stroke="#5ed3e8" stroke-width="1" opacity="0.23"/><path d="M54 20Q58 20 59 20Q60 20 60 20Q61 20 65 21Q70 22 75 26Q80 30 80 30Q80 30 83 35Q85 40 87 45Q89 50 89 51Q90 52 92 56Q95 60 98 64Q100 69 100 69Q101 70 100 71Q100 72 96 76Q92 80 91 80Q90 81 85 81Q80 80 80 80Q79 80 74 78Q70 76 66 73Q61 70 60 70Q60 69 55 66Q50 62 49 61Q47 60 44 57Q40 54 39 52Q37 50 35 45Q34 40 35 35Q37 30 38 28Q40 27 45 24Q50 21 54 20Z" fill="none" stroke="#5ed3e8" stroke-width="1" opacity="0.30"/><path d="M46 35Q48 30 49 29Q50 29 55 28Q60 27 64 29Q68 30 69 31Q70 31 73 36Q76 40 76 45Q77 50 76 55Q74 60 72 61Q70 61 68 61Q67 60 63 59Q60 58 55 55Q50 52 49 51Q48 50 45 45Q43 40 46 35Z" fill="none" stroke="#5ed3e8" stroke-width="1" opacity="0.37"/><circle class="ping fx" cx="58" cy="39" r="5" fill="none" stroke="#5ed3e8" stroke-width="1.4"/><path d="M58 34L63 39L58 44L53 39Z" fill="#07090d" stroke="#5ed3e8" stroke-width="1.4"/></g><rect x="96" y="0" width="60" height="84" fill="url(#r-fade)"/><rect x="96" y="52.08" width="600" height="32.92" fill="url(#r-fade-v)"/><text x="16" y="30" font-size="12" fill="#5ed3e8" font-weight="500" letter-spacing="1.6" class="m">02</text><text x="15" y="68" font-size="20" fill="#f1f4f7" font-weight="800" letter-spacing="-0.4">HostelDesk</text><rect x="16" y="124" width="84" height="22" rx="11" fill="#121821" stroke="#2c3848"/><text x="26" y="138.78" font-size="10.5" fill="#aeb8c4" font-weight="500" class="m">TypeScript</text><rect x="105" y="124" width="52" height="22" rx="11" fill="#121821" stroke="#2c3848"/><text x="115" y="138.78" font-size="10.5" fill="#aeb8c4" font-weight="500" class="m">React</text><path class="nudge" d="M182 154h20m-6-5 6 5-6 5" fill="none" stroke="#5ed3e8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x=".5" y=".5" width="219" height="169" rx="13.5" fill="none" stroke="#1c2530"/>
+<rect x=".5" y=".5" width="219" height="169" rx="13.5" fill="none" stroke="url(#k-edge)"/>
+</svg>

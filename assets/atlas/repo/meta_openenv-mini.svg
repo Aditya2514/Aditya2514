@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="170" viewBox="0 0 220 170" role="img" aria-labelledby="t d">
+<title id="t">Meta OpenEnv</title><desc id="d">An environment for agents juggling assignments, bugs, deadlines and burnout constraints. Team hackathon project.</desc>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif}
+.m{font-family:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace}
+.pulse{animation:pulse 2.4s ease-in-out infinite}
+.comet{animation:comet 9s linear infinite}
+.still{display:none}
+@keyframes pulse{50%{opacity:.25}}
+@keyframes comet{to{stroke-dashoffset:-1000}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.fx{display:none}.still{display:inline}.bw{opacity:.9}}
+
+.ping{transform-box:fill-box;transform-origin:center;animation:ping 3.2s ease-out infinite}
+@keyframes ping{0%{transform:scale(.5);opacity:.9}70%,100%{transform:scale(3.2);opacity:0}}
+.nudge{animation:nudge 1.6s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateX(5px)}}
+.bw{opacity:.5;animation:bw 7s linear infinite}
+@keyframes bw{0%,100%{opacity:.5}3%{opacity:1}16%{opacity:.5}}
+.head{animation:head 7s linear infinite}
+@keyframes head{0%{transform:translateX(0);opacity:0}2%{opacity:.9}57%{transform:translateX(var(--run));opacity:.9}60%,100%{transform:translateX(var(--run));opacity:0}}
+.kt{opacity:.3;animation:kt 9s linear infinite}
+@keyframes kt{0%,100%{opacity:.3}6%{opacity:1}22%{opacity:.3}}
+.stop{opacity:.7;animation:stop 8s linear infinite}
+@keyframes stop{0%,100%{opacity:.7}4%{opacity:1}30%{opacity:.7}}
+.walk{animation:walk 8s linear infinite}
+@keyframes walk{0%{transform:translateY(0);opacity:0}3%{opacity:1}82%{transform:translateY(var(--run));opacity:1}88%,100%{transform:translateY(var(--run));opacity:0}}
+</style>
+<defs>
+<radialGradient id="k-glow" cx="0" cy="0" r="1"><stop offset="0" stop-color="#ffb648" stop-opacity=".10"/><stop offset="1" stop-color="#ffb648" stop-opacity="0"/></radialGradient>
+<linearGradient id="k-edge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".09"/><stop offset=".25" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<clipPath id="k-card"><rect width="220" height="170" rx="14"/></clipPath>
+<linearGradient id="r-fade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#07090d"/><stop offset="1" stop-color="#07090d" stop-opacity="0"/></linearGradient><linearGradient id="r-fade-v" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#07090d" stop-opacity="0"/><stop offset="1" stop-color="#07090d"/></linearGradient></defs>
+<g clip-path="url(#k-card)"><rect width="220" height="170" fill="#07090d"/><rect width="154" height="170" fill="url(#k-glow)"/>
+<g transform="translate(96 0)"><path d="M130 59Q130 60 125 64Q120 68 118 69Q117 70 113 72Q110 74 105 75Q100 77 95 78Q90 78 85 79Q80 79 75 79Q70 78 65 78Q60 77 55 76Q50 74 46 72Q42 70 41 70Q40 69 35 66Q30 62 29 61Q27 60 24 55Q20 51 20 50Q19 50 17 45Q14 40 12 35Q11 30 11 25Q10 20 12 15Q14 10 17 7Q20 4 23 2L26 0M70 0Q80 3 85 5Q90 7 94 8Q98 10 99 10Q100 11 105 12Q110 14 115 17Q120 20 120 20Q120 20 125 25L130 29" fill="none" stroke="#ffb648" stroke-width="1" opacity="0.16"/><path d="M23 15Q26 10 28 8Q30 7 35 5Q40 3 45 3Q50 2 55 3Q60 4 65 6Q70 8 73 9Q75 10 78 11Q80 12 85 14Q90 16 95 18Q99 20 100 20Q100 20 105 24Q110 27 112 28Q114 30 117 35Q119 40 119 45Q118 50 114 55Q110 60 110 60Q110 60 105 63Q100 66 95 67Q90 68 85 69Q80 69 75 69Q70 69 65 68Q60 68 55 66Q50 64 47 62Q43 60 42 59Q40 58 36 54Q32 50 31 49Q30 48 27 44Q25 40 23 35Q21 30 20 25Q20 20 23 15Z" fill="none" stroke="#ffb648" stroke-width="1" opacity="0.23"/><path d="M35 14Q40 10 40 10Q40 10 45 9Q50 9 52 10Q55 10 58 11Q60 11 65 13Q70 15 75 17Q80 19 81 20Q82 20 86 22Q90 24 95 26Q100 29 100 30Q101 30 104 35Q108 40 107 45Q106 50 103 53Q100 56 96 58Q92 60 91 60Q90 61 85 62Q80 63 75 62Q70 62 65 61Q60 60 60 60Q60 60 55 58Q50 56 46 53Q42 50 41 49Q40 48 37 44Q34 40 32 36Q30 32 30 31Q29 30 29 25Q29 20 30 19Q30 18 35 14Z" fill="none" stroke="#ffb648" stroke-width="1" opacity="0.30"/><path d="M39 25Q40 20 40 20Q40 20 45 18Q50 17 55 18Q60 18 62 19Q65 20 67 21Q70 22 75 24Q80 26 84 28Q88 30 89 31Q90 32 94 36Q97 40 95 45Q94 50 92 51Q90 52 85 54Q80 55 75 55Q70 56 65 54Q60 53 57 51Q54 50 52 48Q50 46 47 43Q44 40 42 37Q40 33 39 32Q38 30 39 25Z" fill="none" stroke="#ffb648" stroke-width="1" opacity="0.37"/><circle class="ping fx" cx="75" cy="43" r="5" fill="none" stroke="#ffb648" stroke-width="1.4"/><path d="M75 38L80 43L75 48L70 43Z" fill="#07090d" stroke="#ffb648" stroke-width="1.4"/></g><rect x="96" y="0" width="60" height="84" fill="url(#r-fade)"/><rect x="96" y="52.08" width="600" height="32.92" fill="url(#r-fade-v)"/><text x="16" y="30" font-size="12" fill="#ffb648" font-weight="500" letter-spacing="1.6" class="m">03</text><text x="15" y="68" font-size="20" fill="#f1f4f7" font-weight="800" letter-spacing="-0.4">Meta OpenEnv</text><rect x="16" y="124" width="58.4" height="22" rx="11" fill="#121821" stroke="#2c3848"/><text x="26" y="138.78" font-size="10.5" fill="#aeb8c4" font-weight="500" class="m">Python</text><rect x="79.4" y="124" width="64.8" height="22" rx="11" fill="#121821" stroke="#2c3848"/><text x="89.4" y="138.78" font-size="10.5" fill="#aeb8c4" font-weight="500" class="m">FastAPI</text><path class="nudge" d="M182 154h20m-6-5 6 5-6 5" fill="none" stroke="#ffb648" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x=".5" y=".5" width="219" height="169" rx="13.5" fill="none" stroke="#1c2530"/>
+<rect x=".5" y=".5" width="219" height="169" rx="13.5" fill="none" stroke="url(#k-edge)"/>
+</svg>

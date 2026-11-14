@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="170" viewBox="0 0 220 170" role="img" aria-labelledby="t d">
+<title id="t">Fintrac</title><desc id="d">A personal budgeting dashboard with Gemini-powered spending analysis.</desc>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif}
+.m{font-family:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace}
+.pulse{animation:pulse 2.4s ease-in-out infinite}
+.comet{animation:comet 9s linear infinite}
+.still{display:none}
+@keyframes pulse{50%{opacity:.25}}
+@keyframes comet{to{stroke-dashoffset:-1000}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.fx{display:none}.still{display:inline}.bw{opacity:.9}}
+
+.ping{transform-box:fill-box;transform-origin:center;animation:ping 3.2s ease-out infinite}
+@keyframes ping{0%{transform:scale(.5);opacity:.9}70%,100%{transform:scale(3.2);opacity:0}}
+.nudge{animation:nudge 1.6s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateX(5px)}}
+.bw{opacity:.5;animation:bw 7s linear infinite}
+@keyframes bw{0%,100%{opacity:.5}3%{opacity:1}16%{opacity:.5}}
+.head{animation:head 7s linear infinite}
+@keyframes head{0%{transform:translateX(0);opacity:0}2%{opacity:.9}57%{transform:translateX(var(--run));opacity:.9}60%,100%{transform:translateX(var(--run));opacity:0}}
+.kt{opacity:.3;animation:kt 9s linear infinite}
+@keyframes kt{0%,100%{opacity:.3}6%{opacity:1}22%{opacity:.3}}
+.stop{opacity:.7;animation:stop 8s linear infinite}
+@keyframes stop{0%,100%{opacity:.7}4%{opacity:1}30%{opacity:.7}}
+.walk{animation:walk 8s linear infinite}
+@keyframes walk{0%{transform:translateY(0);opacity:0}3%{opacity:1}82%{transform:translateY(var(--run));opacity:1}88%,100%{transform:translateY(var(--run));opacity:0}}
+</style>
+<defs>
+<radialGradient id="k-glow" cx="0" cy="0" r="1"><stop offset="0" stop-color="#ffb648" stop-opacity=".10"/><stop offset="1" stop-color="#ffb648" stop-opacity="0"/></radialGradient>
+<linearGradient id="k-edge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".09"/><stop offset=".25" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<clipPath id="k-card"><rect width="220" height="170" rx="14"/></clipPath>
+<linearGradient id="r-fade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#07090d"/><stop offset="1" stop-color="#07090d" stop-opacity="0"/></linearGradient><linearGradient id="r-fade-v" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#07090d" stop-opacity="0"/><stop offset="1" stop-color="#07090d"/></linearGradient></defs>
+<g clip-path="url(#k-card)"><rect width="220" height="170" fill="#07090d"/><rect width="154" height="170" fill="url(#k-glow)"/>
+<g transform="translate(96 0)"><path d="M130 58Q129 60 124 64Q120 68 119 69Q118 70 114 72Q110 75 105 77Q100 78 96 79Q93 80 91 80Q90 81 85 82Q80 83 75 83Q70 83 65 83Q60 83 55 82Q50 81 48 80Q47 80 43 79Q40 78 35 77Q30 75 26 72Q22 70 21 69Q20 68 16 64Q11 60 11 59Q10 57 8 54Q6 50 6 45Q6 40 8 37Q10 33 11 32Q11 30 16 25Q20 21 20 20Q21 20 25 16Q30 13 32 11Q34 10 37 8Q40 6 45 4Q50 1 52 1L53 0M97 0Q100 1 105 4Q110 7 112 8Q114 10 117 13Q120 16 122 18Q124 20 127 24L130 29" fill="none" stroke="#ffb648" stroke-width="1" opacity="0.16"/><path d="M51 10Q52 10 56 8Q60 6 65 4Q70 3 75 3Q80 3 85 4Q90 5 95 8Q99 10 100 10Q100 10 105 15Q110 19 110 20Q111 20 114 25Q118 30 119 34Q120 38 120 39Q121 40 120 43Q120 46 120 48Q120 50 116 55Q113 60 111 61Q110 62 105 65Q100 68 97 69Q94 70 92 71Q90 72 85 72Q80 74 75 74Q70 74 65 74Q60 73 55 72Q50 71 49 70Q48 70 44 68Q40 67 35 63Q30 60 30 60Q30 59 27 55Q24 50 24 45Q23 40 26 35Q28 30 29 29Q30 28 34 24Q38 20 39 19Q40 18 45 15Q50 11 51 10Z" fill="none" stroke="#ffb648" stroke-width="1" opacity="0.23"/><path d="M64 11Q67 10 69 10Q70 9 75 9Q80 9 82 9Q84 10 87 11Q90 12 95 15Q100 18 101 19Q102 20 105 25Q109 30 109 32Q110 35 111 38Q112 40 111 43Q110 47 110 48Q109 50 105 55Q100 60 100 60Q99 60 95 62Q90 64 85 65Q80 67 75 67Q70 67 65 66Q60 66 55 64Q50 63 48 61Q45 60 43 58Q40 56 38 53Q36 50 35 45Q34 40 37 35Q39 30 40 30Q40 29 44 25Q48 20 49 19Q50 19 55 15Q60 12 64 11Z" fill="none" stroke="#ffb648" stroke-width="1" opacity="0.30"/><path d="M54 24Q57 20 59 19Q60 18 65 16Q70 14 75 14Q80 14 85 16Q90 17 92 19Q94 20 97 24Q100 28 101 29Q102 30 103 35Q104 40 102 45Q100 50 95 54Q90 57 86 59Q82 60 81 60Q80 60 75 61Q70 61 67 60Q64 60 62 60Q60 59 55 56Q50 54 48 52Q46 50 45 45Q43 40 45 35Q47 30 49 29Q50 27 54 24Z" fill="none" stroke="#ffb648" stroke-width="1" opacity="0.37"/><circle class="ping fx" cx="72" cy="45" r="5" fill="none" stroke="#ffb648" stroke-width="1.4"/><path d="M72 40L77 45L72 50L67 45Z" fill="#07090d" stroke="#ffb648" stroke-width="1.4"/></g><rect x="96" y="0" width="60" height="84" fill="url(#r-fade)"/><rect x="96" y="52.08" width="600" height="32.92" fill="url(#r-fade-v)"/><text x="16" y="30" font-size="12" fill="#ffb648" font-weight="500" letter-spacing="1.6" class="m">07</text><text x="15" y="68" font-size="20" fill="#f1f4f7" font-weight="800" letter-spacing="-0.4">Fintrac</text><rect x="16" y="124" width="52" height="22" rx="11" fill="#121821" stroke="#2c3848"/><text x="26" y="138.78" font-size="10.5" fill="#aeb8c4" font-weight="500" class="m">React</text><rect x="73" y="124" width="45.6" height="22" rx="11" fill="#121821" stroke="#2c3848"/><text x="83" y="138.78" font-size="10.5" fill="#aeb8c4" font-weight="500" class="m">Vite</text><path class="nudge" d="M182 154h20m-6-5 6 5-6 5" fill="none" stroke="#ffb648" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x=".5" y=".5" width="219" height="169" rx="13.5" fill="none" stroke="#1c2530"/>
+<rect x=".5" y=".5" width="219" height="169" rx="13.5" fill="none" stroke="url(#k-edge)"/>
+</svg>

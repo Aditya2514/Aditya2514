@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="170" viewBox="0 0 220 170" role="img" aria-labelledby="t d">
+<title id="t">Vidya / BookFinder</title><desc id="d">Book discovery, debounced search, Google sign-in and persistent saved lists.</desc>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif}
+.m{font-family:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace}
+.pulse{animation:pulse 2.4s ease-in-out infinite}
+.comet{animation:comet 9s linear infinite}
+.still{display:none}
+@keyframes pulse{50%{opacity:.25}}
+@keyframes comet{to{stroke-dashoffset:-1000}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.fx{display:none}.still{display:inline}.bw{opacity:.9}}
+
+.ping{transform-box:fill-box;transform-origin:center;animation:ping 3.2s ease-out infinite}
+@keyframes ping{0%{transform:scale(.5);opacity:.9}70%,100%{transform:scale(3.2);opacity:0}}
+.nudge{animation:nudge 1.6s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateX(5px)}}
+.bw{opacity:.5;animation:bw 7s linear infinite}
+@keyframes bw{0%,100%{opacity:.5}3%{opacity:1}16%{opacity:.5}}
+.head{animation:head 7s linear infinite}
+@keyframes head{0%{transform:translateX(0);opacity:0}2%{opacity:.9}57%{transform:translateX(var(--run));opacity:.9}60%,100%{transform:translateX(var(--run));opacity:0}}
+.kt{opacity:.3;animation:kt 9s linear infinite}
+@keyframes kt{0%,100%{opacity:.3}6%{opacity:1}22%{opacity:.3}}
+.stop{opacity:.7;animation:stop 8s linear infinite}
+@keyframes stop{0%,100%{opacity:.7}4%{opacity:1}30%{opacity:.7}}
+.walk{animation:walk 8s linear infinite}
+@keyframes walk{0%{transform:translateY(0);opacity:0}3%{opacity:1}82%{transform:translateY(var(--run));opacity:1}88%,100%{transform:translateY(var(--run));opacity:0}}
+</style>
+<defs>
+<radialGradient id="k-glow" cx="0" cy="0" r="1"><stop offset="0" stop-color="#5ed3e8" stop-opacity=".10"/><stop offset="1" stop-color="#5ed3e8" stop-opacity="0"/></radialGradient>
+<linearGradient id="k-edge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".09"/><stop offset=".25" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<clipPath id="k-card"><rect width="220" height="170" rx="14"/></clipPath>
+<linearGradient id="r-fade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#07090d"/><stop offset="1" stop-color="#07090d" stop-opacity="0"/></linearGradient><linearGradient id="r-fade-v" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#07090d" stop-opacity="0"/><stop offset="1" stop-color="#07090d"/></linearGradient></defs>
+<g clip-path="url(#k-card)"><rect width="220" height="170" fill="#07090d"/><rect width="154" height="170" fill="url(#k-glow)"/>
+<g transform="translate(96 0)"><path d="M67 90Q60 88 55 86Q50 84 47 82Q43 80 42 79Q40 78 36 74Q32 70 31 69Q30 67 28 64Q25 60 24 55Q23 50 23 45Q24 40 27 35Q30 30 30 30Q30 30 35 25Q40 21 41 20Q41 20 46 18Q50 15 55 14Q60 12 65 11Q70 11 75 11Q80 11 85 11Q90 11 95 13Q100 14 105 16Q110 18 111 19Q113 20 116 22Q120 25 123 28Q125 30 128 34L130 38M103 90Q110 88 115 86Q120 83 122 81Q124 80 127 76L130 72" fill="none" stroke="#5ed3e8" stroke-width="1" opacity="0.16"/><path d="M73 20Q76 20 78 20Q80 20 81 20Q82 20 86 20Q90 21 95 23Q100 24 105 27Q110 30 110 30Q110 30 114 35Q119 40 119 41Q120 42 122 46Q124 50 124 55Q124 60 122 65Q121 70 120 70Q120 71 115 75Q110 80 110 80Q110 80 105 82Q100 85 95 85Q90 86 85 86Q80 86 75 85Q70 84 65 82Q60 80 60 80Q60 80 55 77Q50 74 48 72Q46 70 43 66Q40 62 39 61Q39 60 37 55Q36 50 37 45Q38 40 39 39Q40 37 43 34Q46 30 48 28Q50 27 55 25Q60 22 65 21Q70 20 73 20Z" fill="none" stroke="#5ed3e8" stroke-width="1" opacity="0.23"/><path d="M61 30Q61 30 66 29Q70 27 75 27Q80 26 85 27Q90 28 92 29Q94 30 97 31Q100 32 105 36Q109 40 110 41Q110 41 113 46Q115 50 116 55Q117 60 115 65Q113 70 111 71Q110 73 105 76Q100 79 97 79Q95 80 92 81Q90 81 85 81Q80 81 78 80Q76 80 73 79Q70 78 65 76Q60 73 58 72Q56 70 53 66Q50 63 49 62Q48 60 47 55Q45 50 47 45Q49 40 49 39Q50 38 55 34Q60 30 61 30Z" fill="none" stroke="#5ed3e8" stroke-width="1" opacity="0.30"/><path d="M56 45Q59 40 59 40Q60 39 65 37Q70 34 75 34Q80 33 85 34Q90 35 95 37Q100 40 100 40Q100 40 104 45Q108 50 109 54Q110 58 110 59Q110 60 110 60Q110 61 108 65Q105 70 103 72Q100 74 95 75Q90 77 85 76Q80 76 75 75Q70 73 67 72Q64 70 62 68Q60 66 58 63Q56 60 55 55Q54 50 56 45Z" fill="none" stroke="#5ed3e8" stroke-width="1" opacity="0.37"/><circle class="ping fx" cx="78" cy="48" r="5" fill="none" stroke="#5ed3e8" stroke-width="1.4"/><path d="M78 43L83 48L78 53L73 48Z" fill="#07090d" stroke="#5ed3e8" stroke-width="1.4"/></g><rect x="96" y="0" width="60" height="84" fill="url(#r-fade)"/><rect x="96" y="52.08" width="600" height="32.92" fill="url(#r-fade-v)"/><text x="16" y="30" font-size="12" fill="#5ed3e8" font-weight="500" letter-spacing="1.6" class="m">06</text><text x="15" y="68" font-size="20" fill="#f1f4f7" font-weight="800" letter-spacing="-0.4">Vidya /</text><text x="15" y="93" font-size="20" fill="#f1f4f7" font-weight="800" letter-spacing="-0.4">BookFinder</text><rect x="16" y="124" width="96.9" height="22" rx="11" fill="#121821" stroke="#2c3848"/><text x="26" y="138.78" font-size="10.5" fill="#aeb8c4" font-weight="500" class="m">React Native</text><path class="nudge" d="M182 154h20m-6-5 6 5-6 5" fill="none" stroke="#5ed3e8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x=".5" y=".5" width="219" height="169" rx="13.5" fill="none" stroke="#1c2530"/>
+<rect x=".5" y=".5" width="219" height="169" rx="13.5" fill="none" stroke="url(#k-edge)"/>
+</svg>
