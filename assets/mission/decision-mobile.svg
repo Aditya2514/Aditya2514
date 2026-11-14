@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="272" viewBox="0 0 600 272" role="img" aria-labelledby="title">
-<title id="title">Why pause before an action? Pikina validates tool proposals and asks for high-risk consent. Understanding a request is different from authorizing it.</title><style>
+<title id="title">Why make an answer traceable? Noesis links retrieved evidence to pages or timestamps. The reader should be able to inspect the source.</title><style>
 text{font-family:Arial,Helvetica,sans-serif}.mono{font-family:Consolas,monospace;letter-spacing:2px}
 .sweep{stroke-dasharray:70 1300;animation:sweep 14s linear infinite}
 .breathe{animation:breathe 8s ease-in-out infinite}
@@ -15,6 +15,6 @@ text{font-family:Arial,Helvetica,sans-serif}.mono{font-family:Consolas,monospace
 @keyframes step3{0%,50%,100%{opacity:.35}65%,90%{opacity:1}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
 </style><defs></defs>
-<rect width="600" height="272" rx="16" fill="#0d1117"/><text x="28" y="36" font-size="14" fill="#e9b44c" class="mono">ENGINEERING DECISION</text><text x="28" y="68" font-size="14" fill="#e9b44c" class="mono">02 / HUMAN APPROVAL</text><text x="28" y="113" font-size="28" fill="#e6edf3" font-weight="700">Why pause before an action?</text><text x="28" y="159" font-size="22" fill="#a8b3bf" >Pikina validates tool proposals and asks</text><text x="28" y="190" font-size="22" fill="#a8b3bf" >for high-risk consent. Understanding a</text><text x="28" y="221" font-size="22" fill="#a8b3bf" >request is different from authorizing it.</text>
+<rect width="600" height="272" rx="16" fill="#0d1117"/><text x="28" y="36" font-size="14" fill="#e9b44c" class="mono">ENGINEERING DECISION</text><text x="28" y="68" font-size="14" fill="#e9b44c" class="mono">03 / SOURCE TRACEABILITY</text><text x="28" y="113" font-size="28" fill="#e6edf3" font-weight="700">Why make an answer traceable?</text><text x="28" y="159" font-size="22" fill="#a8b3bf" >Noesis links retrieved evidence to pages or</text><text x="28" y="190" font-size="22" fill="#a8b3bf" >timestamps. The reader should be able to</text><text x="28" y="221" font-size="22" fill="#a8b3bf" >inspect the source.</text>
 <rect x="1" y="1" width="598" height="270" rx="15" fill="none" stroke="#30363d"/>
 </svg>
