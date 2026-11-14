@@ -2,9 +2,8 @@
   "owner": "Aditya2514",
   "featured": ["LexGuard", "Pikina", "Noesis", "Resilion"],
   "exclude": ["Aditya2514"],
-  "order": ["Resilion", "HostelDesk", "Meta_OpenEnv", "Shopkart", "codecrafters-shell-cpp", "Vidya", "Fintrac", "Naukri"],
+  "order": ["HostelDesk", "Meta_OpenEnv", "Shopkart", "codecrafters-shell-cpp", "Vidya", "Fintrac", "Naukri"],
   "overrides": {
-    "Resilion": {"title": "Resilion", "category": "SUPPLY-CHAIN RISK · IN PROGRESS", "description": "Turns news into structured risk events and traces the affected industries through a supply graph. Risk Watcher and graph built; rerouting planned.", "stack": ["Python", "NetworkX", "Gemini"]},
     "HostelDesk": {"title": "HostelDesk", "category": "FULL-STACK SYSTEM", "description": "Hostel complaints with explained ETA ranges, automatic routing, completion proof and escalation.", "stack": ["TypeScript", "React", "Express", "PostgreSQL", "Prisma"]},
     "Meta_OpenEnv": {"title": "Meta OpenEnv", "category": "AGENT ENVIRONMENT", "description": "An environment for agents juggling assignments, bugs, deadlines and burnout constraints. Team hackathon project.", "stack": ["Python", "FastAPI", "Docker"]},
     "Shopkart": {"title": "ShopKart", "category": "COMMERCE ENGINEERING", "description": "Server-authoritative checkout and Razorpay test-mode payments. Built with Apurva Patil.", "stack": ["React", "Express", "MongoDB"]},

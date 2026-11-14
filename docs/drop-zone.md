@@ -1,7 +1,5 @@
 # Drop Zone README
 
-> Superseded by the Atlas design; see [atlas.md](atlas.md). These notes describe the earlier Drop Zone assets, which are no longer shown or rebuilt.
-
 The profile uses a GitHub-dark base (`#0d1117`), panels (`#161b22`), amber
 (`#e9b44c`), cyan (`#70c9cb`), off-white (`#e6edf3`) and secondary text (`#a8b3bf`).
 Noesis uses a muted lavender accent (`#b6a7dc`).
@@ -47,3 +45,17 @@ campaign visible. Large illustrated project stories replace the compact cards.
 New JPEG source art is embedded into desktop/mobile SVGs. The image backgrounds
 are still renders; animated overlays, step highlights, particles and border
 traces supply the motion. The hero character itself is not a moving 3D model.
+
+## Motion layers
+
+Each painted scene (`operator.jpg`, `lexguard-art.jpg`, `pikina-art.jpg`, `noesis-art.jpg`) has its
+effects drawn in the painting's own coordinates in `scripts/mission_art.py` (`operator_fx`,
+`lexguard_fx`, `pikina_fx`, `noesis_fx`), so they stay aligned on the desktop and phone crops.
+If a painting is replaced, re-check those coordinates.
+
+The hero also carries game HUD pieces: a heading tape, a minimap with a closing zone, and a feed
+of the latest commits from `data/mission-activity.json` (escaped and truncated before use).
+`results.svg` is the match-result scene in the career section; edit its facts in `results()`.
+
+Everything that moves has class `fx` and is hidden under `prefers-reduced-motion`; the hero also
+has `-still` files that the README serves to people who ask for reduced motion.

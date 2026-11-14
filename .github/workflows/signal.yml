@@ -6,7 +6,7 @@ on:
     - cron: "17 */6 * * *"
   push:
     branches: [main]
-    paths-ignore: ["assets/atlas/**", "data/atlas.json", "data/repos.json"]
+    paths-ignore: ["assets/signal.svg", "assets/rhythm.svg", "assets/terminal.svg", "assets/arena/**", "assets/catalog/**", "data/repos.json", "CINEMA.html", "assets/cinema/**", "assets/mission/**", "data/mission-activity.json"]
   workflow_dispatch:
 
 permissions:
@@ -26,24 +26,47 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Check the generators
+      - name: Check catalog generation
         run: python3 -m unittest discover -s tests -v
 
-      # A failed GitHub request keeps the last good data, so this step still succeeds
-      - name: Refresh GitHub data and rebuild the profile
+      # Each generator exits 0 and keeps its last good SVG if the API call fails
+      - name: Render live cards
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/build_atlas.py --refresh
+        run: |
+          python3 scripts/build_signal.py --github "${{ github.repository_owner }}"
+          python3 scripts/build_rhythm.py --github "${{ github.repository_owner }}"
+          python3 scripts/build_terminal.py --github "${{ github.repository_owner }}"
+
+      - name: Frame original animations in the arena theme
+        run: python3 scripts/build_arena.py
+
+      - name: Refresh project lobby and tactical activity map
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 scripts/build_catalog.py --discover
+          python3 scripts/build_ranked_grind.py
+
+      - name: Refresh Drop Zone stories and public commit feed
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/build_mission.py --refresh
+
+      - name: Rebuild the cinematic résumé
+        run: |
+          python3 scripts/build_cinematic_art.py
+          python3 scripts/build_cinema.py
 
       - name: Commit if changed
         run: |
-          git add assets/atlas data/atlas.json data/repos.json README.md
+          git add assets/mission data/mission-activity.json CINEMA.html assets/cinema README.md data/repos.json assets/catalog assets/signal.svg assets/rhythm.svg assets/terminal.svg assets/arena
           if git diff --cached --quiet; then
             echo "No change in signal."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore: refresh profile data"
+          git commit -m "chore: refresh activity and project lobby"
           git pull --rebase origin main
           git push

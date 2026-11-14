@@ -130,6 +130,8 @@ def main():
     parser.add_argument('--refresh',action='store_true')
     args=parser.parse_args()
     OUT.mkdir(parents=True,exist_ok=True)
+    # Refresh first: the hero's commit feed is drawn from the same snapshot as the README table.
+    if args.refresh:refresh()
     for mobile in (False,True):
         suffix='-mobile' if mobile else ''
         for still in (False,True):
@@ -137,7 +139,6 @@ def main():
         for i,p in enumerate(PROJECTS):
             (OUT/f'{p[0].lower()}{suffix}.svg').write_text(project(i,mobile))
     extra_assets(json.loads((ROOT/'profile.json').read_text())['build_kit'])
-    if args.refresh:refresh()
     payload=json.loads(CACHE.read_text())
     # Rotate by the successful snapshot date, making offline rebuilds deterministic.
     day=datetime.fromisoformat(payload['refreshed_at'].replace('Z','+00:00')).date().toordinal()
