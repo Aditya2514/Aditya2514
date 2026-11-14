@@ -360,7 +360,7 @@ def project(index,mobile=False):
         b=art(name.lower()+'-art.jpg',0,0,1200,600,fx(True),1200,'820px 260px')
         b+='<rect width="1200" height="600" fill="url(#shade)"/><rect y="300" width="1200" height="290" fill="url(#fade)"/>'
         b+=t(42,51,f'MISSION 0{index+1} / {category}',15,color,'class="mono"')
-        b+=f'<circle cx="1022" cy="46" r="4.5" fill="{RED}" class="blink fx"/>'+t(1156,51,'ILLUSTRATIVE REPLAY',12,MUTED,'class="mono" text-anchor="end"')
+        b+=f'<circle cx="962" cy="46.5" r="4.5" fill="{RED}" class="blink fx"/>'+t(1156,51,'ILLUSTRATIVE REPLAY',12,MUTED,'class="mono" text-anchor="end"')
         b+=glitch(title)+title(WHITE)+shimmer('sh1',title('#000'),40,96,150,80,820,index)
         b+=t(44,220,line1,35)+t(44,265,line2,35,color)
         b+=t(44,333,'ILLUSTRATIVE SYSTEM STORY',12,MUTED,'class="mono"')
