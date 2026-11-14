@@ -47,6 +47,35 @@ class MissionTests(unittest.TestCase):
         self.assertEqual(after.split('<!-- MISSION-FEED:END -->')[1],
                          readme.split('<!-- MISSION-FEED:END -->')[1])
 
+    def test_every_scene_parses_and_can_stand_still(self):
+        from xml.etree import ElementTree as ET
+        import mission_art as art
+        kit = json.loads((mission.ROOT / 'profile.json').read_text())['build_kit']
+        scenes = [art.hero(m, s) for m in (False, True) for s in (False, True)]
+        scenes += [art.project(i, m) for i in range(3) for m in (False, True)]
+        scenes += [f(m) for f in (art.outro, art.results) for m in (False, True)]
+        scenes += [art.chapter('02', 'FEATURED MISSIONS', 'Three systems.', m) for m in (False, True)]
+        scenes += [art.arsenal(kit, m) for m in (False, True)]
+        for image in scenes:
+            ET.fromstring(image)
+            self.assertNotIn('<script', image)
+            # every moving layer is switched off for people who ask for less motion
+            self.assertIn('.fx{display:none}', image)
+        for still in (art.hero(False, True), art.hero(True, True)):
+            self.assertNotIn('@keyframes', still)
+        self.assertEqual(art.hero(False), art.hero(False))
+
+    def test_commit_feed_in_the_hero_is_escaped_and_bounded(self):
+        from xml.etree import ElementTree as ET
+        import mission_art as art
+        commits = [{'repo': '<b>x</b>' * 9, 'title': '<script>alert(1)</script> ' * 20}] * 5
+        image = art.hero(False, False, commits)
+        ET.fromstring(image)
+        self.assertNotIn('<script>', image)
+        self.assertNotIn('<b>', image)
+        self.assertEqual(image.count('class="kf fx"'), 3)
+        ET.fromstring(art.hero(False, False, []))
+
 
 if __name__ == '__main__':
     unittest.main()
