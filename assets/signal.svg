@@ -84,14 +84,14 @@
 <text x="710.3" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Sep</text>
 <text x="773.4" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Oct</text>
 <text x="836.5" y="273" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#8b949e">Nov</text>
-<rect class="seg" style="animation-delay:1.00s" x="32.0" y="292" width="272.9" height="10" rx="2" fill="#3987e5"><title>Python: 32.9%</title></rect>
-<rect class="seg" style="animation-delay:1.08s" x="306.9" y="292" width="257.3" height="10" rx="2" fill="#d95926"><title>JavaScript: 31.0%</title></rect>
-<rect class="seg" style="animation-delay:1.16s" x="566.2" y="292" width="215.3" height="10" rx="2" fill="#199e70"><title>TypeScript: 26.0%</title></rect>
-<rect class="seg" style="animation-delay:1.24s" x="783.5" y="292" width="56.9" height="10" rx="2" fill="#c98500"><title>HTML: 7.0%</title></rect>
-<rect class="seg" style="animation-delay:1.32s" x="842.4" y="292" width="16.3" height="10" rx="2" fill="#d55181"><title>CSS: 2.2%</title></rect>
+<rect class="seg" style="animation-delay:1.00s" x="32.0" y="292" width="267.9" height="10" rx="2" fill="#3987e5"><title>Python: 32.3%</title></rect>
+<rect class="seg" style="animation-delay:1.08s" x="301.9" y="292" width="259.6" height="10" rx="2" fill="#d95926"><title>JavaScript: 31.3%</title></rect>
+<rect class="seg" style="animation-delay:1.16s" x="563.5" y="292" width="217.2" height="10" rx="2" fill="#199e70"><title>TypeScript: 26.2%</title></rect>
+<rect class="seg" style="animation-delay:1.24s" x="782.7" y="292" width="57.4" height="10" rx="2" fill="#c98500"><title>HTML: 7.1%</title></rect>
+<rect class="seg" style="animation-delay:1.32s" x="842.1" y="292" width="16.4" height="10" rx="2" fill="#d55181"><title>CSS: 2.2%</title></rect>
 <rect class="seg" style="animation-delay:1.40s" x="860.6" y="292" width="5.4" height="10" rx="2" fill="#6e7681"><title>Other: 0.9%</title></rect>
 <circle cx="36" cy="322" r="4" fill="#3987e5"/>
-<text x="45" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">Python 33%</text>
+<text x="45" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">Python 32%</text>
 <circle cx="134" cy="322" r="4" fill="#d95926"/>
 <text x="143" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#e6edf3">JavaScript 31%</text>
 <circle cx="260" cy="322" r="4" fill="#199e70"/>
