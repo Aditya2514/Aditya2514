@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="170" viewBox="0 0 220 170" role="img" aria-labelledby="t d">
+<title id="t">BenchShield</title><desc id="d">Explore the source, documentation and latest changes.</desc>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif}
+.m{font-family:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace}
+.pulse{animation:pulse 2.4s ease-in-out infinite}
+.comet{animation:comet 9s linear infinite}
+.still{display:none}
+@keyframes pulse{50%{opacity:.25}}
+@keyframes comet{to{stroke-dashoffset:-1000}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.fx{display:none}.still{display:inline}.bw{opacity:.9}}
+
+.ping{transform-box:fill-box;transform-origin:center;animation:ping 3.2s ease-out infinite}
+@keyframes ping{0%{transform:scale(.5);opacity:.9}70%,100%{transform:scale(3.2);opacity:0}}
+.nudge{animation:nudge 1.6s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateX(5px)}}
+.bw{opacity:.5;animation:bw 7s linear infinite}
+@keyframes bw{0%,100%{opacity:.5}3%{opacity:1}16%{opacity:.5}}
+.head{animation:head 7s linear infinite}
+@keyframes head{0%{transform:translateX(0);opacity:0}2%{opacity:.9}57%{transform:translateX(var(--run));opacity:.9}60%,100%{transform:translateX(var(--run));opacity:0}}
+.kt{opacity:.3;animation:kt 9s linear infinite}
+@keyframes kt{0%,100%{opacity:.3}6%{opacity:1}22%{opacity:.3}}
+.stop{opacity:.7;animation:stop 8s linear infinite}
+@keyframes stop{0%,100%{opacity:.7}4%{opacity:1}30%{opacity:.7}}
+.walk{animation:walk 8s linear infinite}
+@keyframes walk{0%{transform:translateY(0);opacity:0}3%{opacity:1}82%{transform:translateY(var(--run));opacity:1}88%,100%{transform:translateY(var(--run));opacity:0}}
+</style>
+<defs>
+<radialGradient id="k-glow" cx="0" cy="0" r="1"><stop offset="0" stop-color="#c8f542" stop-opacity=".10"/><stop offset="1" stop-color="#c8f542" stop-opacity="0"/></radialGradient>
+<linearGradient id="k-edge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".09"/><stop offset=".25" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<clipPath id="k-card"><rect width="220" height="170" rx="14"/></clipPath>
+<linearGradient id="r-fade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#07090d"/><stop offset="1" stop-color="#07090d" stop-opacity="0"/></linearGradient><linearGradient id="r-fade-v" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#07090d" stop-opacity="0"/><stop offset="1" stop-color="#07090d"/></linearGradient></defs>
+<g clip-path="url(#k-card)"><rect width="220" height="170" fill="#07090d"/><rect width="154" height="170" fill="url(#k-glow)"/>
+<g transform="translate(96 0)"><path d="M48 90Q40 85 37 83Q34 80 32 78Q30 75 28 73Q26 70 24 65Q22 60 21 55Q20 50 20 45Q20 40 22 35Q23 30 26 25Q29 20 29 19Q30 18 34 14Q38 10 39 9Q40 9 45 6Q50 3 55 2Q60 1 65 1Q70 0 75 1Q80 2 85 4Q90 5 93 8Q97 10 98 11Q100 12 104 16Q108 20 109 21Q110 23 113 26Q116 30 118 32Q120 34 123 37Q125 40 128 43L130 45" fill="none" stroke="#c8f542" stroke-width="1" opacity="0.16"/><path d="M76 90Q70 88 65 86Q60 84 56 82Q53 80 51 79Q50 78 45 74Q40 70 40 70Q40 69 37 65Q34 60 33 55Q32 50 32 45Q32 40 34 35Q36 30 38 27Q40 25 42 22Q45 20 47 18Q50 16 55 14Q60 12 65 12Q70 12 75 13Q80 14 85 16Q90 19 91 20Q91 20 96 24Q100 28 101 29Q102 30 106 35Q110 40 110 40Q110 40 114 45Q119 50 119 51Q120 52 123 56Q126 60 128 65Q130 70 129 75Q129 80 125 85L121 90" fill="none" stroke="#c8f542" stroke-width="1" opacity="0.23"/><path d="M44 35Q47 30 49 28Q50 27 55 24Q60 22 65 21Q70 20 75 22Q80 23 85 26Q90 30 90 30Q90 30 94 35Q99 40 99 41Q100 42 103 46Q107 50 108 52Q110 54 112 57Q115 60 117 65Q119 70 117 75Q116 80 113 82Q110 84 105 85Q100 86 95 86Q90 85 85 84Q80 82 76 81Q72 80 71 80Q70 79 65 77Q60 75 56 72Q53 70 51 69Q50 68 47 64Q44 60 42 55Q41 50 41 45Q42 40 44 35Z" fill="none" stroke="#c8f542" stroke-width="1" opacity="0.30"/><path d="M60 30Q61 30 65 29Q70 29 72 29Q75 30 77 31Q80 32 84 36Q89 40 89 41Q90 42 93 46Q96 50 98 54Q100 58 101 59Q102 60 103 65Q104 70 102 72Q100 73 95 74Q90 75 85 74Q80 73 75 72Q70 71 69 70Q68 70 64 68Q60 66 57 63Q54 60 52 56Q50 52 50 51Q49 50 50 47Q50 43 50 42Q50 40 55 35Q60 30 60 30Z" fill="none" stroke="#c8f542" stroke-width="1" opacity="0.37"/><circle class="ping fx" cx="68" cy="47" r="5" fill="none" stroke="#c8f542" stroke-width="1.4"/><path d="M68 42L73 47L68 52L63 47Z" fill="#07090d" stroke="#c8f542" stroke-width="1.4"/></g><rect x="96" y="0" width="60" height="84" fill="url(#r-fade)"/><rect x="96" y="52.08" width="600" height="32.92" fill="url(#r-fade-v)"/><text x="16" y="30" font-size="12" fill="#c8f542" font-weight="500" letter-spacing="1.6" class="m">09</text><text x="15" y="68" font-size="20" fill="#f1f4f7" font-weight="800" letter-spacing="-0.4">BenchShield</text><rect x="16" y="124" width="58.4" height="22" rx="11" fill="#121821" stroke="#2c3848"/><text x="26" y="138.78" font-size="10.5" fill="#aeb8c4" font-weight="500" class="m">Python</text><path class="nudge" d="M182 154h20m-6-5 6 5-6 5" fill="none" stroke="#c8f542" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x=".5" y=".5" width="219" height="169" rx="13.5" fill="none" stroke="#1c2530"/>
+<rect x=".5" y=".5" width="219" height="169" rx="13.5" fill="none" stroke="url(#k-edge)"/>
+</svg>

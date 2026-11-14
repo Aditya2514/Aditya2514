@@ -1,5 +1,7 @@
 # Drop Zone README
 
+> Superseded by the Atlas design; see [atlas.md](atlas.md). These notes describe the earlier Drop Zone assets, which are no longer shown or rebuilt.
+
 The profile uses a GitHub-dark base (`#0d1117`), panels (`#161b22`), amber
 (`#e9b44c`), cyan (`#70c9cb`), off-white (`#e6edf3`) and secondary text (`#a8b3bf`).
 Noesis uses a muted lavender accent (`#b6a7dc`).

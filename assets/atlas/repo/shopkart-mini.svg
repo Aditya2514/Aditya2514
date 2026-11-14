@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="170" viewBox="0 0 220 170" role="img" aria-labelledby="t d">
+<title id="t">ShopKart</title><desc id="d">Server-authoritative checkout and Razorpay test-mode payments. Built with Apurva Patil.</desc>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif}
+.m{font-family:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace}
+.pulse{animation:pulse 2.4s ease-in-out infinite}
+.comet{animation:comet 9s linear infinite}
+.still{display:none}
+@keyframes pulse{50%{opacity:.25}}
+@keyframes comet{to{stroke-dashoffset:-1000}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.fx{display:none}.still{display:inline}.bw{opacity:.9}}
+
+.ping{transform-box:fill-box;transform-origin:center;animation:ping 3.2s ease-out infinite}
+@keyframes ping{0%{transform:scale(.5);opacity:.9}70%,100%{transform:scale(3.2);opacity:0}}
+.nudge{animation:nudge 1.6s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateX(5px)}}
+.bw{opacity:.5;animation:bw 7s linear infinite}
+@keyframes bw{0%,100%{opacity:.5}3%{opacity:1}16%{opacity:.5}}
+.head{animation:head 7s linear infinite}
+@keyframes head{0%{transform:translateX(0);opacity:0}2%{opacity:.9}57%{transform:translateX(var(--run));opacity:.9}60%,100%{transform:translateX(var(--run));opacity:0}}
+.kt{opacity:.3;animation:kt 9s linear infinite}
+@keyframes kt{0%,100%{opacity:.3}6%{opacity:1}22%{opacity:.3}}
+.stop{opacity:.7;animation:stop 8s linear infinite}
+@keyframes stop{0%,100%{opacity:.7}4%{opacity:1}30%{opacity:.7}}
+.walk{animation:walk 8s linear infinite}
+@keyframes walk{0%{transform:translateY(0);opacity:0}3%{opacity:1}82%{transform:translateY(var(--run));opacity:1}88%,100%{transform:translateY(var(--run));opacity:0}}
+</style>
+<defs>
+<radialGradient id="k-glow" cx="0" cy="0" r="1"><stop offset="0" stop-color="#a698ff" stop-opacity=".10"/><stop offset="1" stop-color="#a698ff" stop-opacity="0"/></radialGradient>
+<linearGradient id="k-edge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".09"/><stop offset=".25" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<clipPath id="k-card"><rect width="220" height="170" rx="14"/></clipPath>
+<linearGradient id="r-fade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#07090d"/><stop offset="1" stop-color="#07090d" stop-opacity="0"/></linearGradient><linearGradient id="r-fade-v" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#07090d" stop-opacity="0"/><stop offset="1" stop-color="#07090d"/></linearGradient></defs>
+<g clip-path="url(#k-card)"><rect width="220" height="170" fill="#07090d"/><rect width="154" height="170" fill="url(#k-glow)"/>
+<g transform="translate(96 0)"><path d="M65 90Q60 90 55 88Q50 87 45 84Q40 81 39 80Q38 80 34 77Q30 74 28 72Q26 70 23 66Q20 61 20 61Q19 60 17 55Q15 50 15 45Q15 40 17 35Q18 30 19 29Q20 28 22 24Q25 20 27 17Q30 15 33 12Q35 10 38 8Q40 6 45 4Q50 1 51 0L53 0M87 0Q90 1 95 3Q100 6 103 8Q106 10 108 11Q110 12 114 16Q119 20 119 21Q120 22 123 26Q127 30 128 35Q130 40 130 45Q130 50 128 55Q127 60 123 64Q120 68 119 69Q119 70 114 74Q110 77 108 79Q105 80 103 82Q100 83 95 85Q90 87 85 89Q80 90 78 90L76 90" fill="none" stroke="#a698ff" stroke-width="1" opacity="0.16"/><path d="M53 11Q56 10 58 9Q60 8 65 7Q70 6 75 7Q80 7 83 9Q86 10 88 11Q90 11 95 14Q100 17 102 19Q104 20 107 23Q110 26 112 28Q113 30 116 35Q118 40 118 45Q118 50 116 55Q114 60 112 62Q110 65 107 67Q105 70 102 72Q100 73 95 76Q90 79 88 79Q85 80 83 81Q80 82 75 82Q70 83 65 82Q60 81 59 80Q58 80 54 78Q50 77 46 73Q41 70 41 69Q40 68 36 64Q33 60 32 55Q30 50 30 50Q30 50 30 45Q30 40 30 40Q30 40 32 35Q33 30 37 26Q40 21 41 21Q41 20 46 16Q50 13 53 11Z" fill="none" stroke="#a698ff" stroke-width="1" opacity="0.23"/><path d="M51 21Q52 20 56 18Q60 15 65 14Q70 13 75 13Q80 14 85 16Q90 18 91 19Q92 20 96 23Q100 26 102 28Q104 30 107 35Q109 40 109 45Q110 50 107 55Q105 60 102 62Q100 65 97 67Q93 70 92 71Q90 72 85 74Q80 76 75 76Q70 77 65 76Q60 75 56 72Q52 70 51 69Q50 69 46 64Q42 60 41 58Q40 55 39 53Q38 50 38 45Q38 40 39 38Q40 35 41 33Q42 30 46 26Q50 21 51 21Z" fill="none" stroke="#a698ff" stroke-width="1" opacity="0.30"/><path d="M62 21Q64 20 67 19Q70 18 75 19Q80 20 80 20Q81 20 85 22Q90 25 93 27Q96 30 98 33Q100 36 101 38Q102 40 102 45Q103 50 101 52Q100 55 99 57Q97 60 94 63Q90 66 86 68Q81 70 81 70Q80 71 75 71Q70 72 67 71Q64 70 62 70Q60 69 55 65Q50 61 49 61Q49 60 46 55Q44 50 44 45Q44 40 47 35Q49 30 50 30Q50 29 55 25Q60 21 62 21Z" fill="none" stroke="#a698ff" stroke-width="1" opacity="0.37"/><circle class="ping fx" cx="77" cy="46" r="5" fill="none" stroke="#a698ff" stroke-width="1.4"/><path d="M77 41L82 46L77 51L72 46Z" fill="#07090d" stroke="#a698ff" stroke-width="1.4"/></g><rect x="96" y="0" width="60" height="84" fill="url(#r-fade)"/><rect x="96" y="52.08" width="600" height="32.92" fill="url(#r-fade-v)"/><text x="16" y="30" font-size="12" fill="#a698ff" font-weight="500" letter-spacing="1.6" class="m">04</text><text x="15" y="68" font-size="20" fill="#f1f4f7" font-weight="800" letter-spacing="-0.4">ShopKart</text><rect x="16" y="124" width="52" height="22" rx="11" fill="#121821" stroke="#2c3848"/><text x="26" y="138.78" font-size="10.5" fill="#aeb8c4" font-weight="500" class="m">React</text><rect x="73" y="124" width="64.8" height="22" rx="11" fill="#121821" stroke="#2c3848"/><text x="83" y="138.78" font-size="10.5" fill="#aeb8c4" font-weight="500" class="m">Express</text><path class="nudge" d="M182 154h20m-6-5 6 5-6 5" fill="none" stroke="#a698ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x=".5" y=".5" width="219" height="169" rx="13.5" fill="none" stroke="#1c2530"/>
+<rect x=".5" y=".5" width="219" height="169" rx="13.5" fill="none" stroke="url(#k-edge)"/>
+</svg>

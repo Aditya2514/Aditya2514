@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="52" viewBox="0 0 200 52" role="img" aria-labelledby="t d">
+<title id="t">Email</title><desc id="d">Link: Email</desc>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif}
+.m{font-family:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace}
+.pulse{animation:pulse 2.4s ease-in-out infinite}
+.comet{animation:comet 9s linear infinite}
+.still{display:none}
+@keyframes pulse{50%{opacity:.25}}
+@keyframes comet{to{stroke-dashoffset:-1000}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.fx{display:none}.still{display:inline}.bw{opacity:.9}}
+
+.ping{transform-box:fill-box;transform-origin:center;animation:ping 3.2s ease-out infinite}
+@keyframes ping{0%{transform:scale(.5);opacity:.9}70%,100%{transform:scale(3.2);opacity:0}}
+.nudge{animation:nudge 1.6s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateX(5px)}}
+.bw{opacity:.5;animation:bw 7s linear infinite}
+@keyframes bw{0%,100%{opacity:.5}3%{opacity:1}16%{opacity:.5}}
+.head{animation:head 7s linear infinite}
+@keyframes head{0%{transform:translateX(0);opacity:0}2%{opacity:.9}57%{transform:translateX(var(--run));opacity:.9}60%,100%{transform:translateX(var(--run));opacity:0}}
+.kt{opacity:.3;animation:kt 9s linear infinite}
+@keyframes kt{0%,100%{opacity:.3}6%{opacity:1}22%{opacity:.3}}
+.stop{opacity:.7;animation:stop 8s linear infinite}
+@keyframes stop{0%,100%{opacity:.7}4%{opacity:1}30%{opacity:.7}}
+.walk{animation:walk 8s linear infinite}
+@keyframes walk{0%{transform:translateY(0);opacity:0}3%{opacity:1}82%{transform:translateY(var(--run));opacity:1}88%,100%{transform:translateY(var(--run));opacity:0}}
+</style>
+<defs>
+<radialGradient id="k-glow" cx="0" cy="0" r="1"><stop offset="0" stop-color="#5ed3e8" stop-opacity=".10"/><stop offset="1" stop-color="#5ed3e8" stop-opacity="0"/></radialGradient>
+<linearGradient id="k-edge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".09"/><stop offset=".25" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<clipPath id="k-card"><rect width="200" height="52" rx="14"/></clipPath>
+</defs>
+<g clip-path="url(#k-card)"><rect width="200" height="52" fill="#07090d"/><rect width="140" height="52" fill="url(#k-glow)"/>
+<circle cx="26" cy="26" r="3.5" fill="#5ed3e8" class="pulse" /><text x="42" y="31" font-size="13" fill="#f1f4f7" font-weight="600" letter-spacing="1.4" class="m">EMAIL</text><path d="M166 32l10-10m-7 0h7v7" fill="none" stroke="#5ed3e8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect class="comet fx" x="0.75" y="0.75" width="198.5" height="50.5" rx="13" fill="none" stroke="#5ed3e8" stroke-width="1.5" stroke-linecap="round" pathLength="1000" stroke-dasharray="70 930" style="animation-duration:6s;animation-delay:-0s"/></g>
+<rect x=".5" y=".5" width="199" height="51" rx="13.5" fill="none" stroke="#1c2530"/>
+<rect x=".5" y=".5" width="199" height="51" rx="13.5" fill="none" stroke="url(#k-edge)"/>
+</svg>

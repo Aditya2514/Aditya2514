@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="170" viewBox="0 0 220 170" role="img" aria-labelledby="t d">
+<title id="t">Naukri / Jobee</title><desc id="d">A job-portal UI with search, saved jobs and a simulated listings API.</desc>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif}
+.m{font-family:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace}
+.pulse{animation:pulse 2.4s ease-in-out infinite}
+.comet{animation:comet 9s linear infinite}
+.still{display:none}
+@keyframes pulse{50%{opacity:.25}}
+@keyframes comet{to{stroke-dashoffset:-1000}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.fx{display:none}.still{display:inline}.bw{opacity:.9}}
+
+.ping{transform-box:fill-box;transform-origin:center;animation:ping 3.2s ease-out infinite}
+@keyframes ping{0%{transform:scale(.5);opacity:.9}70%,100%{transform:scale(3.2);opacity:0}}
+.nudge{animation:nudge 1.6s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateX(5px)}}
+.bw{opacity:.5;animation:bw 7s linear infinite}
+@keyframes bw{0%,100%{opacity:.5}3%{opacity:1}16%{opacity:.5}}
+.head{animation:head 7s linear infinite}
+@keyframes head{0%{transform:translateX(0);opacity:0}2%{opacity:.9}57%{transform:translateX(var(--run));opacity:.9}60%,100%{transform:translateX(var(--run));opacity:0}}
+.kt{opacity:.3;animation:kt 9s linear infinite}
+@keyframes kt{0%,100%{opacity:.3}6%{opacity:1}22%{opacity:.3}}
+.stop{opacity:.7;animation:stop 8s linear infinite}
+@keyframes stop{0%,100%{opacity:.7}4%{opacity:1}30%{opacity:.7}}
+.walk{animation:walk 8s linear infinite}
+@keyframes walk{0%{transform:translateY(0);opacity:0}3%{opacity:1}82%{transform:translateY(var(--run));opacity:1}88%,100%{transform:translateY(var(--run));opacity:0}}
+</style>
+<defs>
+<radialGradient id="k-glow" cx="0" cy="0" r="1"><stop offset="0" stop-color="#a698ff" stop-opacity=".10"/><stop offset="1" stop-color="#a698ff" stop-opacity="0"/></radialGradient>
+<linearGradient id="k-edge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".09"/><stop offset=".25" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<clipPath id="k-card"><rect width="220" height="170" rx="14"/></clipPath>
+<linearGradient id="r-fade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#07090d"/><stop offset="1" stop-color="#07090d" stop-opacity="0"/></linearGradient><linearGradient id="r-fade-v" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#07090d" stop-opacity="0"/><stop offset="1" stop-color="#07090d"/></linearGradient></defs>
+<g clip-path="url(#k-card)"><rect width="220" height="170" fill="#07090d"/><rect width="154" height="170" fill="url(#k-glow)"/>
+<g transform="translate(96 0)"><path d="M0 16Q8 10 9 9Q10 8 15 6Q20 3 25 2L29 0M112 0Q120 7 122 8Q123 10 126 15Q129 20 130 21L130 23M0 64Q7 70 9 71Q10 72 15 75Q20 78 23 79Q26 80 28 81Q30 82 35 85Q40 87 44 88L49 90M100 90Q110 85 113 83Q116 80 118 78Q120 76 123 73Q125 70 128 65L130 60" fill="none" stroke="#a698ff" stroke-width="1" opacity="0.16"/><path d="M32 11Q33 10 37 9Q40 8 45 6Q50 5 55 4Q60 3 65 3Q70 2 75 2Q80 2 85 3Q90 4 95 6Q100 8 101 9Q103 10 106 13Q110 16 112 18Q113 20 116 25Q118 30 119 34Q120 38 120 39Q120 40 120 43Q120 45 120 48Q120 50 118 55Q116 60 113 64Q110 69 109 69Q109 70 104 73Q100 77 96 78Q92 80 91 81Q90 81 85 82Q80 83 75 83Q70 83 65 81Q60 80 60 80Q60 80 55 78Q50 77 45 75Q40 72 38 71Q35 70 33 69Q30 68 25 65Q20 62 19 61Q17 60 14 57Q10 53 9 52Q7 50 6 45Q4 40 5 35Q6 30 8 27Q10 24 12 22Q14 20 17 18Q20 16 25 13Q30 11 32 11Z" fill="none" stroke="#a698ff" stroke-width="1" opacity="0.23"/><path d="M25 24Q30 20 30 20Q30 20 35 18Q40 16 45 14Q50 13 55 12Q60 12 65 11Q70 11 75 11Q80 11 85 12Q90 14 95 17Q100 20 100 20Q100 20 104 25Q108 30 109 34Q110 37 110 38Q111 40 110 45Q110 50 110 50Q110 50 108 55Q105 60 103 63Q100 66 97 68Q93 70 92 71Q90 72 85 73Q80 74 75 74Q70 74 65 72Q60 71 58 71Q57 70 53 69Q50 68 45 65Q40 63 37 62Q34 60 32 59Q30 58 25 54Q20 50 18 45Q15 40 16 35Q18 30 19 29Q20 27 25 24Z" fill="none" stroke="#a698ff" stroke-width="1" opacity="0.30"/><path d="M51 20Q52 20 56 19Q60 18 65 18Q70 18 75 18Q80 19 82 19Q84 20 87 21Q90 23 94 26Q98 30 99 32Q100 34 101 37Q102 40 101 45Q101 50 100 51Q100 52 97 56Q94 60 92 61Q90 62 85 64Q80 66 75 66Q70 66 65 65Q60 64 55 62Q51 60 50 60Q50 60 45 57Q40 55 36 52Q32 50 31 48Q30 47 28 43Q26 40 28 35Q29 30 30 30Q30 30 35 27Q40 24 45 22Q50 20 51 20Z" fill="none" stroke="#a698ff" stroke-width="1" opacity="0.37"/><circle class="ping fx" cx="80" cy="43" r="5" fill="none" stroke="#a698ff" stroke-width="1.4"/><path d="M80 38L85 43L80 48L75 43Z" fill="#07090d" stroke="#a698ff" stroke-width="1.4"/></g><rect x="96" y="0" width="60" height="84" fill="url(#r-fade)"/><rect x="96" y="52.08" width="600" height="32.92" fill="url(#r-fade-v)"/><text x="16" y="30" font-size="12" fill="#a698ff" font-weight="500" letter-spacing="1.6" class="m">08</text><text x="15" y="68" font-size="20" fill="#f1f4f7" font-weight="800" letter-spacing="-0.4">Naukri / Jobee</text><rect x="16" y="124" width="52" height="22" rx="11" fill="#121821" stroke="#2c3848"/><text x="26" y="138.78" font-size="10.5" fill="#aeb8c4" font-weight="500" class="m">React</text><rect x="73" y="124" width="45.6" height="22" rx="11" fill="#121821" stroke="#2c3848"/><text x="83" y="138.78" font-size="10.5" fill="#aeb8c4" font-weight="500" class="m">Vite</text><path class="nudge" d="M182 154h20m-6-5 6 5-6 5" fill="none" stroke="#a698ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+<rect x=".5" y=".5" width="219" height="169" rx="13.5" fill="none" stroke="#1c2530"/>
+<rect x=".5" y=".5" width="219" height="169" rx="13.5" fill="none" stroke="url(#k-edge)"/>
+</svg>
