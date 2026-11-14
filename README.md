@@ -81,11 +81,12 @@ Three projects, one rule. Select a card to read the code.
 
 | Repository | Latest change | Date |
 | :-- | :-- | :-- |
-| [Pikina](https://github.com/Aditya2514/Pikina) | [fix(switcher): review findings — Ctrl+C, git config execution, robustness](https://github.com/Aditya2514/Pikina/commit/21e6e432e8653851d9680c458f8814e7e942b6e9) | 2026-10-22 |
-| [Pikina](https://github.com/Aditya2514/Pikina) | [feat: project switcher (&quot;work on &lt;project&gt;&quot;) as the built-in workspace plugin](https://github.com/Aditya2514/Pikina/commit/a1b73fa721aaa649689d0b1412fa3d13e56c6f09) | 2026-10-22 |
-| [Pikina](https://github.com/Aditya2514/Pikina) | [phase1: close the gaps found when re-verifying the review fixes](https://github.com/Aditya2514/Pikina/commit/11b49a84714332dfcaa3a8681c22d143dbd24271) | 2026-10-22 |
+| [HostelDesk](https://github.com/Aditya2514/HostelDesk) | [docs: update chief warden demo email to chief@hosteldesk.dev](https://github.com/Aditya2514/HostelDesk/commit/082f7fdcd7cda0695ad06f2a56d4cd5c5d1c3864) | 2026-10-27 |
+| [HostelDesk](https://github.com/Aditya2514/HostelDesk) | [fix(analytics): compute prediction error using staff shift working minutes](https://github.com/Aditya2514/HostelDesk/commit/dcacb427049f3784102edf963d183c0df332708a) | 2026-10-26 |
+| [HostelDesk](https://github.com/Aditya2514/HostelDesk) | [chore: release v1.0.0](https://github.com/Aditya2514/HostelDesk/commit/23fa2beb254f40ad6d8a19eb80c32089873ad10d) | 2026-10-26 |
+| [HostelDesk](https://github.com/Aditya2514/HostelDesk) | [test: production smoke script](https://github.com/Aditya2514/HostelDesk/commit/f2ca8d8e7b35ebd37da86101d8ed01b7c2ae33a1) | 2026-10-26 |
 
-<sub>My latest commits, excluding merges and bots. Snapshot 2026-11-13; refreshed every six hours.</sub>
+<sub>My latest commits, excluding merges and bots. Snapshot 2026-11-14; refreshed every six hours.</sub>
 
 <!-- MISSION-FEED:END -->
 

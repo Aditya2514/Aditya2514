@@ -1,7 +1,7 @@
 {
- "refreshed_at": "2026-11-13T00:00:00Z",
+ "refreshed_at": "2026-11-14T11:10:24Z",
  "signal": {
-  "total": 552,
+  "total": 554,
   "active_months": 10,
   "longest_streak": 11,
   "peak_week": 100,
@@ -217,7 +217,7 @@
    ],
    [
     "2026-11-08",
-    0
+    2
    ]
   ],
   "languages": [
@@ -243,7 +243,7 @@
    ],
    [
     "Other",
-    0.9
+    1.0
    ]
   ]
  },
@@ -282,22 +282,28 @@
  },
  "recent": [
   {
-   "repo": "Pikina",
-   "sha": "21e6e432e8653851d9680c458f8814e7e942b6e9",
-   "title": "fix(switcher): review findings \u2014 Ctrl+C, git config execution, robustness",
-   "date": "2026-10-22"
+   "repo": "HostelDesk",
+   "sha": "082f7fdcd7cda0695ad06f2a56d4cd5c5d1c3864",
+   "title": "docs: update chief warden demo email to chief@hosteldesk.dev",
+   "date": "2026-10-27"
   },
   {
-   "repo": "Pikina",
-   "sha": "a1b73fa721aaa649689d0b1412fa3d13e56c6f09",
-   "title": "feat: project switcher (\"work on <project>\") as the built-in workspace plugin",
-   "date": "2026-10-22"
+   "repo": "HostelDesk",
+   "sha": "dcacb427049f3784102edf963d183c0df332708a",
+   "title": "fix(analytics): compute prediction error using staff shift working minutes",
+   "date": "2026-10-26"
   },
   {
-   "repo": "Pikina",
-   "sha": "11b49a84714332dfcaa3a8681c22d143dbd24271",
-   "title": "phase1: close the gaps found when re-verifying the review fixes",
-   "date": "2026-10-22"
+   "repo": "HostelDesk",
+   "sha": "23fa2beb254f40ad6d8a19eb80c32089873ad10d",
+   "title": "chore: release v1.0.0",
+   "date": "2026-10-26"
+  },
+  {
+   "repo": "HostelDesk",
+   "sha": "f2ca8d8e7b35ebd37da86101d8ed01b7c2ae33a1",
+   "title": "test: production smoke script",
+   "date": "2026-10-26"
   }
  ]
 }
