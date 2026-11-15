@@ -1,4 +1,4 @@
-name: Proof of Work audit
+name: Aurora refresh
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
     - cron: "17 */6 * * *"
   push:
     branches: [main]
-    paths: ["data/claims.json", "scripts/build_proof.py", "tests/test_proof.py", ".github/workflows/signal.yml"]
+    paths: ["data/aurora.json", "data/README.template.md", "profile.json", "scripts/**", "tests/test_aurora.py", ".github/workflows/signal.yml"]
   workflow_dispatch:
 
 permissions:
@@ -26,24 +26,24 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Test the auditor
-        run: python3 -m unittest tests.test_proof -v
+      - name: Test the generator
+        run: python3 -m unittest tests.test_aurora -v
 
-      # Re-reads every claimed line at each repo's current commit. An unreachable repo keeps its last result.
-      - name: Audit claims and redraw the receipt
+      # Live stats over GraphQL, code links and metrics over REST. Anything unreachable keeps its last saved value.
+      - name: Fetch live data and redraw every scene
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/build_proof.py
+        run: python3 scripts/build_aurora.py
 
       - name: Commit if changed
         run: |
-          git add README.md data/proof.json assets/proof
+          git add README.md data/github.json data/evidence.json assets/aurora
           if git diff --cached --quiet; then
             echo "Nothing changed."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore: proof-of-work audit"
-          git pull --rebase origin main
-          git push
+          git commit -m "chore: refresh aurora scenes"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin HEAD:"$GITHUB_REF_NAME"

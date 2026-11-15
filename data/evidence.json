@@ -1,0 +1,793 @@
+{
+ "generated_at": "2026-11-15T18:02:48Z",
+ "repos": {
+  "LexGuard": "2e6cb460aa9efabc2a51d3aa3c7aaf02849169a5",
+  "Pikina": "4bcbcec85180db750df0844f2a55d34b2b016d21",
+  "Noesis": "fde4e09283833cd25ec9e58777d0f6d74fa33bce",
+  "Mobius": "fec1c089ead7dc6c91479c97c859c7f334f288ed",
+  "BenchShield": "d1beb1b0ce341d6aac0860adc49e549554ab36b1",
+  "Resilion": "c6c3dbb3c883da1731f3ecaac6666d49ff75bf2e",
+  "HostelDesk": "9c978ace415069e1f1f8b07e55d0869ec28b1260",
+  "Shopkart": "3a909ed607c55817e66ba5d623886d44ea2e0460",
+  "codecrafters-shell-cpp": "c4adda13d0f55a81f540b209b496a4cb087a1e1d",
+  "Meta_OpenEnv": "328688b03ec3310cf8498f83ad6fd8dd7e1b00f6"
+ },
+ "links": {
+  "LexGuard#1": {
+   "sha": "2e6cb460aa9efabc2a51d3aa3c7aaf02849169a5",
+   "line": 107
+  },
+  "LexGuard#2": {
+   "sha": "2e6cb460aa9efabc2a51d3aa3c7aaf02849169a5",
+   "line": 404
+  },
+  "LexGuard#3": {
+   "sha": "2e6cb460aa9efabc2a51d3aa3c7aaf02849169a5",
+   "line": 8
+  },
+  "Pikina#1": {
+   "sha": "4bcbcec85180db750df0844f2a55d34b2b016d21",
+   "line": 10
+  },
+  "Pikina#2": {
+   "sha": "4bcbcec85180db750df0844f2a55d34b2b016d21",
+   "line": 16
+  },
+  "Pikina#3": {
+   "sha": "4bcbcec85180db750df0844f2a55d34b2b016d21",
+   "line": 15
+  },
+  "Noesis#1": {
+   "sha": "fde4e09283833cd25ec9e58777d0f6d74fa33bce",
+   "line": 177
+  },
+  "Noesis#2": {
+   "sha": "fde4e09283833cd25ec9e58777d0f6d74fa33bce",
+   "line": 28
+  },
+  "Noesis#3": {
+   "sha": "fde4e09283833cd25ec9e58777d0f6d74fa33bce",
+   "line": 205
+  },
+  "Mobius#1": {
+   "sha": "fec1c089ead7dc6c91479c97c859c7f334f288ed",
+   "line": 230
+  },
+  "Mobius#2": {
+   "sha": "fec1c089ead7dc6c91479c97c859c7f334f288ed",
+   "line": 80
+  },
+  "Mobius#3": {
+   "sha": "fec1c089ead7dc6c91479c97c859c7f334f288ed",
+   "line": 55
+  },
+  "Mobius#4": {
+   "sha": "fec1c089ead7dc6c91479c97c859c7f334f288ed",
+   "line": 164
+  },
+  "BenchShield#1": {
+   "sha": "d1beb1b0ce341d6aac0860adc49e549554ab36b1",
+   "line": 5
+  },
+  "BenchShield#2": {
+   "sha": "d1beb1b0ce341d6aac0860adc49e549554ab36b1",
+   "line": 1
+  },
+  "BenchShield#3": {
+   "sha": "d1beb1b0ce341d6aac0860adc49e549554ab36b1",
+   "line": 104
+  },
+  "Resilion#1": {
+   "sha": "c6c3dbb3c883da1731f3ecaac6666d49ff75bf2e",
+   "line": 194
+  },
+  "Resilion#2": {
+   "sha": "c6c3dbb3c883da1731f3ecaac6666d49ff75bf2e",
+   "line": 34
+  },
+  "HostelDesk#1": {
+   "sha": "9c978ace415069e1f1f8b07e55d0869ec28b1260",
+   "line": 78
+  },
+  "HostelDesk#2": {
+   "sha": "9c978ace415069e1f1f8b07e55d0869ec28b1260",
+   "line": 21
+  },
+  "Shopkart#1": {
+   "sha": "3a909ed607c55817e66ba5d623886d44ea2e0460",
+   "line": 71
+  },
+  "Shopkart#2": {
+   "sha": "3a909ed607c55817e66ba5d623886d44ea2e0460",
+   "line": 171
+  },
+  "codecrafters-shell-cpp#1": {
+   "sha": "c4adda13d0f55a81f540b209b496a4cb087a1e1d",
+   "line": 366
+  },
+  "codecrafters-shell-cpp#2": {
+   "sha": "c4adda13d0f55a81f540b209b496a4cb087a1e1d",
+   "line": 369
+  },
+  "codecrafters-shell-cpp#3": {
+   "sha": "c4adda13d0f55a81f540b209b496a4cb087a1e1d",
+   "line": 168
+  },
+  "Meta_OpenEnv#1": {
+   "sha": "328688b03ec3310cf8498f83ad6fd8dd7e1b00f6",
+   "line": 106
+  },
+  "Meta_OpenEnv#2": {
+   "sha": "328688b03ec3310cf8498f83ad6fd8dd7e1b00f6",
+   "line": 190
+  }
+ },
+ "metrics": {
+  "LexGuard": "36",
+  "Pikina": "23",
+  "Noesis": "4",
+  "Resilion": "News \u2192 graph",
+  "Shopkart": "HMAC",
+  "codecrafters-shell-cpp": "fork \u00b7 pipe",
+  "Meta_OpenEnv": "3",
+  "Mobius": "98",
+  "BenchShield": "117",
+  "HostelDesk": "201"
+ },
+ "recent": [
+  {
+   "sha": "d68ffd16ee98e41d7f764049072280c68e564c10",
+   "date": "2026-11-01",
+   "subject": "fix: stop preview redaction from revealing gold answers; merge 02eb16d",
+   "repo": "BenchShield"
+  },
+  {
+   "sha": "636574515f596cf471b1515b9da4cb4b0fcb956a",
+   "date": "2026-11-01",
+   "subject": "feat(frontend): experiments screen for backend phase B4",
+   "repo": "BenchShield"
+  },
+  {
+   "sha": "2a738d7d35d97f00001f5df18380289deb76504b",
+   "date": "2026-11-01",
+   "subject": "test(e2e): add full-stack browser test against live backend",
+   "repo": "BenchShield"
+  },
+  {
+   "sha": "7ebafc52fc0558579e1f490a325ab9fae8bd86ea",
+   "date": "2026-10-31",
+   "subject": "fix(client): consistent Indian money and number formatting, compact KPI cards with exact amount on hover, no sign on zero amounts",
+   "repo": "Mobius"
+  },
+  {
+   "sha": "5ef990f2cc107b479b4b2b6a6c59fd812a242a83",
+   "date": "2026-10-31",
+   "subject": "style(client): dark glass theme matching the login screen across all app and portal pages",
+   "repo": "Mobius"
+  },
+  {
+   "sha": "396f32565e07c5efb5a23677bfde6bf2dd58eaa7",
+   "date": "2026-10-31",
+   "subject": "fix(client): template list shows real line count",
+   "repo": "Mobius"
+  },
+  {
+   "sha": "9c978ace415069e1f1f8b07e55d0869ec28b1260",
+   "date": "2026-10-27",
+   "subject": "docs: make the roadmap visual with three animated diagrams",
+   "repo": "HostelDesk"
+  },
+  {
+   "sha": "69b943303620719421c571856ace0a826acbf1e5",
+   "date": "2026-10-27",
+   "subject": "docs: add roadmap of planned ML/AI features",
+   "repo": "HostelDesk"
+  },
+  {
+   "sha": "194b9c06dacaf7a3b17f3eda8fe84464fe81bc7a",
+   "date": "2026-10-27",
+   "subject": "docs: make DEPLOYMENT.md match the real Neon/Render setup",
+   "repo": "HostelDesk"
+  },
+  {
+   "sha": "a1b73fa721aaa649689d0b1412fa3d13e56c6f09",
+   "date": "2026-10-22",
+   "subject": "feat: project switcher (\"work on <project>\") as the built-in workspace plugin",
+   "repo": "Pikina"
+  },
+  {
+   "sha": "21e6e432e8653851d9680c458f8814e7e942b6e9",
+   "date": "2026-10-22",
+   "subject": "fix(switcher): review findings \u2014 Ctrl+C, git config execution, robustness",
+   "repo": "Pikina"
+  },
+  {
+   "sha": "11b49a84714332dfcaa3a8681c22d143dbd24271",
+   "date": "2026-10-22",
+   "subject": "phase1: close the gaps found when re-verifying the review fixes",
+   "repo": "Pikina"
+  },
+  {
+   "sha": "fde4e09283833cd25ec9e58777d0f6d74fa33bce",
+   "date": "2026-10-21",
+   "subject": "chore: remove unreferenced AI-generated concept images",
+   "repo": "Noesis"
+  },
+  {
+   "sha": "c6c3dbb3c883da1731f3ecaac6666d49ff75bf2e",
+   "date": "2026-10-21",
+   "subject": "docs: separate what Resilion does today from what is planned",
+   "repo": "Resilion"
+  },
+  {
+   "sha": "9a577ee07c7c357d248b7fc14ad0b2b217ffd6e7",
+   "date": "2026-10-21",
+   "subject": "docs: match the README to the code",
+   "repo": "Noesis"
+  },
+  {
+   "sha": "934f890f815fedf2c9ab7f6f72c6118b7b816ba4",
+   "date": "2026-10-21",
+   "subject": "fix(benchmark): let the rewrite judge see the clause and parse its reply",
+   "repo": "LexGuard"
+  },
+  {
+   "sha": "51ab388ddf1ef0df12add698b68840c220b4716c",
+   "date": "2026-10-21",
+   "subject": "chore: move one-off dev scripts and fixtures out of backend/ into scripts/dev",
+   "repo": "LexGuard"
+  },
+  {
+   "sha": "2e6cb460aa9efabc2a51d3aa3c7aaf02849169a5",
+   "date": "2026-10-21",
+   "subject": "docs: align the README with the code",
+   "repo": "LexGuard"
+  },
+  {
+   "sha": "fb0a822c7bd1cb5e3df56c385afbba04e614dd43",
+   "date": "2026-10-16",
+   "subject": "docs: fix broken badge link and Python version; add the MIT license the README cites",
+   "repo": "Resilion"
+  },
+  {
+   "sha": "c4adda13d0f55a81f540b209b496a4cb087a1e1d",
+   "date": "2026-10-16",
+   "subject": "docs: replace the CodeCrafters template README with what this shell does",
+   "repo": "codecrafters-shell-cpp"
+  },
+  {
+   "sha": "c2f6d4be3bfa2d42efcdf9350937207c62b6638e",
+   "date": "2026-10-16",
+   "subject": "docs: update clone instructions for the renamed repo",
+   "repo": "Resilion"
+  },
+  {
+   "sha": "328688b03ec3310cf8498f83ad6fd8dd7e1b00f6",
+   "date": "2026-10-16",
+   "subject": "ci: run the 110-test suite on every push and badge the real result",
+   "repo": "Meta_OpenEnv"
+  },
+  {
+   "sha": "df7d9239943b130832b81a796930fa42a6e8b9df",
+   "date": "2026-10-15",
+   "subject": "fix: add framework definitions to vercel.json services",
+   "repo": "Shopkart"
+  },
+  {
+   "sha": "8f898b6d77f444cad423e8c9d6cb4e14242676c2",
+   "date": "2026-10-15",
+   "subject": "fix: make api.js dynamically route to /api on Vercel and optimize MongoDB connection timeout",
+   "repo": "Shopkart"
+  },
+  {
+   "sha": "3a909ed607c55817e66ba5d623886d44ea2e0460",
+   "date": "2026-10-15",
+   "subject": "fix: invoke connectDB in middleware to ensure MongoDB connection in Vercel serverless mode",
+   "repo": "Shopkart"
+  },
+  {
+   "sha": "bade1635bdc6d5d11797306e83100c4b209d3bac",
+   "date": "2026-08-23",
+   "subject": "Add README.md and visual assets",
+   "repo": "Noesis"
+  },
+  {
+   "sha": "9259738f0a4410c24ff3c80108141de9eb1c94a9",
+   "date": "2026-08-22",
+   "subject": "docs: update README with human-centric UI visuals, system architecture diagrams, and mathematical specifications",
+   "repo": "Meta_OpenEnv"
+  },
+  {
+   "sha": "b1a31e040be61a938675966bf2ab3921b458eb76",
+   "date": "2026-06-18",
+   "subject": "codecrafters submit [skip ci]",
+   "repo": "codecrafters-shell-cpp"
+  },
+  {
+   "sha": "2490c4ab16e4be21ebd883e87629331f8f6acc87",
+   "date": "2026-06-18",
+   "subject": "codecrafters submit [skip ci]",
+   "repo": "codecrafters-shell-cpp"
+  },
+  {
+   "sha": "d2f2e25a24d95783f4b19a64c7c6993ed2d36e4e",
+   "date": "2026-04-08",
+   "subject": "Fix: Clamp scores and rewards to strictly open interval (0, 1)",
+   "repo": "Meta_OpenEnv"
+  }
+ ],
+ "signals": {
+  "BenchShield": {
+   "tests": 117,
+   "test_files": 20,
+   "ci": 0,
+   "docker": true,
+   "license": false,
+   "adrs": 7,
+   "docs": 16,
+   "readme_kb": 21
+  },
+  "FinancePro": {
+   "tests": 0,
+   "test_files": 0,
+   "ci": 0,
+   "docker": false,
+   "license": false,
+   "adrs": 0,
+   "docs": 0,
+   "readme_kb": 3
+  },
+  "Fintrac": {
+   "tests": 0,
+   "test_files": 0,
+   "ci": 0,
+   "docker": false,
+   "license": false,
+   "adrs": 0,
+   "docs": 0,
+   "readme_kb": 12
+  },
+  "HostelDesk": {
+   "tests": 201,
+   "test_files": 27,
+   "ci": 0,
+   "docker": false,
+   "license": false,
+   "adrs": 0,
+   "docs": 3,
+   "readme_kb": 32
+  },
+  "LexGuard": {
+   "tests": 33,
+   "test_files": 6,
+   "ci": 2,
+   "docker": true,
+   "license": true,
+   "adrs": 0,
+   "docs": 0,
+   "readme_kb": 21
+  },
+  "Meta_OpenEnv": {
+   "tests": 0,
+   "test_files": 0,
+   "ci": 1,
+   "docker": true,
+   "license": false,
+   "adrs": 0,
+   "docs": 0,
+   "readme_kb": 14
+  },
+  "Mobius": {
+   "tests": 98,
+   "test_files": 13,
+   "ci": 1,
+   "docker": true,
+   "license": false,
+   "adrs": 0,
+   "docs": 8,
+   "readme_kb": 30
+  },
+  "Naukri": {
+   "tests": 0,
+   "test_files": 0,
+   "ci": 0,
+   "docker": false,
+   "license": false,
+   "adrs": 0,
+   "docs": 0,
+   "readme_kb": 1
+  },
+  "Noesis": {
+   "tests": 3,
+   "test_files": 1,
+   "ci": 0,
+   "docker": false,
+   "license": false,
+   "adrs": 0,
+   "docs": 0,
+   "readme_kb": 32
+  },
+  "Pikina": {
+   "tests": 255,
+   "test_files": 16,
+   "ci": 1,
+   "docker": false,
+   "license": true,
+   "adrs": 0,
+   "docs": 7,
+   "readme_kb": 26
+  },
+  "Resilion": {
+   "tests": 0,
+   "test_files": 0,
+   "ci": 0,
+   "docker": false,
+   "license": true,
+   "adrs": 0,
+   "docs": 0,
+   "readme_kb": 17
+  },
+  "Shopkart": {
+   "tests": 0,
+   "test_files": 0,
+   "ci": 0,
+   "docker": false,
+   "license": false,
+   "adrs": 0,
+   "docs": 0,
+   "readme_kb": 27
+  },
+  "Simple-Sounboard": {
+   "tests": 0,
+   "test_files": 0,
+   "ci": 0,
+   "docker": false,
+   "license": false,
+   "adrs": 0,
+   "docs": 0,
+   "readme_kb": 0
+  },
+  "Vidya": {
+   "tests": 1,
+   "test_files": 1,
+   "ci": 0,
+   "docker": false,
+   "license": false,
+   "adrs": 0,
+   "docs": 0,
+   "readme_kb": 4
+  },
+  "codecrafters-shell-cpp": {
+   "tests": 0,
+   "test_files": 0,
+   "ci": 0,
+   "docker": false,
+   "license": false,
+   "adrs": 0,
+   "docs": 0,
+   "readme_kb": 1
+  },
+  "portfolio": {
+   "tests": 0,
+   "test_files": 0,
+   "ci": 0,
+   "docker": false,
+   "license": false,
+   "adrs": 0,
+   "docs": 0,
+   "readme_kb": 0
+  }
+ },
+ "live": {
+  "HostelDesk": true,
+  "Naukri": true
+ },
+ "rhythm": {
+  "commits": 381,
+  "repos": 13,
+  "active_days": 42,
+  "since": "Dec 2025",
+  "hours": [
+   4,
+   8,
+   11,
+   15,
+   11,
+   2,
+   13,
+   19,
+   9,
+   11,
+   7,
+   16,
+   22,
+   23,
+   14,
+   34,
+   35,
+   36,
+   22,
+   23,
+   15,
+   19,
+   6,
+   6
+  ],
+  "grid": [
+   [
+    0,
+    0,
+    1,
+    3,
+    0,
+    0,
+    12,
+    16,
+    9,
+    9,
+    3,
+    11,
+    13,
+    8,
+    1,
+    1,
+    5,
+    8,
+    1,
+    2,
+    1,
+    3,
+    3,
+    0
+   ],
+   [
+    1,
+    5,
+    8,
+    5,
+    8,
+    2,
+    0,
+    0,
+    0,
+    2,
+    1,
+    1,
+    2,
+    3,
+    4,
+    3,
+    4,
+    1,
+    1,
+    2,
+    2,
+    3,
+    2,
+    4
+   ],
+   [
+    2,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    2,
+    3,
+    4,
+    2,
+    4,
+    3,
+    1,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0
+   ],
+   [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    19,
+    10,
+    14,
+    9,
+    7,
+    5,
+    7,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    3,
+    0,
+    1,
+    0,
+    1,
+    3,
+    0,
+    2,
+    0,
+    1
+   ],
+   [
+    0,
+    0,
+    0,
+    5,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    5,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    2,
+    1,
+    0,
+    1
+   ],
+   [
+    0,
+    2,
+    2,
+    1,
+    2,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    1,
+    1,
+    3,
+    2,
+    8,
+    14,
+    12,
+    9,
+    9,
+    5,
+    1,
+    0,
+    0
+   ]
+  ],
+  "chronotype": "Afternoon Climber",
+  "line": "38% of my commits land between 11:00 and 17:00 IST.",
+  "night": 0.16,
+  "weekend": 0.244,
+  "focus": [
+   15,
+   18,
+   105
+  ],
+  "peak_hour": 17,
+  "deep": {
+   "minutes": 464,
+   "commits": 63,
+   "repo": "HostelDesk",
+   "start": "Mon 26 Oct 2026 \u00b7 06:08",
+   "end": "13:53",
+   "offsets": [
+    0,
+    3,
+    5,
+    8,
+    10,
+    12,
+    12,
+    19,
+    20,
+    47,
+    50,
+    51,
+    51,
+    53,
+    59,
+    60,
+    68,
+    74,
+    75,
+    82,
+    95,
+    96,
+    96,
+    97,
+    99,
+    138,
+    142,
+    145,
+    146,
+    147,
+    148,
+    155,
+    179,
+    195,
+    198,
+    200,
+    201,
+    202,
+    205,
+    212,
+    220,
+    232,
+    262,
+    288,
+    309,
+    326,
+    329,
+    343,
+    345,
+    354,
+    379,
+    379,
+    402,
+    404,
+    408,
+    412,
+    421,
+    430,
+    437,
+    441,
+    445,
+    448,
+    464
+   ]
+  },
+  "busiest": [
+   3,
+   15,
+   19
+  ],
+  "latest": {
+   "repo": "HostelDesk",
+   "subject": "docs: update chief warden demo email to chief@hosteldesk.dev",
+   "when": "27 Oct 05:54 IST"
+  }
+ }
+}
