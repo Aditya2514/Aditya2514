@@ -248,7 +248,7 @@ Gemini extracts events from articles; validators reject any event type, severity
 
 Hostel complaints with **explained ETA ranges**, automatic routing and escalation. Live on Neon and Render.
 
-`201 tests`
+`201 tests` **[● live ↗](https://hostel-desk-three.vercel.app)**
 
 <details>
 <summary>Architecture notes</summary>
@@ -344,7 +344,7 @@ Built for the Meta PyTorch OpenEnv Hackathon. An agent schedules work against ha
 | :-- | :-- | :-- |
 | [Vidya](https://github.com/Aditya2514/Vidya) | Book discovery in React Native: debounced search, Firebase sign-in, saved lists, strict TypeScript. | React Native · TypeScript · Firebase |
 | [Fintrac](https://github.com/Aditya2514/Fintrac) | Personal budgeting with Gemini-powered spending analysis. | React · Vite · Recharts · Gemini |
-| [Naukri](https://github.com/Aditya2514/Naukri) | A dark-mode job portal with a 100-entry API, persistent saved jobs and sliding-window pagination. | React · Vite |
+| [Naukri](https://github.com/Aditya2514/Naukri) · [live ↗](https://Aditya2514.github.io/Naukri/) | A dark-mode job portal with a 100-entry API, persistent saved jobs and sliding-window pagination. | React · Vite |
 | [FinancePro](https://github.com/Aditya2514/FinancePro) | A vanilla-JavaScript finance dashboard: multiple profiles, analytics and goal tracking. | JavaScript |
 
 <br>
@@ -415,6 +415,6 @@ Built for the Meta PyTorch OpenEnv Hackathon. An agent schedules work against ha
 <a href="mailto:adityasinghv05@gmail.com"><img src="assets/aurora/channel-email.svg" width="32%" alt="Email" /></a>
 <a href="https://github.com/Aditya2514?tab=repositories"><img src="assets/aurora/channel-github.svg" width="32%" alt="GitHub repositories" /></a>
 
-<sub>Scenes redrawn from live GitHub data every six hours · last run 15 Nov 2026, 16:56 UTC</sub>
+<sub>Scenes redrawn from live GitHub data every six hours · last run 15 Nov 2026, 16:58 UTC</sub>
 
 </div>
