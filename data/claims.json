@@ -1,0 +1,134 @@
+{
+  "owner": "Aditya2514",
+  "exhibits": [
+    {
+      "id": "A",
+      "repo": "LexGuard",
+      "name": "LexGuard",
+      "pitch": "Contract review under Indian law, where written rules can overrule the model.",
+      "stack": "Node.js · React · MongoDB · Redis",
+      "claims": [
+        {
+          "text": "Deterministic rules run before any LLM agent reads a risk level, so the model cannot talk a clause down.",
+          "path": "backend/src/services/jobQueueService.js",
+          "needle": "await agentLimit(() => runAgent10DeterministicAudit(contractId));"
+        },
+        {
+          "text": "Every statute the model cites is looked up and graded before it is shown.",
+          "path": "backend/src/services/citationVerifier.js",
+          "needle": "async function verifyCitations(lawRefs)"
+        },
+        {
+          "text": "Rules copied from the benchmark's own text were deleted, even though they raised the score.",
+          "path": "backend/src/services/classifierService.js",
+          "needle": "(Removed Oct 2026: two rules whose triggers were copied verbatim"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "repo": "Pikina",
+      "name": "Pikina",
+      "pitch": "An offline-first desktop assistant that asks before it acts and can undo what it did.",
+      "stack": "Python · Electron · Ollama · SQLite",
+      "claims": [
+        {
+          "text": "Nothing the model proposes reaches a tool without a schema check against the capability registry.",
+          "path": "src/pikina/validation/schema_check.py",
+          "needle": "def validate_action(proposed: dict, registry) -> tuple:"
+        },
+        {
+          "text": "One consent rule for every path: level 4 always asks; level 3 asks when the action can't be rolled back.",
+          "path": "src/pikina/registry/gatekeeper.py",
+          "needle": "return level >= 4 or (level >= 3 and not manifest.get(\"supports_rollback\", False))"
+        },
+        {
+          "text": "Multi-step plans roll back step by step when one fails.",
+          "path": "src/pikina/transactions/rollback_engine.py",
+          "needle": "def rollback(self, plan_id: str, completed_steps: list) -> bool:"
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "repo": "Noesis",
+      "name": "Noesis",
+      "pitch": "Search across video, audio, PDFs and images, with answers pinned to a timestamp or page.",
+      "stack": "Python · ChromaDB · Whisper · Streamlit · with Apurva Patil",
+      "claims": [
+        {
+          "text": "Dense and BM25 results are merged with reciprocal rank fusion.",
+          "path": "hybrid_retrieve.py",
+          "needle": "def _rrf_fuse("
+        },
+        {
+          "text": "Reranking runs on a local cross-encoder, not a paid API.",
+          "path": "hybrid_retrieve.py",
+          "needle": "from sentence_transformers import CrossEncoder, SentenceTransformer"
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "repo": "Resilion",
+      "name": "Resilion",
+      "pitch": "Turns news into structured supply-chain risk and traces who gets hit.",
+      "stack": "Python · NetworkX · Gemini · in progress",
+      "claims": [
+        {
+          "text": "The model can't invent a trade corridor: extracted events must name a seeded one, or none.",
+          "path": "backend/agents/risk_agent.py",
+          "needle": "def corridor_must_be_seeded_or_null(cls, v: Optional[str]) -> Optional[str]:"
+        },
+        {
+          "text": "A disruption is traced through the supply graph to the industries it affects.",
+          "path": "backend/graph/traversal.py",
+          "needle": "def find_affected_industries("
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "repo": "HostelDesk",
+      "name": "HostelDesk",
+      "pitch": "Hostel complaints with honest ETAs, automatic routing and escalation.",
+      "stack": "TypeScript · React · Express · PostgreSQL · Prisma",
+      "claims": [
+        {
+          "text": "A late ticket tells the student why it is late, in plain words.",
+          "path": "server/src/modules/scheduling/eta.service.ts",
+          "needle": "export function studentDelayReason(reason: EtaReason, isTriggerTicket: boolean): string {"
+        },
+        {
+          "text": "Missed deadlines escalate on a background job, with no one having to notice.",
+          "path": "server/src/jobs/escalation.job.ts",
+          "needle": "export class EscalationJob"
+        }
+      ]
+    },
+    {
+      "id": "F",
+      "repo": "codecrafters-shell-cpp",
+      "name": "C++ Shell",
+      "pitch": "A POSIX-style shell: quoting, redirection, pipelines and background jobs.",
+      "stack": "C++23 · POSIX · CMake",
+      "claims": [
+        {
+          "text": "Pipelines are wired by hand with pipe() and fork(), not a library.",
+          "path": "src/main.cpp",
+          "needle": "pid_t pid = fork();"
+        },
+        {
+          "text": "Each stage's stdin is the previous stage's pipe, rewired with dup2().",
+          "path": "src/main.cpp",
+          "needle": "dup2(pipefds[(i - 1) * 2], STDIN_FILENO);"
+        },
+        {
+          "text": "Quoting is parsed by its own state machine for single and double quotes.",
+          "path": "src/main.cpp",
+          "needle": "bool in_single_quotes = false;"
+        }
+      ]
+    }
+  ]
+}

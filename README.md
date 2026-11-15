@@ -1,236 +1,96 @@
 <picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: 600px)" srcset="assets/mission/hero-mobile-still.svg" />
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/mission/hero-still.svg" />
-  <source media="(max-width: 600px)" srcset="assets/mission/hero-mobile.svg" />
-  <img src="assets/mission/hero.svg" width="100%" alt="Aditya Singh — AI systems, agents and full-stack. IIT Madras and Scaler School of Technology. A BGMI-inspired operator at a holographic workstation." />
+  <source media="(max-width: 600px) and (prefers-color-scheme: light)" srcset="assets/proof/receipt-light-mobile.svg" />
+  <source media="(max-width: 600px)" srcset="assets/proof/receipt-dark-mobile.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/proof/receipt-light.svg" />
+  <img src="assets/proof/receipt-dark.svg" width="100%" alt="A receipt printer prints a Proof of Work receipt for Aditya Singh: the number of claims on this page, how many were checked against source code, how many were verified or are stale, and the time of the last audit. A red rubber stamp lands beside it. Headline: Don't take my word for it. Every claim below links to the exact line of code behind it; a bot re-reads those lines every six hours." />
 </picture>
+
+<p align="center"><b><a href="#exhibits">Exhibits</a> &nbsp;·&nbsp; <a href="#the-ledger">The ledger</a> &nbsp;·&nbsp; <a href="#what-isnt-done-yet">What isn't done yet</a> &nbsp;·&nbsp; <a href="#contact">Contact</a></b></p>
+
+I'm **Aditya Singh**. I study Data Science & Applications at **IIT Madras** and I'm co-enrolled at **Scaler School of Technology**. I build LLM systems, local desktop agents and full-stack products, and the part I care about most is **what happens when the model gets something wrong**.
+
+My projects follow one rule: *the model proposes, the system checks, the person stays in control.* This page follows it too.
+
+## How this page works
+
+1. Each project is an **exhibit**.
+2. Each exhibit makes a few specific claims, not adjectives.
+3. Each claim links to the line of code that implements it, pinned to the commit that was read.
+4. Every six hours a GitHub Action re-reads those lines. If the code moved or was deleted, the claim is marked **STALE** in public until I fix the code or the wording.
+
+Nobody, me included, can quietly change what this page says about my code.
+
+## Exhibits
+
+<!-- LEDGER:START -->
 
 <p align="center">
-<b><a href="#select-a-mission">Explore projects</a> &nbsp; / &nbsp; <a href="#engineering-brief">Engineering brief</a> &nbsp; / &nbsp; <a href="#squad-up">Squad up</a></b>
-</p>
-
-I'm **Aditya Singh**. I build LLM systems, local desktop agents and full-stack products—with a particular interest in **what happens when a model gets something wrong**.
-
-**The model proposes. The system checks. The person stays in control.**
-
-
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/mission/chapter-01-mobile.svg" />
-  <img src="assets/mission/chapter-01.svg" width="100%" alt="Chapter 01 of the Aditya Singh engineering dossier" />
-</picture>
-
-## The operator
-
-I study **Data Science & Applications at IIT Madras**, co-enrolled at **Scaler School of Technology**. My projects span contract intelligence, local desktop agents, multimodal retrieval and full-stack applications.
-
-What interests me most is the gap between a model producing an answer and a system doing something dependable with it. I work with retrieval, explicit checks and human approval to make that gap easier to inspect.
-
-**Read the situation. Coordinate the squad. Review the mistakes. Queue again.** That is the BGMI energy behind this profile—and the mindset I bring to a build.
-
-<img src="assets/arena/terminal.svg" width="100%" alt="An animated terminal introduction with a dated snapshot of recent GitHub commits." />
-
-
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/mission/chapter-02-mobile.svg" />
-  <img src="assets/mission/chapter-02.svg" width="100%" alt="Chapter 02 of the Aditya Singh engineering dossier" />
-</picture>
-
-## Select a mission
-
-Three systems. Three different ways to make AI easier to inspect. Click a card to explore its code.
-
-<a href="https://github.com/Aditya2514/LexGuard">
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/mission/lexguard-mobile.svg" />
-  <img src="assets/mission/lexguard.svg" width="100%" alt="LexGuard — Reviews contracts under Indian law using statutory retrieval and deterministic risk checks." />
-</picture>
-</a>
-
-**The mission:** make contract risks easier to inspect before signing. LexGuard reviews contracts under Indian law using statutory retrieval and deterministic risk checks.
-
-**Under the hood:** a staged agent pipeline examines clauses, checks explicit traps, verifies citations and proposes rewrites. Deterministic checks can escalate the model’s risk assessment. Its repository documents benchmark context and limitations.
-
-<sub>Node.js · React · MongoDB · Redis</sub> &nbsp; **[Inspect LexGuard →](https://github.com/Aditya2514/LexGuard)**
-
-<a href="https://github.com/Aditya2514/Pikina">
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/mission/pikina-mobile.svg" />
-  <img src="assets/mission/pikina.svg" width="100%" alt="Pikina — An offline-first Windows/Linux assistant with local inference, validated tools and consent for high-risk actions." />
-</picture>
-</a>
-
-**The mission:** let a local assistant help with your computer while keeping meaningful actions inspectable. Pikina is an offline-first Windows/Linux assistant with local inference, validated tools and consent for high-risk actions.
-
-**Under the hood:** regex-first routing handles known intents, Ollama supports local inference, and an action validator checks proposed tools. Alias chains support rollback. The project is pre-alpha; the scheduler still awaits its planner.
-
-<sub>Python · Electron · Ollama · SQLite · Pre-alpha</sub> &nbsp; **[Inspect Pikina →](https://github.com/Aditya2514/Pikina)**
-
-<a href="https://github.com/Aditya2514/Noesis">
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/mission/noesis-mobile.svg" />
-  <img src="assets/mission/noesis.svg" width="100%" alt="Noesis — Searches video, audio, PDFs and images with hybrid retrieval, reranking and citations to timestamps or pages. Built with Apurva Patil." />
-</picture>
-</a>
-
-**The mission:** find the useful moment across a collection of mixed media. Noesis searches video, audio, PDFs and images, then links answers to timestamps or pages.
-
-**Under the hood:** BM25 and dense retrieval feed a reranker; source citations and an LLM audit help inspect the response. Built with **Apurva Patil**.
-
-<sub>Python · ChromaDB · Whisper · Streamlit · Team project</sub> &nbsp; **[Inspect Noesis →](https://github.com/Aditya2514/Noesis)**
-
-<sub>The animated sequences illustrate mechanisms; they are not live production runs.</sub>
-
-## Engineering brief
-
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/mission/decision-mobile.svg" />
-  <img src="assets/mission/decision.svg" width="100%" alt="A rotating engineering decision from LexGuard, Pikina or Noesis. Read the implementation notes below." />
-</picture>
-
-**The decisions beneath the visuals**
-
-| System | Design decision | What to inspect |
-| :-- | :-- | :-- |
-| [LexGuard](https://github.com/Aditya2514/LexGuard) | Deterministic trap checks can escalate an LLM's risk assessment; retrieval grounds statutory citations. | Its README explains benchmarks and limitations. |
-| [Pikina](https://github.com/Aditya2514/Pikina) | Validate model proposals against registered capabilities; request consent for high-risk actions. | Alias chains support rollback. The scheduler still awaits its planner. |
-| [Noesis](https://github.com/Aditya2514/Noesis) | Combine BM25 and dense retrieval, rerank results, and make sources inspectable. | Source citations and an LLM audit help inspect answers. Built with Apurva Patil. |
-| [Resilion](https://github.com/Aditya2514/Resilion) | Turn news into structured risk events and trace affected industries through a supply graph. | Graph and Risk Watcher built; rerouting, API and approval console are planned. |
-
-**Mission replay — an illustrative LexGuard walkthrough**
-
-<img src="assets/arena/lexguard_flow.svg" width="100%" alt="Illustrative LexGuard sequence: classify clauses, assess risks, check traps and citations, propose rewrites." />
-
-
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/mission/chapter-03-mobile.svg" />
-  <img src="assets/mission/chapter-03.svg" width="100%" alt="Chapter 03 of the Aditya Singh engineering dossier" />
-</picture>
-
-## Project lobby
-
-**Also building [Resilion](https://github.com/Aditya2514/Resilion):** supply-chain intelligence with a Risk Watcher and impact graph. Python · NetworkX · Gemini. In progress.
-
-<!-- PROJECT-LOBBY:START -->
-
-<p align="center">
-<a href="https://github.com/Aditya2514/HostelDesk"><img src="assets/catalog/hosteldesk.svg" width="49%" alt="HostelDesk — Hostel complaints with explained ETA ranges, automatic routing, completion proof and escalation. Stack: TypeScript, React, Express, PostgreSQL, Prisma" /></a>
-<a href="https://github.com/Aditya2514/Meta_OpenEnv"><img src="assets/catalog/meta_openenv.svg" width="49%" alt="Meta OpenEnv — An environment for agents juggling assignments, bugs, deadlines and burnout constraints. Team hackathon project. Stack: Python, FastAPI, Docker" /></a>
+<a href="https://github.com/Aditya2514/LexGuard"><img src="assets/proof/exhibit-a.svg" width="49%" alt="Exhibit A: LexGuard. Contract review under Indian law, where written rules can overrule the model." /></a>
+<a href="https://github.com/Aditya2514/Pikina"><img src="assets/proof/exhibit-b.svg" width="49%" alt="Exhibit B: Pikina. An offline-first desktop assistant that asks before it acts and can undo what it did." /></a>
 </p>
 
 <p align="center">
-<a href="https://github.com/Aditya2514/Shopkart"><img src="assets/catalog/shopkart.svg" width="49%" alt="ShopKart — Server-authoritative checkout and Razorpay test-mode payments. Built with Apurva Patil. Stack: React, Express, MongoDB" /></a>
-<a href="https://github.com/Aditya2514/codecrafters-shell-cpp"><img src="assets/catalog/codecrafters-shell-cpp.svg" width="49%" alt="C++ Shell — A shell built around fork, exec, pipe and dup2: quoting, redirection, pipelines and background jobs. Stack: C++23, POSIX, CMake" /></a>
+<a href="https://github.com/Aditya2514/Noesis"><img src="assets/proof/exhibit-c.svg" width="49%" alt="Exhibit C: Noesis. Search across video, audio, PDFs and images, with answers pinned to a timestamp or page." /></a>
+<a href="https://github.com/Aditya2514/Resilion"><img src="assets/proof/exhibit-d.svg" width="49%" alt="Exhibit D: Resilion. Turns news into structured supply-chain risk and traces who gets hit." /></a>
 </p>
 
 <p align="center">
-<a href="https://github.com/Aditya2514/Vidya"><img src="assets/catalog/vidya.svg" width="49%" alt="Vidya / BookFinder — Book discovery, debounced search, Google sign-in and persistent saved lists. Stack: React Native, TypeScript, Firebase" /></a>
-<a href="https://github.com/Aditya2514/Fintrac"><img src="assets/catalog/fintrac.svg" width="49%" alt="Fintrac — A personal budgeting dashboard with Gemini-powered spending analysis. Stack: React, Vite, Recharts, Gemini" /></a>
+<a href="https://github.com/Aditya2514/HostelDesk"><img src="assets/proof/exhibit-e.svg" width="49%" alt="Exhibit E: HostelDesk. Hostel complaints with honest ETAs, automatic routing and escalation." /></a>
+<a href="https://github.com/Aditya2514/codecrafters-shell-cpp"><img src="assets/proof/exhibit-f.svg" width="49%" alt="Exhibit F: C++ Shell. A POSIX-style shell: quoting, redirection, pipelines and background jobs." /></a>
 </p>
 
-<p align="center">
-<a href="https://github.com/Aditya2514/Naukri"><img src="assets/catalog/naukri.svg" width="49%" alt="Naukri / Jobee — A job-portal UI with search, saved jobs and a simulated listings API. Stack: React, Vite" /></a>
-<a href="https://github.com/Aditya2514/BenchShield"><img src="assets/catalog/benchshield.svg" width="49%" alt="BenchShield — Explore the source, documentation and latest changes. Stack: Python" /></a>
-</p>
+### The ledger
 
-<p align="center">
-<a href="https://github.com/Aditya2514/Mobius"><img src="assets/catalog/mobius.svg" width="49%" alt="Mobius — Explore the source, documentation and latest changes. Stack: TypeScript" /></a>
-<a href="https://github.com/Aditya2514?tab=repositories"><img src="assets/catalog/browse.svg" width="49%" alt="Explore all repositories" /></a>
-</p>
+| # | Claim | Evidence | Status |
+| :-- | :-- | :-- | :-- |
+| A1 | Deterministic rules run before any LLM agent reads a risk level, so the model cannot talk a clause down. | [`jobQueueService.js:107`](https://github.com/Aditya2514/LexGuard/blob/2e6cb460aa9efabc2a51d3aa3c7aaf02849169a5/backend/src/services/jobQueueService.js#L107) | **VERIFIED** |
+| A2 | Every statute the model cites is looked up and graded before it is shown. | [`citationVerifier.js:404`](https://github.com/Aditya2514/LexGuard/blob/2e6cb460aa9efabc2a51d3aa3c7aaf02849169a5/backend/src/services/citationVerifier.js#L404) | **VERIFIED** |
+| A3 | Rules copied from the benchmark's own text were deleted, even though they raised the score. | [`classifierService.js:134`](https://github.com/Aditya2514/LexGuard/blob/2e6cb460aa9efabc2a51d3aa3c7aaf02849169a5/backend/src/services/classifierService.js#L134) | **VERIFIED** |
+| B1 | Nothing the model proposes reaches a tool without a schema check against the capability registry. | [`schema_check.py:10`](https://github.com/Aditya2514/Pikina/blob/4bcbcec85180db750df0844f2a55d34b2b016d21/src/pikina/validation/schema_check.py#L10) | **VERIFIED** |
+| B2 | One consent rule for every path: level 4 always asks; level 3 asks when the action can't be rolled back. | [`gatekeeper.py:16`](https://github.com/Aditya2514/Pikina/blob/4bcbcec85180db750df0844f2a55d34b2b016d21/src/pikina/registry/gatekeeper.py#L16) | **VERIFIED** |
+| B3 | Multi-step plans roll back step by step when one fails. | [`rollback_engine.py:15`](https://github.com/Aditya2514/Pikina/blob/4bcbcec85180db750df0844f2a55d34b2b016d21/src/pikina/transactions/rollback_engine.py#L15) | **VERIFIED** |
+| C1 | Dense and BM25 results are merged with reciprocal rank fusion. | [`hybrid_retrieve.py:177`](https://github.com/Aditya2514/Noesis/blob/fde4e09283833cd25ec9e58777d0f6d74fa33bce/hybrid_retrieve.py#L177) | **VERIFIED** |
+| C2 | Reranking runs on a local cross-encoder, not a paid API. | [`hybrid_retrieve.py:28`](https://github.com/Aditya2514/Noesis/blob/fde4e09283833cd25ec9e58777d0f6d74fa33bce/hybrid_retrieve.py#L28) | **VERIFIED** |
+| D1 | The model can't invent a trade corridor: extracted events must name a seeded one, or none. | [`risk_agent.py:194`](https://github.com/Aditya2514/Resilion/blob/c6c3dbb3c883da1731f3ecaac6666d49ff75bf2e/backend/agents/risk_agent.py#L194) | **VERIFIED** |
+| D2 | A disruption is traced through the supply graph to the industries it affects. | [`traversal.py:34`](https://github.com/Aditya2514/Resilion/blob/c6c3dbb3c883da1731f3ecaac6666d49ff75bf2e/backend/graph/traversal.py#L34) | **VERIFIED** |
+| E1 | A late ticket tells the student why it is late, in plain words. | [`eta.service.ts:78`](https://github.com/Aditya2514/HostelDesk/blob/9c978ace415069e1f1f8b07e55d0869ec28b1260/server/src/modules/scheduling/eta.service.ts#L78) | **VERIFIED** |
+| E2 | Missed deadlines escalate on a background job, with no one having to notice. | [`escalation.job.ts:21`](https://github.com/Aditya2514/HostelDesk/blob/9c978ace415069e1f1f8b07e55d0869ec28b1260/server/src/jobs/escalation.job.ts#L21) | **VERIFIED** |
+| F1 | Pipelines are wired by hand with pipe() and fork(), not a library. | [`main.cpp:366`](https://github.com/Aditya2514/codecrafters-shell-cpp/blob/c4adda13d0f55a81f540b209b496a4cb087a1e1d/src/main.cpp#L366) | **VERIFIED** |
+| F2 | Each stage's stdin is the previous stage's pipe, rewired with dup2(). | [`main.cpp:369`](https://github.com/Aditya2514/codecrafters-shell-cpp/blob/c4adda13d0f55a81f540b209b496a4cb087a1e1d/src/main.cpp#L369) | **VERIFIED** |
+| F3 | Quoting is parsed by its own state machine for single and double quotes. | [`main.cpp:168`](https://github.com/Aditya2514/codecrafters-shell-cpp/blob/c4adda13d0f55a81f540b209b496a4cb087a1e1d/src/main.cpp#L168) | **VERIFIED** |
 
-<!-- PROJECT-LOBBY:END -->
+<sub>Audited 15 NOV 2026 16:06Z · 15 of 15 claims verified · each link is pinned to the commit that was read · rerun every six hours by <a href="scripts/build_proof.py"><code>scripts/build_proof.py</code></a>.</sub>
 
-[Earlier experiments](https://github.com/Aditya2514?tab=repositories): FinancePro · Simple Soundboard · First portfolio.
+<!-- LEDGER:END -->
 
+## What isn't done yet
 
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/mission/chapter-04-mobile.svg" />
-  <img src="assets/mission/chapter-04.svg" width="100%" alt="Chapter 04 of the Aditya Singh engineering dossier" />
-</picture>
+A profile that lists only wins is hiding something. Here is what is unfinished:
 
-## Build kit
+- **Pikina** is pre-alpha. The task scheduler is built and tested, but nothing calls it yet; it is waiting for the planner.
+- **Resilion** has the supply graph and the Risk Watcher working. Rerouting, the API and the approval console are still planned.
+- **LexGuard** got *less* impressive on paper in October 2026: I removed two classifier rules whose triggers had been copied from the benchmark's own text. A rule that matches the test set measures memory, not judgement.
+- **Noesis** and **ShopKart** were built with **Apurva Patil**. The claims above are about the code, not about who typed which line.
 
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/mission/arsenal-mobile.svg" />
-  <img src="assets/mission/arsenal.svg" width="100%" alt="Build kit: languages, AI and retrieval, backend, data, interfaces and delivery tools." />
-</picture>
+## Also on file
 
+[ShopKart](https://github.com/Aditya2514/Shopkart): server-authoritative checkout with Razorpay test-mode payments ·
+[Meta OpenEnv](https://github.com/Aditya2514/Meta_OpenEnv): an agent environment of assignments, bugs, deadlines and burnout (team hackathon) ·
+[Vidya](https://github.com/Aditya2514/Vidya): book discovery in React Native ·
+[Fintrac](https://github.com/Aditya2514/Fintrac): budgeting with Gemini spending analysis ·
+[everything else](https://github.com/Aditya2514?tab=repositories)
 
-## Utility belt
-
-**Game wali utility. Builder wala purpose.** Four animated links into the work.
-
-<p align="center">
-<a href="https://github.com/Aditya2514/Noesis"><img src="assets/actions/smoke.svg" width="49%" alt="Smoke daal. Noise hata. Explore Noesis and its evidence retrieval." /></a>
-<a href="https://github.com/Aditya2514/LexGuard"><img src="assets/actions/frag.svg" width="49%" alt="Frag out. Bug out. Explore LexGuard and its checks." /></a>
-</p>
-<p align="center">
-<a href="https://github.com/Aditya2514/codecrafters-shell-cpp"><img src="assets/actions/molotov.svg" width="49%" alt="Debt jalao. Clean build. Explore the C++ shell." /></a>
-<a href="https://github.com/Aditya2514/HostelDesk"><img src="assets/actions/boost.svg" width="49%" alt="Boost on. Build on. Explore HostelDesk." /></a>
-</p>
-
-
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/mission/chapter-05-mobile.svg" />
-  <img src="assets/mission/chapter-05.svg" width="100%" alt="Chapter 05 of the Aditya Singh engineering dossier" />
-</picture>
-
-## Match history
-
-**Build transmissions**
-
-<!-- MISSION-FEED:START -->
-
-| Repository | Recent change | Date (UTC) |
-| :-- | :-- | :-- |
-| Pikina | [fix(switcher): review findings — Ctrl+C, git config execution, robustness](https://github.com/Aditya2514/Pikina/commit/21e6e432e8653851d9680c458f8814e7e942b6e9) | 2026-10-22 |
-| Pikina | [feat: project switcher (&quot;work on &lt;project&gt;&quot;) as the built-in workspace plugin](https://github.com/Aditya2514/Pikina/commit/a1b73fa721aaa649689d0b1412fa3d13e56c6f09) | 2026-10-22 |
-| Pikina | [phase1: close the gaps found when re-verifying the review fixes](https://github.com/Aditya2514/Pikina/commit/11b49a84714332dfcaa3a8681c22d143dbd24271) | 2026-10-22 |
-
-<sub>Recent non-merge changes from LexGuard, Pikina and Noesis. Refreshed 15 Nov 2026, 06:31 UTC. Scheduled every six hours; the last successful snapshot stays visible if refresh fails.</sub>
-
-<!-- MISSION-FEED:END -->
-
-
-<img src="assets/arena/signal.svg" width="100%" alt="GitHub contributions and language distribution, with the last generation date on the card." />
-<img src="assets/arena/rhythm.svg" width="100%" alt="Commit activity by hour in IST and by weekday." />
-<img src="assets/catalog/ranked-grind.svg" width="100%" alt="Active contribution weeks represented as a tactical map. The scope animation is decorative." />
-
-<sub>Generated from GitHub data. Scheduled every six hours; each card keeps its last successful update.</sub>
-
-
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/mission/chapter-06-mobile.svg" />
-  <img src="assets/mission/chapter-06.svg" width="100%" alt="Chapter 06 of the Aditya Singh engineering dossier" />
-</picture>
-
-## Career campaign
-
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/mission/results-mobile.svg" />
-  <img src="assets/mission/results.svg" width="100%" alt="Match result: runner-up, number two, at the Paradox DSA Triathlon, IIT Madras, 2026. CGPA 9.0 of 10 at IIT Madras; co-enrolled at Scaler School of Technology; Meta PyTorch OpenEnv Hackathon team submission." />
-</picture>
-
-<img src="assets/arena/journey.svg" width="100%" alt="Animated education and project milestone timeline." />
+## Record
 
 | Education | Achievement |
 | :-- | :-- |
 | **IIT Madras** · BS Data Science & Applications · 2025–2029 · CGPA **9.0/10** | **Runner-up** · Paradox DSA Triathlon · IIT Madras · 2026 |
-| **Scaler School of Technology** · 2025–2029 | **Meta PyTorch OpenEnv Hackathon** · 2026 · Team submission |
+| **Scaler School of Technology** · 2025–2029 | **Meta PyTorch OpenEnv Hackathon** · 2026 · team submission |
 
-**The BGMI connection:** read the situation, communicate with the squad, learn from the replay, queue again. That same competitive curiosity shapes how I build.
+## Contact
 
+Looking for **AI engineering internships**, **agent systems** work, or a **hackathon team**. Send me the problem, and I'll send you line numbers.
 
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/mission/outro-mobile.svg" />
-  <img src="assets/mission/outro.svg" width="100%" alt="Squad up. Build something worth finding. AI engineering, agents and hackathons." />
-</picture>
+**[LinkedIn ↗](https://www.linkedin.com/in/aditya-singh-8286b137a/)** &nbsp;·&nbsp; **[Email ↗](mailto:adityasinghv05@gmail.com)** &nbsp;·&nbsp; **[All repositories ↗](https://github.com/Aditya2514?tab=repositories)**
 
-## Squad up
-
-Interested in **AI engineering internships**, **agent systems**, or a **hackathon project**? Send me the problem you're working on.
-
-**[LinkedIn ↗](https://www.linkedin.com/in/aditya-singh-8286b137a/)** &nbsp; / &nbsp; **[Email ↗](mailto:adityasinghv05@gmail.com)** &nbsp; / &nbsp; **[All repositories ↗](https://github.com/Aditya2514?tab=repositories)**
-
----
-
-<p align="center"><b>GG. Now go inspect the code.</b><br/><sub>BGMI-inspired spirit. Engineering you can inspect.</sub></p>
+<p align="center"><sub>✂ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -<br/>Keep this receipt. Diff it later.</sub></p>
