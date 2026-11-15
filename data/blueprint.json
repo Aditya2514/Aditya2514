@@ -1,0 +1,99 @@
+{
+  "owner": "Aditya2514",
+  "projects": {
+    "LexGuard": [
+      {"path": "backend/src/services/jobQueueService.js", "needle": "await agentLimit(() => runAgent10DeterministicAudit(contractId));"},
+      {"path": "backend/src/services/citationVerifier.js", "needle": "async function verifyCitations(lawRefs)"},
+      {"path": "backend/package.json", "needle": "--max-old-space-size=380"}
+    ],
+    "Pikina": [
+      {"path": "src/pikina/validation/schema_check.py", "needle": "def validate_action(proposed: dict, registry) -> tuple:"},
+      {"path": "src/pikina/registry/gatekeeper.py", "needle": "return level >= 4 or (level >= 3 and not manifest.get(\"supports_rollback\", False))"},
+      {"path": "src/pikina/transactions/rollback_engine.py", "needle": "def rollback(self, plan_id: str, completed_steps: list) -> bool:"}
+    ],
+    "Noesis": [
+      {"path": "hybrid_retrieve.py", "needle": "def _rrf_fuse("},
+      {"path": "hybrid_retrieve.py", "needle": "from sentence_transformers import CrossEncoder, SentenceTransformer"},
+      {"path": "grounded_generate.py", "needle": "def call_fact_audit("},
+      {"path": "grounded_generate.py", "needle": "return f\"Page {sl.get('page_number')}\""}
+    ],
+    "Resilion": [
+      {"path": "backend/agents/risk_agent.py", "needle": "def corridor_must_be_seeded_or_null(cls, v: Optional[str]) -> Optional[str]:"},
+      {"path": "backend/graph/traversal.py", "needle": "def find_affected_industries("}
+    ],
+    "HostelDesk": [
+      {"path": "server/src/modules/scheduling/eta.service.ts", "needle": "export function studentDelayReason(reason: EtaReason, isTriggerTicket: boolean): string {"},
+      {"path": "server/src/jobs/escalation.job.ts", "needle": "export class EscalationJob"}
+    ],
+    "Shopkart": [
+      {"path": "server/controllers/order.controller.js", "needle": "calculatedTotal += product.price * cartItem.quantity;"},
+      {"path": "server/controllers/order.controller.js", "needle": "if (expectedSignature !== razorpay_signature) {"}
+    ],
+    "codecrafters-shell-cpp": [
+      {"path": "src/main.cpp", "needle": "pid_t pid = fork();"},
+      {"path": "src/main.cpp", "needle": "dup2(pipefds[(i - 1) * 2], STDIN_FILENO);"},
+      {"path": "src/main.cpp", "needle": "bool in_single_quotes = false;"}
+    ],
+    "Meta_OpenEnv": [
+      {"path": "src/envs/assignment_planner/environment.py", "needle": "def step(self, action: Action) -> Tuple[Observation, float, bool, Dict]:"},
+      {"path": "src/envs/assignment_planner/graders.py", "needle": "burnout_free = all(h <= 8.0 for h in daily_hours.values())"}
+    ]
+  },
+  "names": {
+    "LexGuard": "LexGuard", "Pikina": "Pikina", "Noesis": "Noesis", "Resilion": "Resilion", "HostelDesk": "HostelDesk",
+    "Shopkart": "ShopKart", "codecrafters-shell-cpp": "C++ Shell", "Meta_OpenEnv": "Meta OpenEnv"
+  },
+  "sheets": [
+    {
+      "repo": "LexGuard", "sheet": "01", "title": "Contract review under Indian law", "per_row": 5,
+      "stages": [
+        [["io", "Contract in", "PDF · DOCX · scan"]],
+        [["io", "Parse & repair", "LlamaParse → OCR"]],
+        [["model", "Classify clauses", "+ RAG index"]],
+        [["model", "Risk analyst", "+ adversarial pass"]],
+        [["rule", "Rule gate", "traps can escalate"]],
+        [["model", "Plain guide", "for the signer"], ["model", "Indian law", "compliance RAG"], ["rule", "Cross-refs", "clause audit"]],
+        [["rule", "Citation check", "vs statute DB"]],
+        [["model", "Redline", "rewrite drafts"]],
+        [["person", "You decide", "score + dashboard"]]
+      ]
+    },
+    {
+      "repo": "Pikina", "sheet": "02", "title": "Offline-first desktop assistant", "per_row": 4,
+      "stages": [
+        [["person", "You", "hotkey · quick panel"]],
+        [["rule", "Tier 1 router", "regex, no model"]],
+        [["model", "Tier 2", "local Ollama"]],
+        [["rule", "Validator", "schema vs registry"]],
+        [["rule", "Consent gate", "L4, or L3 w/o undo"]],
+        [["person", "You approve", "native dialog"]],
+        [["io", "Execute", "OS bridge"]],
+        [["rule", "Rollback", "plan transactions"]]
+      ],
+      "edges": [[0, 1], [1, 2, "miss"], [1, 3, "hit", "over"], [2, 3], [3, 4], [4, 5, "high risk"], [4, 6, "low risk", "over"], [5, 6], [6, 7]]
+    },
+    {
+      "repo": "Noesis", "sheet": "03", "title": "Multimodal search with citations", "per_row": 4,
+      "stages": [
+        [["io", "Video · audio", "Whisper transcripts"], ["io", "PDFs", "text by page"], ["io", "Images", "visual links"]],
+        [["io", "SuperChunk", "time window or page"]],
+        [["io", "Dense index", "ChromaDB"], ["io", "Sparse index", "BM25"]],
+        [["rule", "RRF fusion", "rank merge"]],
+        [["model", "Rerank", "local cross-encoder"]],
+        [["model", "Grounded answer", "cites chunks"]],
+        [["rule", "Fact audit", "per-claim verdict"]],
+        [["person", "You read", "time · page cited"]]
+      ]
+    }
+  ],
+  "decisions": [
+    {"repo": "LexGuard", "text": "Deterministic trap checks run before the LLM agents read a risk level, and can escalate it. Statute citations are verified against a legal database. The backend is sized to run in 512 MB.", "claims": [1, 2, 3]},
+    {"repo": "Pikina", "text": "Validate every model proposal against registered capabilities; ask for consent when an action is high-risk or can't be rolled back; roll plans back step by step.", "claims": [1, 2, 3]},
+    {"repo": "Noesis", "text": "Fuse BM25 and dense retrieval, rerank on a local cross-encoder, audit every claim in the answer, and cite pages and timestamps.", "claims": [1, 2, 3, 4]},
+    {"repo": "Resilion", "text": "Turn news into structured risk events, reject trade corridors the graph doesn't know, and trace affected industries.", "claims": [1, 2]},
+    {"repo": "HostelDesk", "text": "Explain every delay in plain language and escalate missed deadlines automatically.", "claims": [1, 2]},
+    {"repo": "Shopkart", "text": "Recompute order totals on the server and accept a payment only after verifying its signature.", "claims": [1, 2]},
+    {"repo": "codecrafters-shell-cpp", "text": "Wire pipelines by hand with fork, pipe and dup2; parse quoting with a state machine.", "claims": [1, 2, 3]},
+    {"repo": "Meta_OpenEnv", "text": "Grade agent schedules on finishing the work and on keeping every day under 8 hours.", "claims": [1, 2]}
+  ]
+}

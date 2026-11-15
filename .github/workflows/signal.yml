@@ -1,4 +1,4 @@
-name: Proof of Work audit
+name: Blueprint refresh
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
     - cron: "17 */6 * * *"
   push:
     branches: [main]
-    paths: ["data/claims.json", "scripts/build_proof.py", "tests/test_proof.py", ".github/workflows/signal.yml"]
+    paths: ["data/blueprint.json", "data/README.template.md", "profile.json", "scripts/build_blueprint.py", "tests/test_blueprint.py", ".github/workflows/signal.yml"]
   workflow_dispatch:
 
 permissions:
@@ -26,24 +26,24 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Test the auditor
-        run: python3 -m unittest tests.test_proof -v
+      - name: Test the generator
+        run: python3 -m unittest tests.test_blueprint -v
 
-      # Re-reads every claimed line at each repo's current commit. An unreachable repo keeps its last result.
-      - name: Audit claims and redraw the receipt
+      # Re-finds every linked line at each repo's current commit. An unreachable repo keeps its last result.
+      - name: Refresh code links and redraw the blueprints
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/build_proof.py
+        run: python3 scripts/build_blueprint.py
 
       - name: Commit if changed
         run: |
-          git add README.md data/proof.json assets/proof
+          git add README.md data/evidence.json assets/blueprint
           if git diff --cached --quiet; then
             echo "Nothing changed."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore: proof-of-work audit"
+          git commit -m "chore: refresh blueprints and code links"
           git pull --rebase origin main
           git push
