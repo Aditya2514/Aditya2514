@@ -65,6 +65,12 @@ BASE_DEFS = (
         f'<stop offset=".97" stop-color="{c}" stop-opacity="1"/><stop offset="1" stop-color="{c}" stop-opacity=".15"/></linearGradient>'
         for k, c in (("em", EMERALD), ("te", TEAL), ("ic", ICE), ("am", AMBER))
     )
+    + "".join(
+        f'<linearGradient id="cur-{k}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{c}" stop-opacity="0"/>'
+        f'<stop offset=".3" stop-color="{c}" stop-opacity=".45"/><stop offset=".78" stop-color="{c}" stop-opacity=".9"/>'
+        f'<stop offset="1" stop-color="#f2fffb" stop-opacity="1"/></linearGradient>'
+        for k, c in (("em", EMERALD), ("te", TEAL), ("ic", ICE))
+    )
 )
 
 
@@ -272,11 +278,11 @@ def sky(gh: dict, weeks: list[dict], active: int, longest: int, current: int, n_
     tw, gap = (W - 104 - 4 * 14) / 5, 14
     for i, (label, value, sub, color) in enumerate(tiles):
         x = 52 + i * (tw + gap)
-        body.append(f'<g class="up" style="animation-delay:{.1 + i * .1:.2f}s">{glass(x, 64, tw, 86, 12, color)}'
+        body.append(f'<g class="up" style="animation-delay:{.1 + i * .1:.2f}s">{glass(x, 64, tw, 92, 12, color)}'
                     f'{t(x + 16, 88, label, 10, MUTED, MONO, 500, "start", 2)}'
-                    f'{t(x + 16, 126, value, 32, TEXT, SANS, 700)}'
-                    f'{t(x + 16 + len(value) * 19 + 8, 126, sub, 11, color, MONO)}</g>')
-    base, top = 452, 200
+                    f'{t(x + 16, 124, value, 32, TEXT, SANS, 700)}'
+                    f'{t(x + 16, 141, sub, 10.5, color, MONO)}</g>')
+    base, top = 440, 206
     peak = max((w["count"] for w in weeks), default=0) or 1
     n = len(weeks)
     x0, span = 60, W - 120
@@ -289,12 +295,14 @@ def sky(gh: dict, weeks: list[dict], active: int, longest: int, current: int, n_
             continue
         h = 14 + (base - top - 14) * math.sqrt(w["count"] / peak)
         color = "ic" if w["count"] >= .7 * peak else "em" if w["count"] >= .25 * peak else "te"
-        r = f'<rect x="{x + step * .12:.1f}" y="{base - h:.1f}" width="{step * .76:.1f}" height="{h:.1f}" rx="{step * .3:.1f}" fill="url(#ray-{color})"/>'
-        rays[i % 4].append(r)
+        r = f'<rect x="{x + step * .06:.1f}" y="{base - h:.1f}" width="{step * .88:.1f}" height="{h:.1f}" rx="{step * .3:.1f}" fill="url(#cur-{color})"/>'
+        core = (f'<rect x="{x + step * .44:.1f}" y="{base - h * .92:.1f}" width="{step * .12:.1f}" height="{h * .92:.1f}" '
+                f'fill="#f2fffb" opacity=".55"/>')
+        rays[i % 4].append(r + core)
         rays_glow[i % 4].append(r)
     layer = lambda groups: "".join(f'<g class="sh" style="animation-delay:{k * .7:.1f}s">{"".join(g)}</g>' for k, g in enumerate(groups))
-    body.append(f'<g class="sway" style="animation-duration:20s"><g filter="url(#soft)" opacity=".9">{layer(rays_glow)}</g>'
-                f'<g filter="url(#mist)">{layer(rays)}</g></g>')
+    body.append(f'<g class="sway" style="animation-duration:20s"><g filter="url(#soft)">{layer(rays_glow)}</g>'
+                f'<g filter="url(#soft)">{layer(rays_glow)}</g><g filter="url(#mist)">{layer(rays)}</g></g>')
     avg = sum(w["count"] for w in weeks) / max(n, 1)
     if avg > 0:
         ay = base - (14 + (base - top - 14) * math.sqrt(avg / peak))
@@ -308,15 +316,16 @@ def sky(gh: dict, weeks: list[dict], active: int, longest: int, current: int, n_
         lx = min(max(px, 150), W - 150)
         body.append(f'<g class="fade" style="animation-delay:1.2s"><circle cx="{px:.1f}" cy="{py - 10:.1f}" r="4" fill="{ICE}" filter="url(#glow)"/>'
                     f'{t(lx, py - 22, label, 11, ICE, MONO, 600, "middle", 2)}</g>')
-    body.append(mountains(W, H, 0, 446, 478, 77, "#071321", uid="s"))
-    body.append(mountains(W, H, 0, 486, 506, 91, "#030a13", snow=False, rough=.8))
-    seen = set()
+    body.append(mountains(W, H, 0, 448, 488, 77, "#071321", uid="s"))
+    body.append(mountains(W, H, 0, 492, 512, 91, "#030a13", snow=False, rough=.8))
+    seen, last_x = set(), -99
     for i, w in enumerate(weeks):
         d = date.fromisoformat(w["start"])
         key = (d.year, d.month)
-        if key in seen or d.day > 7 and i:
+        if key in seen or d.day > 7 and i or x0 + i * step - last_x < 52:
             continue
         seen.add(key)
+        last_x = x0 + i * step
         label = d.strftime("%b").upper() + (f" '{d.strftime('%y')}" if d.month == 1 or i == 0 else "")
         body.append(t(x0 + i * step + 2, 538, label, 10.5, MUTED, MONO, 400, "start", 1.5))
     body.append(t(52, 570, "ONE CURTAIN = ONE WEEK  ·  HEIGHT = CONTRIBUTIONS (SQUARE-ROOT SCALE)", 10, FAINT, MONO, 400, "start", 2))
@@ -502,7 +511,7 @@ def terrain(repos: list[dict], cats: dict, flags: list[str], fetched: str) -> st
     flagged = [s for s in shapes if s[2]["name"] in flags]
     flagged.sort(key=lambda s: s[3])
     for k, (_, _, r, x, top) in enumerate(flagged):
-        pole = 26 + (k % 3) * 26
+        pole = min(26 + (k % 3) * 26, top - 92)
         cat = CAT[cats.get(r["name"], "other")]
         name = {"codecrafters-shell-cpp": "C++ Shell", "Meta_OpenEnv": "Meta OpenEnv", "Shopkart": "ShopKart"}.get(r["name"], r["name"])
         lw = len(name) * 7.4 + 18
@@ -543,9 +552,11 @@ def bedrock(shares: list[tuple[str, float]], n_repos: int) -> str:
         pines.append(f'<polygon points="{x:.1f},{y - 26 * s:.1f} {x - 7 * s:.1f},{y - 8 * s:.1f} {x - 3 * s:.1f},{y - 9 * s:.1f} {x - 9 * s:.1f},{y:.1f} {x + 9 * s:.1f},{y:.1f} {x + 3 * s:.1f},{y - 9 * s:.1f} {x + 7 * s:.1f},{y - 8 * s:.1f}" fill="#04101b"/>')
     body.append("".join(pines))
     body.append(f'<path d="{d}" fill="none" stroke="#e6fbff" stroke-opacity=".75" stroke-width="2.4"/>')
-    thick = [max(18, s * depth) for _, s in shares]
-    scale = depth / sum(thick) if thick else 1
-    thick = [h * scale for h in thick]
+    small = sum(s for n, s in shares if s < .015 or n == "Other")
+    shares = [(n, s) for n, s in shares if s >= .015 and n != "Other"] + ([("Other", small)] if small else [])
+    floor = 26
+    spare = depth - floor * len(shares)
+    thick = [floor + spare * s for _, s in shares]
     y = surface + 4
     prev = [(x, py + 4) for x, py in line]
     for i, ((name, share), h) in enumerate(zip(shares, thick)):

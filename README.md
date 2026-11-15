@@ -193,7 +193,7 @@ Tickets route to the right staff member automatically. ETAs come from simulating
 **ShopKart**<br>
 <sub>E-COMMERCE · with Apurva Patil</sub>
 
-![React](https://img.shields.io/badge/React-08141F?style=flat-square&logo=react&logoColor=61DAFB) ![Express](https://img.shields.io/badge/Express-08141F?style=flat-square&logo=express&logoColor=FFFFFF) ![MongoDB](https://img.shields.io/badge/MongoDB-08141F?style=flat-square&logo=mongodb&logoColor=47A248) ![Razorpay](https://img.shields.io/badge/Razorpay-08141F?style=flat-square&logo=razorpay&logoColor=0C2451)
+![React](https://img.shields.io/badge/React-08141F?style=flat-square&logo=react&logoColor=61DAFB) ![Express](https://img.shields.io/badge/Express-08141F?style=flat-square&logo=express&logoColor=FFFFFF) ![MongoDB](https://img.shields.io/badge/MongoDB-08141F?style=flat-square&logo=mongodb&logoColor=47A248) ![Razorpay](https://img.shields.io/badge/Razorpay-08141F?style=flat-square&logo=razorpay&logoColor=3395FF)
 
 A store whose checkout **never trusts the browser with a price**.
 

@@ -98,7 +98,7 @@
     },
     {
       "repo": "Shopkart", "name": "ShopKart", "tag": "E-COMMERCE · with Apurva Patil",
-      "badges": [["React", "react", "61DAFB"], ["Express", "express", "FFFFFF"], ["MongoDB", "mongodb", "47A248"], ["Razorpay", "razorpay", "0C2451"]],
+      "badges": [["React", "react", "61DAFB"], ["Express", "express", "FFFFFF"], ["MongoDB", "mongodb", "47A248"], ["Razorpay", "razorpay", "3395FF"]],
       "lede": "A store whose checkout **never trusts the browser with a price**.",
       "notes": "The server rebuilds every order from database prices and live stock, and an order is marked paid only after Razorpay's signature checks out with HMAC-SHA256 on the server.",
       "claims": [
