@@ -5,7 +5,7 @@ on:
     # Off the hour: scheduled runs at :00 are the ones GitHub delays most
     - cron: "17 */6 * * *"
   push:
-    branches: [main, claude/ecstatic-hawking-uvnd4a]
+    branches: [main]
     paths: ["data/aurora.json", "data/README.template.md", "profile.json", "scripts/**", "tests/test_aurora.py", ".github/workflows/signal.yml"]
   workflow_dispatch:
 
