@@ -191,6 +191,7 @@ def main() -> int:
                 commits = activity.from_git(dirs, emails) if emails else []
             else:
                 commits = activity.from_github(spec["owner"])
+            commits = [c for c in commits if c["repo"] not in spec.get("exclude", [])]
             if commits:
                 ev["rhythm"] = data.rhythm(commits)
             elif previous.get("rhythm"):
