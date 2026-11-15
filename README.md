@@ -59,7 +59,7 @@ Nobody, me included, can quietly change what this page says about my code.
 | F2 | Each stage's stdin is the previous stage's pipe, rewired with dup2(). | [`main.cpp:369`](https://github.com/Aditya2514/codecrafters-shell-cpp/blob/c4adda13d0f55a81f540b209b496a4cb087a1e1d/src/main.cpp#L369) | **VERIFIED** |
 | F3 | Quoting is parsed by its own state machine for single and double quotes. | [`main.cpp:168`](https://github.com/Aditya2514/codecrafters-shell-cpp/blob/c4adda13d0f55a81f540b209b496a4cb087a1e1d/src/main.cpp#L168) | **VERIFIED** |
 
-<sub>Audited 15 NOV 2026 16:06Z · 15 of 15 claims verified · each link is pinned to the commit that was read · rerun every six hours by <a href="scripts/build_proof.py"><code>scripts/build_proof.py</code></a>.</sub>
+<sub>Audited 15 NOV 2026 16:10Z · 15 of 15 claims verified · each link is pinned to the commit that was read · rerun every six hours by <a href="scripts/build_proof.py"><code>scripts/build_proof.py</code></a>.</sub>
 
 <!-- LEDGER:END -->
 
