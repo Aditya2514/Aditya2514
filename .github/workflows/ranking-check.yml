@@ -1,0 +1,54 @@
+name: ranking-check (temporary)
+
+# One-off: score a GitHub profile with kartikeyajay2006/github-ranking, pinned to a reviewed commit.
+on:
+  push:
+    branches: [claude/ecstatic-hawking-uvnd4a]
+    paths: [".github/workflows/ranking-check.yml"]
+
+permissions:
+  contents: read
+
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.13
+      - name: Fetch tool at pinned commit
+        run: |
+          git init gr && cd gr
+          git remote add origin https://github.com/kartikeyajay2006/github-ranking
+          git fetch --depth=1 origin 9b4adf3d84124d90e775ae17dc1867f9bd9236b3
+          git checkout FETCH_HEAD
+      - name: Install
+        working-directory: gr
+        run: npm ci --ignore-scripts
+      - name: Score
+        working-directory: gr
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          BACKUP_DISABLED: "1"
+          LOGIN: Aditya2514
+        run: |
+          cat > tests/dump.live.test.ts <<'EOF'
+          import { test } from "vitest";
+          import { collectProfile } from "@/lib/github/collect";
+          import { assess } from "@/lib/scoring/individual";
+          test("dump", { timeout: 900000 }, async () => {
+            const { evidence, notes } = await collectProfile(process.env.LOGIN!);
+            const a: any = assess(evidence, Date.parse(evidence.fetchedAt), notes);
+            const out: string[] = [];
+            out.push(`TOTAL ${a.total}  BAND ${a.band}  ${a.orientation ? "ORIENTATION " + JSON.stringify(a.orientation) : ""}`);
+            for (const d of a.dimensions) {
+              out.push(`DIM ${d.label} | weight ${d.weight} | score ${d.score}`);
+              for (const f of d.factors) out.push(`  - ${f.label}: value ${Math.round(Math.max(0, Math.min(1, f.value)) * 100)}% x weight ${f.weight} | ${f.evidence}`);
+            }
+            for (const r of (a.repos ?? []).slice(0, 8)) out.push(`REPO ${r.nameWithOwner} | quality ${r.quality} | portfolioWeight ${r.portfolioWeight} | signals ${JSON.stringify(r.signals)}`);
+            if (notes?.length) out.push(`NOTES ${JSON.stringify(notes)}`);
+            console.log("=====RESULT=====\n" + out.join("\n") + "\n=====END=====");
+          });
+          EOF
+          npx vitest run tests/dump.live.test.ts --reporter=verbose
