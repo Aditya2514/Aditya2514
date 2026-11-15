@@ -1,5 +1,5 @@
 {
-  "audited_at": "2026-11-15T16:06:53Z",
+  "audited_at": "2026-11-15T16:15:39Z",
   "repos": {
     "LexGuard": {
       "sha": "2e6cb460aa9efabc2a51d3aa3c7aaf02849169a5",
@@ -24,6 +24,14 @@
     "codecrafters-shell-cpp": {
       "sha": "c4adda13d0f55a81f540b209b496a4cb087a1e1d",
       "branch": "main"
+    },
+    "Shopkart": {
+      "sha": "3a909ed607c55817e66ba5d623886d44ea2e0460",
+      "branch": "main"
+    },
+    "Meta_OpenEnv": {
+      "sha": "328688b03ec3310cf8498f83ad6fd8dd7e1b00f6",
+      "branch": "main"
     }
   },
   "claims": [
@@ -43,6 +51,12 @@
       "id": "A3",
       "status": "verified",
       "line": 134,
+      "sha": "2e6cb460aa9efabc2a51d3aa3c7aaf02849169a5"
+    },
+    {
+      "id": "A4",
+      "status": "verified",
+      "line": 8,
       "sha": "2e6cb460aa9efabc2a51d3aa3c7aaf02849169a5"
     },
     {
@@ -73,6 +87,18 @@
       "id": "C2",
       "status": "verified",
       "line": 28,
+      "sha": "fde4e09283833cd25ec9e58777d0f6d74fa33bce"
+    },
+    {
+      "id": "C3",
+      "status": "verified",
+      "line": 205,
+      "sha": "fde4e09283833cd25ec9e58777d0f6d74fa33bce"
+    },
+    {
+      "id": "C4",
+      "status": "verified",
+      "line": 98,
       "sha": "fde4e09283833cd25ec9e58777d0f6d74fa33bce"
     },
     {
@@ -116,6 +142,128 @@
       "status": "verified",
       "line": 168,
       "sha": "c4adda13d0f55a81f540b209b496a4cb087a1e1d"
+    },
+    {
+      "id": "G1",
+      "status": "verified",
+      "line": 71,
+      "sha": "3a909ed607c55817e66ba5d623886d44ea2e0460"
+    },
+    {
+      "id": "G2",
+      "status": "verified",
+      "line": 171,
+      "sha": "3a909ed607c55817e66ba5d623886d44ea2e0460"
+    },
+    {
+      "id": "H1",
+      "status": "verified",
+      "line": 106,
+      "sha": "328688b03ec3310cf8498f83ad6fd8dd7e1b00f6"
+    },
+    {
+      "id": "H2",
+      "status": "verified",
+      "line": 190,
+      "sha": "328688b03ec3310cf8498f83ad6fd8dd7e1b00f6"
+    }
+  ],
+  "recent": [
+    {
+      "sha": "9c978ace415069e1f1f8b07e55d0869ec28b1260",
+      "date": "2026-10-27",
+      "subject": "docs: make the roadmap visual with three animated diagrams",
+      "repo": "HostelDesk"
+    },
+    {
+      "sha": "69b943303620719421c571856ace0a826acbf1e5",
+      "date": "2026-10-27",
+      "subject": "docs: add roadmap of planned ML/AI features",
+      "repo": "HostelDesk"
+    },
+    {
+      "sha": "21e6e432e8653851d9680c458f8814e7e942b6e9",
+      "date": "2026-10-22",
+      "subject": "fix(switcher): review findings \u2014 Ctrl+C, git config execution, robustness",
+      "repo": "Pikina"
+    },
+    {
+      "sha": "a1b73fa721aaa649689d0b1412fa3d13e56c6f09",
+      "date": "2026-10-22",
+      "subject": "feat: project switcher (\"work on <project>\") as the built-in workspace plugin",
+      "repo": "Pikina"
+    },
+    {
+      "sha": "c6c3dbb3c883da1731f3ecaac6666d49ff75bf2e",
+      "date": "2026-10-21",
+      "subject": "docs: separate what Resilion does today from what is planned",
+      "repo": "Resilion"
+    },
+    {
+      "sha": "fde4e09283833cd25ec9e58777d0f6d74fa33bce",
+      "date": "2026-10-21",
+      "subject": "chore: remove unreferenced AI-generated concept images",
+      "repo": "Noesis"
+    },
+    {
+      "sha": "9a577ee07c7c357d248b7fc14ad0b2b217ffd6e7",
+      "date": "2026-10-21",
+      "subject": "docs: match the README to the code",
+      "repo": "Noesis"
+    },
+    {
+      "sha": "2e6cb460aa9efabc2a51d3aa3c7aaf02849169a5",
+      "date": "2026-10-21",
+      "subject": "docs: align the README with the code",
+      "repo": "LexGuard"
+    },
+    {
+      "sha": "51ab388ddf1ef0df12add698b68840c220b4716c",
+      "date": "2026-10-21",
+      "subject": "chore: move one-off dev scripts and fixtures out of backend/ into scripts/dev",
+      "repo": "LexGuard"
+    },
+    {
+      "sha": "c4adda13d0f55a81f540b209b496a4cb087a1e1d",
+      "date": "2026-10-16",
+      "subject": "docs: replace the CodeCrafters template README with what this shell does",
+      "repo": "codecrafters-shell-cpp"
+    },
+    {
+      "sha": "c2f6d4be3bfa2d42efcdf9350937207c62b6638e",
+      "date": "2026-10-16",
+      "subject": "docs: update clone instructions for the renamed repo",
+      "repo": "Resilion"
+    },
+    {
+      "sha": "328688b03ec3310cf8498f83ad6fd8dd7e1b00f6",
+      "date": "2026-10-16",
+      "subject": "ci: run the 110-test suite on every push and badge the real result",
+      "repo": "Meta_OpenEnv"
+    },
+    {
+      "sha": "3a909ed607c55817e66ba5d623886d44ea2e0460",
+      "date": "2026-10-15",
+      "subject": "fix: invoke connectDB in middleware to ensure MongoDB connection in Vercel serverless mode",
+      "repo": "Shopkart"
+    },
+    {
+      "sha": "8f898b6d77f444cad423e8c9d6cb4e14242676c2",
+      "date": "2026-10-15",
+      "subject": "fix: make api.js dynamically route to /api on Vercel and optimize MongoDB connection timeout",
+      "repo": "Shopkart"
+    },
+    {
+      "sha": "9259738f0a4410c24ff3c80108141de9eb1c94a9",
+      "date": "2026-08-22",
+      "subject": "docs: update README with human-centric UI visuals, system architecture diagrams, and mathematical specifications",
+      "repo": "Meta_OpenEnv"
+    },
+    {
+      "sha": "2490c4ab16e4be21ebd883e87629331f8f6acc87",
+      "date": "2026-06-18",
+      "subject": "codecrafters submit [skip ci]",
+      "repo": "codecrafters-shell-cpp"
     }
   ]
 }

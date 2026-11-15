@@ -47,7 +47,9 @@ class ProofTest(unittest.TestCase):
         files[first["repo"]][first["claims"][0]["path"]] = "rewritten\n"
         state = proof.check(SPEC, {}, opener_for(files))
         self.assertEqual(state["claims"][0]["status"], "stale")
-        self.assertIn("STALE", proof.ledger(SPEC, state))
+        block = proof.ledger(SPEC, state)
+        self.assertIn("STALE", block)
+        self.assertIn("`A1` (stale)", block)
 
     def test_unreachable_repo_carries_last_result(self):
         good = proof.check(SPEC, {}, opener_for(all_present()))
@@ -71,6 +73,7 @@ class ProofTest(unittest.TestCase):
         for mode in ("dark", "light"):
             for mobile in (False, True):
                 ET.fromstring(proof.hero(SPEC, state, mode, mobile))
+                ET.fromstring(proof.pipeline(SPEC, state, mode, mobile))
         for ex in SPEC["exhibits"]:
             ET.fromstring(proof.tag(ex, state))
 

@@ -75,6 +75,11 @@ class RemoteRepo:
                 return None
             raise
 
+    def recent(self, n: int = 2) -> list[dict]:
+        rows = _get(f"{API}/repos/{self.owner}/{self.name}/commits?sha={self.sha}&per_page=10")
+        return [{"sha": r["sha"], "date": r["commit"]["committer"]["date"][:10],
+                 "subject": r["commit"]["message"].splitlines()[0]} for r in rows if len(r.get("parents", [])) <= 1][:n]
+
 
 class LocalRepo:
     """A local clone, for previews without network access."""
@@ -89,6 +94,11 @@ class LocalRepo:
         file = self.dir / path
         return file.read_text(errors="replace") if file.is_file() else None
 
+    def recent(self, n: int = 2) -> list[dict]:
+        out = subprocess.run(["git", "-C", str(self.dir), "log", f"-{n}", "--no-merges", "--format=%H%x09%cs%x09%s", self.sha],
+                             capture_output=True, text=True, check=True).stdout
+        return [dict(zip(("sha", "date", "subject"), line.split("\t", 2))) for line in out.splitlines() if line]
+
 
 def find_line(text: str | None, needle: str) -> int | None:
     if text is None:
@@ -102,7 +112,8 @@ def find_line(text: str | None, needle: str) -> int | None:
 def check(spec: dict, previous: dict, open_repo) -> dict:
     owner = spec["owner"]
     old = {c["id"]: c for c in previous.get("claims", [])}
-    claims, repos = [], {}
+    claims, repos, recent = [], {}, []
+    old_recent = [r for r in previous.get("recent", [])]
     for ex in spec["exhibits"]:
         try:
             repo = open_repo(owner, ex["repo"])
@@ -112,6 +123,13 @@ def check(spec: dict, previous: dict, open_repo) -> dict:
             repo = None
             if ex["repo"] in previous.get("repos", {}):
                 repos[ex["repo"]] = previous["repos"][ex["repo"]]
+        try:
+            if repo is None:
+                raise RuntimeError("unreachable")
+            recent += [{**c, "repo": ex["repo"]} for c in repo.recent()]
+        except Exception as err:
+            print(f"warn: {ex['repo']} history: {err}", file=sys.stderr)
+            recent += [r for r in old_recent if r.get("repo") == ex["repo"]]
         for i, claim in enumerate(ex["claims"], 1):
             cid = f"{ex['id']}{i}"
             if repo is None:
@@ -128,7 +146,8 @@ def check(spec: dict, previous: dict, open_repo) -> dict:
             line = find_line(text, claim["needle"])
             claims.append({"id": cid, "status": "verified" if line else "stale", "line": line, "sha": repo.sha})
     now = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
-    return {"audited_at": now, "repos": repos, "claims": claims}
+    recent.sort(key=lambda r: (r["date"], r["repo"]), reverse=True)
+    return {"audited_at": now, "repos": repos, "claims": claims, "recent": recent}
 
 
 # ----------------------------------------------------------------------------------------------- helpers
@@ -375,14 +394,80 @@ def tag(ex: dict, state: dict) -> str:
 
 # ----------------------------------------------------------------------------------------------- README ledger
 
+# ----------------------------------------------------------------------------------------------- how-it-works
+
+def pipeline(spec: dict, state: dict, mode: str, mobile: bool) -> str:
+    t = DESK[mode]
+    total = counts(state)["total"]
+    steps = [
+        ("01", "Claim", f"{total} claims, each naming a file and the exact code it rests on."),
+        ("02", "Read", "Each repo at its latest commit, through the GitHub API."),
+        ("03", "Match", "Find the code. Found means a line number; gone means stale."),
+        ("04", "Stamp", "VERIFIED or STALE, with a link pinned to that commit."),
+        ("05", "Redraw", "Receipt, tags and this page, every six hours."),
+    ]
+    css = ('<style>.flow{stroke-dasharray:5 6;animation:flow 1.2s linear infinite}'
+           '@keyframes flow{to{stroke-dashoffset:-22}}@media (prefers-reduced-motion: reduce){.flow{animation:none}}</style>')
+    out = []
+    if mobile:
+        W, cw, ch, gap, x = 600, 520, 92, 34, 40
+        H = 40 + len(steps) * ch + (len(steps) - 1) * gap + 40
+        for i, (num, title, body) in enumerate(steps):
+            y = 40 + i * (ch + gap)
+            out.append(f'<rect x="{x}" y="{y}" width="{cw}" height="{ch}" rx="6" fill="{PAPER}" stroke="{PAPER_EDGE}"/>')
+            out.append(f'<text x="{x + 22}" y="{y + 36}" font-family="{MONO}" font-size="15" font-weight="700" fill="{RED}">{num}</text>')
+            out.append(f'<text x="{x + 66}" y="{y + 38}" font-family="{SERIF}" font-size="26" fill="{INK}">{title}</text>')
+            for j, line in enumerate(wrap(body, 52)[:2]):
+                out.append(f'<text x="{x + 66}" y="{y + 62 + j * 19}" font-family="{SANS}" font-size="15" fill="{INK_SOFT}">{escape(line)}</text>')
+            if i < len(steps) - 1:
+                out.append(f'<line class="flow" x1="{W / 2}" y1="{y + ch + 4}" x2="{W / 2}" y2="{y + ch + gap - 6}" stroke="{RED}" stroke-width="2.5"/>')
+                out.append(f'<path d="M{W / 2 - 6},{y + ch + gap - 11} L{W / 2},{y + ch + gap - 3} L{W / 2 + 6},{y + ch + gap - 11}" fill="none" stroke="{RED}" stroke-width="2.5"/>')
+    else:
+        W, H, cw, ch, y = 1000, 214, 168, 150, 32
+        gap = (W - 48 - len(steps) * cw) / (len(steps) - 1)
+        for i, (num, title, body) in enumerate(steps):
+            x = 24 + i * (cw + gap)
+            out.append(f'<rect x="{x}" y="{y}" width="{cw}" height="{ch}" rx="6" fill="{PAPER}" stroke="{PAPER_EDGE}"/>')
+            out.append(f'<text x="{x + 16}" y="{y + 28}" font-family="{MONO}" font-size="13" font-weight="700" letter-spacing="1" fill="{RED}">{num}</text>')
+            out.append(f'<text x="{x + 16}" y="{y + 62}" font-family="{SERIF}" font-size="25" fill="{INK}">{title}</text>')
+            for j, line in enumerate(wrap(body, 22)[:4]):
+                out.append(f'<text x="{x + 16}" y="{y + 88 + j * 17}" font-family="{SANS}" font-size="13" fill="{INK_SOFT}">{escape(line)}</text>')
+            if i < len(steps) - 1:
+                ax, bx, my = x + cw + 5, x + cw + gap - 5, y + ch / 2
+                out.append(f'<line class="flow" x1="{ax}" y1="{my}" x2="{bx - 3}" y2="{my}" stroke="{RED}" stroke-width="2.5"/>')
+                out.append(f'<path d="M{bx - 9},{my - 6} L{bx - 1},{my} L{bx - 9},{my + 6}" fill="none" stroke="{RED}" stroke-width="2.5"/>')
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" '
+            f'aria-label="How the audit works: claim, read, match, stamp, redraw">{css}'
+            f'<rect width="{W}" height="{H}" rx="14" fill="{t["bg"]}"/>' + "".join(out) + "</svg>")
+
+
 def md_cell(text: str) -> str:
     return escape(text).replace("|", "&#124;").replace("\n", " ")
+
+
+def claim_url(owner: str, ex: dict, claim: dict, result: dict) -> str | None:
+    if result.get("status") != "verified":
+        return None
+    return f"https://github.com/{owner}/{ex['repo']}/blob/{result['sha']}/{claim['path']}#L{result['line']}"
 
 
 def ledger(spec: dict, state: dict) -> str:
     owner = spec["owner"]
     by_id = {c["id"]: c for c in state["claims"]}
-    out = [START, ""]
+    index = {f"{ex['id']}{i}": (ex, claim) for ex in spec["exhibits"] for i, claim in enumerate(ex["claims"], 1)}
+    names = {ex["repo"]: ex["name"] for ex in spec["exhibits"]}
+    c = counts(state)
+
+    def ref(cid: str) -> str:
+        ex, claim = index[cid]
+        url = claim_url(owner, ex, claim, by_id.get(cid, {}))
+        return f"[`{cid}`]({url})" if url else f"`{cid}` (stale)"
+
+    def repo_link(repo: str) -> str:
+        return f"[{names.get(repo, repo)}](https://github.com/{owner}/{repo})"
+
+    out = [START, "", "## Exhibits", "",
+           f"{len(spec['exhibits'])} projects, {c['total']} claims. Each tag opens the repository; each claim ID opens the line.", ""]
     cards = [
         f'<a href="https://github.com/{owner}/{ex["repo"]}"><img src="assets/proof/exhibit-{ex["id"].lower()}.svg" width="49%" '
         f'alt="Exhibit {ex["id"]}: {md_cell(ex["name"])}. {md_cell(ex["pitch"])}" /></a>'
@@ -390,26 +475,67 @@ def ledger(spec: dict, state: dict) -> str:
     ]
     for i in range(0, len(cards), 2):
         out += ['<p align="center">', *cards[i:i + 2], "</p>", ""]
-    out += ["### The ledger", "", "| # | Claim | Evidence | Status |", "| :-- | :-- | :-- | :-- |"]
+
+    # Case files: the story of each exhibit, collapsed so the page stays scannable.
+    out += ["## Case files", "", "Open any file for the problem, the approach, what was hard and what is unfinished.", ""]
     for ex in spec["exhibits"]:
-        for i, claim in enumerate(ex["claims"], 1):
-            result = by_id.get(f"{ex['id']}{i}", {"status": "unchecked"})
-            name = claim["path"].rsplit("/", 1)[-1]
-            if result["status"] == "verified":
-                url = f"https://github.com/{owner}/{ex['repo']}/blob/{result['sha']}/{claim['path']}#L{result['line']}"
-                evidence, status = f"[`{name}:{result['line']}`]({url})", "**VERIFIED**"
-            elif result["status"] == "stale":
-                evidence = f"`{name}` at [`{result['sha'][:7]}`](https://github.com/{owner}/{ex['repo']}/tree/{result['sha']})"
-                status = "**STALE**: the code moved or changed"
-            else:
-                evidence, status = f"`{name}`", "not checked yet"
-            if result.get("carried"):
-                status += " <sub>(last known; repo unreachable at audit)</sub>"
-            out.append(f"| {ex['id']}{i} | {md_cell(claim['text'])} | {evidence} | {status} |")
-    c = counts(state)
+        ids = [f"{ex['id']}{i}" for i in range(1, len(ex["claims"]) + 1)]
+        ok = sum(by_id.get(i, {}).get("status") == "verified" for i in ids)
+        out += ["<details>", f"<summary><b>Exhibit {ex['id']} · {escape(ex['name'])}</b> &nbsp;·&nbsp; {escape(ex['pitch'])} "
+                f"&nbsp;<code>{ok}/{len(ids)} verified</code></summary>", "",
+                f"**The problem.** {ex['problem']}", "", f"**The approach.** {ex['approach']}", ""]
+        if ex.get("hard"):
+            out += ["**What was hard.**", ""] + [f"- {h}" for h in ex["hard"]] + [""]
+        out += ["**Claims.**", ""]
+        for cid in ids:
+            out.append(f"- {ref(cid)} {index[cid][1]['text']}")
+        out += ["", f"**Not done yet.** {ex['limits']}", "",
+                f"<sub>{escape(ex['stack'])} · [Open the repository →](https://github.com/{owner}/{ex['repo']})</sub>", "",
+                "</details>", ""]
+
+    # The ledger: every claim in one table.
+    out += ["## The ledger", "", "| # | Claim | Evidence | Status |", "| :-- | :-- | :-- | :-- |"]
+    for cid, (ex, claim) in index.items():
+        result = by_id.get(cid, {"status": "unchecked"})
+        name = claim["path"].rsplit("/", 1)[-1]
+        url = claim_url(owner, ex, claim, result)
+        if url:
+            evidence, status = f"[`{name}:{result['line']}`]({url})", "**VERIFIED**"
+        elif result["status"] == "stale":
+            evidence = f"`{name}` at [`{result['sha'][:7]}`](https://github.com/{owner}/{ex['repo']}/tree/{result['sha']})"
+            status = "**STALE**: the code moved or changed"
+        else:
+            evidence, status = f"`{name}`", "not checked yet"
+        if result.get("carried"):
+            status += " <sub>(last known; repo unreachable at audit)</sub>"
+        out.append(f"| {cid} | {md_cell(claim['text'])} | {evidence} | {status} |")
     out += ["", f"<sub>Audited {stamp_time(state['audited_at'])} · {c['verified']} of {c['total']} claims verified · "
-            "each link is pinned to the commit that was read · rerun every six hours by "
-            "<a href=\"scripts/build_proof.py\"><code>scripts/build_proof.py</code></a>.</sub>", "", END]
+            "each link is pinned to the commit that was read.</sub>", ""]
+
+    # Principles, each backed by claims above.
+    out += ["## Principles, with receipts", "", "Opinions are cheap, so each one links to the code where I acted on it.", ""]
+    for n, p in enumerate(spec.get("principles", []), 1):
+        out += [f"**{n}. {p['title']}** {p['body']} &nbsp;→ {' · '.join(ref(cid) for cid in p['claims'])}", ""]
+
+    # Latest receipts: recent commits across the exhibits.
+    if state.get("recent"):
+        out += ["## Latest receipts", "", "The most recent changes across the exhibits, read during the last audit.", "",
+                "| Date | Project | Change |", "| :-- | :-- | :-- |"]
+        for r in state["recent"][:10]:
+            subject = md_cell(r["subject"][:96] + ("…" if len(r["subject"]) > 96 else ""))
+            out.append(f"| {r['date'].replace('-', '\u2011')} | {repo_link(r['repo'])} | [{subject}](https://github.com/{owner}/{r['repo']}/commit/{r['sha']}) |")
+        out.append("")
+
+    # Honesty section, generated from the same file so it can't drift from the case files.
+    out += ["## What isn't done yet", "", "A profile that lists only wins is hiding something. Here is what is unfinished or easy to overstate:", ""]
+    out += [f"- **{escape(ex['name'])}:** {ex['limits']}" for ex in spec["exhibits"]] + [""]
+
+    if spec.get("toolbox"):
+        out += ["## Toolbox, with receipts", "", "Only tools I have shipped something with, and where.", "",
+                "| Tool | Used in |", "| :-- | :-- |"]
+        out += [f"| {md_cell(t['tool'])} | {' · '.join(repo_link(r) for r in t['where'])} |" for t in spec["toolbox"]]
+        out.append("")
+    out.append(END)
     return "\n".join(out)
 
 
@@ -426,6 +552,8 @@ def render(spec: dict, state: dict) -> None:
     for mode in ("dark", "light"):
         (ART / f"receipt-{mode}.svg").write_text(hero(spec, state, mode, mobile=False))
         (ART / f"receipt-{mode}-mobile.svg").write_text(hero(spec, state, mode, mobile=True))
+        (ART / f"pipeline-{mode}.svg").write_text(pipeline(spec, state, mode, mobile=False))
+        (ART / f"pipeline-{mode}-mobile.svg").write_text(pipeline(spec, state, mode, mobile=True))
     for ex in spec["exhibits"]:
         (ART / f"exhibit-{ex['id'].lower()}.svg").write_text(tag(ex, state))
     README.write_text(replace_block(README.read_text(), ledger(spec, state)))
