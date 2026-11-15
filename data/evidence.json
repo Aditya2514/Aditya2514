@@ -1,9 +1,11 @@
 {
- "generated_at": "2026-11-15T16:46:40Z",
+ "generated_at": "2026-11-15T16:56:58Z",
  "repos": {
   "LexGuard": "2e6cb460aa9efabc2a51d3aa3c7aaf02849169a5",
   "Pikina": "4bcbcec85180db750df0844f2a55d34b2b016d21",
   "Noesis": "fde4e09283833cd25ec9e58777d0f6d74fa33bce",
+  "Mobius": "fec1c089ead7dc6c91479c97c859c7f334f288ed",
+  "BenchShield": "d1beb1b0ce341d6aac0860adc49e549554ab36b1",
   "Resilion": "c6c3dbb3c883da1731f3ecaac6666d49ff75bf2e",
   "HostelDesk": "9c978ace415069e1f1f8b07e55d0869ec28b1260",
   "Shopkart": "3a909ed607c55817e66ba5d623886d44ea2e0460",
@@ -46,6 +48,34 @@
   "Noesis#3": {
    "sha": "fde4e09283833cd25ec9e58777d0f6d74fa33bce",
    "line": 205
+  },
+  "Mobius#1": {
+   "sha": "fec1c089ead7dc6c91479c97c859c7f334f288ed",
+   "line": 230
+  },
+  "Mobius#2": {
+   "sha": "fec1c089ead7dc6c91479c97c859c7f334f288ed",
+   "line": 80
+  },
+  "Mobius#3": {
+   "sha": "fec1c089ead7dc6c91479c97c859c7f334f288ed",
+   "line": 55
+  },
+  "Mobius#4": {
+   "sha": "fec1c089ead7dc6c91479c97c859c7f334f288ed",
+   "line": 164
+  },
+  "BenchShield#1": {
+   "sha": "d1beb1b0ce341d6aac0860adc49e549554ab36b1",
+   "line": 5
+  },
+  "BenchShield#2": {
+   "sha": "d1beb1b0ce341d6aac0860adc49e549554ab36b1",
+   "line": 1
+  },
+  "BenchShield#3": {
+   "sha": "d1beb1b0ce341d6aac0860adc49e549554ab36b1",
+   "line": 104
   },
   "Resilion#1": {
    "sha": "c6c3dbb3c883da1731f3ecaac6666d49ff75bf2e",
@@ -97,12 +127,50 @@
   "Pikina": "23",
   "Noesis": "4",
   "Resilion": "News \u2192 graph",
-  "HostelDesk": "27",
   "Shopkart": "HMAC",
   "codecrafters-shell-cpp": "fork \u00b7 pipe",
-  "Meta_OpenEnv": "3"
+  "Meta_OpenEnv": "3",
+  "Mobius": "98",
+  "BenchShield": "117",
+  "HostelDesk": "201"
  },
  "recent": [
+  {
+   "sha": "d68ffd16ee98e41d7f764049072280c68e564c10",
+   "date": "2026-11-01",
+   "subject": "fix: stop preview redaction from revealing gold answers; merge 02eb16d",
+   "repo": "BenchShield"
+  },
+  {
+   "sha": "636574515f596cf471b1515b9da4cb4b0fcb956a",
+   "date": "2026-11-01",
+   "subject": "feat(frontend): experiments screen for backend phase B4",
+   "repo": "BenchShield"
+  },
+  {
+   "sha": "2a738d7d35d97f00001f5df18380289deb76504b",
+   "date": "2026-11-01",
+   "subject": "test(e2e): add full-stack browser test against live backend",
+   "repo": "BenchShield"
+  },
+  {
+   "sha": "7ebafc52fc0558579e1f490a325ab9fae8bd86ea",
+   "date": "2026-10-31",
+   "subject": "fix(client): consistent Indian money and number formatting, compact KPI cards with exact amount on hover, no sign on zero amounts",
+   "repo": "Mobius"
+  },
+  {
+   "sha": "5ef990f2cc107b479b4b2b6a6c59fd812a242a83",
+   "date": "2026-10-31",
+   "subject": "style(client): dark glass theme matching the login screen across all app and portal pages",
+   "repo": "Mobius"
+  },
+  {
+   "sha": "396f32565e07c5efb5a23677bfde6bf2dd58eaa7",
+   "date": "2026-10-31",
+   "subject": "fix(client): template list shows real line count",
+   "repo": "Mobius"
+  },
   {
    "sha": "9c978ace415069e1f1f8b07e55d0869ec28b1260",
    "date": "2026-10-27",
@@ -247,5 +315,171 @@
    "subject": "Fix: Clamp scores and rewards to strictly open interval (0, 1)",
    "repo": "Meta_OpenEnv"
   }
- ]
+ ],
+ "signals": {
+  "BenchShield": {
+   "tests": 117,
+   "test_files": 20,
+   "ci": 0,
+   "docker": true,
+   "license": false,
+   "adrs": 7,
+   "docs": 16,
+   "readme_kb": 21
+  },
+  "FinancePro": {
+   "tests": 0,
+   "test_files": 0,
+   "ci": 0,
+   "docker": false,
+   "license": false,
+   "adrs": 0,
+   "docs": 0,
+   "readme_kb": 3
+  },
+  "Fintrac": {
+   "tests": 0,
+   "test_files": 0,
+   "ci": 0,
+   "docker": false,
+   "license": false,
+   "adrs": 0,
+   "docs": 0,
+   "readme_kb": 12
+  },
+  "HostelDesk": {
+   "tests": 201,
+   "test_files": 27,
+   "ci": 0,
+   "docker": false,
+   "license": false,
+   "adrs": 0,
+   "docs": 3,
+   "readme_kb": 32
+  },
+  "LexGuard": {
+   "tests": 33,
+   "test_files": 6,
+   "ci": 2,
+   "docker": true,
+   "license": true,
+   "adrs": 0,
+   "docs": 0,
+   "readme_kb": 21
+  },
+  "Meta_OpenEnv": {
+   "tests": 0,
+   "test_files": 0,
+   "ci": 1,
+   "docker": true,
+   "license": false,
+   "adrs": 0,
+   "docs": 0,
+   "readme_kb": 14
+  },
+  "Mobius": {
+   "tests": 98,
+   "test_files": 13,
+   "ci": 1,
+   "docker": true,
+   "license": false,
+   "adrs": 0,
+   "docs": 8,
+   "readme_kb": 30
+  },
+  "Naukri": {
+   "tests": 0,
+   "test_files": 0,
+   "ci": 0,
+   "docker": false,
+   "license": false,
+   "adrs": 0,
+   "docs": 0,
+   "readme_kb": 1
+  },
+  "Noesis": {
+   "tests": 3,
+   "test_files": 1,
+   "ci": 0,
+   "docker": false,
+   "license": false,
+   "adrs": 0,
+   "docs": 0,
+   "readme_kb": 32
+  },
+  "Pikina": {
+   "tests": 255,
+   "test_files": 16,
+   "ci": 1,
+   "docker": false,
+   "license": true,
+   "adrs": 0,
+   "docs": 7,
+   "readme_kb": 26
+  },
+  "Resilion": {
+   "tests": 0,
+   "test_files": 0,
+   "ci": 0,
+   "docker": false,
+   "license": true,
+   "adrs": 0,
+   "docs": 0,
+   "readme_kb": 17
+  },
+  "Shopkart": {
+   "tests": 0,
+   "test_files": 0,
+   "ci": 0,
+   "docker": false,
+   "license": false,
+   "adrs": 0,
+   "docs": 0,
+   "readme_kb": 27
+  },
+  "Simple-Sounboard": {
+   "tests": 0,
+   "test_files": 0,
+   "ci": 0,
+   "docker": false,
+   "license": false,
+   "adrs": 0,
+   "docs": 0,
+   "readme_kb": 0
+  },
+  "Vidya": {
+   "tests": 1,
+   "test_files": 1,
+   "ci": 0,
+   "docker": false,
+   "license": false,
+   "adrs": 0,
+   "docs": 0,
+   "readme_kb": 4
+  },
+  "codecrafters-shell-cpp": {
+   "tests": 0,
+   "test_files": 0,
+   "ci": 0,
+   "docker": false,
+   "license": false,
+   "adrs": 0,
+   "docs": 0,
+   "readme_kb": 1
+  },
+  "portfolio": {
+   "tests": 0,
+   "test_files": 0,
+   "ci": 0,
+   "docker": false,
+   "license": false,
+   "adrs": 0,
+   "docs": 0,
+   "readme_kb": 0
+  }
+ },
+ "live": {
+  "HostelDesk": null,
+  "Naukri": null
+ }
 }

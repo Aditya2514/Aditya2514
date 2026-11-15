@@ -62,8 +62,15 @@ def cards_html(spec: dict, ev: dict) -> str:
     rows, cells = [], []
     for card in spec["cards"]:
         links = code_links(spec, ev, card)
+        sig = ev.get("signals", {}).get(card["repo"], {})
+        chips = [f"`{sig['tests']} tests`" if sig.get("tests") else "", "`CI`" if sig.get("ci") else "",
+                 "`Docker`" if sig.get("docker") else "", f"`{sig['adrs']} ADRs`" if sig.get("adrs") else ""]
+        live = spec.get("live", {}).get(card["repo"])
+        if live and ev.get("live", {}).get(card["repo"]):
+            chips.append(f"**[● live ↗]({live})**")
+        chips = " ".join(c for c in chips if c)
         cell = [f'<td width="50%" valign="top">', "", f"**{card['name']}**<br>", f"<sub>{escape(card['tag'])}</sub>", "",
-                " ".join(badge(*b) for b in card["badges"]), "", card["lede"], "",
+                " ".join(badge(*b) for b in card["badges"]), "", card["lede"], ""] + ([chips, ""] if chips else []) + [
                 "<details>", "<summary>Architecture notes</summary>", "<br>", "", card["notes"], "", "</details>", ""]
         if links:
             cell += [f"**In the code:** {links}", ""]
@@ -72,6 +79,15 @@ def cards_html(spec: dict, ev: dict) -> str:
     for i in range(0, len(cells), 2):
         rows.append("<tr>\n" + "\n".join(cells[i:i + 2]) + "\n</tr>")
     return "<table>\n" + "\n".join(rows) + "\n</table>"
+
+
+def smaller_table(spec: dict, ev: dict) -> str:
+    rows = ["| Project | What it does | Stack |", "| :-- | :-- | :-- |"]
+    for s in spec.get("smaller", []):
+        live = spec.get("live", {}).get(s["repo"])
+        tag = f" · [live ↗]({live})" if live and ev.get("live", {}).get(s["repo"]) else ""
+        rows.append(f"| [{s['name']}](https://github.com/{spec['owner']}/{s['repo']}){tag} | {escape(s['what'])} | {escape(s['stack'])} |")
+    return "\n".join(rows)
 
 
 def kit_badges(kit: list[dict]) -> str:
@@ -112,6 +128,13 @@ def render(spec: dict, gh: dict, ev: dict) -> None:
         (OUT / f"channel-{key}.svg").write_text(art.channel(label, sub, icon, color))
     if ev.get("recent"):
         (OUT / "trail.svg").write_text(art.trail(ev["recent"], names, cats, ev["generated_at"]))
+    display = {**{r["name"]: r["name"] for r in gh.get("repos", [])}, **names,
+               **{s["repo"]: s["name"] for s in spec.get("smaller", [])}, "Simple-Sounboard": "Soundboard", "portfolio": "Portfolio"}
+    if ev.get("signals"):
+        (OUT / "instruments.svg").write_text(art.instruments(ev["signals"], ev.get("live", {}), gh.get("totals", {}).get("prs", 0),
+                                                             spec.get("crew", []), display, ev["generated_at"]))
+    if gh.get("repos"):
+        (OUT / "ascent.svg").write_text(art.ascent(spec.get("journey", []), {r["name"]: r for r in gh["repos"]}, display, cats))
     if gh.get("days"):
         repos = [r for r in gh["repos"] if not r["archived"] or r["kb"] > 0]
         active, longest, current = data.streaks(gh["days"])
@@ -120,6 +143,7 @@ def render(spec: dict, gh: dict, ev: dict) -> None:
         (OUT / "bedrock.svg").write_text(art.bedrock(data.language_shares(repos), len(repos)))
     text = TEMPLATE.read_text()
     text = text.replace("{{cards}}", cards_html(spec, ev))
+    text = text.replace("{{smaller}}", smaller_table(spec, ev))
     text = text.replace("{{kit}}", kit_badges(json.loads(KIT.read_text())["build_kit"]))
     stamp = datetime.fromisoformat(ev.get("generated_at", data.now_iso()).replace("Z", "+00:00")).strftime("%d %b %Y, %H:%M UTC")
     text = text.replace("{{generated}}", stamp)
@@ -141,7 +165,13 @@ def main() -> int:
             except Exception as err:
                 print(f"::warning::GitHub stats unavailable, keeping the last snapshot: {err}")
         opener = (lambda owner, name: data.LocalRepo(Path(args.local), name)) if args.local else data.RemoteRepo
-        ev = data.collect(spec, ev, opener)
+        previous = ev
+        ev = data.collect(spec, previous, opener)
+        names_all = sorted({r["name"] for r in gh.get("repos", [])} | {c["repo"] for c in spec["cards"]})
+        ev.update(data.collect_signals(names_all, previous, opener, spec["owner"], spec.get("live", {}), check_live=not args.local))
+        for item in spec["flagships"] + spec["systems"]:
+            if item["metric"].get("tests") and ev["signals"].get(item["repo"], {}).get("tests"):
+                ev["metrics"][item["repo"]] = str(ev["signals"][item["repo"]]["tests"])
         EVIDENCE.write_text(json.dumps(ev, indent=1) + "\n")
     render(spec, gh, ev)
     print(f"links {len(ev.get('links', {}))} · metrics {ev.get('metrics', {})} · stats {'yes' if gh.get('days') else 'no'}")

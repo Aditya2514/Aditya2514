@@ -1,7 +1,7 @@
 <!-- Generated from data/README.template.md by scripts/build_aurora.py. Edit the template, not this file. -->
 <div align="center">
 
-<sub>[ LINKEDIN ](https://www.linkedin.com/in/aditya-singh-8286b137a/) &nbsp;·&nbsp; [ EMAIL ](mailto:adityasinghv05@gmail.com) &nbsp;·&nbsp; [ REPOSITORIES ](https://github.com/Aditya2514?tab=repositories)</sub>
+<sub>[ LINKEDIN ](https://www.linkedin.com/in/aditya-singh-8286b137a/) &nbsp;·&nbsp; [ EMAIL ](mailto:adityasinghv05@gmail.com) &nbsp;·&nbsp; [ HOSTELDESK LIVE ](https://hostel-desk-three.vercel.app) &nbsp;·&nbsp; [ REPOSITORIES ](https://github.com/Aditya2514?tab=repositories)</sub>
 
 <img src="assets/aurora/hero.svg" width="100%" alt="Aditya Singh: AI systems, agents and full-stack. IIT Madras and Scaler School of Technology. Northern lights over snowy mountains, and three chips: the model proposes, the system checks, the person decides." />
 
@@ -17,32 +17,39 @@
 
 <div align="center">
 
-[`01` BASE CAMP](#01-base-camp) &nbsp;·&nbsp; [`02` EXPEDITIONS](#02-expeditions) &nbsp;·&nbsp; [`03` FIELD NOTES](#03-field-notes) &nbsp;·&nbsp; [`04` TERRAIN](#04-terrain) &nbsp;·&nbsp; [`05` BEDROCK](#05-bedrock)<br>
-[`06` TRAIL LOG](#06-trail-log) &nbsp;·&nbsp; [`07` RECORD](#07-record) &nbsp;·&nbsp; [`08` SEND A SIGNAL](#08-send-a-signal)
+[`01` BASE CAMP](#01-base-camp) &nbsp;·&nbsp; [`02` ASCENT](#02-ascent) &nbsp;·&nbsp; [`03` EXPEDITIONS](#03-expeditions) &nbsp;·&nbsp; [`04` FIELD NOTES](#04-field-notes) &nbsp;·&nbsp; [`05` INSTRUMENTS](#05-instruments)<br>
+[`06` TERRAIN](#06-terrain) &nbsp;·&nbsp; [`07` BEDROCK](#07-bedrock) &nbsp;·&nbsp; [`08` TRAIL LOG](#08-trail-log) &nbsp;·&nbsp; [`09` RECORD](#09-record) &nbsp;·&nbsp; [`10` SEND A SIGNAL](#10-send-a-signal)
 
 </div>
 
 <table>
 <tr>
-<td width="33%" valign="top">
+<td width="25%" valign="top">
 
 <sub>NOW // STUDYING</sub><br>
 **BS Data Science & Applications**<br>
-IIT Madras · CGPA **9.0** · and Scaler School of Technology
+IIT Madras · CGPA **9.0**<br>+ Scaler School of Technology
 
 </td>
-<td width="33%" valign="top">
+<td width="25%" valign="top">
 
 <sub>LATEST // PODIUM</sub><br>
 **Runner-up**<br>
-Paradox DSA Triathlon · IIT Madras · 2026
+Paradox DSA Triathlon<br>IIT Madras · 2026
 
 </td>
-<td width="33%" valign="top">
+<td width="25%" valign="top">
 
 <sub>LATEST // HACKATHON</sub><br>
-**Meta PyTorch OpenEnv Hackathon**<br>
-Team submission · 2026 · [Meta OpenEnv](https://github.com/Aditya2514/Meta_OpenEnv)
+**Meta PyTorch OpenEnv**<br>
+Team submission · 2026<br>[Meta OpenEnv →](https://github.com/Aditya2514/Meta_OpenEnv)
+
+</td>
+<td width="25%" valign="top">
+
+<sub>LATEST // BUILD</sub><br>
+**BenchShield**<br>
+Leak audits for AI benchmarks<br>[Open →](https://github.com/Aditya2514/BenchShield)
 
 </td>
 </tr>
@@ -58,19 +65,29 @@ Team submission · 2026 · [Meta OpenEnv](https://github.com/Aditya2514/Meta_Ope
 
 <br>
 
-## 02 Expeditions
+## 02 Ascent
 
 <sub>AURORA // 02</sub>
 
-<img src="assets/aurora/expeditions.svg" width="100%" alt="Flagship systems: LexGuard reviews contracts under Indian law with trap checks that outrank the LLM; Pikina is an offline desktop assistant whose capabilities are each schema-checked; Noesis searches four media types with one citation format. Also: Resilion, HostelDesk, ShopKart, a C++ shell and Meta OpenEnv." />
+<img src="assets/aurora/ascent.svg" width="100%" alt="Every public repository as a star in the order it began, rising from a static portfolio through a first live deploy, a first hackathon, multi-agent contract review, a local desktop agent and multimodal search, to database-enforced billing and AI-evaluation security." />
+
+<sub>Each star is a real repository, placed in the order it was created. The line only climbs.</sub>
+
+<br>
+
+## 03 Expeditions
+
+<sub>AURORA // 03</sub>
+
+<img src="assets/aurora/expeditions.svg" width="100%" alt="Six flagship systems with a live number from each repository: LexGuard's trap checks, Pikina's schema-checked capabilities, Noesis's media types, and the test suites of Mobius, BenchShield and HostelDesk; plus Resilion, ShopKart, Meta OpenEnv and a C++ shell." />
 
 <sub>Every number on these cards is re-read from its own repository each time the page refreshes.</sub>
 
 <br>
 
-## 03 Field notes
+## 04 Field notes
 
-<sub>AURORA // 03 · open any card for the architecture, and the code links for the exact lines</sub>
+<sub>AURORA // 04 · open any card for the architecture, and the code links for the exact lines</sub>
 
 <table>
 <tr>
@@ -82,6 +99,8 @@ Team submission · 2026 · [Meta OpenEnv](https://github.com/Aditya2514/Meta_Ope
 ![Node.js](https://img.shields.io/badge/Node.js-08141F?style=flat-square&logo=nodedotjs&logoColor=339933) ![React](https://img.shields.io/badge/React-08141F?style=flat-square&logo=react&logoColor=61DAFB) ![MongoDB](https://img.shields.io/badge/MongoDB-08141F?style=flat-square&logo=mongodb&logoColor=47A248) ![Redis](https://img.shields.io/badge/Redis-08141F?style=flat-square&logo=redis&logoColor=DC382D)
 
 Makes contract risks easier to inspect before signing. A staged agent pipeline examines clauses, checks explicit traps, **verifies every statute it cites** and proposes rewrites.
+
+`33 tests` `CI` `Docker`
 
 <details>
 <summary>Architecture notes</summary>
@@ -104,6 +123,8 @@ A deterministic auditor runs hand-written trap patterns before any agent reads a
 ![Python](https://img.shields.io/badge/Python-08141F?style=flat-square&logo=python&logoColor=3776AB) ![Electron](https://img.shields.io/badge/Electron-08141F?style=flat-square&logo=electron&logoColor=47848F) ![Ollama](https://img.shields.io/badge/Ollama-08141F?style=flat-square&logo=ollama&logoColor=FFFFFF) ![SQLite](https://img.shields.io/badge/SQLite-08141F?style=flat-square&logo=sqlite&logoColor=74B9E8)
 
 An offline-first Windows/Linux assistant with local inference, validated tools and **consent for anything high-risk**.
+
+`255 tests` `CI`
 
 <details>
 <summary>Architecture notes</summary>
@@ -129,6 +150,8 @@ Known intents go through a regex router with no model call; everything else goes
 
 Finds the useful moment across a pile of mixed media. Video, audio, PDFs and images go in; **every answer links to a timestamp or page**.
 
+`3 tests`
+
 <details>
 <summary>Architecture notes</summary>
 <br>
@@ -140,6 +163,56 @@ Each source becomes a SuperChunk that keeps its time window or page. Dense (Chro
 **In the code:** [`RRF fusion`](https://github.com/Aditya2514/Noesis/blob/fde4e09283833cd25ec9e58777d0f6d74fa33bce/hybrid_retrieve.py#L177) · [`local reranker`](https://github.com/Aditya2514/Noesis/blob/fde4e09283833cd25ec9e58777d0f6d74fa33bce/hybrid_retrieve.py#L28) · [`fact audit`](https://github.com/Aditya2514/Noesis/blob/fde4e09283833cd25ec9e58777d0f6d74fa33bce/grounded_generate.py#L205)
 
 [Source →](https://github.com/Aditya2514/Noesis)
+
+</td>
+<td width="50%" valign="top">
+
+**Mobius**<br>
+<sub>BILLING · POSTGRES INVARIANTS · with Apurva Patil</sub>
+
+![TypeScript](https://img.shields.io/badge/TypeScript-08141F?style=flat-square&logo=typescript&logoColor=3178C6) ![Node.js](https://img.shields.io/badge/Node.js-08141F?style=flat-square&logo=nodedotjs&logoColor=339933) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-08141F?style=flat-square&logo=postgresql&logoColor=4169E1) ![Prisma](https://img.shields.io/badge/Prisma-08141F?style=flat-square&logo=prisma&logoColor=FFFFFF) ![React](https://img.shields.io/badge/React-08141F?style=flat-square&logo=react&logoColor=61DAFB) ![MUI](https://img.shields.io/badge/MUI-08141F?style=flat-square&logo=mui&logoColor=007FFF)
+
+Runs the whole life of a subscription, from quotation to recurring invoices and payments, and **the database itself enforces that billing is correct**.
+
+`98 tests` `CI` `Docker`
+
+<details>
+<summary>Architecture notes</summary>
+<br>
+
+Quotation → confirmation → activation → recurring invoices → payments → reports, across an admin console, a staff workspace and a customer portal, with product variants, GST, discount campaigns and four billing cadences. A `UNIQUE (subscription_id, period_start)` constraint plus `ON CONFLICT DO NOTHING` means re-runs and parallel runs cannot double-bill; each subscription is locked `FOR UPDATE SKIP LOCKED`; a catch-up loop bills every period missed during downtime; and a discount slot is claimed with one conditional `UPDATE`, so two invoices can never take the last one. Money is computed to the paisa.
+
+</details>
+
+**In the code:** [`no double billing`](https://github.com/Aditya2514/Mobius/blob/fec1c089ead7dc6c91479c97c859c7f334f288ed/server/prisma/migrations/0001_init/migration.sql#L230) · [`idempotent insert`](https://github.com/Aditya2514/Mobius/blob/fec1c089ead7dc6c91479c97c859c7f334f288ed/server/src/modules/billing/engine.ts#L80) · [`parallel-safe lock`](https://github.com/Aditya2514/Mobius/blob/fec1c089ead7dc6c91479c97c859c7f334f288ed/server/src/modules/billing/engine.ts#L55) · [`atomic discount claim`](https://github.com/Aditya2514/Mobius/blob/fec1c089ead7dc6c91479c97c859c7f334f288ed/server/src/modules/billing/engine.ts#L164)
+
+[Source →](https://github.com/Aditya2514/Mobius)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**BenchShield**<br>
+<sub>AI EVALUATION · SECURITY · with Rudra Patel</sub>
+
+![Python](https://img.shields.io/badge/Python-08141F?style=flat-square&logo=python&logoColor=3776AB) ![FastAPI](https://img.shields.io/badge/FastAPI-08141F?style=flat-square&logo=fastapi&logoColor=009688) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-08141F?style=flat-square&logo=postgresql&logoColor=4169E1) ![Pydantic](https://img.shields.io/badge/Pydantic-08141F?style=flat-square&logo=pydantic&logoColor=E92063) ![uv](https://img.shields.io/badge/uv-08141F?style=flat-square&logo=uv&logoColor=DE5FE9)
+
+Finds where an AI benchmark's questions and answers have leaked onto the web, and **backs every finding with pinned, human-reviewed evidence**.
+
+`117 tests` `Docker` `7 ADRs`
+
+<details>
+<summary>Architecture notes</summary>
+<br>
+
+Benchmarks lose their value once their answers leak, because browsing agents can look them up instead of solving the task. BenchShield keeps four steps apart (discovery, verification, agent experiments and human review) so a promising search hit can never become an unsupported contamination claim. Protected answers live in a vault encrypted with AES-256-GCM. Long-running work runs on a durable PostgreSQL worker with leases, heartbeats and fencing tokens, and every major design choice is written down as an architecture decision record.
+
+</details>
+
+**In the code:** [`AES-256-GCM vault`](https://github.com/Aditya2514/BenchShield/blob/d1beb1b0ce341d6aac0860adc49e549554ab36b1/apps/backend/src/benchshield/storage/vault_encryption.py#L5) · [`durable worker`](https://github.com/Aditya2514/BenchShield/blob/d1beb1b0ce341d6aac0860adc49e549554ab36b1/apps/backend/src/benchshield/workers/durable_worker.py#L1) · [`fenced task claim`](https://github.com/Aditya2514/BenchShield/blob/d1beb1b0ce341d6aac0860adc49e549554ab36b1/apps/backend/src/benchshield/workers/durable_worker.py#L104)
+
+[Source →](https://github.com/Aditya2514/BenchShield)
 
 </td>
 <td width="50%" valign="top">
@@ -174,6 +247,8 @@ Gemini extracts events from articles; validators reject any event type, severity
 ![TypeScript](https://img.shields.io/badge/TypeScript-08141F?style=flat-square&logo=typescript&logoColor=3178C6) ![React](https://img.shields.io/badge/React-08141F?style=flat-square&logo=react&logoColor=61DAFB) ![Express](https://img.shields.io/badge/Express-08141F?style=flat-square&logo=express&logoColor=FFFFFF) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-08141F?style=flat-square&logo=postgresql&logoColor=4169E1) ![Prisma](https://img.shields.io/badge/Prisma-08141F?style=flat-square&logo=prisma&logoColor=FFFFFF)
 
 Hostel complaints with **explained ETA ranges**, automatic routing and escalation. Live on Neon and Render.
+
+`201 tests`
 
 <details>
 <summary>Architecture notes</summary>
@@ -243,6 +318,8 @@ Builtins, PATH lookup, a quoting state machine for single and double quotes, I/O
 
 An environment where agents juggle assignments, bugs and deadlines, and **finishing by burning out still loses points**.
 
+`CI` `Docker`
+
 <details>
 <summary>Architecture notes</summary>
 <br>
@@ -261,9 +338,28 @@ Built for the Meta PyTorch OpenEnv Hackathon. An agent schedules work against ha
 
 <br>
 
-## 04 Terrain
+**Smaller climbs**
 
-<sub>AURORA // 04</sub>
+| Project | What it does | Stack |
+| :-- | :-- | :-- |
+| [Vidya](https://github.com/Aditya2514/Vidya) | Book discovery in React Native: debounced search, Firebase sign-in, saved lists, strict TypeScript. | React Native · TypeScript · Firebase |
+| [Fintrac](https://github.com/Aditya2514/Fintrac) | Personal budgeting with Gemini-powered spending analysis. | React · Vite · Recharts · Gemini |
+| [Naukri](https://github.com/Aditya2514/Naukri) | A dark-mode job portal with a 100-entry API, persistent saved jobs and sliding-window pagination. | React · Vite |
+| [FinancePro](https://github.com/Aditya2514/FinancePro) | A vanilla-JavaScript finance dashboard: multiple profiles, analytics and goal tracking. | JavaScript |
+
+<br>
+
+## 05 Instruments
+
+<sub>AURORA // 05</sub>
+
+<img src="assets/aurora/instruments.svg" width="100%" alt="Engineering signals counted across every public repository: test cases, test files, CI workflows, dockerised repos, design documents and architecture decision records, and pull requests, with a signal board per repository and the people these were built with." />
+
+<br>
+
+## 06 Terrain
+
+<sub>AURORA // 06</sub>
 
 <img src="assets/aurora/terrain.svg" width="100%" alt="Every public repository drawn as a mountain peak: its height is the amount of code, its position is when it began, and its colour is its kind: AI systems, agents, products or systems. Flags mark the systems described above." />
 
@@ -271,9 +367,9 @@ Built for the Meta PyTorch OpenEnv Hackathon. An agent schedules work against ha
 
 <br>
 
-## 05 Bedrock
+## 07 Bedrock
 
-<sub>AURORA // 05</sub>
+<sub>AURORA // 07</sub>
 
 <img src="assets/aurora/bedrock.svg" width="100%" alt="Languages drawn as layers of rock under a snowy forest, each layer as thick as its share of the code across all public repositories." />
 
@@ -288,17 +384,17 @@ Built for the Meta PyTorch OpenEnv Hackathon. An agent schedules work against ha
 
 <br>
 
-## 06 Trail log
+## 08 Trail log
 
-<sub>AURORA // 06</sub>
+<sub>AURORA // 08</sub>
 
 <img src="assets/aurora/trail.svg" width="100%" alt="The latest commits across the systems above, drawn as waypoints on a trail climbing a mountain under the northern lights, newest at the summit." />
 
 <br>
 
-## 07 Record
+## 09 Record
 
-<sub>AURORA // 07</sub>
+<sub>AURORA // 09</sub>
 
 | Education | Achievement |
 | :-- | :-- |
@@ -307,9 +403,9 @@ Built for the Meta PyTorch OpenEnv Hackathon. An agent schedules work against ha
 
 <br>
 
-## 08 Send a signal
+## 10 Send a signal
 
-<sub>AURORA // 08</sub>
+<sub>AURORA // 10</sub>
 
 <img src="assets/aurora/flare.svg" width="100%" alt="A signal flare rises from a mountain into the northern lights over a still lake. Let's build something worth finding: AI engineering internships, agent systems, hackathon teams." />
 
@@ -319,6 +415,6 @@ Built for the Meta PyTorch OpenEnv Hackathon. An agent schedules work against ha
 <a href="mailto:adityasinghv05@gmail.com"><img src="assets/aurora/channel-email.svg" width="32%" alt="Email" /></a>
 <a href="https://github.com/Aditya2514?tab=repositories"><img src="assets/aurora/channel-github.svg" width="32%" alt="GitHub repositories" /></a>
 
-<sub>Scenes redrawn from live GitHub data every six hours · last run 15 Nov 2026, 16:46 UTC</sub>
+<sub>Scenes redrawn from live GitHub data every six hours · last run 15 Nov 2026, 16:56 UTC</sub>
 
 </div>

@@ -218,6 +218,13 @@ def glyph(kind, cx, cy, s, color):
         return (f'<rect x="{cx - 9 * k:.1f}" y="{cy - 8 * k:.1f}" width="{18 * k:.1f}" height="{17 * k:.1f}" rx="{2 * k:.1f}" {st}/>'
                 f'<polyline points="{P((3, 9), (21, 9))}" {st}/><polyline points="{P((8, 2), (8, 6))}" {st}/>'
                 f'<polyline points="{P((16, 2), (16, 6))}" {st}/><polyline points="{P((8, 13), (10.5, 15.5), (16, 11))}" {st}/>')
+    if kind == "loop":
+        return (f'<path d="M{cx - 9 * k:.1f},{cy:.1f} a{6 * k:.1f},{6 * k:.1f} 0 1 1 {6 * k:.1f},{6 * k:.1f} M{cx + 9 * k:.1f},{cy:.1f} '
+                f'a{6 * k:.1f},{6 * k:.1f} 0 1 1 {-6 * k:.1f},{-6 * k:.1f}" {st}/>'
+                f'<polyline points="{P((5, 18), (9, 18), (9, 14))}" {st}/><polyline points="{P((19, 6), (15, 6), (15, 10))}" {st}/>')
+    if kind == "shield":
+        return (f'<polyline points="{P((12, 3), (20, 6), (19.5, 13), (12, 21), (4.5, 13), (4, 6), (12, 3))}" {st}/>'
+                f'<polyline points="{P((8.5, 12), (11, 14.5), (15.5, 9.5))}" {st}/>')
     return ""
 
 
@@ -406,17 +413,20 @@ def flow(x0, x1, y, steps, color, uid):
 
 
 def expeditions(flagships: list[dict], systems: list[dict], metrics: dict, cats: dict, n_links: int) -> str:
-    W, H = 1000, 760
+    W = 1000
+    rows = (len(flagships) + 2) // 3
+    cw, ch, gap, y0 = 290, 372, 23, 146
+    H = y0 + rows * (ch + 22) + 212
     body = [ground(W, H), stars(W, 0, 140, 70, 41, .25), aurora(W, 120, 110, 47, "te", opacity=.3, cls="sway2")]
     body.append(t(52, 52, "EXPEDITIONS // FLAGSHIP SYSTEMS", 12, ICE, MONO, 500, "start", 3))
     body.append(t(52, 92, "Where the model meets a rule.", 30, TEXT, SANS, 700))
-    body.append(t(52, 118, "Three flagships and five more climbs, each with a number read live from its own repository.", 14, MUTED))
-    for i, (v, l, c) in enumerate([("3", "FLAGSHIPS", EMERALD), (str(len(flagships) + len(systems)), "SYSTEMS", ICE), (str(n_links), "CODE LINKS", AMBER)]):
+    body.append(t(52, 118, f"{len(flagships)} flagships and {len(systems)} more climbs, each with a number read live from its own repository.", 14, MUTED))
+    for i, (v, l, c) in enumerate([(str(len(flagships)), "FLAGSHIPS", EMERALD), (str(len(flagships) + len(systems)), "SYSTEMS", ICE), (str(n_links), "CODE LINKS", AMBER)]):
         x = W - 52 - (2 - i) * 104
         body.append(t(x, 92, v, 32, c, SANS, 700, "end") + t(x, 112, l, 9.5, MUTED, MONO, 500, "end", 2))
-    cw, ch, gap, y0 = 290, 400, 23, 146
     for i, f in enumerate(flagships):
-        x = 52 + i * (cw + gap)
+        x = 52 + (i % 3) * (cw + gap)
+        y0 = 146 + (i // 3) * (ch + 22)
         color = CAT.get(cats.get(f["repo"], "other"))
         g = [f'<g class="up" style="animation-delay:{.2 + i * .18:.2f}s">',
              f'<rect x="{x}" y="{y0}" width="{cw}" height="{ch}" rx="18" fill="{color}" opacity=".06" filter="url(#soft)"/>',
@@ -428,15 +438,16 @@ def expeditions(flagships: list[dict], systems: list[dict], metrics: dict, cats:
         for j, line in enumerate(wrap(f["pitch"], 38)[:3]):
             g.append(t(x + 22, y0 + 108 + j * 20, line, 14, MUTED))
         value = metrics.get(f["repo"], "·")
-        g.append(t(x + 22, y0 + 218, value, 48, "url(#title)", SANS, 800, "start", -1, 'filter="url(#glow)"'))
+        g.append(t(x + 22, y0 + 210, value, 48, "url(#title)", SANS, 800, "start", -1, 'filter="url(#glow)"'))
         for j, line in enumerate(wrap(f["metric"]["label"], 36)[:2]):
-            g.append(t(x + 22, y0 + 242 + j * 16, line.upper(), 10, MUTED, MONO, 500, "start", 1.2))
-        g.append(f'<line x1="{x + 22}" y1="{y0 + 278}" x2="{x + cw - 22}" y2="{y0 + 278}" stroke="{ICE}" stroke-opacity=".1"/>')
-        g.append(flow(x + 34, x + cw - 34, y0 + 312, f["flow"], color, f"fl{i}"))
+            g.append(t(x + 22, y0 + 234 + j * 16, line.upper(), 10, MUTED, MONO, 500, "start", 1.2))
+        g.append(f'<line x1="{x + 22}" y1="{y0 + 262}" x2="{x + cw - 22}" y2="{y0 + 262}" stroke="{ICE}" stroke-opacity=".1"/>')
+        g.append(flow(x + 34, x + cw - 34, y0 + 294, f["flow"], color, f"fl{i}"))
         g.append(t(x + 22, y0 + ch - 20, f["stack"], 10.5, FAINT, MONO))
         g.append("</g>")
         body.append("".join(g))
-    sw, sgap, sy = (W - 104 - 4 * 14) / 5, 14, y0 + ch + 30
+    n_sys = max(len(systems), 1)
+    sw, sgap, sy = (W - 104 - (n_sys - 1) * 14) / n_sys, 14, 146 + rows * (ch + 22) + 14
     body.append(t(52, sy - 8, "ALSO CLIMBED", 10.5, MUTED, MONO, 500, "start", 3))
     for i, s in enumerate(systems):
         x = 52 + i * (sw + sgap)
@@ -448,7 +459,7 @@ def expeditions(flagships: list[dict], systems: list[dict], metrics: dict, cats:
                     f'{t(x + 16, sy + 64, s["tag"], 8.5, color, MONO, 500, "start", 1.2)}'
                     f'{t(x + 16, sy + 102, value, size, TEXT, SANS, 800)}'
                     + "".join(t(x + 16, sy + 122 + j * 13, line.upper(), 8.8, MUTED, MONO, 500, "start", .8)
-                              for j, line in enumerate(wrap(s["metric"]["label"], 27)[:2])) + "</g>")
+                              for j, line in enumerate(wrap(s["metric"]["label"], int(sw / 6.6))[:2])) + "</g>")
     legend = [("◇ MODEL", ICE), ("■ CHECK", AMBER), ("● PERSON", EMERALD), ("● DATA", STEEL)]
     x = 52
     for label, c in legend:
@@ -716,3 +727,143 @@ def channel(label: str, sub: str, icon: str, color: str) -> str:
             + icons[icon] + t(66, 33, label, 16, TEXT, SANS, 700) + t(66, 52, sub, 11, MUTED, MONO)
             + f'<polyline points="{W - 40},28 {W - 30},36 {W - 40},44" fill="none" stroke="{color}" stroke-width="2"/>')
     return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="{escape(label)}"><style>{CSS}</style>{body}</svg>'
+
+
+# ------------------------------------------------------------------------------------------------ 9. ascent (the journey)
+
+def ascent(journey: list[dict], repos: dict, names: dict, cats: dict) -> str:
+    W, H = 1000, 560
+    stops = [j for j in journey if j["repo"] in repos]
+    n = len(stops)
+    body = [ground(W, H), stars(W, 0, 470, 210, 131, .4), aurora(W, 150, 120, 137, "ic", opacity=.35, cls="sway2"),
+            mountains(W, H, 0, 486, 530, 139, "#040c17", snow=False)]
+    first, last = (repos[stops[0]["repo"]]["created"], repos[stops[-1]["repo"]]["created"]) if stops else ("", "")
+    months = 0
+    if stops:
+        a, b = date.fromisoformat(first), date.fromisoformat(last)
+        months = (b.year - a.year) * 12 + b.month - a.month
+    body.append(t(52, 48, f"ASCENT // {months} MONTHS · {n} REPOS", 12, ICE, MONO, 500, "start", 3))
+    body.append(t(52, 92, "From a static page to systems", 30, TEXT, SANS, 700))
+    body.append(t(52, 128, "that check themselves.", 30, "url(#title)", SANS, 800))
+    if not n:
+        return svg(W, H, "Ascent", "", "".join(body) + frame(W, H))
+    x0, x1, ylo, yhi = 78, W - 70, 448, 182
+    pts = [(x0 + (x1 - x0) * i / max(n - 1, 1), ylo - (ylo - yhi) * (i / max(n - 1, 1)) ** .85) for i in range(n)]
+    d = "M" + " L".join(f"{x:.1f},{y:.1f}" for x, y in pts)
+    body.append(f'<path d="{d}" fill="none" stroke="{ICE}" stroke-opacity=".18" stroke-width="6" filter="url(#soft)"/>')
+    body.append(f'<path class="draw" pathLength="1" d="{d}" fill="none" stroke="url(#title)" stroke-width="1.6" style="animation-duration:4s"/>')
+    maxkb = max(repos[s["repo"]]["kb"] for s in stops) or 1
+    for i, (s, (x, y)) in enumerate(zip(stops, pts)):
+        r = repos[s["repo"]]
+        c = CAT[cats.get(s["repo"], "other")]
+        size = 3 + 6 * math.log1p(r["kb"]) / math.log1p(maxkb)
+        delay = .3 + i * 3.6 / n
+        above = i % 2 == 0
+        lift = 34 if (i // 2) % 2 else 0
+        ny = y - 30 - lift if above else y + 30 + lift
+        when = date.fromisoformat(r["created"]).strftime("%b '%y").upper()
+        body.append(f'<g class="fade" style="animation-delay:{delay:.2f}s">'
+                    f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{size * 2.6:.1f}" fill="{c}" opacity=".18" filter="url(#soft)"/>'
+                    f'<circle class="tw" style="animation-delay:{i * .4:.1f}s" cx="{x:.1f}" cy="{y:.1f}" r="{size:.1f}" fill="#f2fffb"/>'
+                    f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{size + 3:.1f}" fill="none" stroke="{c}" stroke-opacity=".7"/>')
+        if lift:
+            y2 = ny + 6 if above else ny - 16
+            body.append(f'<line x1="{x:.1f}" y1="{y - size - 4 if above else y + size + 4:.1f}" x2="{x:.1f}" y2="{y2:.1f}" stroke="{c}" stroke-opacity=".35"/>')
+        name_y, note_y = (ny - 14, ny) if above else (ny, ny + 14)
+        x = min(max(x, 70), W - 76)
+        body.append(t(x, name_y - 13, when, 8.5, c, MONO, 600, "middle", 1.2) if above else "")
+        body.append(t(x, name_y, names.get(s["repo"], s["label"]), 12.5, TEXT, SANS, 700, "middle"))
+        body.append(t(x, note_y, s["note"], 9.5, MUTED, MONO, 400, "middle"))
+        body.append(t(x, note_y + 13, when, 8.5, c, MONO, 600, "middle", 1.2) if not above else "")
+        body.append("</g>")
+    body.append(t(52, H - 24, "ONE STAR = ONE REPO, IN THE ORDER IT BEGAN · BRIGHTNESS = SIZE OF THE CODE", 10, FAINT, MONO, 400, "start", 1.5))
+    body.append(frame(W, H))
+    return svg(W, H, f"Ascent: {n} repositories over {months} months, from a static portfolio to " + ", ".join(s["label"] for s in stops[-4:]),
+               "", "".join(body))
+
+
+# ------------------------------------------------------------------------------------------------ 10. instruments
+
+def gauge(cx, cy, value, label, color, delay):
+    r = 50
+    return (f'<g class="up" style="animation-delay:{delay:.2f}s">'
+            f'<circle cx="{cx}" cy="{cy}" r="{r + 14}" fill="{color}" opacity=".07" filter="url(#soft)"/>'
+            f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="#06121c" stroke="{color}" stroke-opacity=".18" stroke-width="7"/>'
+            f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="{color}" stroke-width="7" stroke-linecap="round" pathLength="100" '
+            f'stroke-dasharray="22 78" filter="url(#glow)"><animateTransform attributeName="transform" type="rotate" '
+            f'from="0 {cx} {cy}" to="360 {cx} {cy}" dur="{6 + delay * 4:.1f}s" repeatCount="indefinite"/></circle>'
+            + t(cx, cy + 9, value, 26 if len(value) < 4 else 21, TEXT, SANS, 800, "middle")
+            + t(cx, cy + r + 30, label, 9.5, MUTED, MONO, 600, "middle", 1.6) + "</g>")
+
+
+def instruments(signals: dict, live: dict, prs: int, crew: list[dict], names: dict, fetched: str) -> str:
+    W = 1000
+    tests = sum(s["tests"] for s in signals.values())
+    tfiles = sum(s["test_files"] for s in signals.values())
+    ci = sum(s["ci"] for s in signals.values())
+    docker = sum(1 for s in signals.values() if s["docker"])
+    docs = sum(s["docs"] + s["adrs"] for s in signals.values())
+    live_n = sum(1 for v in live.values() if v)
+    board = sorted(((n, s) for n, s in signals.items()
+                    if s["tests"] or s["ci"] or s["docker"] or s["adrs"] or s["license"] or live.get(n)),
+                   key=lambda kv: (-kv[1]["tests"], kv[0]))
+    rows = (len(board) + 1) // 2
+    H = 330 + rows * 44 + 120
+    body = [ground(W, H), stars(W, 0, 140, 70, 151, .3), aurora(W, 130, 110, 157, "te", opacity=.3, cls="sway2")]
+    body.append(t(52, 48, "INSTRUMENTS // ENGINEERING ACROSS EVERY REPO", 12, ICE, MONO, 500, "start", 3))
+    body.append(synced(W, 48, fetched))
+    head = f"{tests:,} test cases. {ci} CI workflows." + (f" {live_n} live apps." if live_n else "")
+    body.append(t(52, 92, head, 28, TEXT, SANS, 700))
+    gauges = [(f"{tests:,}", "TEST CASES", EMERALD), (str(tfiles), "TEST FILES", TEAL), (str(ci), "CI WORKFLOWS", ICE),
+              (str(docker), "DOCKERISED REPOS", STEEL), (str(docs), "DESIGN DOCS & ADRS", AMBER), (str(prs), "PULL REQUESTS", ROSE)]
+    gx = (W - 104) / len(gauges)
+    for i, (v, l, c) in enumerate(gauges):
+        body.append(gauge(52 + gx * (i + .5), 182, v, l, c, .1 + i * .12))
+    y = 300
+    body.append(t(52, y - 8, "SIGNAL BOARD", 10.5, MUTED, MONO, 500, "start", 3))
+    colw = (W - 104 - 20) / 2
+    for k, (name, s) in enumerate(board):
+        x = 52 + (k % 2) * (colw + 20)
+        yy = y + (k // 2) * 44
+        chips = []
+        if s["tests"]:
+            chips.append((f"{s['tests']} TESTS", EMERALD))
+        if s["ci"]:
+            chips.append(("CI", TEAL))
+        if s["docker"]:
+            chips.append(("DOCKER", ICE))
+        if s["adrs"]:
+            chips.append((f"{s['adrs']} ADRS", AMBER))
+        elif s["docs"] >= 3:
+            chips.append((f"{s['docs']} DOCS", AMBER))
+        if s["license"]:
+            chips.append(("LICENSED", STEEL))
+        if live.get(name):
+            chips.append(("● LIVE", EMERALD))
+        g = [f'<g class="slide" style="animation-delay:{.5 + k * .06:.2f}s">', glass(x, yy, colw, 36, 10, None, .55),
+             t(x + 14, yy + 23, names.get(name, name), 14, TEXT, SANS, 700)]
+        cx = x + 132
+        for label, c in chips:
+            w = len(label) * 6.6 + 16
+            if cx + w > x + colw - 8:
+                break
+            g.append(f'<rect x="{cx:.1f}" y="{yy + 9}" width="{w:.1f}" height="18" rx="9" fill="{c}" fill-opacity=".1" stroke="{c}" stroke-opacity=".55"/>'
+                     + t(cx + w / 2, yy + 22, label, 9.5, c, MONO, 600, "middle", .8))
+            cx += w + 6
+        g.append("</g>")
+        body.append("".join(g))
+    cy = y + rows * 44 + 34
+    body.append(t(52, cy, "ROPE TEAM // BUILT WITH", 10.5, MUTED, MONO, 500, "start", 3))
+    x = 52
+    for m in crew:
+        label = f'{m["name"]}  ·  ' + (f'{len(m["repos"])} repos' if len(m["repos"]) > 1 else names.get(m["repos"][0], m["repos"][0]))
+        initials = "".join(w[0] for w in m["name"].split()[:2]).upper()
+        w = len(label) * 7.4 + 58
+        body.append(f'<g class="up" style="animation-delay:1.2s">{glass(x, cy + 14, w, 40, 20, None, .7)}'
+                    f'<circle cx="{x + 21}" cy="{cy + 34}" r="13" fill="{TEAL}" fill-opacity=".15" stroke="{TEAL}"/>'
+                    + t(x + 21, cy + 38, initials, 10, TEAL, MONO, 700, "middle") + t(x + 42, cy + 39, label, 12.5, TEXT, SANS, 600) + "</g>")
+        x += w + 12
+    body.append(t(W - 52, H - 20, "COUNTED FROM EVERY PUBLIC REPO ON EACH REFRESH", 10, FAINT, MONO, 400, "end", 1.5))
+    body.append(frame(W, H))
+    return svg(W, H, f"Instruments: {tests} test cases in {tfiles} test files, {ci} CI workflows, {docker} dockerised repos, "
+                     f"{docs} design documents, {prs} pull requests across every public repository.", "", "".join(body))

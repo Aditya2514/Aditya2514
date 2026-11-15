@@ -192,6 +192,8 @@ def find_line(text: str | None, needle: str) -> int | None:
 def measure(repo, metric: dict) -> str | None:
     if "value" in metric:
         return metric["value"]
+    if metric.get("tests"):
+        return None  # filled in from the account-wide signals
     if "count" in metric:
         text = repo.read(metric["count"]["path"])
         return str(text.count(metric["count"]["needle"])) if text else None
@@ -258,3 +260,55 @@ def collect(spec: dict, previous: dict, open_repo) -> dict:
             recent += [r for r in previous.get("recent", []) if r.get("repo") == name]
     recent.sort(key=lambda r: (r["date"], r["sha"]), reverse=True)
     return {"generated_at": now_iso(), "repos": shas, "links": links, "metrics": metrics, "recent": recent}
+
+
+# ------------------------------------------------------------------------------------------------ account-wide signals
+
+import re  # noqa: E402
+
+TEST_FILE = re.compile(r"(^|/)(tests?|__tests__)/.*\.(py|js|ts|tsx)$|\.(test|spec)\.(js|ts|tsx)$|(^|/)test_[^/]*\.py$", re.I)
+TEST_CASE = re.compile(r"^\s*(async\s+def\s+test_|def\s+test_|it\(|test\(|it\.each|test\.each|TEST\()", re.M)
+
+
+def repo_signals(repo) -> dict:
+    files = [p for p in repo.files() if "node_modules/" not in p and "/vendor/" not in p]
+    test_files = [p for p in files if TEST_FILE.search(p)]
+    cases = 0
+    for p in test_files:
+        text = repo.read(p) or ""
+        cases += len(TEST_CASE.findall(text))
+    readme = next((p for p in files if p.lower() == "readme.md"), None)
+    readme_kb = len((repo.read(readme) or "").encode()) // 1024 if readme else 0
+    return {
+        "tests": cases, "test_files": len(test_files),
+        "ci": len([p for p in files if p.startswith(".github/workflows/") and p.endswith((".yml", ".yaml"))]),
+        "docker": any(re.search(r"(^|/)(Dockerfile|docker-compose[^/]*\.ya?ml)$", p) for p in files),
+        "license": any(re.match(r"^licen[cs]e", p, re.I) for p in files),
+        "adrs": len([p for p in files if re.search(r"(^|/)adr/\d+.*\.md$", p, re.I)]),
+        "docs": len([p for p in files if p.startswith("docs/") and p.endswith(".md")]),
+        "readme_kb": readme_kb,
+    }
+
+
+def health(url: str) -> bool:
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "aurora-profile-healthcheck"})
+        with urllib.request.urlopen(req, timeout=20) as res:
+            return res.status < 400
+    except Exception:
+        return False
+
+
+def collect_signals(names: list[str], previous: dict, open_repo, owner: str, live: dict, check_live: bool) -> dict:
+    out = {}
+    for name in names:
+        try:
+            out[name] = repo_signals(open_repo(owner, name))
+        except Exception as err:
+            print(f"warn: signals {name}: {err}", file=sys.stderr)
+            if name in previous.get("signals", {}):
+                out[name] = previous["signals"][name]
+    status = {}
+    for name, url in live.items():
+        status[name] = health(url) if check_live else previous.get("live", {}).get(name)
+    return {"signals": out, "live": status}
