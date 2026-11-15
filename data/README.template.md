@@ -1,104 +1,131 @@
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/blueprint/hero-mobile.svg" />
-  <img src="assets/blueprint/hero.svg" width="100%" alt="Blueprint sheet 00: Aditya Singh, AI systems, agents and full-stack, IIT Madras and Scaler School of Technology. A diagram loops between three parts: the model proposes, the system checks, the person decides." />
-</picture>
+<div align="center">
 
-<p align="center"><b><a href="#featured-systems">Featured systems</a> &nbsp;·&nbsp; <a href="#engineering-decisions">Engineering decisions</a> &nbsp;·&nbsp; <a href="#more-builds">More builds</a> &nbsp;·&nbsp; <a href="#build-kit">Build kit</a> &nbsp;·&nbsp; <a href="#get-in-touch">Get in touch</a></b></p>
+<sub>[ LINKEDIN ](https://www.linkedin.com/in/aditya-singh-8286b137a/) &nbsp;·&nbsp; [ EMAIL ](mailto:adityasinghv05@gmail.com) &nbsp;·&nbsp; [ REPOSITORIES ](https://github.com/Aditya2514?tab=repositories)</sub>
 
-## About
+<img src="assets/aurora/hero.svg" width="100%" alt="Aditya Singh: AI systems, agents and full-stack. IIT Madras and Scaler School of Technology. Northern lights over snowy mountains, and three chips: the model proposes, the system checks, the person decides." />
 
-I'm **Aditya Singh**. I study **Data Science & Applications at IIT Madras**, co-enrolled at **Scaler School of Technology**, and I build LLM systems, local desktop agents and full-stack products. My projects span contract intelligence, local desktop agents, multimodal retrieval and full-stack applications.
+<br>
 
-What interests me most is the gap between a model producing an answer and a system doing something dependable with it. I work with retrieval, explicit checks and human approval to make that gap easier to inspect.
+<img src="assets/aurora/sky.svg" width="100%" alt="The last 12 months of GitHub contributions drawn as northern lights over mountains: one curtain of light per week, its height that week's contributions, with totals for contributions, commits, active days, longest streak and public repositories." />
 
-**The model proposes. The system checks. The person stays in control.** Every drawing below uses the same three symbols:
+<sub>Live from the GitHub API. Every curtain of light is one real week of contributions, redrawn every six hours.</sub>
 
-<p align="center"><code>◇ model proposes</code> &nbsp; <code>■ system checks</code> &nbsp; <code>● person decides</code></p>
+</div>
 
-**Read the situation. Coordinate the squad. Review the mistakes. Queue again.** That's the BGMI mindset I bring to a build.
+<br>
 
-## Featured systems
+<div align="center">
 
-Three systems, drawn from their actual code paths. Links under each drawing go to the exact lines.
+[`01` BASE CAMP](#01-base-camp) &nbsp;·&nbsp; [`02` EXPEDITIONS](#02-expeditions) &nbsp;·&nbsp; [`03` FIELD NOTES](#03-field-notes) &nbsp;·&nbsp; [`04` TERRAIN](#04-terrain) &nbsp;·&nbsp; [`05` BEDROCK](#05-bedrock)<br>
+[`06` TRAIL LOG](#06-trail-log) &nbsp;·&nbsp; [`07` RECORD](#07-record) &nbsp;·&nbsp; [`08` SEND A SIGNAL](#08-send-a-signal)
 
-<a href="https://github.com/Aditya2514/LexGuard">
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/blueprint/lexguard-mobile.svg" />
-  <img src="assets/blueprint/lexguard.svg" width="100%" alt="Blueprint of LexGuard: a contract is parsed and repaired, clauses are classified and indexed, a risk analyst rates them with an adversarial pass, a rule gate of trap patterns can escalate the rating, then a plain-language guide, an Indian law compliance check and a cross-reference audit run in parallel, citations are checked against a statute database, a drafter proposes rewrites, and the person decides from the score and dashboard." />
-</picture>
-</a>
+</div>
 
-**LexGuard.** Makes contract risks easier to inspect before signing. It reviews contracts under Indian law using statutory retrieval and deterministic risk checks: a staged agent pipeline examines clauses, checks explicit traps, verifies citations and proposes rewrites, and the deterministic checks can escalate the model's risk assessment.
+<table>
+<tr>
+<td width="33%" valign="top">
 
-<sub>Node.js · React · MongoDB · Redis</sub> &nbsp; **In the code:** {{code:LexGuard}}
+<sub>NOW // STUDYING</sub><br>
+**BS Data Science & Applications**<br>
+IIT Madras · CGPA **9.0** · and Scaler School of Technology
 
-<a href="https://github.com/Aditya2514/Pikina">
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/blueprint/pikina-mobile.svg" />
-  <img src="assets/blueprint/pikina.svg" width="100%" alt="Blueprint of Pikina: your command goes to a Tier 1 regex router; on a hit it goes straight to the validator, on a miss to a local Ollama model first. The validator checks the proposal against the capability registry, a consent gate sends high-risk actions to you for approval and lets low-risk ones run, the action executes through the OS bridge, and plans can roll back." />
-</picture>
-</a>
+</td>
+<td width="33%" valign="top">
 
-**Pikina.** Lets a local assistant help with your computer while keeping meaningful actions inspectable. It's an offline-first Windows/Linux assistant with local inference, validated tools and consent for high-risk actions: regex-first routing handles known intents, Ollama handles the rest, an action validator checks every proposed tool call, and plans support rollback.
+<sub>LATEST // PODIUM</sub><br>
+**Runner-up**<br>
+Paradox DSA Triathlon · IIT Madras · 2026
 
-<sub>Python · Electron · Ollama · SQLite</sub> &nbsp; **In the code:** {{code:Pikina}}
+</td>
+<td width="33%" valign="top">
 
-<a href="https://github.com/Aditya2514/Noesis">
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/blueprint/noesis-mobile.svg" />
-  <img src="assets/blueprint/noesis.svg" width="100%" alt="Blueprint of Noesis: video and audio, PDFs and images become SuperChunks tagged with a time window or page, which feed a dense ChromaDB index and a sparse BM25 index; results are merged with reciprocal rank fusion, reranked by a local cross-encoder, used for a grounded answer, checked by a per-claim fact audit, and shown to you cited to a time or page." />
-</picture>
-</a>
+<sub>LATEST // HACKATHON</sub><br>
+**Meta PyTorch OpenEnv Hackathon**<br>
+Team submission · 2026 · [Meta OpenEnv](https://github.com/Aditya2514/Meta_OpenEnv)
 
-**Noesis.** Finds the useful moment across a collection of mixed media. It searches video, audio, PDFs and images, then links each answer to a timestamp or page: BM25 and dense retrieval feed a reranker, and source citations plus an LLM fact audit make the response inspectable. Built with **Apurva Patil**.
+</td>
+</tr>
+</table>
 
-<sub>Python · ChromaDB · Whisper · Streamlit</sub> &nbsp; **In the code:** {{code:Noesis}}
+<br>
 
-## Engineering decisions
+## 01 Base camp
 
-The decisions underneath the drawings, each linked to the line that implements it.
+<sub>AURORA // 01</sub>
 
-{{decisions}}
+<img src="assets/aurora/basecamp.svg" width="100%" alt="Base camp. What happens when the model is wrong? Aditya studies at IIT Madras and Scaler School of Technology and builds the layer around the model: rules that can overrule it, retrieval that keeps it honest, consent before it acts and a way to undo. The loop: the model proposes, the system checks, the person decides." />
 
-## More builds
+<br>
 
-| Project | What it does | Stack |
-| :-- | :-- | :-- |
-| [Resilion](https://github.com/Aditya2514/Resilion) | Supply-chain intelligence: a Risk Watcher turns news into structured events and an impact graph traces who is affected. | Python · NetworkX · Gemini |
-| [HostelDesk](https://github.com/Aditya2514/HostelDesk) | Hostel complaints with explained ETA ranges, automatic routing and escalation. | TypeScript · React · Express · PostgreSQL · Prisma |
-| [Meta OpenEnv](https://github.com/Aditya2514/Meta_OpenEnv) | An environment for agents juggling assignments, bugs, deadlines and burnout constraints. Team hackathon project. | Python · FastAPI · Docker |
-| [ShopKart](https://github.com/Aditya2514/Shopkart) | Server-authoritative checkout and Razorpay test-mode payments. Built with Apurva Patil. | React · Express · MongoDB |
-| [C++ Shell](https://github.com/Aditya2514/codecrafters-shell-cpp) | A shell built around fork, exec, pipe and dup2: quoting, redirection, pipelines and background jobs. | C++23 · POSIX · CMake |
-| [Vidya](https://github.com/Aditya2514/Vidya) | Book discovery with debounced search, Google sign-in and persistent saved lists. | React Native · TypeScript · Firebase |
-| [Fintrac](https://github.com/Aditya2514/Fintrac) | A personal budgeting dashboard with Gemini-powered spending analysis. | React · Vite · Recharts · Gemini |
-| [Naukri](https://github.com/Aditya2514/Naukri) | A job-portal UI with search, saved jobs and a simulated listings API. | React · Vite |
+## 02 Expeditions
 
-<sub>[All repositories →](https://github.com/Aditya2514?tab=repositories)</sub>
+<sub>AURORA // 02</sub>
 
-## Build kit
+<img src="assets/aurora/expeditions.svg" width="100%" alt="Flagship systems: LexGuard reviews contracts under Indian law with trap checks that outrank the LLM; Pikina is an offline desktop assistant whose capabilities are each schema-checked; Noesis searches four media types with one citation format. Also: Resilion, HostelDesk, ShopKart, a C++ shell and Meta OpenEnv." />
 
-<picture>
-  <source media="(max-width: 600px)" srcset="assets/blueprint/parts-mobile.svg" />
-  <img src="assets/blueprint/parts.svg" width="100%" alt="Parts list: languages Python, JavaScript, TypeScript, C++; AI and retrieval Ollama, Gemini, Groq, Hugging Face, ChromaDB, sentence-transformers; backend Node.js, Express, FastAPI, Flask; data PostgreSQL, MongoDB, Redis, SQLite; interfaces React, React Native, Electron, Streamlit; delivery Git, GitHub Actions, Docker, Vercel." />
-</picture>
+<sub>Every number on these cards is re-read from its own repository each time the page refreshes.</sub>
 
-## Build log
+<br>
 
-Recent changes across the featured systems and builds.
+## 03 Field notes
 
-{{buildlog}}
+<sub>AURORA // 03 · open any card for the architecture, and the code links for the exact lines</sub>
 
-## Record
+{{cards}}
+
+<br>
+
+## 04 Terrain
+
+<sub>AURORA // 04</sub>
+
+<img src="assets/aurora/terrain.svg" width="100%" alt="Every public repository drawn as a mountain peak: its height is the amount of code, its position is when it began, and its colour is its kind: AI systems, agents, products or systems. Flags mark the systems described above." />
+
+<sub>Each new repository rises on the right the next time the page refreshes.</sub>
+
+<br>
+
+## 05 Bedrock
+
+<sub>AURORA // 05</sub>
+
+<img src="assets/aurora/bedrock.svg" width="100%" alt="Languages drawn as layers of rock under a snowy forest, each layer as thick as its share of the code across all public repositories." />
+
+{{kit}}
+
+<br>
+
+## 06 Trail log
+
+<sub>AURORA // 06</sub>
+
+<img src="assets/aurora/trail.svg" width="100%" alt="The latest commits across the systems above, drawn as waypoints on a trail climbing a mountain under the northern lights, newest at the summit." />
+
+<br>
+
+## 07 Record
+
+<sub>AURORA // 07</sub>
 
 | Education | Achievement |
 | :-- | :-- |
 | **IIT Madras** · BS Data Science & Applications · 2025–2029 · CGPA **9.0/10** | **Runner-up** · Paradox DSA Triathlon · IIT Madras · 2026 |
 | **Scaler School of Technology** · 2025–2029 | **Meta PyTorch OpenEnv Hackathon** · 2026 · team submission |
 
-## Get in touch
+<br>
 
-Interested in **AI engineering internships**, **agent systems**, or a **hackathon project**? Send me the problem you're working on.
+## 08 Send a signal
 
-**[LinkedIn ↗](https://www.linkedin.com/in/aditya-singh-8286b137a/)** &nbsp;·&nbsp; **[Email ↗](mailto:adityasinghv05@gmail.com)** &nbsp;·&nbsp; **[All repositories ↗](https://github.com/Aditya2514?tab=repositories)**
+<sub>AURORA // 08</sub>
 
-<p align="center"><sub>Drawings and code links regenerate every six hours · last run {{generated}}</sub></p>
+<img src="assets/aurora/flare.svg" width="100%" alt="A signal flare rises from a mountain into the northern lights over a still lake. Let's build something worth finding: AI engineering internships, agent systems, hackathon teams." />
+
+<div align="center">
+
+<a href="https://www.linkedin.com/in/aditya-singh-8286b137a/"><img src="assets/aurora/channel-linkedin.svg" width="32%" alt="LinkedIn" /></a>
+<a href="mailto:adityasinghv05@gmail.com"><img src="assets/aurora/channel-email.svg" width="32%" alt="Email" /></a>
+<a href="https://github.com/Aditya2514?tab=repositories"><img src="assets/aurora/channel-github.svg" width="32%" alt="GitHub repositories" /></a>
+
+<sub>Scenes redrawn from live GitHub data every six hours · last run {{generated}}</sub>
+
+</div>

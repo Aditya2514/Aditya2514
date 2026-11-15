@@ -1,0 +1,131 @@
+{
+  "owner": "Aditya2514",
+  "exclude": ["Aditya2514"],
+  "categories": {
+    "LexGuard": "ai", "Noesis": "ai", "Resilion": "ai", "BenchShield": "ai",
+    "Pikina": "agents", "Meta_OpenEnv": "agents",
+    "HostelDesk": "product", "Shopkart": "product", "Vidya": "product", "Fintrac": "product", "Naukri": "product", "Mobius": "product",
+    "codecrafters-shell-cpp": "systems"
+  },
+  "flagships": [
+    {
+      "repo": "LexGuard", "name": "LexGuard", "tag": "LEGAL AI · INDIAN LAW", "glyph": "scales",
+      "pitch": "Reviews contracts under Indian law. Written rules can overrule the model.",
+      "metric": {"count": {"path": "backend/src/services/classifierService.js", "needle": "detectedTraps.push"}, "label": "trap checks that outrank the LLM"},
+      "flow": [["io", "Parse"], ["model", "Rate"], ["rule", "Traps"], ["rule", "Cite"], ["person", "Sign"]],
+      "stack": "Node.js · React · MongoDB · Redis"
+    },
+    {
+      "repo": "Pikina", "name": "Pikina", "tag": "AGENT · OFFLINE DESKTOP", "glyph": "window",
+      "pitch": "A local assistant that asks before it acts, and can undo what it did.",
+      "metric": {"files": {"glob": "src/pikina/registry/capabilities/*.json"}, "label": "capabilities, each schema-checked"},
+      "flow": [["person", "Ask"], ["rule", "Route"], ["model", "Ollama"], ["rule", "Gate"], ["io", "Act"]],
+      "stack": "Python · Electron · Ollama · SQLite"
+    },
+    {
+      "repo": "Noesis", "name": "Noesis", "tag": "MULTIMODAL RAG", "glyph": "wave",
+      "pitch": "Searches video, audio, PDFs and images. Every answer points to a second or a page.",
+      "metric": {"value": "4", "label": "media types, one citation format"},
+      "flow": [["io", "Ingest"], ["io", "Fuse"], ["model", "Rerank"], ["rule", "Audit"], ["person", "Read"]],
+      "stack": "Python · ChromaDB · Whisper · Streamlit"
+    }
+  ],
+  "systems": [
+    {"repo": "Resilion", "name": "Resilion", "tag": "SUPPLY-CHAIN RISK", "glyph": "graph",
+     "metric": {"value": "News → graph", "label": "risk traced to industries"}},
+    {"repo": "HostelDesk", "name": "HostelDesk", "tag": "PRODUCT · OPERATIONS", "glyph": "ticket",
+     "metric": {"files": {"glob": "**/*.test.ts"}, "label": "test files"}},
+    {"repo": "Shopkart", "name": "ShopKart", "tag": "E-COMMERCE", "glyph": "cart",
+     "metric": {"value": "HMAC", "label": "signed payments only"}},
+    {"repo": "codecrafters-shell-cpp", "name": "C++ Shell", "tag": "SYSTEMS · POSIX", "glyph": "prompt",
+     "metric": {"value": "fork · pipe", "label": "pipelines by hand"}},
+    {"repo": "Meta_OpenEnv", "name": "Meta OpenEnv", "tag": "AGENT ENVIRONMENT", "glyph": "grid",
+     "metric": {"value": "3", "label": "difficulty tiers"}}
+  ],
+  "cards": [
+    {
+      "repo": "LexGuard", "name": "LexGuard", "tag": "LEGAL AI · INDIAN LAW",
+      "badges": [["Node.js", "nodedotjs", "339933"], ["React", "react", "61DAFB"], ["MongoDB", "mongodb", "47A248"], ["Redis", "redis", "DC382D"]],
+      "lede": "Makes contract risks easier to inspect before signing. A staged agent pipeline examines clauses, checks explicit traps, **verifies every statute it cites** and proposes rewrites.",
+      "notes": "A deterministic auditor runs hand-written trap patterns before any agent reads a risk level, and it can force an escalation: LLMs under-rate predatory clauses written in calm legal language. Citations are looked up and graded against a statute database. Providers fail mid-document, so the AI client falls through Gemini, Groq, Hugging Face, Grok and local Ollama. PDFs are repaired by a two-pass chunker before any model sees them, and clauses are keyed by position because LLM-echoed IDs drifted. It runs inside 512 MB: a 380 MB V8 heap cap, idle models unloaded, GC after each job.",
+      "claims": [
+        {"path": "backend/src/services/jobQueueService.js", "needle": "await agentLimit(() => runAgent10DeterministicAudit(contractId));", "label": "rule gate"},
+        {"path": "backend/src/services/citationVerifier.js", "needle": "async function verifyCitations(lawRefs)", "label": "citation check"},
+        {"path": "backend/package.json", "needle": "--max-old-space-size=380", "label": "512 MB budget"}
+      ]
+    },
+    {
+      "repo": "Pikina", "name": "Pikina", "tag": "AGENT · OFFLINE DESKTOP",
+      "badges": [["Python", "python", "3776AB"], ["Electron", "electron", "47848F"], ["Ollama", "ollama", "FFFFFF"], ["SQLite", "sqlite", "74B9E8"]],
+      "lede": "An offline-first Windows/Linux assistant with local inference, validated tools and **consent for anything high-risk**.",
+      "notes": "Known intents go through a regex router with no model call; everything else goes to a local model through Ollama. Every proposed action is schema-checked against a capability registry. One consent rule covers every entry point: level 4 always asks, and level 3 asks when the action can't be rolled back. Multi-step plans run as transactions and roll back step by step when one fails.",
+      "claims": [
+        {"path": "src/pikina/validation/schema_check.py", "needle": "def validate_action(proposed: dict, registry) -> tuple:", "label": "validator"},
+        {"path": "src/pikina/registry/gatekeeper.py", "needle": "return level >= 4 or (level >= 3 and not manifest.get(\"supports_rollback\", False))", "label": "consent rule"},
+        {"path": "src/pikina/transactions/rollback_engine.py", "needle": "def rollback(self, plan_id: str, completed_steps: list) -> bool:", "label": "rollback"}
+      ]
+    },
+    {
+      "repo": "Noesis", "name": "Noesis", "tag": "MULTIMODAL RAG · with Apurva Patil",
+      "badges": [["Python", "python", "3776AB"], ["ChromaDB", "databricks", "FF6B6B"], ["Whisper", "openai", "FFFFFF"], ["Streamlit", "streamlit", "FF4B4B"]],
+      "lede": "Finds the useful moment across a pile of mixed media. Video, audio, PDFs and images go in; **every answer links to a timestamp or page**.",
+      "notes": "Each source becomes a SuperChunk that keeps its time window or page. Dense (ChromaDB) and sparse (BM25) results are merged with reciprocal rank fusion, a local cross-encoder reranks them, and a separate fact-audit pass labels every claim in the answer as supported, partially supported or unsupported.",
+      "claims": [
+        {"path": "hybrid_retrieve.py", "needle": "def _rrf_fuse(", "label": "RRF fusion"},
+        {"path": "hybrid_retrieve.py", "needle": "from sentence_transformers import CrossEncoder, SentenceTransformer", "label": "local reranker"},
+        {"path": "grounded_generate.py", "needle": "def call_fact_audit(", "label": "fact audit"}
+      ]
+    },
+    {
+      "repo": "Resilion", "name": "Resilion", "tag": "SUPPLY-CHAIN INTELLIGENCE",
+      "badges": [["Python", "python", "3776AB"], ["NetworkX", "python", "8FB8FF"], ["Gemini", "googlegemini", "8E75B2"]],
+      "lede": "Turns supply-chain news into structured risk events and **traces which industries get hit**.",
+      "notes": "Gemini extracts events from articles; validators reject any event type, severity or trade corridor the graph doesn't already know, so the model can't invent a place. Graph traversal then walks from the disrupted corridor to the refineries and industries downstream and scores their exposure.",
+      "claims": [
+        {"path": "backend/agents/risk_agent.py", "needle": "def corridor_must_be_seeded_or_null(cls, v: Optional[str]) -> Optional[str]:", "label": "no invented corridors"},
+        {"path": "backend/graph/traversal.py", "needle": "def find_affected_industries(", "label": "impact traversal"}
+      ]
+    },
+    {
+      "repo": "HostelDesk", "name": "HostelDesk", "tag": "PRODUCT · OPERATIONS",
+      "badges": [["TypeScript", "typescript", "3178C6"], ["React", "react", "61DAFB"], ["Express", "express", "FFFFFF"], ["PostgreSQL", "postgresql", "4169E1"], ["Prisma", "prisma", "FFFFFF"]],
+      "lede": "Hostel complaints with **explained ETA ranges**, automatic routing and escalation. Live on Neon and Render.",
+      "notes": "Tickets route to the right staff member automatically. ETAs come from simulating that person's whole open queue rather than a fixed SLA, a late ticket tells the student why it is late, and a background job escalates anything past its deadline.",
+      "claims": [
+        {"path": "server/src/modules/scheduling/eta.service.ts", "needle": "export function studentDelayReason(reason: EtaReason, isTriggerTicket: boolean): string {", "label": "delay reasons"},
+        {"path": "server/src/jobs/escalation.job.ts", "needle": "export class EscalationJob", "label": "escalation job"}
+      ]
+    },
+    {
+      "repo": "Shopkart", "name": "ShopKart", "tag": "E-COMMERCE · with Apurva Patil",
+      "badges": [["React", "react", "61DAFB"], ["Express", "express", "FFFFFF"], ["MongoDB", "mongodb", "47A248"], ["Razorpay", "razorpay", "0C2451"]],
+      "lede": "A store whose checkout **never trusts the browser with a price**.",
+      "notes": "The server rebuilds every order from database prices and live stock, and an order is marked paid only after Razorpay's signature checks out with HMAC-SHA256 on the server.",
+      "claims": [
+        {"path": "server/controllers/order.controller.js", "needle": "calculatedTotal += product.price * cartItem.quantity;", "label": "server-side total"},
+        {"path": "server/controllers/order.controller.js", "needle": "if (expectedSignature !== razorpay_signature) {", "label": "signature check"}
+      ]
+    },
+    {
+      "repo": "codecrafters-shell-cpp", "name": "C++ Shell", "tag": "SYSTEMS · POSIX",
+      "badges": [["C++23", "cplusplus", "00599C"], ["POSIX", "linux", "FCC624"], ["CMake", "cmake", "064F8C"]],
+      "lede": "A shell built on **fork, exec, pipe and dup2**: quoting, redirection, pipelines and background jobs.",
+      "notes": "Builtins, PATH lookup, a quoting state machine for single and double quotes, I/O redirection and multi-stage pipelines. Each stage's stdin is rewired to the previous stage's pipe with dup2, and every unused pipe end is closed so the next stage sees EOF.",
+      "claims": [
+        {"path": "src/main.cpp", "needle": "pid_t pid = fork();", "label": "fork"},
+        {"path": "src/main.cpp", "needle": "dup2(pipefds[(i - 1) * 2], STDIN_FILENO);", "label": "dup2 wiring"},
+        {"path": "src/main.cpp", "needle": "bool in_single_quotes = false;", "label": "quote parser"}
+      ]
+    },
+    {
+      "repo": "Meta_OpenEnv", "name": "Meta OpenEnv", "tag": "AGENT ENVIRONMENT · HACKATHON",
+      "badges": [["Python", "python", "3776AB"], ["FastAPI", "fastapi", "009688"], ["Docker", "docker", "2496ED"]],
+      "lede": "An environment where agents juggle assignments, bugs and deadlines, and **finishing by burning out still loses points**.",
+      "notes": "Built for the Meta PyTorch OpenEnv Hackathon. An agent schedules work against hard deadlines across easy, medium and hard tasks; the graders reward finished work and add bonuses only for burnout-free days (none over 8 hours) and balanced schedules.",
+      "claims": [
+        {"path": "src/envs/assignment_planner/environment.py", "needle": "def step(self, action: Action) -> Tuple[Observation, float, bool, Dict]:", "label": "step contract"},
+        {"path": "src/envs/assignment_planner/graders.py", "needle": "burnout_free = all(h <= 8.0 for h in daily_hours.values())", "label": "burnout rule"}
+      ]
+    }
+  ]
+}

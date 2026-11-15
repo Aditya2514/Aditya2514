@@ -1,12 +1,12 @@
-name: Blueprint refresh
+name: Aurora refresh
 
 on:
   schedule:
     # Off the hour: scheduled runs at :00 are the ones GitHub delays most
     - cron: "17 */6 * * *"
   push:
-    branches: [main]
-    paths: ["data/blueprint.json", "data/README.template.md", "profile.json", "scripts/build_blueprint.py", "tests/test_blueprint.py", ".github/workflows/signal.yml"]
+    branches: [main, claude/ecstatic-hawking-uvnd4a]
+    paths: ["data/aurora.json", "data/README.template.md", "profile.json", "scripts/**", "tests/test_aurora.py", ".github/workflows/signal.yml"]
   workflow_dispatch:
 
 permissions:
@@ -27,23 +27,23 @@ jobs:
           python-version: "3.12"
 
       - name: Test the generator
-        run: python3 -m unittest tests.test_blueprint -v
+        run: python3 -m unittest tests.test_aurora -v
 
-      # Re-finds every linked line at each repo's current commit. An unreachable repo keeps its last result.
-      - name: Refresh code links and redraw the blueprints
+      # Live stats over GraphQL, code links and metrics over REST. Anything unreachable keeps its last saved value.
+      - name: Fetch live data and redraw every scene
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/build_blueprint.py
+        run: python3 scripts/build_aurora.py
 
       - name: Commit if changed
         run: |
-          git add README.md data/evidence.json assets/blueprint
+          git add README.md data/github.json data/evidence.json assets/aurora
           if git diff --cached --quiet; then
             echo "Nothing changed."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore: refresh blueprints and code links"
-          git pull --rebase origin main
-          git push
+          git commit -m "chore: refresh aurora scenes"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin HEAD:"$GITHUB_REF_NAME"
