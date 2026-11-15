@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -22,6 +23,8 @@ from xml.sax.saxutils import escape
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import aurora_art as art  # noqa: E402
 import aurora_data as data  # noqa: E402
+import aurora_fx as fx  # noqa: E402
+import github_activity as activity  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 SPEC = ROOT / "data" / "aurora.json"
@@ -31,6 +34,14 @@ KIT = ROOT / "profile.json"
 TEMPLATE = ROOT / "data" / "README.template.md"
 README = ROOT / "README.md"
 OUT = ROOT / "assets" / "aurora"
+
+DIVIDERS = ["", "", ""]
+
+TAGLINES = [
+    "I build AI that checks itself before you have to.",
+    "Agents that ask before they act, and can undo what they did.",
+    "Rules where mistakes are expensive. Models where they help.",
+]
 
 LOOP_RULES = [
     ("The model proposes", "LexGuard's agents draft the risk ratings; Pikina's local model drafts the tool call.", art.ICE),
@@ -112,7 +123,9 @@ def render(spec: dict, gh: dict, ev: dict) -> None:
     cats = spec["categories"]
     names = {c["repo"]: c["name"] for c in spec["cards"]}
     lat = "12.99° N  ·  80.23° E  ·  CHENNAI"
-    (OUT / "hero.svg").write_text(art.hero(lat))
+    (OUT / "hero.svg").write_text(fx.hero(lat, TAGLINES))
+    if ev.get("rhythm"):
+        (OUT / "rhythm.svg").write_text(fx.rhythm(ev["rhythm"], ev["generated_at"]))
     traps = ev.get("metrics", {}).get("LexGuard")
     rules = list(LOOP_RULES)
     if traps:
@@ -120,8 +133,10 @@ def render(spec: dict, gh: dict, ev: dict) -> None:
     else:
         rules[1] = (rules[1][0], "Trap rules can overrule a rating. Every tool call is schema-checked first.", rules[1][2])
     (OUT / "basecamp.svg").write_text(art.basecamp(rules))
-    (OUT / "expeditions.svg").write_text(art.expeditions(spec["flagships"], spec["systems"], ev.get("metrics", {}), cats, len(ev.get("links", {}))))
+    (OUT / "expeditions.svg").write_text(art.expeditions(spec["flagships"], spec["systems"], ev.get("metrics", {}), cats, len(ev.get("links", {})), ev.get("live", {})))
     (OUT / "flare.svg").write_text(art.flare())
+    for i, label in enumerate(DIVIDERS, 1):
+        (OUT / f"divider-{i:02d}.svg").write_text(fx.divider(label, i))
     for key, label, sub, icon, color in [("linkedin", "LinkedIn", "aditya-singh-8286b137a", "linkedin", art.ICE),
                                          ("email", "Email", "adityasinghv05@gmail.com", "mail", art.AMBER),
                                          ("github", "GitHub", "@Aditya2514 · all repositories", "git", art.EMERALD)]:
@@ -169,6 +184,21 @@ def main() -> int:
         ev = data.collect(spec, previous, opener)
         names_all = sorted({r["name"] for r in gh.get("repos", [])} | {c["repo"] for c in spec["cards"]})
         ev.update(data.collect_signals(names_all, previous, opener, spec["owner"], spec.get("live", {}), check_live=not args.local))
+        try:  # when the commits land: GitHub API in Actions, local clones (emails from AURORA_EMAILS) in a preview
+            if args.local:
+                emails = {e.strip().lower() for e in os.environ.get("AURORA_EMAILS", "").split(",") if e.strip()}
+                dirs = [str(Path(args.local) / n) for n in names_all if (Path(args.local) / n).is_dir()]
+                commits = activity.from_git(dirs, emails) if emails else []
+            else:
+                commits = activity.from_github(spec["owner"])
+            if commits:
+                ev["rhythm"] = data.rhythm(commits)
+            elif previous.get("rhythm"):
+                ev["rhythm"] = previous["rhythm"]
+        except Exception as err:
+            print(f"::warning::commit rhythm unavailable, keeping the last snapshot: {err}")
+            if previous.get("rhythm"):
+                ev["rhythm"] = previous["rhythm"]
         for item in spec["flagships"] + spec["systems"]:
             if item["metric"].get("tests") and ev["signals"].get(item["repo"], {}).get("tests"):
                 ev["metrics"][item["repo"]] = str(ev["signals"][item["repo"]]["tests"])

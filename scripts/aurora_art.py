@@ -274,7 +274,8 @@ def hero(coords: str) -> str:
 
 def sky(gh: dict, weeks: list[dict], active: int, longest: int, current: int, n_repos: int) -> str:
     W, H = 1000, 590
-    body = [ground(W, H), stars(W, 150, 470, 120, 5, .3)]
+    import aurora_fx as fx
+    body = [fx.FX_CSS, ground(W, H), stars(W, 150, 470, 120, 5, .3), meteor(820, 190, 4)]
     body.append(t(52, 44, "SKY // THE LAST 12 MONTHS", 12, ICE, MONO, 500, "start", 3))
     body.append(synced(W, 44, gh["fetched_at"]))
     tiles = [("CONTRIBUTIONS", f'{gh["totals"]["contributions"]:,}', "last 12 months", EMERALD),
@@ -305,8 +306,9 @@ def sky(gh: dict, weeks: list[dict], active: int, longest: int, current: int, n_
         r = f'<rect x="{x + step * .06:.1f}" y="{base - h:.1f}" width="{step * .88:.1f}" height="{h:.1f}" rx="{step * .3:.1f}" fill="url(#cur-{color})"/>'
         core = (f'<rect x="{x + step * .44:.1f}" y="{base - h * .92:.1f}" width="{step * .12:.1f}" height="{h * .92:.1f}" '
                 f'fill="#f2fffb" opacity=".55"/>')
-        rays[i % 4].append(r + core)
-        rays_glow[i % 4].append(r)
+        wrap_open = f'<g class="breathe" style="animation-delay:{-i * .29:.2f}s;animation-duration:{3.4 + (i % 5) * .7:.1f}s">'
+        rays[i % 4].append(wrap_open + r + core + "</g>")
+        rays_glow[i % 4].append(wrap_open + r + "</g>")
     layer = lambda groups: "".join(f'<g class="sh" style="animation-delay:{k * .7:.1f}s">{"".join(g)}</g>' for k, g in enumerate(groups))
     body.append(f'<g class="sway" style="animation-duration:20s"><g filter="url(#soft)">{layer(rays_glow)}</g>'
                 f'<g filter="url(#soft)">{layer(rays_glow)}</g><g filter="url(#mist)">{layer(rays)}</g></g>')
@@ -412,12 +414,14 @@ def flow(x0, x1, y, steps, color, uid):
     return "".join(out)
 
 
-def expeditions(flagships: list[dict], systems: list[dict], metrics: dict, cats: dict, n_links: int) -> str:
+def expeditions(flagships: list[dict], systems: list[dict], metrics: dict, cats: dict, n_links: int, live: dict | None = None) -> str:
+    import aurora_fx as fx
+    live = live or {}
     W = 1000
     rows = (len(flagships) + 2) // 3
     cw, ch, gap, y0 = 290, 372, 23, 146
     H = y0 + rows * (ch + 22) + 212
-    body = [ground(W, H), stars(W, 0, 140, 70, 41, .25), aurora(W, 120, 110, 47, "te", opacity=.3, cls="sway2")]
+    body = [fx.FX_CSS, ground(W, H), stars(W, 0, 140, 70, 41, .25), aurora(W, 120, 110, 47, "te", opacity=.3, cls="sway2")]
     body.append(t(52, 52, "EXPEDITIONS // FLAGSHIP SYSTEMS", 12, ICE, MONO, 500, "start", 3))
     body.append(t(52, 92, "Where the model meets a rule.", 30, TEXT, SANS, 700))
     body.append(t(52, 118, f"{len(flagships)} flagships and {len(systems)} more climbs, each with a number read live from its own repository.", 14, MUTED))
@@ -431,6 +435,10 @@ def expeditions(flagships: list[dict], systems: list[dict], metrics: dict, cats:
         g = [f'<g class="up" style="animation-delay:{.2 + i * .18:.2f}s">',
              f'<rect x="{x}" y="{y0}" width="{cw}" height="{ch}" rx="18" fill="{color}" opacity=".06" filter="url(#soft)"/>',
              glass(x, y0, cw, ch, 18, color, .7),
+             fx.running_border(x, y0, cw, ch, 18, color, delay=i * 1.3, dur=6 + (i % 3)),
+             f'<circle cx="{x + 42}" cy="{y0 + 48}" r="24" fill="none" stroke="{color}" stroke-width="1.5">'
+             f'<animate attributeName="r" values="24;36" dur="2.8s" begin="{i * .5:.1f}s" repeatCount="indefinite"/>'
+             f'<animate attributeName="opacity" values=".7;0" dur="2.8s" begin="{i * .5:.1f}s" repeatCount="indefinite"/></circle>',
              f'<circle cx="{x + 42}" cy="{y0 + 48}" r="24" fill="{color}" opacity=".12"/>',
              f'<circle cx="{x + 42}" cy="{y0 + 48}" r="24" fill="none" stroke="{color}" stroke-opacity=".6"/>',
              glyph(f["glyph"], x + 42, y0 + 48, 26, color),
@@ -438,7 +446,11 @@ def expeditions(flagships: list[dict], systems: list[dict], metrics: dict, cats:
         for j, line in enumerate(wrap(f["pitch"], 38)[:3]):
             g.append(t(x + 22, y0 + 108 + j * 20, line, 14, MUTED))
         value = metrics.get(f["repo"], "·")
-        g.append(t(x + 22, y0 + 210, value, 48, "url(#title)", SANS, 800, "start", -1, 'filter="url(#glow)"'))
+        g.append(fx.countup(x + 22, y0 + 210, value, 48, "url(#title)", delay=.6 + i * .15, extra='filter="url(#glow)"'))
+        if live.get(f["repo"]):
+            g.append(f'<rect x="{x + cw - 86}" y="{y0 + 180}" width="64" height="22" rx="11" fill="{EMERALD}" fill-opacity=".12" stroke="{EMERALD}" stroke-opacity=".6"/>'
+                     f'<circle class="blink" cx="{x + cw - 71}" cy="{y0 + 191}" r="3.5" fill="{EMERALD}"/>'
+                     + t(x + cw - 46, y0 + 195, "LIVE", 10, EMERALD, MONO, 700, "middle", 1.5))
         for j, line in enumerate(wrap(f["metric"]["label"], 36)[:2]):
             g.append(t(x + 22, y0 + 234 + j * 16, line.upper(), 10, MUTED, MONO, 500, "start", 1.2))
         g.append(f'<line x1="{x + 22}" y1="{y0 + 262}" x2="{x + cw - 22}" y2="{y0 + 262}" stroke="{ICE}" stroke-opacity=".1"/>')
@@ -455,9 +467,10 @@ def expeditions(flagships: list[dict], systems: list[dict], metrics: dict, cats:
         value = metrics.get(s["repo"], "·")
         size = 26 if len(value) <= 6 else 19
         body.append(f'<g class="up" style="animation-delay:{.8 + i * .1:.2f}s">{glass(x, sy + 6, sw, 140, 14, color, .65)}'
+                    f'{fx.running_border(x, sy + 6, sw, 140, 14, color, delay=2 + i * 1.1, dur=7)}'
                     f'{glyph(s["glyph"], x + 26, sy + 34, 20, color)}{t(x + 46, sy + 39, s["name"], 15, TEXT, SANS, 700)}'
                     f'{t(x + 16, sy + 64, s["tag"], 8.5, color, MONO, 500, "start", 1.2)}'
-                    f'{t(x + 16, sy + 102, value, size, TEXT, SANS, 800)}'
+                    f'{fx.countup(x + 16, sy + 102, value, size, TEXT, delay=1 + i * .12)}'
                     + "".join(t(x + 16, sy + 122 + j * 13, line.upper(), 8.8, MUTED, MONO, 500, "start", .8)
                               for j, line in enumerate(wrap(s["metric"]["label"], int(sw / 6.6))[:2])) + "</g>")
     legend = [("◇ MODEL", ICE), ("■ CHECK", AMBER), ("● PERSON", EMERALD), ("● DATA", STEEL)]
@@ -510,6 +523,11 @@ def terrain(repos: list[dict], cats: dict, flags: list[str], fetched: str) -> st
                                 f'stroke-opacity=".75" stroke-width="1.2"/></g>', r, x, base - h))
     body += [s[1] for s in shapes]
     body.append(f'<rect x="0" y="{base - 10}" width="{W}" height="60" fill="{NIGHT2}" opacity=".7" filter="url(#soft)"/>')
+    import aurora_fx as fx
+    body.insert(0, fx.FX_CSS)
+    for k, (my, op, dur) in enumerate([(base - 40, .16, 30), (base - 90, .1, 38), (base - 18, .22, 26)]):
+        body.append(f'<ellipse class="mist" style="animation-duration:{dur}s;animation-delay:{-k * 7}s" cx="{W / 2}" cy="{my}" rx="{W * .7}" ry="14" '
+                    f'fill="#cfeff6" opacity="{op}" filter="url(#soft)"/>')
     body.append(f'<line x1="60" y1="{base + 6}" x2="{W - 60}" y2="{base + 6}" stroke="{ICE}" stroke-opacity=".25"/>')
     # quarter ticks
     q = date.fromordinal(d0).replace(day=1)
@@ -521,13 +539,29 @@ def terrain(repos: list[dict], cats: dict, flags: list[str], fetched: str) -> st
         q = date(q.year + (q.month // 12), q.month % 12 + 1, 1)
     flagged = [s for s in shapes if s[2]["name"] in flags]
     flagged.sort(key=lambda s: s[3])
+    placed = []  # label boxes already drawn, so the next one climbs higher instead of overlapping
+    names_ = {"codecrafters-shell-cpp": "C++ Shell", "Meta_OpenEnv": "Meta OpenEnv", "Shopkart": "ShopKart"}
     for k, (_, _, r, x, top) in enumerate(flagged):
-        pole = min(26 + (k % 3) * 26, top - 92)
+        lw_ = len(names_.get(r["name"], r["name"])) * 7.4 + 18
+        pole = 26
+        while True:
+            box = (x - lw_ / 2 - 4, top - pole - 24, x + lw_ / 2 + 4, top - pole)
+            if box[1] < 64 or not any(box[0] < b[2] and b[0] < box[2] and box[1] < b[3] and b[1] < box[3] for b in placed):
+                break
+            pole += 12
+        if box[1] < 64:  # out of sky: tuck the label beside the peak instead
+            pole = max(18, top - 90)
+            box = (x - lw_ / 2 - 4, top - pole - 24, x + lw_ / 2 + 4, top - pole)
+        placed.append(box)
         cat = CAT[cats.get(r["name"], "other")]
         name = {"codecrafters-shell-cpp": "C++ Shell", "Meta_OpenEnv": "Meta OpenEnv", "Shopkart": "ShopKart"}.get(r["name"], r["name"])
         lw = len(name) * 7.4 + 18
         body.append(f'<g class="fade" style="animation-delay:{1.6 + k * .12:.2f}s">'
                     f'<line x1="{x:.1f}" y1="{top:.1f}" x2="{x:.1f}" y2="{top - pole:.1f}" stroke="{TEXT}" stroke-opacity=".7"/>'
+                    f'<path fill="{cat}" opacity=".9" d="M{x:.1f},{top - pole + 2:.1f} q8,-3 16,1 v9 q-8,-4 -16,-1 z">'
+                    f'<animate attributeName="d" dur="{1.6 + k * .2:.1f}s" repeatCount="indefinite" values="'
+                    f'M{x:.1f},{top - pole + 2:.1f} q8,-3 16,1 v9 q-8,-4 -16,-1 z;M{x:.1f},{top - pole + 2:.1f} q8,3 16,-1 v9 q-8,4 -16,1 z;'
+                    f'M{x:.1f},{top - pole + 2:.1f} q8,-3 16,1 v9 q-8,-4 -16,-1 z"/></path>'
                     f'<rect x="{x - lw / 2:.1f}" y="{top - pole - 22:.1f}" width="{lw:.1f}" height="20" rx="10" fill="#06121c" stroke="{cat}"/>'
                     + t(x, top - pole - 8, name, 11.5, TEXT, SANS, 600, "middle") + "</g>")
     x = 52
@@ -636,7 +670,8 @@ def trail(commits: list[dict], names: dict, cats: dict, fetched: str) -> str:
     d = "M" + " L".join(f"{x:.1f},{y:.1f}" for x, y in path)
     body.append(f'<path id="trail" d="{d}" fill="none" stroke="{AMBER}" stroke-opacity=".25" stroke-width="5" stroke-linecap="round"/>')
     body.append(f'<path class="draw" pathLength="1" d="{d}" fill="none" stroke="{AMBER}" stroke-width="1.6" stroke-dasharray="1" stroke-linecap="round"/>')
-    body.append(f'<circle r="4.5" fill="{AMBER}" filter="url(#glow)"><animateMotion dur="11s" repeatCount="indefinite"><mpath href="#trail"/></animateMotion></circle>')
+    body.append(f'<g><circle r="22" fill="{AMBER}" opacity=".16" filter="url(#soft)"/><circle r="4.5" fill="#fff1c9" filter="url(#glow)"/>'
+                f'<animateMotion dur="11s" repeatCount="indefinite"><mpath href="#trail"/></animateMotion></g>')
     lengths = [0.0]
     for (ax, ay), (bx, by) in zip(path, path[1:]):
         lengths.append(lengths[-1] + math.hypot(bx - ax, by - ay))
@@ -657,6 +692,11 @@ def trail(commits: list[dict], names: dict, cats: dict, fetched: str) -> str:
         cx = min(max(cx, 24), W - 24 - cw)
         cy = y - 22
         subject = c["subject"] if len(c["subject"]) <= 44 else c["subject"][:43] + "…"
+        frac = lengths[k] / total
+        k1, k2 = max(frac - .001, .0005), min(frac + .07, .999)
+        body.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="6" fill="none" stroke="{AMBER}" stroke-width="2" opacity="0">'
+                    f'<animate attributeName="r" dur="11s" repeatCount="indefinite" values="6;6;22;22" keyTimes="0;{k1:.4f};{k2:.4f};1"/>'
+                    f'<animate attributeName="opacity" dur="11s" repeatCount="indefinite" values="0;0;.9;0;0" keyTimes="0;{k1:.4f};{(k1 + .002):.4f};{k2:.4f};1"/></circle>')
         body.append(f'<g class="up" style="animation-delay:{.5 + i * .22:.2f}s">'
                     f'<line x1="{x:.1f}" y1="{y:.1f}" x2="{cx + (0 if right else cw):.1f}" y2="{y:.1f}" stroke="{color}" stroke-opacity=".5"/>'
                     f'<circle cx="{x:.1f}" cy="{y:.1f}" r="6" fill="#06121c" stroke="{color}" stroke-width="2"/>'
@@ -702,6 +742,16 @@ def flare() -> str:
         f'<line class="fl" x1="{fx}" y1="{fy0}" x2="{fx}" y2="{fy1}" pathLength="1" stroke-dasharray="1" stroke="url(#warm)" stroke-width="2.4" stroke-linecap="round" filter="url(#glow)"/>'
         f'<g class="bu" filter="url(#glow)"><circle cx="{fx}" cy="{fy1}" r="10" fill="{AMBER}"/>{sparks}</g>'
         f'<circle cx="{fx}" cy="{fy0}" r="3" fill="{AMBER}" class="br"/>')
+    for (bx, by, c, d0) in [(640, 120, EMERALD, 2.0), (900, 150, ICE, 3.4), (720, 70, ROSE, 4.6)]:
+        sp = "".join(f'<line x1="{bx}" y1="{by}" x2="{bx + 34 * math.cos(a):.1f}" y2="{by + 34 * math.sin(a):.1f}" stroke="{c}" stroke-width="1.4" stroke-linecap="round"/>'
+                     f'<circle cx="{bx + 40 * math.cos(a):.1f}" cy="{by + 40 * math.sin(a):.1f}" r="1.6" fill="{c}"/>'
+                     for a in [j * math.pi / 8 for j in range(16)])
+        body.append(f'<g class="bu" style="animation-delay:{d0}s" filter="url(#glow)">{sp}</g>')
+    for j in range(3):
+        body.append(f'<ellipse cx="{fx}" cy="{horizon + 14}" rx="10" ry="2.5" fill="none" stroke="{AMBER}" stroke-opacity=".6">'
+                    f'<animate attributeName="rx" values="10;120" dur="6s" begin="{j * 2}s" repeatCount="indefinite"/>'
+                    f'<animate attributeName="ry" values="2.5;14" dur="6s" begin="{j * 2}s" repeatCount="indefinite"/>'
+                    f'<animate attributeName="opacity" values=".8;0" dur="6s" begin="{j * 2}s" repeatCount="indefinite"/></ellipse>')
     body.append(f'<g class="up" style="animation-delay:.2s">{t(64, 100, "SEND A SIGNAL", 13, AMBER, MONO, 600, "start", 6)}</g>')
     body.append(f'<g class="up" style="animation-delay:.4s" filter="url(#glow)">{t(60, 160, "Let’s build something", 50, TEXT, SANS, 800, "start", -1)}'
                 f'{t(60, 216, "worth finding.", 50, "url(#title)", SANS, 800, "start", -1)}</g>')
@@ -792,7 +842,7 @@ def gauge(cx, cy, value, label, color, delay):
             f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="{color}" stroke-width="7" stroke-linecap="round" pathLength="100" '
             f'stroke-dasharray="22 78" filter="url(#glow)"><animateTransform attributeName="transform" type="rotate" '
             f'from="0 {cx} {cy}" to="360 {cx} {cy}" dur="{6 + delay * 4:.1f}s" repeatCount="indefinite"/></circle>'
-            + t(cx, cy + 9, value, 26 if len(value) < 4 else 21, TEXT, SANS, 800, "middle")
+            + __import__("aurora_fx").countup(cx, cy + 9, value, 26 if len(value) < 4 else 21, TEXT, delay=delay + .3, anchor="middle")
             + t(cx, cy + r + 30, label, 9.5, MUTED, MONO, 600, "middle", 1.6) + "</g>")
 
 

@@ -86,6 +86,14 @@ class AuroraTest(unittest.TestCase):
                   art.sky(gh, data.weekly(gh["days"]), active, longest, current, 4),
                   art.terrain(gh["repos"], SPEC["categories"], ["LexGuard"], gh["fetched_at"]),
                   art.bedrock(data.language_shares(gh["repos"]), 4), art.channel("Email", "x", "mail", art.AMBER)]
+        import aurora_fx as fx
+        from datetime import datetime, timezone, timedelta as td
+        commits = [{"repo": "LexGuard", "sha": str(i), "message_first_line": 'fix: "x" & y',
+                    "authored_at": datetime(2026, 5, 1, tzinfo=timezone.utc) + td(minutes=37 * i)} for i in range(300)]
+        r = data.rhythm(commits)
+        self.assertEqual(sum(r["hours"]), 300)
+        self.assertIn(r["chronotype"], {"Night Owl", "Early Riser", "Afternoon Climber", "Evening Climber"})
+        scenes += [fx.hero("0° N", ["a", "b", "c"]), fx.rhythm(r, "2026-11-15T00:00:00Z"), fx.divider("", 1)]
         for s in scenes:
             ET.fromstring(s)
 

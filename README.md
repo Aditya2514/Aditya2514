@@ -17,8 +17,8 @@
 
 <div align="center">
 
-[`01` BASE CAMP](#01-base-camp) &nbsp;·&nbsp; [`02` ASCENT](#02-ascent) &nbsp;·&nbsp; [`03` EXPEDITIONS](#03-expeditions) &nbsp;·&nbsp; [`04` FIELD NOTES](#04-field-notes) &nbsp;·&nbsp; [`05` INSTRUMENTS](#05-instruments)<br>
-[`06` TERRAIN](#06-terrain) &nbsp;·&nbsp; [`07` BEDROCK](#07-bedrock) &nbsp;·&nbsp; [`08` TRAIL LOG](#08-trail-log) &nbsp;·&nbsp; [`09` RECORD](#09-record) &nbsp;·&nbsp; [`10` SEND A SIGNAL](#10-send-a-signal)
+[`01` BASE CAMP](#01-base-camp) &nbsp;·&nbsp; [`02` ASCENT](#02-ascent) &nbsp;·&nbsp; [`03` EXPEDITIONS](#03-expeditions) &nbsp;·&nbsp; [`04` FIELD NOTES](#04-field-notes) &nbsp;·&nbsp; [`05` RHYTHM](#05-rhythm) &nbsp;·&nbsp; [`06` INSTRUMENTS](#06-instruments)<br>
+[`07` TERRAIN](#07-terrain) &nbsp;·&nbsp; [`08` BEDROCK](#08-bedrock) &nbsp;·&nbsp; [`09` TRAIL LOG](#09-trail-log) &nbsp;·&nbsp; [`10` RECORD](#10-record) &nbsp;·&nbsp; [`11` SEND A SIGNAL](#11-send-a-signal)
 
 </div>
 
@@ -55,7 +55,7 @@ Leak audits for AI benchmarks<br>[Open →](https://github.com/Aditya2514/BenchS
 </tr>
 </table>
 
-<br>
+<img src="assets/aurora/divider-01.svg" width="100%" alt="" />
 
 ## 01 Base camp
 
@@ -63,7 +63,7 @@ Leak audits for AI benchmarks<br>[Open →](https://github.com/Aditya2514/BenchS
 
 <img src="assets/aurora/basecamp.svg" width="100%" alt="Base camp. What happens when the model is wrong? Aditya studies at IIT Madras and Scaler School of Technology and builds the layer around the model: rules that can overrule it, retrieval that keeps it honest, consent before it acts and a way to undo. The loop: the model proposes, the system checks, the person decides." />
 
-<br>
+<img src="assets/aurora/divider-02.svg" width="100%" alt="" />
 
 ## 02 Ascent
 
@@ -73,7 +73,7 @@ Leak audits for AI benchmarks<br>[Open →](https://github.com/Aditya2514/BenchS
 
 <sub>Each star is a real repository, placed in the order it was created. The line only climbs.</sub>
 
-<br>
+<img src="assets/aurora/divider-03.svg" width="100%" alt="" />
 
 ## 03 Expeditions
 
@@ -83,7 +83,7 @@ Leak audits for AI benchmarks<br>[Open →](https://github.com/Aditya2514/BenchS
 
 <sub>Every number on these cards is re-read from its own repository each time the page refreshes.</sub>
 
-<br>
+<img src="assets/aurora/divider-01.svg" width="100%" alt="" />
 
 ## 04 Field notes
 
@@ -347,29 +347,39 @@ Built for the Meta PyTorch OpenEnv Hackathon. An agent schedules work against ha
 | [Naukri](https://github.com/Aditya2514/Naukri) · [live ↗](https://Aditya2514.github.io/Naukri/) | A dark-mode job portal with a 100-entry API, persistent saved jobs and sliding-window pagination. | React · Vite |
 | [FinancePro](https://github.com/Aditya2514/FinancePro) | A vanilla-JavaScript finance dashboard: multiple profiles, analytics and goal tracking. | JavaScript |
 
-<br>
+<img src="assets/aurora/divider-02.svg" width="100%" alt="" />
 
-## 05 Instruments
+## 05 Rhythm
 
 <sub>AURORA // 05</sub>
 
-<img src="assets/aurora/instruments.svg" width="100%" alt="Engineering signals counted across every public repository: test cases, test files, CI workflows, dockerised repos, design documents and architecture decision records, and pull requests, with a signal board per repository and the people these were built with." />
+<img src="assets/aurora/rhythm.svg" width="100%" alt="When the code ships: commits bucketed by hour of day in IST, drawn as rays of light over a horizon while a sun and a moon cross the sky every 24 seconds and light each hour in turn; below, seven nights of aurora, one band per weekday, brightest where commits cluster; plus the derived chronotype, focus window, weekend share and the longest unbroken session." />
 
-<br>
+<sub>Every commit I've authored on the default branch of my public repos in the last year, bucketed by IST hour and weekday and recomputed every six hours. The chronotype is derived from the data, not chosen.</sub>
 
-## 06 Terrain
+<img src="assets/aurora/divider-03.svg" width="100%" alt="" />
+
+## 06 Instruments
 
 <sub>AURORA // 06</sub>
+
+<img src="assets/aurora/instruments.svg" width="100%" alt="Engineering signals counted across every public repository: test cases, test files, CI workflows, dockerised repos, design documents and architecture decision records, and pull requests, with a signal board per repository and the people these were built with." />
+
+<img src="assets/aurora/divider-01.svg" width="100%" alt="" />
+
+## 07 Terrain
+
+<sub>AURORA // 07</sub>
 
 <img src="assets/aurora/terrain.svg" width="100%" alt="Every public repository drawn as a mountain peak: its height is the amount of code, its position is when it began, and its colour is its kind: AI systems, agents, products or systems. Flags mark the systems described above." />
 
 <sub>Each new repository rises on the right the next time the page refreshes.</sub>
 
-<br>
+<img src="assets/aurora/divider-02.svg" width="100%" alt="" />
 
-## 07 Bedrock
+## 08 Bedrock
 
-<sub>AURORA // 07</sub>
+<sub>AURORA // 08</sub>
 
 <img src="assets/aurora/bedrock.svg" width="100%" alt="Languages drawn as layers of rock under a snowy forest, each layer as thick as its share of the code across all public repositories." />
 
@@ -382,30 +392,30 @@ Built for the Meta PyTorch OpenEnv Hackathon. An agent schedules work against ha
 | <sub>**INTERFACES**</sub><br><sub>Make systems usable</sub> | ![React](https://img.shields.io/badge/React-08141F?style=flat-square&logo=react&logoColor=61DAFB) ![React Native](https://img.shields.io/badge/React%20Native-08141F?style=flat-square&logo=react&logoColor=61DAFB) ![Electron](https://img.shields.io/badge/Electron-08141F?style=flat-square&logo=electron&logoColor=47848F) ![Streamlit](https://img.shields.io/badge/Streamlit-08141F?style=flat-square&logo=streamlit&logoColor=FF4B4B) |
 | <sub>**DELIVERY**</sub><br><sub>Version, test and ship</sub> | ![Git](https://img.shields.io/badge/Git-08141F?style=flat-square&logo=git&logoColor=F05032) ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-08141F?style=flat-square&logo=githubactions&logoColor=2088FF) ![Docker](https://img.shields.io/badge/Docker-08141F?style=flat-square&logo=docker&logoColor=2496ED) ![Vercel](https://img.shields.io/badge/Vercel-08141F?style=flat-square&logo=vercel&logoColor=FFFFFF) |
 
-<br>
+<img src="assets/aurora/divider-03.svg" width="100%" alt="" />
 
-## 08 Trail log
+## 09 Trail log
 
-<sub>AURORA // 08</sub>
+<sub>AURORA // 09</sub>
 
 <img src="assets/aurora/trail.svg" width="100%" alt="The latest commits across the systems above, drawn as waypoints on a trail climbing a mountain under the northern lights, newest at the summit." />
 
-<br>
+<img src="assets/aurora/divider-01.svg" width="100%" alt="" />
 
-## 09 Record
+## 10 Record
 
-<sub>AURORA // 09</sub>
+<sub>AURORA // 10</sub>
 
 | Education | Achievement |
 | :-- | :-- |
 | **IIT Madras** · BS Data Science & Applications · 2025–2029 · CGPA **9.0/10** | **Runner-up** · Paradox DSA Triathlon · IIT Madras · 2026 |
 | **Scaler School of Technology** · 2025–2029 | **Meta PyTorch OpenEnv Hackathon** · 2026 · team submission |
 
-<br>
+<img src="assets/aurora/divider-02.svg" width="100%" alt="" />
 
-## 10 Send a signal
+## 11 Send a signal
 
-<sub>AURORA // 10</sub>
+<sub>AURORA // 11</sub>
 
 <img src="assets/aurora/flare.svg" width="100%" alt="A signal flare rises from a mountain into the northern lights over a still lake. Let's build something worth finding: AI engineering internships, agent systems, hackathon teams." />
 
@@ -415,6 +425,6 @@ Built for the Meta PyTorch OpenEnv Hackathon. An agent schedules work against ha
 <a href="mailto:adityasinghv05@gmail.com"><img src="assets/aurora/channel-email.svg" width="32%" alt="Email" /></a>
 <a href="https://github.com/Aditya2514?tab=repositories"><img src="assets/aurora/channel-github.svg" width="32%" alt="GitHub repositories" /></a>
 
-<sub>Scenes redrawn from live GitHub data every six hours · last run 15 Nov 2026, 16:58 UTC</sub>
+<sub>Scenes redrawn from live GitHub data every six hours · last run 15 Nov 2026, 17:58 UTC</sub>
 
 </div>

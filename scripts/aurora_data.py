@@ -312,3 +312,55 @@ def collect_signals(names: list[str], previous: dict, open_repo, owner: str, liv
     for name, url in live.items():
         status[name] = health(url) if check_live else previous.get("live", {}).get(name)
     return {"signals": out, "live": status}
+
+
+# ------------------------------------------------------------------------------------------------ rhythm
+
+def rhythm(commits: list[dict]) -> dict:
+    """When the commits land, in IST: per hour, per weekday x hour, chronotype and the longest session."""
+    from datetime import timedelta as _td, timezone as _tz
+    ist = _tz(_td(hours=5, minutes=30))
+    times = sorted(c["authored_at"].astimezone(ist) for c in commits)
+    n = len(times)
+    if not n:
+        return {}
+    hours = [0] * 24
+    grid = [[0] * 24 for _ in range(7)]
+    for t in times:
+        hours[t.hour] += 1
+        grid[t.weekday()][t.hour] += 1
+    share = lambda hs: sum(hours[h] for h in hs) / n
+    night = share([22, 23, 0, 1, 2, 3, 4])
+    bands = [("Night Owl", night, "22:00 and 05:00"), ("Early Riser", share(range(5, 11)), "05:00 and 11:00"),
+             ("Afternoon Climber", share(range(11, 17)), "11:00 and 17:00"), ("Evening Climber", share(range(17, 22)), "17:00 and 22:00")]
+    kind, frac, span = max(bands, key=lambda b: b[1])
+    line = f"{frac:.0%} of my commits land between {span} IST."
+    best = max(range(24), key=lambda h: hours[h] + hours[(h + 1) % 24] + hours[(h + 2) % 24])
+    focus = hours[best] + hours[(best + 1) % 24] + hours[(best + 2) % 24]
+    weekend = sum(1 for t in times if t.weekday() >= 5) / n
+    # longest session: commits no more than 90 minutes apart
+    sessions, cur = [], [times[0]]
+    for a, b in zip(times, times[1:]):
+        if (b - a).total_seconds() <= 90 * 60:
+            cur.append(b)
+        else:
+            sessions.append(cur)
+            cur = [b]
+    sessions.append(cur)
+    deep = max(sessions, key=lambda s: (s[-1] - s[0], len(s)))
+    deep_repos = [c["repo"] for c in commits if deep[0] <= c["authored_at"].astimezone(ist) <= deep[-1]]
+    top_repo = max(set(deep_repos), key=deep_repos.count) if deep_repos else ""
+    bd, bh = max(((d, h) for d in range(7) for h in range(24)), key=lambda dh: grid[dh[0]][dh[1]])
+    latest = max(commits, key=lambda c: c["authored_at"])
+    return {
+        "commits": n, "repos": len({c["repo"] for c in commits}), "active_days": len({t.date() for t in times}),
+        "since": times[0].strftime("%b %Y"), "hours": hours, "grid": grid,
+        "chronotype": kind, "line": line, "night": round(night, 3), "weekend": round(weekend, 3),
+        "focus": [best, (best + 3) % 24, focus], "peak_hour": max(range(24), key=lambda h: hours[h]),
+        "deep": {"minutes": int((deep[-1] - deep[0]).total_seconds() // 60), "commits": len(deep), "repo": top_repo,
+                 "start": deep[0].strftime("%a %d %b %Y · %H:%M"), "end": deep[-1].strftime("%H:%M"),
+                 "offsets": [int((t - deep[0]).total_seconds() // 60) for t in deep]},
+        "busiest": [bd, bh, grid[bd][bh]],
+        "latest": {"repo": latest["repo"], "subject": latest["message_first_line"],
+                   "when": latest["authored_at"].astimezone(ist).strftime("%d %b %H:%M IST")},
+    }
