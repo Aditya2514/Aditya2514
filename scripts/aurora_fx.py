@@ -137,7 +137,10 @@ def running_border(x, y, w, h, r, color, delay=0.0, dur=5.5):
 
 
 def countup(x, y, final: str, size, color, delay=0.3, frames=14, step=.07, anchor="start", extra=""):
-    """A number that counts up to `final` (SMIL frame swap); non-numeric values are drawn as they are."""
+    """A number that counts up to `final` (SMIL frame swap); non-numeric values are drawn as they are.
+
+    The real value is the resting state: it shows on the first frame (and wherever SMIL never runs), steps
+    aside while the count plays, and is back when the count ends. A frozen frame never shows a wrong number."""
     digits = final.replace(",", "")
     if not digits.isdigit():
         return t(x, y, final, size, color, SANS, 800, anchor, -1, extra)
@@ -146,10 +149,14 @@ def countup(x, y, final: str, size, color, delay=0.3, frames=14, step=.07, ancho
     for k in range(frames):
         v = round(n * ((k + 1) / frames) ** 2.2)
         label = f"{v:,}" if "," in final else str(v)
-        last = k == frames - 1
-        out.append(f'<text x="{x}" y="{y}" font-family="{SANS}" font-size="{size}" font-weight="800" fill="{color}" text-anchor="{anchor}" '
-                   f'letter-spacing="-1" opacity="0" {extra}>{label}'
-                   f'<set attributeName="opacity" to="1" begin="{delay + k * step:.2f}s"' + ("" if last else f' dur="{step:.2f}s"') + "/></text>")
+        attrs = (f'x="{x}" y="{y}" font-family="{SANS}" font-size="{size}" font-weight="800" fill="{color}" text-anchor="{anchor}" '
+                 f'letter-spacing="-1"')
+        if k == frames - 1:
+            out.append(f'<text {attrs} {extra}>{label}'
+                       f'<set attributeName="opacity" to="0" begin="{delay:.2f}s" dur="{k * step:.2f}s"/></text>')
+        else:
+            out.append(f'<text {attrs} opacity="0" {extra}>{label}'
+                       f'<set attributeName="opacity" to="1" begin="{delay + k * step:.2f}s" dur="{step:.2f}s"/></text>')
     return "".join(out)
 
 

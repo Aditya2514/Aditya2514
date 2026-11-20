@@ -29,10 +29,12 @@ CSS = (
     ".sh{animation:sh 2.8s ease-in-out infinite}@keyframes sh{0%,100%{opacity:.35}50%{opacity:1}}"
     ".br{animation:br 5s ease-in-out infinite}@keyframes br{0%,100%{opacity:.6}50%{opacity:1}}"
     ".rise{transform-box:fill-box;transform-origin:50% 100%;animation:rise 1.2s cubic-bezier(.2,.8,.2,1) both}"
-    "@keyframes rise{from{transform:scaleY(0)}to{transform:scaleY(1)}}"
-    ".up{animation:up .9s ease-out both}@keyframes up{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}"
-    ".fade{animation:fade 1s ease-out both}@keyframes fade{from{opacity:0}to{opacity:1}}"
-    ".slide{animation:slide 1s cubic-bezier(.2,.8,.2,1) both}@keyframes slide{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:none}}"
+    # Entrances never hide content: the first frame is what thumbnails, link previews and a reader who
+    # scrolls quickly see, so text, cards and charts start visible and only settle into place.
+    "@keyframes rise{from{transform:scaleY(.35)}to{transform:scaleY(1)}}"
+    ".up{animation:up .9s ease-out both}@keyframes up{from{transform:translateY(10px)}to{transform:none}}"
+    ".fade{animation:fade 1s ease-out both}@keyframes fade{from{filter:brightness(1.7)}to{filter:none}}"
+    ".slide{animation:slide 1s cubic-bezier(.2,.8,.2,1) both}@keyframes slide{from{transform:translateX(-14px)}to{transform:none}}"
     ".draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.4s ease-out both}@keyframes draw{to{stroke-dashoffset:0}}"
     ".blink{animation:blink 1.6s steps(2,start) infinite}@keyframes blink{to{opacity:.2}}"
     ".meteor{animation:meteor 9s linear infinite}"
