@@ -113,6 +113,23 @@ class AuroraTest(unittest.TestCase):
             shown = [el.text for el in root if el.get("opacity") != "0"]
             self.assertEqual(shown, [final])
 
+    def test_curtains_are_coloured_by_height(self):
+        # red-magenta crown, green body, pink-violet fringe on the lower edge
+        for key in ("em", "te", "ic"):
+            grad = art.BASE_DEFS.split(f'id="ray-{key}"')[1].split("</linearGradient>")[0]
+            self.assertIn("#ff4f86", grad)
+            self.assertIn("#b47cff", grad)
+
+    def test_only_full_brightness_curtains_surge(self):
+        self.assertIn('class="surge"', art.aurora(600, 200, 120, 1))
+        self.assertNotIn('class="surge"', art.aurora(600, 200, 120, 1, opacity=.4))
+
+    def test_every_built_scene_has_unique_ids(self):
+        import re
+        for path in sorted((Path(__file__).resolve().parent.parent / "assets" / "aurora").glob("*.svg")):
+            ids = re.findall(r'\bid="([^"]+)"', path.read_text())
+            self.assertEqual(len(ids), len(set(ids)), path.name)
+
     def test_template_placeholders_all_known(self):
         text = build.TEMPLATE.read_text()
         for token in ("{{cards}}", "{{kit}}", "{{generated}}"):

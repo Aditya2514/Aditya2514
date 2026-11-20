@@ -37,6 +37,8 @@ CSS = (
     ".slide{animation:slide 1s cubic-bezier(.2,.8,.2,1) both}@keyframes slide{from{transform:translateX(-14px)}to{transform:none}}"
     ".draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.4s ease-out both}@keyframes draw{to{stroke-dashoffset:0}}"
     ".blink{animation:blink 1.6s steps(2,start) infinite}@keyframes blink{to{opacity:.2}}"
+    ".surge{animation:surge 11s cubic-bezier(.45,0,.55,1) infinite}"
+    "@keyframes surge{0%{transform:translateX(0)}70%,100%{transform:translateX(var(--run,1500px))}}"
     ".meteor{animation:meteor 9s linear infinite}"
     "@keyframes meteor{0%,82%{opacity:0;transform:translate(0,0)}84%{opacity:1}96%{opacity:0;transform:translate(-260px,120px)}100%{opacity:0}}"
     "@media (prefers-reduced-motion: reduce){*{animation:none!important}.draw{stroke-dasharray:none}}"
@@ -61,12 +63,20 @@ BASE_DEFS = (
     f'<stop offset=".55" stop-color="{EMERALD}"/><stop offset="1" stop-color="{TEAL}"/></linearGradient>'
     f'<linearGradient id="warm" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{AMBER}"/>'
     f'<stop offset="1" stop-color="{ROSE}"/></linearGradient>'
+    # A real curtain is coloured by height: red and magenta oxygen glow at the crown, the familiar green
+    # through the body, a hot yellow-green lower edge, and a thin pink-violet nitrogen fringe below it.
     + "".join(
-        f'<linearGradient id="ray-{k}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{c}" stop-opacity="0"/>'
-        f'<stop offset=".45" stop-color="{c}" stop-opacity=".16"/><stop offset=".82" stop-color="{c}" stop-opacity=".6"/>'
-        f'<stop offset=".97" stop-color="{c}" stop-opacity="1"/><stop offset="1" stop-color="{c}" stop-opacity=".15"/></linearGradient>'
-        for k, c in (("em", EMERALD), ("te", TEAL), ("ic", ICE), ("am", AMBER))
+        f'<linearGradient id="ray-{k}" x1="0" y1="0" x2="0" y2="1">'
+        f'<stop offset="0" stop-color="#ff5c8a" stop-opacity="0"/><stop offset=".14" stop-color="#ff4f86" stop-opacity=".2"/>'
+        f'<stop offset=".34" stop-color="#c46bff" stop-opacity=".12"/><stop offset=".5" stop-color="{c}" stop-opacity=".24"/>'
+        f'<stop offset=".8" stop-color="{c}" stop-opacity=".72"/><stop offset=".93" stop-color="#e4ffb8" stop-opacity="1"/>'
+        f'<stop offset=".97" stop-color="#ff86d0" stop-opacity=".75"/><stop offset="1" stop-color="#b47cff" stop-opacity="0"/></linearGradient>'
+        for k, c in (("em", "#45ff9b"), ("te", "#3ef0c4"), ("ic", "#8bffd8"), ("am", AMBER))
     )
+    + '<linearGradient id="surge-band" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#000"/>'
+      '<stop offset=".5" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>'
+    + '<radialGradient id="star-halo"><stop offset="0" stop-color="#fff" stop-opacity=".55"/>'
+      '<stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>'
     + "".join(
         f'<linearGradient id="cur-{k}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{c}" stop-opacity="0"/>'
         f'<stop offset=".3" stop-color="{c}" stop-opacity=".45"/><stop offset=".78" stop-color="{c}" stop-opacity=".9"/>'
@@ -101,13 +111,18 @@ def frame(W, H, rx=16):
 
 
 def stars(W, top, bottom, n, seed, twinkle=.3):
+    """Stars with real colour temperatures (blue-white, white, warm), most faint, a few bright with a halo."""
     rnd, out = random.Random(seed), []
+    tints = ["#dff9ff", "#ffffff", "#ffffff", "#cfdcff", "#ffe8c2", "#ffd6b0"]
     for i in range(n):
         x, y = rnd.uniform(8, W - 8), top + (bottom - top) * rnd.random() ** 1.6  # denser near the top
-        r = rnd.choice([.5, .6, .7, .8, 1, 1.2, 1.5])
+        r = rnd.choice([.4, .5, .5, .6, .7, .8, 1, 1.2, 1.6])
         op = rnd.uniform(.25, .9)
-        cls = f' class="tw" style="animation-delay:{rnd.uniform(0, 3.4):.2f}s"' if rnd.random() < twinkle else ""
-        out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r}" fill="#dff9ff" opacity="{op:.2f}"{cls}/>')
+        tint = rnd.choice(tints)
+        cls = f' class="tw" style="animation-delay:{rnd.uniform(0, 3.4):.2f}s;animation-duration:{rnd.uniform(2.2, 5):.1f}s"' if rnd.random() < twinkle else ""
+        if r >= 1.2:
+            out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r * 4:.1f}" fill="url(#star-halo)" opacity="{op * .5:.2f}"/>')
+        out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r}" fill="{tint}" opacity="{op:.2f}"{cls}/>')
     return "".join(out)
 
 
@@ -118,27 +133,47 @@ def meteor(x, y, delay=0):
 
 
 def aurora(W, low, height, seed, color="em", step=6, opacity=1.0, cls="sway", amp=26, x0=-80, x1=None):
-    """One aurora curtain: hundreds of thin rays hanging from a wavy top to a bright, wavy lower edge."""
+    """One aurora curtain, drawn the way a real one looks.
+
+    Thin rays of uneven width and height hang from a wavy crown to a bright lower edge. The curtain folds:
+    rays are pushed sideways by a slow wave, so they bunch (and glow brighter) where the sheet turns toward
+    the viewer and thin out where it turns away. A bright surge travels along it every few seconds."""
     x1 = W + 80 if x1 is None else x1
     rnd = random.Random(seed)
-    p = [rnd.uniform(0, 6.28) for _ in range(5)]
-    f = [rnd.uniform(.004, .007), rnd.uniform(.011, .019), rnd.uniform(.002, .004)]
+    p = [rnd.uniform(0, 6.28) for _ in range(6)]
+    f = [rnd.uniform(.004, .007), rnd.uniform(.011, .019), rnd.uniform(.002, .004), rnd.uniform(.008, .013)]
+    fold = step * 2.6
     groups = [[] for _ in range(5)]
     edge = []
-    x = x0
-    while x <= x1:
+    u = x0
+    while u <= x1:
+        x = u + fold * math.sin(u * f[3] + p[3])
+        bunch = 1 + fold * f[3] * math.cos(u * f[3] + p[3])  # >1 where rays spread out, <1 where they bunch
         lo = low + amp * math.sin(x * f[0] + p[0]) + amp * .45 * math.sin(x * f[1] + p[1])
-        hi = lo - height * (.55 + .45 * (.5 + .5 * math.sin(x * f[2] + p[2])))
+        hi = lo - height * (.5 + .5 * (.5 + .5 * math.sin(x * f[2] + p[2]))) * rnd.uniform(.82, 1.12)
+        w = rnd.uniform(.7, 1.5) * step * .8
+        op = min(1, rnd.uniform(.3, .85) / max(bunch, .55))
         groups[rnd.randrange(5)].append(
-            f'<rect x="{x:.1f}" y="{hi:.1f}" width="{step + 1.2:.1f}" height="{lo - hi:.1f}" fill="url(#ray-{color})" opacity="{rnd.uniform(.35, 1):.2f}"/>')
+            f'<rect x="{x:.1f}" y="{hi:.1f}" width="{w:.1f}" height="{lo - hi + 6:.1f}" fill="url(#ray-{color})" opacity="{op:.2f}"/>')
         edge.append(f"{x:.1f},{lo:.1f}")
-        x += step
+        u += step * rnd.uniform(.85, 1.25)
     uid = f"au{seed}"
-    rays = f'<g id="{uid}">' + "".join(f'<g class="sh" style="animation-delay:{i * .55:.2f}s">{"".join(g)}</g>' for i, g in enumerate(groups)) + "</g>"
+    rays = f'<g id="{uid}">' + "".join(f'<g class="sh" style="animation-delay:{i * .55:.2f}s;animation-duration:{2.2 + i * .45:.2f}s">{"".join(g)}</g>'
+                                       for i, g in enumerate(groups)) + "</g>"
     c = {"em": EMERALD, "te": TEAL, "ic": ICE, "am": AMBER}[color]
-    line = f'<polyline points="{" ".join(edge)}" fill="none" stroke="{c}" stroke-width="2" opacity=".55" filter="url(#mist)"/>'
-    return (f'<g class="{cls}" opacity="{opacity}"><use href="#{uid}" filter="url(#soft)" opacity=".75"/>'
-            f'<g filter="url(#mist)">{rays}</g>{line}</g>')
+    pts = " ".join(edge)
+    line = (f'<polyline points="{pts}" fill="none" stroke="#e4ffb8" stroke-width="1.6" opacity=".6" filter="url(#mist)"/>'
+            f'<polyline points="{pts}" fill="none" stroke="#ff86d0" stroke-width="2.4" opacity=".22" transform="translate(0 5)" filter="url(#mist)"/>')
+    top, span = low - height - 2 * amp, height + 4 * amp
+    run = (x1 - x0) + 520
+    # Only the main, full-brightness curtain carries a surge: each one costs a mask on every frame, and the
+    # faint curtains behind text-heavy panels gain little from it.
+    surge = "" if opacity < .9 else (f'<mask id="sg{seed}" maskUnits="userSpaceOnUse" x="{x0}" y="{top:.0f}" width="{x1 - x0}" height="{span:.0f}">'
+             f'<rect class="surge" style="--run:{run}px;animation-delay:{-rnd.uniform(0, 11):.1f}s;animation-duration:{rnd.uniform(9, 14):.1f}s" '
+             f'x="{x0 - 480}" y="{top:.0f}" width="420" height="{span:.0f}" fill="url(#surge-band)"/></mask>'
+             f'<use href="#{uid}" mask="url(#sg{seed})" opacity=".9"/>')
+    return (f'<g class="{cls}" opacity="{opacity}"><use href="#{uid}" filter="url(#soft)" opacity=".8"/>'
+            f'<g filter="url(#mist)">{rays}</g>{surge}{line}</g>')
 
 
 def ridge(W, base, top_min, top_max, seed, rough=1.0, x0=-10, x1=None):
@@ -167,10 +202,12 @@ def mountains(W, H, base_top, top_min, top_max, seed, fill, snow=True, uid="m", 
     line, peak = ridge(W, base_top, top_min, top_max, seed, rough)
     d = "M" + " L".join(f"{x:.1f},{y:.1f}" for x, y in line) + f" L{W + 10},{H + 2} L-10,{H + 2} Z"
     if snow:
-        grad = (f'<linearGradient id="snow-{uid}" gradientUnits="userSpaceOnUse" x1="0" y1="{peak:.0f}" x2="0" y2="{peak + 46:.0f}">'
-                f'<stop offset="0" stop-color="#e6fbff" stop-opacity=".9"/><stop offset=".35" stop-color="#9cc6d8" stop-opacity=".55"/>'
-                f'<stop offset="1" stop-color="{fill}"/></linearGradient>')
-        return grad + f'<path d="{d}" fill="url(#snow-{uid})"/>'
+        grad = (f'<linearGradient id="snow-{uid}" gradientUnits="userSpaceOnUse" x1="0" y1="{peak:.0f}" x2="0" y2="{peak + 52:.0f}">'
+                f'<stop offset="0" stop-color="#e2fff4" stop-opacity=".92"/><stop offset=".3" stop-color="#a6dcd0" stop-opacity=".6"/>'
+                f'<stop offset=".65" stop-color="#4f7f88" stop-opacity=".35"/><stop offset="1" stop-color="{fill}"/></linearGradient>')
+        rim = " ".join(f"{x:.1f},{y:.1f}" for x, y in line)
+        return (grad + f'<path d="{d}" fill="url(#snow-{uid})"/>'
+                f'<polyline points="{rim}" fill="none" stroke="{EMERALD}" stroke-width="1.2" opacity=".28" filter="url(#mist)"/>')
     return f'<path d="{d}" fill="{fill}"/>'
 
 
@@ -754,6 +791,10 @@ def flare() -> str:
                     f'<animate attributeName="rx" values="10;120" dur="6s" begin="{j * 2}s" repeatCount="indefinite"/>'
                     f'<animate attributeName="ry" values="2.5;14" dur="6s" begin="{j * 2}s" repeatCount="indefinite"/>'
                     f'<animate attributeName="opacity" values=".8;0" dur="6s" begin="{j * 2}s" repeatCount="indefinite"/></ellipse>')
+    # keep the headline readable over the brightest part of the sky
+    body.append(f'<radialGradient id="scrim" cx=".3" cy=".42" r=".55"><stop offset="0" stop-color="{NIGHT0}" stop-opacity=".78"/>'
+                f'<stop offset=".7" stop-color="{NIGHT0}" stop-opacity=".35"/><stop offset="1" stop-color="{NIGHT0}" stop-opacity="0"/></radialGradient>'
+                f'<ellipse cx="300" cy="175" rx="420" ry="150" fill="url(#scrim)"/>')
     body.append(f'<g class="up" style="animation-delay:.2s">{t(64, 100, "SEND A SIGNAL", 13, AMBER, MONO, 600, "start", 6)}</g>')
     body.append(f'<g class="up" style="animation-delay:.4s" filter="url(#glow)">{t(60, 160, "Let’s build something", 50, TEXT, SANS, 800, "start", -1)}'
                 f'{t(60, 216, "worth finding.", 50, "url(#title)", SANS, 800, "start", -1)}</g>')
