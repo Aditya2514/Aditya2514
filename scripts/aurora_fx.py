@@ -6,7 +6,7 @@ from __future__ import annotations
 import math
 import random
 
-from aurora_art import (AMBER, EMERALD, ICE, MONO, MUTED, ROSE, SANS, TEAL, TEXT, aurora, frame, ground, meteor,
+from aurora_art import (AMBER, EMERALD, ICE, MONO, MUTED, ROSE, SANS, TEAL, TEXT, aurora, frame, glitch, ground, meteor,
                         mountains, pill, stars, svg, t)
 
 FX_CSS = (
@@ -168,12 +168,13 @@ def hero(coords: str, taglines: list[str]) -> str:
     s_pts = [(152, 42), (130, 33), (113, 45), (121, 64), (146, 74), (153, 91), (136, 101), (115, 95)]
     world = ("<g id='world'>"
              + aurora(W, 300, 210, 3, "te", opacity=.65, cls="sway2")
+             + aurora(W, 286, 160, 5, "cr", opacity=.5, cls="sway2", amp=20)
              + aurora(W, 262, 190, 7, "em")
              + aurora(W, 214, 130, 13, "ic", opacity=.45, cls="sway2", amp=18)
              + f'<g class="drift2">{mountains(W, horizon, 0, 300, 400, 21, "#0b1a2b", uid="a")}</g>'
              + f'<g class="drift">{mountains(W, horizon, 0, 368, 430, 34, "#071321", uid="b")}</g>'
              + "</g>")
-    body = [ground(W, H, 18), milky_way(W, H), stars(W, 0, 380, 210, 11, .4),
+    body = [ground(W, H), milky_way(W, H), stars(W, 0, 380, 210, 11, .4),
             constellation(a_pts, [(0, 1), (1, 2), (3, 4)], 1.2, ICE) + constellation(s_pts, [(i, i + 1) for i in range(7)], 2.4, EMERALD,
                                                                                    "THE A.S. CONSTELLATION", (100, 124)),
             meteor(700, 60, 2), meteor(420, 34, 6.5), meteor(980, 120, 11), world,
@@ -199,6 +200,7 @@ def hero(coords: str, taglines: list[str]) -> str:
                 f'<clipPath id="reveal"><rect x="0" y="80" width="0" height="110">'
                 f'<animate attributeName="width" from="0" to="{W}" dur="1.8s" begin=".3s" fill="freeze" calcMode="spline" keySplines=".2 .8 .2 1" keyTimes="0;1"/></rect></clipPath>')
     name = lambda fill, extra="": t(W / 2, 156, "ADITYA SINGH", 78, fill, SANS, 800, "middle", 11, extra)
+    body.append(glitch(lambda c: name(c), 5.5, 0))
     body.append(f'<g clip-path="url(#reveal)"><g filter="url(#glow)">{name("url(#title)")}</g>{name("url(#shine)", "opacity=\".7\"")}</g>')
     body.append(f'<g class="up" style="animation-delay:1.4s">{t(W / 2, 200, "AI SYSTEMS  ·  AGENTS  ·  FULL-STACK", 15, TEXT, MONO, 500, "middle", 6)}</g>')
     for i, line in enumerate(taglines[:3]):
@@ -212,7 +214,7 @@ def hero(coords: str, taglines: list[str]) -> str:
         p, w = pill(x, H - 58, label, color, 10.5, 12, 28, .8)
         body.append(f'<g class="up" style="animation-delay:{2.2 + i * .25:.2f}s">{p}</g>')
         x += w + 10
-    body.append(frame(W, H, 18))
+    body.append(frame(W, H))
     return svg(W, H, "Aditya Singh. AI systems, agents and full-stack. IIT Madras and Scaler School of Technology. A night scene: the "
                      "northern lights and the Milky Way over mountains and a frozen lake, the initials A.S. drawn as a constellation, "
                      "and a lone figure by a campfire watching the sky.", ripple_filter(), FX_CSS + "".join(body))
@@ -230,11 +232,12 @@ def rhythm(r: dict, fetched: str) -> str:
     col = (x1 - x0) / 24
     hx = lambda h: x0 + (h + .5) * col
     cycle = 24.0
-    body = [ground(W, H, 18), stars(W, 0, 300, 120, 301, .35)]
+    body = [ground(W, H), stars(W, 0, 300, 120, 301, .35)]
     body.append(t(52, 46, "RHYTHM // WHEN THE CODE SHIPS", 12, ICE, MONO, 500, "start", 3))
     from aurora_art import synced as _sync
     body.append(_sync(W, 46, fetched))
     body.append(t(52, 82, f"CHRONOTYPE · DERIVED FROM {r['commits']} COMMITS, NOT SELF-DECLARED", 10, MUTED, MONO, 500, "start", 2))
+    body.append(glitch(lambda c: t(50, 140, r["chronotype"], 54, c, SANS, 800, "start", -1), 7, 2))
     body.append(f'<g class="up" style="animation-delay:.2s" filter="url(#glow)">{t(50, 140, r["chronotype"], 54, "url(#title)", SANS, 800, "start", -1)}</g>')
     body.append(f'<g class="up" style="animation-delay:.4s">{t(52, 172, r["line"], 16, TEXT)}</g>')
     f0, f1, fn = r["focus"]
@@ -353,7 +356,7 @@ def rhythm(r: dict, fetched: str) -> str:
     body.append(f'<circle class="blink" cx="58" cy="{H - 26}" r="4" fill="{EMERALD}"/>'
                 + t(70, H - 22, f'LATEST  {lt["repo"]}  ·  {subj}  ·  {lt["when"]}', 10, MUTED, MONO, 400, "start", .6))
     body.append(t(W - 52, H - 22, f'BUSIEST  {DAYS[bd].upper()} {bh:02d}:00 · {r["busiest"][2]} COMMITS', 10, TEXT, MONO, 600, "end", 1))
-    body.append(frame(W, H, 18))
+    body.append(frame(W, H))
     return svg(W, H, f'Rhythm: {r["chronotype"]}. {r["line"]} Busiest hour {bh:02d}:00 on {DAYS[bd]}. '
                      f'Deepest session {hh}h {mm}m, {dp["commits"]} commits on {dp["repo"]}.', "", FX_CSS + "".join(body))
 
