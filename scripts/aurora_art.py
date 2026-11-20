@@ -39,9 +39,19 @@ CSS = (
     ".blink{animation:blink 1.6s steps(2,start) infinite}@keyframes blink{to{opacity:.2}}"
     ".surge{animation:surge 11s cubic-bezier(.45,0,.55,1) infinite}"
     "@keyframes surge{0%{transform:translateX(0)}70%,100%{transform:translateX(var(--run,1500px))}}"
+    # "alive" layer for otherwise still corners: moving, fading and drawing only, never blur or masks
+    ".flow{stroke-dasharray:7 93;animation:flow var(--d,7s) linear infinite}@keyframes flow{to{stroke-dashoffset:-100}}"
+    ".scan{animation:scan var(--d,6s) ease-in-out infinite}"
+    "@keyframes scan{0%{transform:translateY(0);opacity:0}12%,82%{opacity:1}100%{transform:translateY(var(--dy,100px));opacity:0}}"
+    ".mistx{animation:mistx 24s ease-in-out infinite alternate}@keyframes mistx{from{transform:translateX(-90px)}to{transform:translateX(90px)}}"
+    ".spin{transform-box:fill-box;transform-origin:center;animation:spin 9s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}"
+    ".ping{transform-box:fill-box;transform-origin:center;opacity:0;animation:ping var(--d,9s) ease-out infinite}"
+    "@keyframes ping{0%{transform:scale(.6);opacity:.95}10%{transform:scale(2.6);opacity:0}100%{opacity:0}}"
+    ".sheen{animation:sheen 8s ease-in-out infinite}@keyframes sheen{0%,60%{transform:translateX(0)}100%{transform:translateX(var(--run,800px))}}"
     ".meteor{animation:meteor 9s linear infinite}"
     "@keyframes meteor{0%,82%{opacity:0;transform:translate(0,0)}84%{opacity:1}96%{opacity:0;transform:translate(-260px,120px)}100%{opacity:0}}"
-    "@media (prefers-reduced-motion: reduce){*{animation:none!important}.draw{stroke-dasharray:none}}"
+    "@media (prefers-reduced-motion: reduce){*{animation:none!important}.draw{stroke-dasharray:none}"
+    ".flow,.scan,.mistx,.ping,.sheen,.fx-move{display:none}}"
 )
 
 
@@ -219,6 +229,21 @@ def glass(x, y, w, h, rx=14, accent=None, op=.5):
     return out
 
 
+def border_run(x, y, w, h, r, color, delay=0.0, dur=7.0, width=1.6):
+    """A short light that runs round a rounded rectangle's border."""
+    d = (f"M{x + r},{y} H{x + w - r} A{r},{r} 0 0 1 {x + w},{y + r} V{y + h - r} A{r},{r} 0 0 1 {x + w - r},{y + h} "
+         f"H{x + r} A{r},{r} 0 0 1 {x},{y + h - r} V{y + r} A{r},{r} 0 0 1 {x + r},{y} Z")
+    return (f'<path class="flow" style="--d:{dur:.1f}s;animation-delay:{-delay:.2f}s" d="{d}" pathLength="100" fill="none" '
+            f'stroke="{color}" stroke-width="{width}" stroke-linecap="round" opacity=".9"/>')
+
+
+def drifting_mist(W, y, h, color=ICE, op=.07):
+    """Low mist that drifts sideways: two soft ellipses, a gradient instead of a blur filter."""
+    return (f'<radialGradient id="mistg"><stop offset="0" stop-color="{color}" stop-opacity="{op}"/><stop offset="1" stop-color="{color}" stop-opacity="0"/></radialGradient>'
+            f'<g class="mistx"><ellipse cx="{W * .3:.0f}" cy="{y}" rx="{W * .38:.0f}" ry="{h / 2:.0f}" fill="url(#mistg)"/>'
+            f'<ellipse cx="{W * .78:.0f}" cy="{y + h * .15:.0f}" rx="{W * .3:.0f}" ry="{h * .4:.0f}" fill="url(#mistg)"/></g>')
+
+
 def pill(x, y, text, color, size=11, pad=12, h=26, fill_op=.55):
     w = len(text) * (size * .61 + 1.4) + pad * 2
     return (f'<rect x="{x:.1f}" y="{y}" width="{w:.1f}" height="{h}" rx="{h / 2}" fill="#06121c" fill-opacity="{fill_op}" stroke="{color}" stroke-opacity=".55"/>'
@@ -328,7 +353,8 @@ def sky(gh: dict, weeks: list[dict], active: int, longest: int, current: int, n_
         body.append(f'<g class="up" style="animation-delay:{.1 + i * .1:.2f}s">{glass(x, 64, tw, 92, 12, color)}'
                     f'{t(x + 16, 88, label, 10, MUTED, MONO, 500, "start", 2)}'
                     f'{t(x + 16, 124, value, 32, TEXT, SANS, 700)}'
-                    f'{t(x + 16, 141, sub, 10.5, color, MONO)}</g>')
+                    f'{t(x + 16, 141, sub, 10.5, color, MONO)}</g>'
+                    + border_run(x, 64, tw, 92, 12, color, delay=i * 1.6, dur=8))
     base, top = 440, 206
     peak = max((w["count"] for w in weeks), default=0) or 1
     n = len(weeks)
@@ -401,10 +427,15 @@ def basecamp(loop_rules: list[tuple[str, str, str]]) -> str:
                 f'{t(66, quote_y, "Read the situation. Coordinate the squad.", 14, TEXT, SANS, 600)}'
                 f'{t(66, quote_y + 20, "Review the mistakes. Queue again.", 14, TEXT, SANS, 600)}</g>')
     x = 52
+    chip_boxes = []
     for i, (label, color) in enumerate([("IIT MADRAS · CGPA 9.0", EMERALD), ("SCALER SOT", ICE), ("PARADOX DSA · RUNNER-UP", AMBER)]):
         p, w = pill(x, H - 62, label, color, 10.5, 12, 26)
         body.append(f'<g class="up" style="animation-delay:{1.1 + i * .15:.2f}s">{p}</g>')
+        chip_boxes.append(f'<rect x="{x:.1f}" y="{H - 62}" width="{w:.1f}" height="26" rx="13"/>')
         x += w + 10
+    body.append(f'<clipPath id="chipclip">{"".join(chip_boxes)}</clipPath><g clip-path="url(#chipclip)">'
+                f'<g class="sheen" style="--run:{x - 52 + 120:.0f}px"><rect x="10" y="{H - 66}" width="34" height="34" fill="#ffffff" opacity=".22" '
+                f'transform="skewX(-20)"/></g></g>')
     # the loop
     cx, cy, R = 772, 168, 88
     nodes = [("MODEL", "proposes", ICE, -90), ("SYSTEM", "checks", AMBER, 30), ("PERSON", "decides", EMERALD, 150)]
@@ -657,7 +688,9 @@ def bedrock(shares: list[tuple[str, float]], n_repos: int) -> str:
         body.append(f'<defs>{dots}</defs><g class="slide" style="animation-delay:{.2 + i * .14:.2f}s">'
                     f'<path d="M{top_pts} L{bot_pts} Z" fill="{c}" fill-opacity=".14"/>'
                     f'<path d="M{top_pts} L{bot_pts} Z" fill="url(#{pid})"/>'
-                    f'<polyline points="{" ".join(f"{x:.1f},{py:.1f}" for x, py in prev)}" fill="none" stroke="{c}" stroke-opacity=".65" stroke-width="1.4"/>')
+                    f'<polyline points="{" ".join(f"{x:.1f},{py:.1f}" for x, py in prev)}" fill="none" stroke="{c}" stroke-opacity=".65" stroke-width="1.4"/>'
+                    f'<polyline class="flow" style="--d:{9 + i * 1.3:.1f}s;animation-delay:{-i * 2.1:.1f}s" pathLength="100" '
+                    f'points="{" ".join(f"{x:.1f},{py:.1f}" for x, py in prev)}" fill="none" stroke="{c}" stroke-width="2.2" stroke-linecap="round"/>')
         mid = y + h / 2 + 5
         size = 17 if h >= 34 else 13
         body.append(t(70, mid, name, size, TEXT, SANS, 700) + t(70 + len(name) * size * .58 + 14, mid, f"{share * 100:.1f}%", size - 3, c, MONO, 600))
@@ -674,6 +707,8 @@ def bedrock(shares: list[tuple[str, float]], n_repos: int) -> str:
                     f'fill="{colors[i % len(colors)]}" fill-opacity=".55" stroke="{NIGHT0}"/>')
         cy += hh
     body.append(f'<rect x="{cx}" y="{surface}" width="{cw}" height="{H - 18 - surface}" rx="4" fill="none" stroke="{ICE}" stroke-opacity=".4"/>')
+    body.append(f'<g class="scan" style="--dy:{H - 26 - surface}px;--d:5s"><rect x="{cx - 6}" y="{surface}" width="{cw + 12}" height="3" rx="1.5" fill="#f2fffb" opacity=".85"/>'
+                f'<rect x="{cx}" y="{surface - 10}" width="{cw}" height="10" fill="{ICE}" opacity=".18"/></g>')
     body.append(frame(W, H))
     return svg(W, H, "Bedrock: languages by bytes of code. " + ", ".join(f"{n} {s * 100:.1f}%" for n, s in shares), "", "".join(body))
 
@@ -747,6 +782,7 @@ def trail(commits: list[dict], names: dict, cats: dict, fetched: str) -> str:
         body.append(f'<g class="fade" style="animation-delay:2.4s"><line x1="{peak[0]}" y1="{peak[1]}" x2="{peak[0]}" y2="{peak[1] - 44}" stroke="{TEXT}"/>'
                     f'<polygon points="{peak[0]},{peak[1] - 44} {peak[0] + 26},{peak[1] - 37} {peak[0]},{peak[1] - 30}" fill="{EMERALD}"/>'
                     + t(peak[0] + 32, peak[1] - 33, "NOW", 11, EMERALD, MONO, 700, "start", 2) + "</g>")
+    body.append(drifting_mist(W, H - 70, 120, ICE, .09))
     body.append(t(52, H - 20, "EACH WAYPOINT = ONE COMMIT · NEWEST AT THE SUMMIT", 10, FAINT, MONO, 400, "start", 1.5))
     body.append(frame(W, H))
     return svg(W, H, "Trail log: latest commits as waypoints up a mountain. " + "; ".join(f'{c["date"]} {c["repo"]}: {c["subject"]}' for c in commits[:8]),
@@ -845,6 +881,13 @@ def ascent(journey: list[dict], repos: dict, names: dict, cats: dict) -> str:
     d = "M" + " L".join(f"{x:.1f},{y:.1f}" for x, y in pts)
     body.append(f'<path d="{d}" fill="none" stroke="{ICE}" stroke-opacity=".18" stroke-width="6" filter="url(#soft)"/>')
     body.append(f'<path class="draw" pathLength="1" d="{d}" fill="none" stroke="url(#title)" stroke-width="1.6" style="animation-duration:4s"/>')
+    climb = 10.0  # seconds per climb; the light rests at the top for the last fifth
+    seg = [math.dist(pts[i], pts[i + 1]) for i in range(n - 1)]
+    total = sum(seg) or 1
+    reach = [0.0]
+    for L in seg:
+        reach.append(reach[-1] + L / total)
+    times = [.8 * i / max(n - 1, 1) for i in range(n)]
     maxkb = max(repos[s["repo"]]["kb"] for s in stops) or 1
     for i, (s, (x, y)) in enumerate(zip(stops, pts)):
         r = repos[s["repo"]]
@@ -869,6 +912,17 @@ def ascent(journey: list[dict], repos: dict, names: dict, cats: dict) -> str:
         body.append(t(x, note_y, s["note"], 9.5, MUTED, MONO, 400, "middle"))
         body.append(t(x, note_y + 13, when, 8.5, c, MONO, 600, "middle", 1.2) if not above else "")
         body.append("</g>")
+    if n > 1:
+        for i, (x, y) in enumerate(pts):
+            c = CAT[cats.get(stops[i]["repo"], "other")]
+            body.append(f'<circle class="ping" style="--d:{climb}s;animation-delay:{times[i] * climb:.2f}s" cx="{x:.1f}" cy="{y:.1f}" r="9" '
+                        f'fill="none" stroke="{c}" stroke-width="1.6"/>')
+        kt = ";".join(f"{v:.4f}" for v in times + [1])
+        kp = ";".join(f"{v:.4f}" for v in reach + [1])
+        body.append(f'<g class="fx-move"><circle r="11" fill="{ICE}" opacity=".22"/><circle r="4.2" fill="#ffffff"/>'
+                    f'<animateMotion dur="{climb}s" repeatCount="indefinite" path="{d}" calcMode="linear" keyTimes="0;{kt[kt.index(";") + 1:]}" keyPoints="0;{kp[kp.index(";") + 1:]}"/>'
+                    f'<animate attributeName="opacity" dur="{climb}s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;.03;.8;.9;1"/></g>')
+    body.append(drifting_mist(W, H - 64, 110, ICE, .08))
     body.append(t(52, H - 24, "ONE STAR = ONE REPO, IN THE ORDER IT BEGAN · BRIGHTNESS = SIZE OF THE CODE", 10, FAINT, MONO, 400, "start", 1.5))
     body.append(frame(W, H))
     return svg(W, H, f"Ascent: {n} repositories over {months} months, from a static portfolio to " + ", ".join(s["label"] for s in stops[-4:]),
@@ -945,6 +999,11 @@ def instruments(signals: dict, live: dict, prs: int, crew: list[dict], names: di
             cx += w + 6
         g.append("</g>")
         body.append("".join(g))
+    if rows:
+        body.append(f'<linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{TEAL}" stop-opacity="0"/>'
+                    f'<stop offset=".5" stop-color="{TEAL}" stop-opacity=".16"/><stop offset="1" stop-color="{TEAL}" stop-opacity="0"/></linearGradient>'
+                    f'<g class="scan" style="--dy:{(rows - 1) * 44}px;--d:{2.2 + rows * .8:.1f}s"><rect x="52" y="{y}" width="{W - 104}" height="36" rx="10" fill="url(#sweep)"/>'
+                    f'<rect x="52" y="{y + 35}" width="{W - 104}" height="1.2" fill="{TEAL}" opacity=".55"/></g>')
     cy = y + rows * 44 + 34
     body.append(t(52, cy, "ROPE TEAM // BUILT WITH", 10.5, MUTED, MONO, 500, "start", 3))
     x = 52
@@ -954,6 +1013,7 @@ def instruments(signals: dict, live: dict, prs: int, crew: list[dict], names: di
         w = len(label) * 7.4 + 58
         body.append(f'<g class="up" style="animation-delay:1.2s">{glass(x, cy + 14, w, 40, 20, None, .7)}'
                     f'<circle cx="{x + 21}" cy="{cy + 34}" r="13" fill="{TEAL}" fill-opacity=".15" stroke="{TEAL}"/>'
+                    f'<circle class="spin" cx="{x + 21}" cy="{cy + 34}" r="17" fill="none" stroke="{TEAL}" stroke-opacity=".6" stroke-dasharray="10 7 2 7"/>'
                     + t(x + 21, cy + 38, initials, 10, TEAL, MONO, 700, "middle") + t(x + 42, cy + 39, label, 12.5, TEXT, SANS, 600) + "</g>")
         x += w + 12
     body.append(t(W - 52, H - 20, "COUNTED FROM EVERY PUBLIC REPO ON EACH REFRESH", 10, FAINT, MONO, 400, "end", 1.5))
