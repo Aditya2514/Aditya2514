@@ -12,7 +12,8 @@ import random
 from datetime import date, datetime
 from xml.sax.saxutils import escape
 
-NIGHT0, NIGHT1, NIGHT2 = "#02050b", "#061224", "#0a1b2e"
+NIGHT0, NIGHT1, NIGHT2 = "#010205", "#040a14", "#07111e"
+CRIMSON = "#ff2a4d"
 EMERALD, TEAL, ICE, AMBER, ROSE, STEEL = "#3df5a7", "#19d3c5", "#9eeaff", "#ffb547", "#ff7a90", "#7fa6c9"
 TEXT, MUTED, FAINT = "#eafff8", "#93b7b2", "#47676b"
 KIND = {"model": ICE, "rule": AMBER, "person": EMERALD, "io": STEEL}
@@ -48,10 +49,15 @@ CSS = (
     ".ping{transform-box:fill-box;transform-origin:center;opacity:0;animation:ping var(--d,9s) ease-out infinite}"
     "@keyframes ping{0%{transform:scale(.6);opacity:.95}10%{transform:scale(2.6);opacity:0}100%{opacity:0}}"
     ".sheen{animation:sheen 8s ease-in-out infinite}@keyframes sheen{0%,60%{transform:translateX(0)}100%{transform:translateX(var(--run,800px))}}"
+    ".glA,.glB{opacity:0;animation:glA 6.5s steps(1) infinite}.glB{animation-name:glB}"
+    "@keyframes glA{0%,90%,97%,100%{opacity:0;transform:none}91%{opacity:.85;transform:translate(-6px,1px)}"
+    "93%{opacity:.55;transform:translate(5px,-2px)}95%{opacity:.75;transform:translate(-3px,0)}}"
+    "@keyframes glB{0%,90%,97%,100%{opacity:0;transform:none}91%{opacity:.7;transform:translate(6px,-1px)}"
+    "93%{opacity:.8;transform:translate(-4px,2px)}95%{opacity:.5;transform:translate(3px,0)}}"
     ".meteor{animation:meteor 9s linear infinite}"
     "@keyframes meteor{0%,82%{opacity:0;transform:translate(0,0)}84%{opacity:1}96%{opacity:0;transform:translate(-260px,120px)}100%{opacity:0}}"
     "@media (prefers-reduced-motion: reduce){*{animation:none!important}.draw{stroke-dasharray:none}"
-    ".flow,.scan,.mistx,.ping,.sheen,.fx-move{display:none}}"
+    ".flow,.scan,.mistx,.ping,.sheen,.fx-move,.glA,.glB{display:none}}"
 )
 
 
@@ -68,7 +74,7 @@ BASE_DEFS = (
     '<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" result="b"/>'
     '<feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>'
     '<filter id="soft" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>'
-    '<filter id="mist" x="-10%" y="-50%" width="120%" height="200%"><feGaussianBlur stdDeviation="2.2"/></filter>'
+    '<filter id="mist" x="-10%" y="-50%" width="120%" height="200%"><feGaussianBlur stdDeviation="1.1"/></filter>'
     f'<linearGradient id="title" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{ICE}"/>'
     f'<stop offset=".55" stop-color="{EMERALD}"/><stop offset="1" stop-color="{TEAL}"/></linearGradient>'
     f'<linearGradient id="warm" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{AMBER}"/>'
@@ -77,11 +83,11 @@ BASE_DEFS = (
     # through the body, a hot yellow-green lower edge, and a thin pink-violet nitrogen fringe below it.
     + "".join(
         f'<linearGradient id="ray-{k}" x1="0" y1="0" x2="0" y2="1">'
-        f'<stop offset="0" stop-color="#ff5c8a" stop-opacity="0"/><stop offset=".14" stop-color="#ff4f86" stop-opacity=".2"/>'
+        f'<stop offset="0" stop-color="#ff5c8a" stop-opacity="0"/><stop offset=".14" stop-color="#ff4f86" stop-opacity=".34"/>'
         f'<stop offset=".34" stop-color="#c46bff" stop-opacity=".12"/><stop offset=".5" stop-color="{c}" stop-opacity=".24"/>'
         f'<stop offset=".8" stop-color="{c}" stop-opacity=".72"/><stop offset=".93" stop-color="#e4ffb8" stop-opacity="1"/>'
         f'<stop offset=".97" stop-color="#ff86d0" stop-opacity=".75"/><stop offset="1" stop-color="#b47cff" stop-opacity="0"/></linearGradient>'
-        for k, c in (("em", "#45ff9b"), ("te", "#3ef0c4"), ("ic", "#8bffd8"), ("am", AMBER))
+        for k, c in (("em", "#45ff9b"), ("te", "#3ef0c4"), ("ic", "#8bffd8"), ("am", AMBER), ("cr", CRIMSON))
     )
     + '<linearGradient id="surge-band" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#000"/>'
       '<stop offset=".5" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>'
@@ -112,12 +118,22 @@ def wrap(text: str, limit: int) -> list[str]:
     return lines + ([cur] if cur else [])
 
 
-def ground(W, H, rx=16):
+def ground(W, H, rx=8):
     return f'<rect width="{W}" height="{H}" rx="{rx}" fill="url(#night)"/>'
 
 
-def frame(W, H, rx=16):
-    return f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="{rx}" fill="none" stroke="{ICE}" stroke-opacity=".12"/>'
+def frame(W, H, rx=8):
+    k, m = 22, 7  # bracket length and inset
+    corners = (f"M{m},{m + k} V{m} H{m + k} M{W - m - k},{m} H{W - m} V{m + k} "
+               f"M{W - m},{H - m - k} V{H - m} H{W - m - k} M{m + k},{H - m} H{m} V{H - m - k}")
+    return (f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="{rx}" fill="none" stroke="{ICE}" stroke-opacity=".12"/>'
+            f'<path d="{corners}" fill="none" stroke="{CRIMSON}" stroke-width="2" stroke-opacity=".8"/>')
+
+
+def glitch(draw, every=6.5, at=0.0):
+    """Red and cyan ghosts of a title; `draw(colour)` returns the title's text drawn in that colour."""
+    style = f'style="animation-duration:{every}s;animation-delay:{-at:.2f}s"'
+    return f'<g class="glA" {style}>{draw(CRIMSON)}</g><g class="glB" {style}>{draw("#59e3ff")}</g>'
 
 
 def stars(W, top, bottom, n, seed, twinkle=.3):
@@ -170,7 +186,7 @@ def aurora(W, low, height, seed, color="em", step=6, opacity=1.0, cls="sway", am
     uid = f"au{seed}"
     rays = f'<g id="{uid}">' + "".join(f'<g class="sh" style="animation-delay:{i * .55:.2f}s;animation-duration:{2.2 + i * .45:.2f}s">{"".join(g)}</g>'
                                        for i, g in enumerate(groups)) + "</g>"
-    c = {"em": EMERALD, "te": TEAL, "ic": ICE, "am": AMBER}[color]
+    c = {"em": EMERALD, "te": TEAL, "ic": ICE, "am": AMBER, "cr": CRIMSON}[color]
     pts = " ".join(edge)
     line = (f'<polyline points="{pts}" fill="none" stroke="#e4ffb8" stroke-width="1.6" opacity=".6" filter="url(#mist)"/>'
             f'<polyline points="{pts}" fill="none" stroke="#ff86d0" stroke-width="2.4" opacity=".22" transform="translate(0 5)" filter="url(#mist)"/>')
@@ -415,6 +431,7 @@ def basecamp(loop_rules: list[tuple[str, str, str]]) -> str:
     W, H = 1000, 500
     body = [ground(W, H), stars(W, 0, 220, 80, 17, .25), aurora(W, 160, 120, 29, "em", opacity=.35, cls="sway2", x0=520)]
     body.append(t(52, 58, "BASE CAMP // ADITYA SINGH", 12, ICE, MONO, 500, "start", 3))
+    body.append(glitch(lambda c: t(52, 114, "What happens when", 40, c, SANS, 700) + t(52, 162, "the model is wrong?", 40, c, SANS, 800), 7, 1))
     body.append(f'<g class="up" style="animation-delay:.2s">{t(52, 114, "What happens when", 40, TEXT, SANS, 700)}'
                 f'{t(52, 162, "the model is wrong?", 40, "url(#title)", SANS, 800)}</g>')
     para = ("I study Data Science & Applications at IIT Madras, co-enrolled at Scaler School of Technology, and I build "
@@ -493,6 +510,7 @@ def expeditions(flagships: list[dict], systems: list[dict], metrics: dict, cats:
     H = y0 + rows * (ch + 22) + 212
     body = [fx.FX_CSS, ground(W, H), stars(W, 0, 140, 70, 41, .25), aurora(W, 120, 110, 47, "te", opacity=.3, cls="sway2")]
     body.append(t(52, 52, "EXPEDITIONS // FLAGSHIP SYSTEMS", 12, ICE, MONO, 500, "start", 3))
+    body.append(glitch(lambda c: t(52, 92, "Where the model meets a rule.", 30, c, SANS, 700), 7.5, 3))
     body.append(t(52, 92, "Where the model meets a rule.", 30, TEXT, SANS, 700))
     body.append(t(52, 118, f"{len(flagships)} flagships and {len(systems)} more climbs, each with a number read live from its own repository.", 14, MUTED))
     for i, (v, l, c) in enumerate([(str(len(flagships)), "FLAGSHIPS", EMERALD), (str(len(flagships) + len(systems)), "SYSTEMS", ICE), (str(n_links), "CODE LINKS", AMBER)]):
@@ -794,7 +812,8 @@ def trail(commits: list[dict], names: dict, cats: dict, fetched: str) -> str:
 def flare() -> str:
     W, H = 1000, 470
     horizon = 352
-    sky_art = (aurora(W, 250, 180, 111, "em") + aurora(W, 205, 130, 113, "ic", opacity=.45, cls="sway2")
+    sky_art = (aurora(W, 228, 150, 109, "cr", opacity=.5, cls="sway2", amp=18)
+               + aurora(W, 250, 180, 111, "em") + aurora(W, 205, 130, 113, "ic", opacity=.45, cls="sway2")
                + aurora(W, 280, 150, 117, "te", opacity=.6, cls="sway2"))
     body = [ground(W, H), stars(W, 0, horizon - 40, 170, 109, .35), meteor(700, 60, 3), f'<g id="skyart">{sky_art}</g>']
     body.append(f'<use href="#skyart" transform="translate(0 {2 * horizon}) scale(1 -1)" opacity=".28" filter="url(#mist)"/>')
@@ -832,6 +851,8 @@ def flare() -> str:
                 f'<stop offset=".7" stop-color="{NIGHT0}" stop-opacity=".35"/><stop offset="1" stop-color="{NIGHT0}" stop-opacity="0"/></radialGradient>'
                 f'<ellipse cx="300" cy="175" rx="420" ry="150" fill="url(#scrim)"/>')
     body.append(f'<g class="up" style="animation-delay:.2s">{t(64, 100, "SEND A SIGNAL", 13, AMBER, MONO, 600, "start", 6)}</g>')
+    body.append(glitch(lambda c: t(60, 160, "Let’s build something", 50, c, SANS, 800, "start", -1)
+                       + t(60, 216, "worth finding.", 50, c, SANS, 800, "start", -1), 6, 2))
     body.append(f'<g class="up" style="animation-delay:.4s" filter="url(#glow)">{t(60, 160, "Let’s build something", 50, TEXT, SANS, 800, "start", -1)}'
                 f'{t(60, 216, "worth finding.", 50, "url(#title)", SANS, 800, "start", -1)}</g>')
     body.append(f'<g class="up" style="animation-delay:.7s">{t(64, 254, "AI engineering internships  ·  agent systems  ·  hackathon teams", 16, MUTED)}</g>')
@@ -872,6 +893,7 @@ def ascent(journey: list[dict], repos: dict, names: dict, cats: dict) -> str:
         a, b = date.fromisoformat(first), date.fromisoformat(last)
         months = (b.year - a.year) * 12 + b.month - a.month
     body.append(t(52, 48, f"ASCENT // {months} MONTHS · {n} REPOS", 12, ICE, MONO, 500, "start", 3))
+    body.append(glitch(lambda c: t(52, 92, "From a static page to systems", 30, c, SANS, 700) + t(52, 128, "that check themselves.", 30, c, SANS, 800), 8, 4))
     body.append(t(52, 92, "From a static page to systems", 30, TEXT, SANS, 700))
     body.append(t(52, 128, "that check themselves.", 30, "url(#title)", SANS, 800))
     if not n:
@@ -960,6 +982,7 @@ def instruments(signals: dict, live: dict, prs: int, crew: list[dict], names: di
     body.append(t(52, 48, "INSTRUMENTS // ENGINEERING ACROSS EVERY REPO", 12, ICE, MONO, 500, "start", 3))
     body.append(synced(W, 48, fetched))
     head = f"{tests:,} test cases. {ci} CI workflows." + (f" {live_n} live apps." if live_n else "")
+    body.append(glitch(lambda c: t(52, 92, head, 28, c, SANS, 700), 7, 5))
     body.append(t(52, 92, head, 28, TEXT, SANS, 700))
     gauges = [(f"{tests:,}", "TEST CASES", EMERALD), (str(tfiles), "TEST FILES", TEAL), (str(ci), "CI WORKFLOWS", ICE),
               (str(docker), "DOCKERISED REPOS", STEEL), (str(docs), "DESIGN DOCS & ADRS", AMBER), (str(prs), "PULL REQUESTS", ROSE)]
