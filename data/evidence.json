@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-20T07:14:53Z",
+ "generated_at": "2026-11-20T16:58:23Z",
  "repos": {
   "LexGuard": "2e6cb460aa9efabc2a51d3aa3c7aaf02849169a5",
-  "Pikina": "4bcbcec85180db750df0844f2a55d34b2b016d21",
+  "Pikina": "ba2ae048fa05442cbc1a6c83fc253384c8562f34",
   "Noesis": "fde4e09283833cd25ec9e58777d0f6d74fa33bce",
   "Mobius": "fec1c089ead7dc6c91479c97c859c7f334f288ed",
   "BenchShield": "d1beb1b0ce341d6aac0860adc49e549554ab36b1",
@@ -26,15 +26,15 @@
    "line": 8
   },
   "Pikina#1": {
-   "sha": "4bcbcec85180db750df0844f2a55d34b2b016d21",
+   "sha": "ba2ae048fa05442cbc1a6c83fc253384c8562f34",
    "line": 10
   },
   "Pikina#2": {
-   "sha": "4bcbcec85180db750df0844f2a55d34b2b016d21",
+   "sha": "ba2ae048fa05442cbc1a6c83fc253384c8562f34",
    "line": 16
   },
   "Pikina#3": {
-   "sha": "4bcbcec85180db750df0844f2a55d34b2b016d21",
+   "sha": "ba2ae048fa05442cbc1a6c83fc253384c8562f34",
    "line": 15
   },
   "Noesis#1": {
@@ -136,6 +136,12 @@
  },
  "recent": [
   {
+   "sha": "6e20f1893497bedda998899b2b7e75abf543447a",
+   "date": "2026-11-20",
+   "subject": "phase5a: voice input in the terminal (whisper.cpp), with a no-mic file mode",
+   "repo": "Pikina"
+  },
+  {
    "sha": "d68ffd16ee98e41d7f764049072280c68e564c10",
    "date": "2026-11-01",
    "subject": "fix: stop preview redaction from revealing gold answers; merge 02eb16d",
@@ -199,12 +205,6 @@
    "sha": "21e6e432e8653851d9680c458f8814e7e942b6e9",
    "date": "2026-10-22",
    "subject": "fix(switcher): review findings \u2014 Ctrl+C, git config execution, robustness",
-   "repo": "Pikina"
-  },
-  {
-   "sha": "11b49a84714332dfcaa3a8681c22d143dbd24271",
-   "date": "2026-10-22",
-   "subject": "phase1: close the gaps found when re-verifying the review fixes",
    "repo": "Pikina"
   },
   {
@@ -408,14 +408,14 @@
    "readme_kb": 32
   },
   "Pikina": {
-   "tests": 255,
-   "test_files": 16,
+   "tests": 287,
+   "test_files": 17,
    "ci": 1,
    "docker": false,
    "license": true,
    "adrs": 0,
    "docs": 7,
-   "readme_kb": 26
+   "readme_kb": 27
   },
   "Resilion": {
    "tests": 0,

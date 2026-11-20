@@ -124,7 +124,7 @@ A deterministic auditor runs hand-written trap patterns before any agent reads a
 
 An offline-first Windows/Linux assistant with local inference, validated tools and **consent for anything high-risk**.
 
-`255 tests` `CI`
+`287 tests` `CI`
 
 <details>
 <summary>Architecture notes</summary>
@@ -134,7 +134,7 @@ Known intents go through a regex router with no model call; everything else goes
 
 </details>
 
-**In the code:** [`validator`](https://github.com/Aditya2514/Pikina/blob/4bcbcec85180db750df0844f2a55d34b2b016d21/src/pikina/validation/schema_check.py#L10) · [`consent rule`](https://github.com/Aditya2514/Pikina/blob/4bcbcec85180db750df0844f2a55d34b2b016d21/src/pikina/registry/gatekeeper.py#L16) · [`rollback`](https://github.com/Aditya2514/Pikina/blob/4bcbcec85180db750df0844f2a55d34b2b016d21/src/pikina/transactions/rollback_engine.py#L15)
+**In the code:** [`validator`](https://github.com/Aditya2514/Pikina/blob/ba2ae048fa05442cbc1a6c83fc253384c8562f34/src/pikina/validation/schema_check.py#L10) · [`consent rule`](https://github.com/Aditya2514/Pikina/blob/ba2ae048fa05442cbc1a6c83fc253384c8562f34/src/pikina/registry/gatekeeper.py#L16) · [`rollback`](https://github.com/Aditya2514/Pikina/blob/ba2ae048fa05442cbc1a6c83fc253384c8562f34/src/pikina/transactions/rollback_engine.py#L15)
 
 [Source →](https://github.com/Aditya2514/Pikina)
 
@@ -425,6 +425,6 @@ Built for the Meta PyTorch OpenEnv Hackathon. An agent schedules work against ha
 <a href="mailto:adityasinghv05@gmail.com"><img src="assets/aurora/channel-email.svg" width="32%" alt="Email" /></a>
 <a href="https://github.com/Aditya2514?tab=repositories"><img src="assets/aurora/channel-github.svg" width="32%" alt="GitHub repositories" /></a>
 
-<sub>Scenes redrawn from live GitHub data every six hours · last run 20 Nov 2026, 07:14 UTC</sub>
+<sub>Scenes redrawn from live GitHub data every six hours · last run 20 Nov 2026, 16:58 UTC</sub>
 
 </div>
