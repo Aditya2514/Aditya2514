@@ -97,6 +97,22 @@ class AuroraTest(unittest.TestCase):
         for s in scenes:
             ET.fromstring(s)
 
+    def test_entrances_never_start_hidden(self):
+        # The first frame is what a link preview or a quick scroller sees, so content must not start invisible.
+        import re
+        for name in ("up", "fade", "slide", "rise"):
+            frames = re.search(r"@keyframes %s\{from\{([^}]*)\}" % name, art.CSS)
+            self.assertIsNotNone(frames, name)
+            self.assertNotRegex(frames.group(1), r"opacity\s*:\s*0(?![.\d])", name)
+            self.assertNotIn("scaleY(0)", frames.group(1), name)
+
+    def test_countup_rests_on_the_real_value(self):
+        import aurora_fx as fx
+        for final in ("117", "1,234", "7"):
+            root = ET.fromstring(f'<svg xmlns="http://www.w3.org/2000/svg">{fx.countup(0, 0, final, 20, "#fff")}</svg>')
+            shown = [el.text for el in root if el.get("opacity") != "0"]
+            self.assertEqual(shown, [final])
+
     def test_template_placeholders_all_known(self):
         text = build.TEMPLATE.read_text()
         for token in ("{{cards}}", "{{kit}}", "{{generated}}"):
