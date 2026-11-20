@@ -144,6 +144,14 @@ class AuroraTest(unittest.TestCase):
             for cls in classes:
                 self.assertIn(f'class="{cls}"', text, f"{name}: {cls}")
 
+    def test_glitch_is_hidden_without_motion_and_titles_stay_crisp(self):
+        reduced = art.CSS.split("prefers-reduced-motion")[1]
+        self.assertIn(".glA", reduced)
+        self.assertIn(".glB", reduced)
+        ghosts = art.glitch(lambda c: art.t(0, 0, "X", 10, c))
+        self.assertIn(art.CRIMSON, ghosts)
+        ET.fromstring(f'<svg xmlns="http://www.w3.org/2000/svg">{ghosts}</svg>')
+
     def test_template_placeholders_all_known(self):
         text = build.TEMPLATE.read_text()
         for token in ("{{cards}}", "{{kit}}", "{{generated}}"):
