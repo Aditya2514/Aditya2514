@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-26T21:31:09Z",
+ "fetched_at": "2026-11-27T08:31:52Z",
  "login": "Aditya2514",
  "followers": 4,
  "totals": {
@@ -1484,6 +1484,10 @@
   {
    "date": "2026-11-26",
    "count": 2
+  },
+  {
+   "date": "2026-11-27",
+   "count": 0
   }
  ],
  "repos": [
@@ -1902,19 +1906,15 @@
   {
    "name": "Dooming-Doom",
    "created": "2026-11-26",
-   "pushed": "2026-11-26",
-   "kb": 502,
+   "pushed": "2026-11-27",
+   "kb": 20219,
    "stars": 0,
    "archived": false,
    "lang": "Python",
    "languages": [
     [
      "Python",
-     363174
-    ],
-    [
-     "PowerShell",
-     2295
+     253813
     ],
     [
      "Dockerfile",
